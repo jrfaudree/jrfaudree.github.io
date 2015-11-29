@@ -1,0 +1,148 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, head=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{pgfplots}
+\usepackage{verbatim}
+
+%\usepackage{pdfsync}
+\addtolength{\textwidth}{.5in}
+\addtolength{\leftmargin}{-1in}
+\addtolength{\textheight}{.5in}
+\addtolength{\topmargin}{-0.5in}
+
+%\pagestyle{fancy}
+%\lhead{MATH 200X }
+%\chead{Fall 2007}
+%\rhead{FINAL EXAM}
+%\lfoot{}
+%\cfoot{\thepage}
+%\rfoot{}
+
+\setcounter{secnumdepth}{0}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\clm}{\par\textit{Claim:}\par}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\sect}{\textsection}
+
+\parindent=0in
+\parskip=0.5\baselineskip
+
+\begin{document}
+
+
+\newgeometry{top=1in}
+
+{\huge{Name:{\underline{\hspace{4in}}}}}
+\vfill
+
+\begin{center}
+\vspace{1in}
+
+\huge{Math 156 PRECALCULUS \\
+Fall 2015}
+
+\vfill
+
+\huge{\bf{Quiz 7 -- Version A}}\\
+
+\vspace{0.5in}
+
+\large{Thursday, October 29, 2015}\\
+
+\vfill
+
+This quiz has 8 problems worth a total of 30 points. It is TWO SIDED. 
+\vfill
+\end{center}
+%Useful Formulas:\\
+
+%\scalebox{1.2}{$A(t)=P\left(1+\frac{r}{n}\right)^{nt}$} \hfill \scalebox{1.2}{$A(t)=Pe^{rt}$}
+
+\vfill
+
+
+\newpage
+\restoregeometry
+\begin{enumerate}
+%4.3 #9-16
+\item (2 points) Express the equation \fbox{\scalebox{1.2}{$\log 3=2t $}} in exponential form. (You don't need to solve it.)\\
+\begin{flushright}{ Answer:\underline{\hspace{2in}}}\end{flushright}
+\vfill
+%4.3 \#17-24
+\item (2 points) Express the equation \fbox{\scalebox{1.2}{$e^{0.7t}=r$}} in logarithmic form.\\
+\begin{flushright}{ Answer:\underline{\hspace{2in}}}\end{flushright}
+\vfill
+%4.3 \#25-34
+\item (2 points each) Evaluate the expressions below.
+\begin{enumerate}
+\item \scalebox{1.2}{$\log_9 \sqrt{3}$}\\
+\begin{flushright}{ Answer:\underline{\hspace{2in}}}\end{flushright}
+\vfill
+\item \scalebox{1.2}{$e^{\ln 10}$}\\
+\begin{flushright}{ Answer:\underline{\hspace{2in}}}\end{flushright}
+\vfill
+\item \scalebox{1.2}{$\log_4 8 $}\\
+\begin{flushright}{ Answer:\underline{\hspace{2in}}}\end{flushright}
+\vfill
+\end{enumerate}
+%4.3 \#73-78
+\item (2 points) find the domain of the function \scalebox{1.2}{$h(x)=\ln x + \ln (2-x)$}. Give your answer in interval notation.\\
+\begin{flushright}{ Answer:\underline{\hspace{2in}}}\end{flushright}
+\vfill
+\newpage
+\item (4 points each) Sketch the graphs of the functions below and {\bf{LABEL}} (a) any asymptotes and (b) any $x$- or $y$-intercepts. State the domain and range. 
+\begin{enumerate}
+%4.3 \#61-72
+\item $f(x)=\log_3 (x+2)$\begin{flushright}{domain: \underline{\hspace{2in}}}\end{flushright}
+\begin{flushright}{range: \underline{\hspace{2in}}}\end{flushright}
+\vspace{-.6in}
+\begin{tikzpicture}[scale=0.9]
+\draw[->, thick] (-3,0) -- (4,0)node [pos=1, below] {$x$};
+\draw[->, thick] (0,-3) -- (0,4) node [pos=1, left] {$y$};
+\end{tikzpicture}
+
+%4.1 \#27-40
+\item $f(x)=2^{x-4}+1$ \begin{flushright}{domain: \underline{\hspace{2in}}}\end{flushright}
+\begin{flushright}{range: \underline{\hspace{2in}}}\end{flushright}
+\vspace{-.6in}
+
+\begin{tikzpicture}[scale=0.9]
+\draw[->, thick] (-3,0) -- (4,0)node [pos=1, below] {$x$};
+\draw[->, thick] (0,-3) -- (0,4) node [pos=1, left] {$y$};
+\end{tikzpicture}
+
+%4.2 \#7-16
+\item $f(x)=-2e^{-x}$\begin{flushright}{domain: \underline{\hspace{2in}}}\end{flushright}
+\begin{flushright}{range: \underline{\hspace{2in}}}\end{flushright}
+\vspace{-.6in}
+\begin{tikzpicture}[scale=0.9]
+\draw[->, thick] (-3,0) -- (4,0)node [pos=1, below] {$x$};
+\draw[->, thick] (0,-3) -- (0,4) node [pos=1, left] {$y$};
+\end{tikzpicture}
+\end{enumerate}
+\newpage
+
+%4.4 \# 9-22
+\item (2  points) Use the Laws of Logarithms to evaluate the expression\\ 
+
+\fbox{\scalebox{1.2}{$\frac{-1}{3}\log_5 125 $}} \begin{flushright}{ Answer:\underline{\hspace{2in}}}\end{flushright}
+\vfill
+%4.4 \#23-48
+\item (2 points) Use the Laws of Logarithms to expand the expression\\ 
+
+\fbox{\scalebox{1.2}{$\ln\left(\frac{\sqrt{3x^5}}{zy^2}\right)$}} \begin{flushright}{ Answer:\underline{\hspace{2in}}}\end{flushright}
+\vfill
+%4.4 \#49-58
+\item (2 points) Use the Laws of Logarithms to combine the expression:\\
+
+ \fbox{\scalebox{1.2}{$ \log_a(a+b)+\log_a(a-b)-2\log_ac$}} \begin{flushright}{ Answer:\underline{\hspace{2in}}}\end{flushright}
+\vfill
+
+
+
+\end{enumerate}
+\end{document}

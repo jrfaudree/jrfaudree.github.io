@@ -1,0 +1,106 @@
+/*
+CSS for Jill Faudree
+*/
+
+/*elements*/
+
+body {
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  width:100%;
+}
+hgroup{
+  position:relative;
+  left:355px;
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+h1{
+  font-size:3.5em;
+  color:#19019E;
+  margin:5px;
+}
+h2{
+  font-size:1.9em;
+  margin:15px;
+}
+nav a, h2 a, h1 a{
+  text-decoration:none;
+}
+.content{
+  position:relative;
+  left:215px;
+  top:30px;
+}
+nav {
+  background-color:#000;
+  position:fixed;
+  top:0px;
+  left:0px;
+  padding-left:5px;
+  width:200px;
+  height:100%;
+  font-size:1.2em;
+}
+nav .footer{
+  position:absolute;
+  bottom:0px;
+  font-size:0.7em;
+  color:white;
+  font-style: italic;
+}
+nav .uaf{
+  position:absolute;
+  top:1%;
+}
+nav .widget{
+  position:absolute;
+  top:65%;
+}
+nav ul{
+  position:absolute;
+  top:30%;
+  list-style-type: none;
+  padding:0;
+}
+nav a {
+  color:#13568D;
+}
+nav a:hover{
+  color:#003398;
+}
+td:first-child{
+  font-weight: bold;
+}
+
+td {
+    padding-right: 8px;
+}
+/*classes*/
+.divider{
+  background-color:#19019E;
+  position:relative;
+  top:15px;
+  left:197px;
+  height:10px;
+  width:calc(100% - 200px);
+}
+.quizzes{
+  position:relative;
+  top:-545px;
+  left:300px;
+}
+.tests{
+  position:relative;
+  top:-760px;
+  left:500px;
+}
+.uaf {
+  color:#19019E;
+  font-size:1.1em;
+}
+
+.profilepicture{
+  position:absolute;
+  top:15px;
+  left:215px;
+}
+

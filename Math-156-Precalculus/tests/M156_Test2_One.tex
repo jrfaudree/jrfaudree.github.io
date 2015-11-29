@@ -1,0 +1,324 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+%setspace,
+%graphics, 
+fancybox, fancyhdr,
+%pictex, 
+graphicx, enumerate,
+subfig, multicol}
+
+
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%		Problem and Part
+\newcounter{problemnumber}
+\newcounter{partnumber}
+\newcommand{\Problem}{\stepcounter{problemnumber}\setcounter{partnumber}{0}
+       \item[\fbox{\parbox{.18in}{\hfil\theproblemnumber\hfil}}]}
+\newcommand{\Part}{\stepcounter{partnumber}\item[(\alph{partnumber})]}
+\newcommand{\Points}[1]{(#1 points) \quad}
+
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\newcommand\answerbox[3]{#3 \fbox{\rule{#1}{0cm}\rule{0cm}{#2}}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{2pt}
+
+\lhead{\sc Math F156X}
+\chead{\Large \sc Test 2 -- Version ONE} 
+\rhead{\sc Fall 2015}
+\cfoot{}
+\pagestyle{fancy}
+%
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{tabular}{l@{\hspace{.075\linewidth}}  l}
+Your Name (print clearly) &\\
+%Your Instructor\\
+\blankbox{.6\linewidth}{.45in} & Monday, November 2\\
+%\blankbox{.3\linewidth}{.45in}\\
+\end{tabular}
+\bigskip
+
+\bigskip
+\bigskip
+
+{
+\renewcommand{\baselinestretch}{1.8}
+\setlength{\tabcolsep}{.2in}
+\normalsize
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Page&Total Points&\parbox{.8in}{\hfil Score\hfil}\\
+\hline
+1&15&\\
+\hline
+2&20&\\
+\hline
+3&18&\\
+\hline
+4&15&\\
+\hline
+5&20&\\
+\hline
+6&12&\\
+\hline
+extra credit &5&\\
+\hline
+\hline
+Total&100&\\
+\hline
+\end{tabular}
+
+\end{center}
+}
+
+\bigskip
+
+\begin{center}
+\begin{Large}
+Instructions and information:
+\end{Large}
+\end{center}
+
+\begin{itemize}
+\item Please turn off cell phones or any other thing that will go BEEP.
+\item Calculators are {\bf not} allowed on this test.
+\item Read the directions for each problem. You must always show your work to receive partial credit.  
+\item Be wary of doing computations in your head. Instead, write out your
+computations on the exam paper.
+\item If you need more room, use the backs of the pages and indicate to the
+grader where to look.
+\item Raise your hand (or come up to the front) if you have a question.
+\end{itemize}
+
+\hrulefill
+
+%%%%%%% Formulas %%%%%%%%%%
+\begin{center} Formulas \\ 
+\begin{tabular}{lll}
+$n(t)=n_02^{t/a}$&\hspace{-.2in}&$n(t)=n_0e^{rt}$\\
+$m(t)=m_02^{-t/h}$&\hspace{-.2in}&$m(t)=m_0e^{rt}$ where $r=(\ln 2)/h,$\\
+
+$A(t)=P(1+\frac{r}{n})^{nt}$&\hspace{-.2in}&$A(t)=Pe^{rt}$\\
+$\log_b x = (\log_a x )/(\log_a b)$&&\\
+\end{tabular}
+\end{center}
+
+\newpage
+%%%%%%%%%%%
+%BEGIN TEST
+%%%%%%%%%%%
+
+\begin{enumerate}
+%%%%%%%%%%
+%PAGE 1
+%%%%%%%%%%
+
+%%%%Applied Linear
+%2.5 \#39-50
+\item The owner of a toy factory estimates that it costs \$1300 to produce 100 toys in one day and \$2100 to produce 300 toys in one day.
+\begin{enumerate}
+\item (3 points) Assuming that the relationship between cost and the number of toys produced is linear, find a linear function $C$ that models the cost of producing $x$ toys in one day.\\
+\vspace{.7in}
+%\begin{flushright}{Answer: \underline{\hspace{2in}}}\end{flushright}
+\item (2 points) At what rate does the factory's cost increase for every additional toy produced?
+\vspace{.3in}
+%\begin{flushright}{Answer: \underline{\hspace{2in}}}\end{flushright}
+\end{enumerate}
+%%%%combining functions
+%2.7 \#7-16,47-58
+\item (5 points each) Let $f(x)=\sqrt{9-x^2}$ and $g(x)=\sqrt{x+2}.$
+\begin{enumerate}
+\item Find $f/g$ and state its domain.
+\vfill
+\item Find $f\circ g$ and state its domain.
+\vfill
+\end{enumerate}
+\newpage
+%%%%%%%
+%Page 3
+%%%%%%%
+%inverse functions
+%2.8\#49-70
+\item (5 points) Find the inverse of $h(x)=\frac{(2-x^3)^5}{7}.$
+\vfill
+%quadratics
+%3.1\#9-24
+\item Let $g(x)=5x^2-15x +2.$
+\begin{enumerate}
+\item (6 points) Express $g$ in standard form.
+\vfill
+\item (2 points) Find the vertex of the graph of $g.$
+\vspace{.5in}
+\item (2 points) Determine the range of $g.$
+\vspace{.5in}
+\end{enumerate}
+%graphing polys
+%3.2 \#15-30
+\item (5 points)\\
+\begin{minipage}[t]{8cm}
+Sketch the graph of $P(x)=-(x+1)^3(x-3)^2$
+on the axes. Make sure you label all intercepts and exhibits proper end behavior.
+\end{minipage}%
+%\quad
+%\quad
+%\begin{minipage}[r]{12cm}
+\vspace{-1in}
+\begin{flushright}
+\begin{tikzpicture}[scale=0.9]
+\draw[->, thick] (-4,0) -- (4,0)node [pos=1, below] {$x$};
+\draw[->, thick] (0,-4) -- (0,4) node [pos=1, left] {$y$};
+\end{tikzpicture}
+\end{flushright}
+%\end{minipage}
+\newpage
+%%%%%%%%
+%Page 2
+%%%%%%%%%
+%%%Graph transformations; rational and roots
+%2.6 \#29-52
+\item (6 points each) Sketch the graphs below. Label any asymptotes and intercepts.
+\begin{enumerate}
+\item 
+\begin{minipage}[l]{7cm}
+$f(x)=2-\sqrt{x}$
+\end{minipage}%
+\begin{minipage}[c]{10cm}
+\begin{tikzpicture}[scale=0.7]
+\draw[->, thick] (-4,0) -- (4,0)node [pos=1, below] {$x$};
+\draw[->, thick] (0,-4) -- (0,4) node [pos=1, left] {$y$};
+\end{tikzpicture}
+\end{minipage}
+\vfill
+\item 
+\begin{minipage}[l]{7cm}
+$f(x)=\frac{-3}{(x+4)^2}$
+\end{minipage}%
+\begin{minipage}[c]{10cm}
+\begin{tikzpicture}[scale=0.7]
+\draw[->, thick] (-4,0) -- (4,0)node [pos=1, below] {$x$};
+\draw[->, thick] (0,-4) -- (0,4) node [pos=1, left] {$y$};
+\end{tikzpicture}
+\end{minipage}
+\vfill
+\item 
+\begin{minipage}[l]{7cm}
+$f(x)=\vert x^2-1 \vert$
+\end{minipage}%
+\begin{minipage}[c]{10cm}
+\begin{tikzpicture}[scale=0.7]
+\draw[->, thick] (-4,0) -- (4,0)node [pos=1, below] {$x$};
+\draw[->, thick] (0,-4) -- (0,4) node [pos=1, left] {$y$};
+\end{tikzpicture}
+\end{minipage}
+\end{enumerate}
+\vfill
+\newpage
+%%%%%%%%
+%Page 4
+%%%%%%%%
+%long division
+%3.2\#15-24
+\item (5 points) Let \scalebox{1.2}{$r(x)=\frac{x^2-25}{3x^2+17x+10}=\frac{(x-5)(x+5)}{(3x+2)(x+5)}$}
+\begin{enumerate}
+\item Find any horizontal asymptotes or state that none exist.
+\vspace{.6in}
+\item Find any vertical asymptotes or state that none exist.
+\vspace{.6in}
+\end{enumerate}
+%3.7 \#17-36
+\item (5 points) Solve the rational inequality \scalebox{1.2}{$\frac{6x-7}{5x-2}\geq 1.$} Give your answer in interval notation.
+\vfill
+%3.3 \#15-24
+\item (5 points) Find the quotient, $Q(x),$ and remainder  $R(x),$ of \scalebox{1.2}{$\frac{6x^2-17x+7}{2x-3} $.}
+\vfill
+\newpage
+%%%%%%%%
+%Page 5
+%%%%%%%%
+%4.4\#23-48
+\item (5 points) Expand \fbox{\scalebox{1.2}{$\log_2x\sqrt{\frac{y}{z}}$}} using the Laws of Logarithms.
+\vfill
+%4.5 \#11-38, 55-68
+\item (5 points each) Solve.
+\begin{enumerate}
+\item $10^{1-x}=7$
+\vfill
+\item $e^{2x}+e^{x}-20=0$
+\vfill
+\item $\log_6 x +\log_6 (x+1)=1$
+\vfill
+
+\end{enumerate}
+\newpage
+%%%%%%
+%Page 6
+%%%%%%
+%%%Graph transformations; exponentials and logs
+
+\item (5 points each) Sketch the graphs below. Label any asymptotes and intercepts.
+\begin{enumerate}
+\item 
+%4.1 27-40
+\begin{minipage}[l]{7cm}
+$h(x)=4-2^{x-1}$
+\end{minipage}%
+\begin{minipage}[c]{10cm}
+\begin{tikzpicture}[scale=0.7]
+\draw[->, thick] (-4,0) -- (4,0)node [pos=1, below] {$x$};
+\draw[->, thick] (0,-4) -- (0,4) node [pos=1, left] {$y$};
+\end{tikzpicture}
+\end{minipage}
+\vfill
+\item 
+%4.3 61-72
+\begin{minipage}[t]{7cm}
+$f(x)=1+\ln(-x)$\\
+\end{minipage}%
+\begin{minipage}[c]{10cm}
+\begin{tikzpicture}[scale=0.7]
+\draw[->, thick] (-4,0) -- (4,0)node [pos=1, below] {$x$};
+\draw[->, thick] (0,-4) -- (0,4) node [pos=1, left] {$y$};
+\end{tikzpicture}
+\end{minipage}
+\end{enumerate}
+\vfill
+\end{enumerate}
+%\newpage
+%%%%%%%%%
+%Extra Credit
+%%%%%%%%%
+{\sc{Extra Credit}} (5 points) A certain population of fish has a relative growth rate of $2.5\%$ per year. How long will it take for the population to double? (Yes. You do have enough information to complete t his problem.)
+\vspace{.6in}
+
+\end{document}
+%%%%%%
+%EXTRA PROBS
+%%%%%%
+%1.2(\#55-60)
+\item (4 points) Evaluate \scalebox{1.2}{$(-32)^{-3/5}.$}\\
+\begin{flushright}{ Answer:\underline{\hspace{2in}}}\end{flushright}
+\vspace{.75in}
