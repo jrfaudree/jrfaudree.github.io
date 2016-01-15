@@ -95,6 +95,11 @@ td {
   top:-760px;
   left:500px;
 }
+.miscellaneous{
+  position:relative;
+  top:-860px;
+  left:700px;
+}
 .uaf {
   color:#19019E;
   font-size:1.1em;
