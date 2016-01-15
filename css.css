@@ -86,19 +86,16 @@ td {
   width:calc(100% - 200px);
 }
 .quizzes{
-  position:relative;
-  top:-545px;
-  left:300px;
+  float: right;
+  margin: 0 0 0 70px;
 }
 .tests{
-  position:relative;
-  top:-760px;
-  left:500px;
+  float: right;
+  margin: 0 0 0 70px;
 }
 .miscellaneous{
-  position:relative;
-  top:-880px;
-  left:750px;
+  float: right;
+  margin: 0 0 0 70px;
 }
 .uaf {
   color:#19019E;
