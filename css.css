@@ -85,16 +85,8 @@ td {
   height:10px;
   width:calc(100% - 200px);
 }
-.quizzes{
-  float: right;
-  margin: 0 0 0 70px;
-}
-.tests{
-  float: right;
-  margin: 0 0 0 70px;
-}
-.miscellaneous{
-  float: right;
+.quizzes,.tests,.miscellaneous, .worksheets{
+  float: left;
   margin: 0 0 0 70px;
 }
 .uaf {
