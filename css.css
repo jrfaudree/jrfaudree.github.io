@@ -85,7 +85,7 @@ td {
   height:10px;
   width:calc(100% - 200px);
 }
-.quizzes,.tests,.miscellaneous, .worksheets{
+.content > div{
   float: left;
   margin: 0 0 0 70px;
 }
