@@ -1,0 +1,159 @@
+\documentclass[11pt]{article}
+% Time-stamp: <homework-02.tex, saved on Fri, Sep 14, 2007 at 12:46pm>
+\usepackage[margin=1in, head=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx,color}
+
+%\usepackage{pdfsync}
+\addtolength{\textwidth}{.5in}
+\addtolength{\leftmargin}{-1in}
+\addtolength{\textheight}{.5in}
+\addtolength{\topmargin}{-0.5in}
+
+%\pagestyle{fancy}
+%\lhead{MATH 200X }
+%\chead{Fall 2007}
+%\rhead{FINAL EXAM}
+%\lfoot{}
+%\cfoot{\thepage}
+%\rfoot{}
+
+\setcounter{secnumdepth}{0}
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\emptyset}{\varnothing}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\clm}{\par\textit{Claim:}\par}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\sect}{\textsection}
+
+\parindent=0in
+\parskip=0.5\baselineskip
+
+\begin{document}
+\begin{center}MATH 405: Abstract Algebra (W)  \\ Spring 2016 \\ MWF 2:15-3:15pm \\ Brooks 103
+\end{center}
+
+\hrulefill
+
+\textbf{Instructor:} Jill Faudree\\
+\textbf{Contact Details:} Chapman 301D, jrfaudree@alaska.edu, 474-7385\\
+\textbf{Office Hours:} (\textbf{\emph{tentative}})  M: 3:30-4:30, T: 10:45-11:45, W 10:30-11:30 and by appointment. Also, you are welcome to drop by. Note that these hours may change depending on student demands and scheduling concerns.\\
+\textbf{Textbook:} \emph{Contemporary Abstract Algebra} by Joseph A. Gallian, Brooks/Cole\\
+\textbf{Course Web Page:} Blackboard (for grades and homework solutions)\\
+\textbf{Prerequisites:} ENGL F111X; ENGL F211X or ENGL F213X; MATH F265; or permission of instructor.  \\
+\hrulefill
+
+\textsc{Course Overview and Goals:}
+
+ From the Course Catalog:
+\begin{quote}
+Theory of groups, rings and fields.  \end{quote}
+
+This course is an introduction to Abstract Algebra. We will begin with preliminaries including  the  Division Algorithm, greatest common divisor, the Fundamental Theorem of Arithmetic and congruence arithmetic. Then we proceed to Group Theory including basic definitions, classic examples, subgroups, cosets, Lagrange's Theorem, homomorphisms. Next we cover Ring Theory including basic definitions, classic examples, integral domains, fields, the Division Algorithm for polynomial rings over a field, the Fundamental Theorem of Algebra, and ideals.
+
+\textsc{Course Mechanics}:
+
+\textbf{Class meetings} will always begin with an opportunity to ask questions. Often students will write their question on the board or email me questions ahead of time. Questions can be about homework, issues from past lectures, or from the assigned reading. Then I will begin walking through the assigned reading from the text. (Sometimes called {\it{lecture}}.) This discussion assumes you have read the assigned section at least briefly and will be interactive.
+
+\textbf{Homework} from a particular section will be posted as soon as we {\it{start}} a section and will be due approximately weekly, with due dates varying to suit our schedule. \\
+
+You may work with others on the homework and are encouraged to do so. However, you should always write up your solutions independently. You are expected to attempt every problem and will lose points for not doing so. Your written solutions will be graded on correctness.\\
+
+Solutions to the homework will be posted directly after the due date. No late homework is accepted. \\
+
+\textbf{Attendance} and \textbf{class participation} are required. More than three unexcused absences may result in a faculty-initiated withdrawal for failure to adequately participate in the course.\\
+
+There will be two {\textbf{midterms} and a {\textbf{comprehensive final exam.} The tentative dates for the midterms are Monday 22 February and Monday 4 April. The final exam is scheduled for Thursday May 5 from 1:00-3:00 pm. \textbf{Make-up Midterms} will be given only for excused absences and only if approved in advance.\\
+
+
+\textbf{Grades} will be calculated according to the following rubric:
+\begin{tabular}{|l|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  homework & 25\% \\
+  midterm 1 & 20\% \\
+  midterm 2 & 20\%\\
+  final exam & 35\% \\
+  \hline
+\end{tabular}
+
+Grade Bands: A, A- (90 - 100\%), B+,B, B- (80 - 89\%), C+, C, C- (70 - 79\%), D+, D, D-
+(60 - 69\%), F (0 - 59\%).  I reserve the right to lower the thresholds. The grade of $A+$ is reserved for outstanding performance in the course overall.\\
+
+\textsc{(very tentative) Schedule of Topics:}
+
+\begin{tabular}{|l|l|l|l|l|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  week  & topics &  & week & topics \\
+  beginning&&&beginning&\\
+  \hline
+  1/11 & preliminaries,  Ch 0 &  & 3/7 & Ch 11-12\\
+  1/18 & Ch 0-1 &  & 3/14& Spring Break \\
+  1/25 & Ch 1-2 &  & 3/21 & Ch 13-14\\
+  2/1 & Ch 3-4&  & 3/28 & Ch 14-15\\
+  2/8& Ch 4-5 &  & 4/4 & Midterm 2, Ch 16\\
+  2/15 & Ch 6-7 &  & 4/11& Ch 16-17 \\
+  2/22 & Midterm 1, Ch 8 &  &4/18& Ch 17-18\\
+  2/29 & Ch 9-10 &  &   4/25 &  Ch 18-19 \\
+   &&&5/2 & Review, Final Exam Thursday May 5 \\
+  \hline
+\end{tabular}
+
+
+\textsc{Miscellaneous Other Issues:}
+
+\textbf{Communication:} I will communicate with you using three different channels: (1) class, (2) Blackboard (for general announcements) and (3) email (for private correspondence). I will not email you casually. If you receive an email from me, you need to read it and respond, if necessary.  Class time and email is also the best way for you to communicate with me. 
+
+\textbf{Course accommodations:} If you need course adaptations or accommodations because of a
+disability, please inform your instructor during the first week of the semester, after consulting
+with the Office of Disability Services, 203 Whitaker (474-7403).
+
+\textbf{University and Department Policies:} Your work in this course is governed by the UAF Honor
+Code. The Department of Mathematics and Statistics has specific policies on incomplete grades,
+late withdrawals, and early final exams, some of which are listed below. A complete listing
+can be found at
+http://www.dms.uaf.edu/dms/Policies.html.
+
+\textbf{Late Withdrawal:} This semester the last day for withdrawing with a W  appearing on your
+transcript is Friday March 25. After this date no student may withdraw from a course unless the student has a passing grade. If, in my opinion, a student is not participating adequately in the
+class, I may elect to drop or withdraw this student. Inadequate participation includes but is not limited to: repeatedly missing class, not participating in class, missing a midterm, failing to turn in a written assignment, or having a failing average (below 70\%) at the withdrawal date.
+
+\textbf{Academic Honesty:} Academic dishonesty, including cheating and plagiarism, will not be tolerated. It is a violation of the Student Code of Conduct and will be punished according to
+UAF procedures.
+
+\textbf{Courtesies:} As a courtesy to your instructor and fellow students, please arrive to class on
+time, turn off your electronic devices (phones, laptops, iPods, etc.) and pay attention in class.\\
+
+\vfill
+
+\begin{center} \sc{Your First Assignment}\end{center} 
+
+\begin{tabular}{ll}
+Wednesday 20 Jan & by the beginning of class\\
+& Read Chapter 0 and the webpage \\
+& https://www.math.hmc.edu/~su/math131/good-math-writing.pdf \\
+Monday 25 Jan & by the beginning of class\\
+& \textbf{Homework 1:}\\
+& Ch 0 \#1,2,3,4,6,7,9,11,12,13,14,16,38,58\\
+\end{tabular}
+
+\vfill 
+
+\begin{center} \sc{Guidelines for Writing Homework} \end{center} 
+\begin{enumerate}
+\item The paper you turn in should be a FINAL DRAFT and not a FIRST DRAFT. (eg Your writing should be neat. Your work should be organized.)
+\item Label each part of each problem and write them in order.
+\item Leave some white space at the margins and between problems.
+\item Write only on one side of the paper.
+\item Unless explicitly told otherwise, you should always explain your answer. \end{enumerate}
+
+
+
+
+
+
+\end{document}
