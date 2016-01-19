@@ -1,0 +1,161 @@
+\documentclass[11pt]{article}
+% Time-stamp: <homework-02.tex, saved on Fri, Sep 14, 2007 at 12:46pm>
+\usepackage[margin=1in, head=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx,color}
+
+%\usepackage{pdfsync}
+\addtolength{\textwidth}{.5in}
+\addtolength{\leftmargin}{-1in}
+\addtolength{\textheight}{.5in}
+\addtolength{\topmargin}{-0.5in}
+
+%\pagestyle{fancy}
+%\lhead{MATH 200X }
+%\chead{Fall 2007}
+%\rhead{FINAL EXAM}
+%\lfoot{}
+%\cfoot{\thepage}
+%\rfoot{}
+
+\setcounter{secnumdepth}{0}
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\emptyset}{\varnothing}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\clm}{\par\textit{Claim:}\par}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\sect}{\textsection}
+
+\parindent=0in
+\parskip=0.5\baselineskip
+
+\begin{document}
+\begin{center}MATH/CS 307:  Discrete Mathematics \\ Spring 2016 \\ MWF 1:00-2:00pm \\ Grue 206
+\end{center}
+
+\hrulefill
+
+\textbf{Instructor:} Jill Faudree\\
+\textbf{Contact Details:} Chapman 301D, jrfaudree@alaska.edu, 474-7385\\
+\textbf{Office Hours:} (\textbf{\emph{tentative}})  M: 3:30-4:30, T: 10:45-11:45, W 10:30-11:30 and by appointment. Also, you are welcome to drop by. Note that these hours may change depending on student demands and scheduling concerns.\\
+\textbf{Textbook:} \emph{Discrete Mathematics} by Richard Johnsonbaugh, 7th edition, Prentice Hall\\
+\textbf{Course Web Page:} Blackboard (for grades and homework solutions, as needed); \\
+\textbf{Prerequisites:} MATH F252X Calculus II \\
+\hrulefill
+
+\textsc{Course Overview and Goals:}\\
+
+ From the Course Catalog:
+\begin{quote}
+Logic, counting, sets and functions, recurrence relations, graphs and trees. Additional topics chosen from probability theory.  \end{quote}
+
+This course is an introduction to a variety of topics from Discrete Mathematics that arise frequently in the study of Computer Science and Algorithms. We will cover roughly Chapters 1-8, with a focus on  sets, logic, induction, functions, relations, counting, recurrence relations, and graph theory.\\
+
+Unlike many lower-level math courses, {\it{how}} you write the solution is as  important as whether you get the correct answer. In many problems, the ``answer" \emph{IS} an argument. For this reason, attending class, taking notes, working homework problems, checking worked solutions and graded work is imperative. \\
+
+\textsc{Course Mechanics}:
+
+\textbf{Class meetings} will always begin with an opportunity to ask questions. Often students will write their question on the board or email me questions ahead of time. Questions can be about homework, issues from past lectures, or from the assigned reading. Then I will begin walking through the assigned reading from the text.  This discussion assumes you have read the assigned section at least briefly and will be interactive. We will usually work problems in class. Frequently, we will complete worksheets in class. \\
+
+\textbf{Homework} from a particular section will be posted as soon as we {\it{start}} a section. Only blue problems will be assigned. These have solutions or hints in the back of the book. Homework will not be collected but it is important to recognize that {\it{working all assigned problems  is the most important part of learning mathematics}.} All homework should be completed within two class meetings. \\
+
+For example, the homework assigned today should be completed (all problems worked and questions addressed) \emph{prior} to the beginning of class on Friday 22 January. In particular, you should have \emph{attempted} every problem prior to Wednesday 20 January, so you can ask questions. However, you are expected to make use of office hours and the Math \& Stat Lab as there is not time to answer all questions in class.\\
+
+\textbf{Quizzes} will be given every Friday over material covered since the last quiz. I reserve the right to give unannounced quizzes at any time. A student may drop one quiz grade. There are no make-up quizzes.\\
+
+\textbf{Attendance} and \textbf{class participation} are required. More than three unexcused absences may result in a faculty-initiated withdrawal for failure to adequately participate in the course.\\
+
+There will be three {\textbf{midterms} and a {\textbf{comprehensive final exam.} The tentative dates for the midterms are Wedensday 17 February, Monday 28 March and Monday 25 April. The final exam is scheduled for Tuesday May 3 from 1:00-3:00 pm. It is cumulative. \textbf{Make-up Midterms} will be given only for excused absences and only if approved in advance.\\
+
+
+\textbf{Grades} will be calculated according to the following rubric:
+\begin{tabular}{|l|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  quizzes & 10\% \\
+  midterm 1 & 20\% \\
+  midterm 2 & 20\%\\
+  midterm 3 & 20\%\\
+  final exam & 30\% \\
+  \hline
+\end{tabular}
+
+Grade Bands: A, A- (90 - 100\%), B+,B, B- (80 - 89\%), C+, C, C- (70 - 79\%), D+, D, D-
+(60 - 69\%), F (0 - 59\%).  I reserve the right to lower the thresholds. The grade of $A+$ is reserved for outstanding performance in the course overall.\\
+
+\textsc{(very tentative) Schedule of Topics:}
+
+\begin{tabular}{|l|l|l|l|l|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  week  & topics &  & week & topics \\
+  beginning&&&beginning&\\
+  \hline
+  1/11 & preliminaries,  \sect 1.1 &  & 3/7 & \sect 5.4, 6.1-6.2 \\
+  1/18 & \sect 1.2-1.4 &  & 3/14& Spring Break \\
+  1/25 & \sect 1.5-6, 2.1 &  & 3/21 & \sect 6.3-6.4\\
+  2/1 & \sect 2.2, 2.4-2.5 &  & 3/28& Test 2, \sect 6.5-6.6\\
+  2/8& \sect 3.1-3.2 &  & 4/4 & \sect 6.7-6.8, 7.1\\
+    2/15 & Test 1, \sect 3.3-3.5 &  & 4/11& \sect 7.2-7.3, 8.1 \\
+  2/22 & \sect 4.1-4.3 &  &4/18& \sect 8.2-8.4\\
+  2/29 & \sect 4.4, 5.1-5.2 &  &   4/25 &  Test 3, Catch-up and Review \\
+   & &&5/2 & Review, Final Exam Tuesday May 3 \\
+  \hline
+\end{tabular}
+
+
+\textsc{Miscellaneous Other Issues:}
+
+\textbf{Extra Support}: The Department of Mathematics and Statistics webpage has a link to  Math Services (http://www.uaf.edu/dms/mathlab/). Here is information about the free, no-appointment-necessary Math \& Stat Tutoring Lab and the free one-on-one tutoring. These are both great resources for students in this course.
+
+\textbf{Communication:} I will communicate with you using three different channels: (1) class, (2) Blackboard (for general announcements) and (3) email (for private correspondence). I will not email you casually. If you receive an email from me, you need to read it and respond, if necessary.  Class time and email is also the best way for you to communicate with me. 
+
+\textbf{Course accommodations:} If you need course adaptations or accommodations because of a
+disability, please inform your instructor during the first week of the semester, after consulting
+with the Office of Disability Services, 203 Whitaker (474-7403).
+
+\textbf{University and Department Policies:} Your work in this course is governed by the UAF Honor
+Code. The Department of Mathematics and Statistics has specific policies on incomplete grades,
+late withdrawals, and early final exams, some of which are listed below. A complete listing
+can be found at
+http://www.dms.uaf.edu/dms/Policies.html.
+
+\textbf{Late Withdrawal:} This semester the last day for withdrawing with a W  appearing on your
+transcript is Friday March 25. After this date no student may withdraw from a course unless the student has a passing grade. If, in my opinion, a student is not participating adequately in the
+class, I may elect to drop or withdraw this student. Inadequate participation includes but is not limited to: repeatedly missing class, not participating in class, missing a midterm, repeatedly failing to take quizzes, or having a failing average (below 70\%) at the withdrawal date.
+
+\textbf{Academic Honesty:} Academic dishonesty, including cheating and plagiarism, will not be tolerated. It is a violation of the Student Code of Conduct and will be punished according to
+UAF procedures.
+
+\textbf{Courtesies:} As a courtesy to your instructor and fellow students, please arrive to class on
+time, turn off your electronic devices (phones, laptops, iPods, etc.) and pay attention in class.\\
+
+\hrulefill
+
+By Wednesday 20 January:
+\begin{itemize}
+\item Read \sect 1.1-1.2
+\end{itemize}
+
+By Friday 22 January:
+\begin{itemize}
+\item Read \sect 1.3
+\item Quiz 1 over \sect 1.1
+\end{itemize}
+
+Homework \sect 1.1 $\# 1,4,7,10,13,16,20,24,28,32,36,37,47,53,57,64,68,76,77,80,83,87$
+
+\hrulefill
+
+Here is how to be successful in this course.
+\begin{itemize}
+\item Attend class and take notes, especially of examples, in a notebook.
+\item Work all homework problems in a notebook. Number the problems and check your answers.
+\item Attempt all problems at least one class period before they are due so that you can ask questions.
+\item Look over your graded quizzes and the solutions to the quizzes. Keep your quizzes and tests to study from later.
+\end{itemize}
+
+\end{document}
