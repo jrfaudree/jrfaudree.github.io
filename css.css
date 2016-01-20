@@ -6,7 +6,7 @@ CSS for Jill Faudree
 
 body {
   font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
-  width:80%;
+  width:calc(100% - 200px);
 }
 hgroup{
   position:relative;
@@ -86,7 +86,7 @@ td {
   top:15px;
   left:197px;
   height:10px;
-  width:calc(100% - 200px);
+  width:100%;
 }
 .content > div{
   float: left;
