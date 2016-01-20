@@ -55,13 +55,16 @@ nav .uaf{
 }
 nav .widget{
   position:absolute;
-  top:65%;
+  bottom:12%;
 }
 nav ul{
   position:absolute;
-  top:30%;
+  top:33%;
   list-style-type: none;
   padding:0;
+}
+nav li{
+  padding-top:7px;
 }
 nav a {
   color:#13568D;
