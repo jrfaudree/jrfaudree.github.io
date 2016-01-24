@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{20pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{Quiz \#1} 
+\rhead{\sc Spring 2016 \\22 Jan 16}
+\cfoot{}
+\pagestyle{fancy}
+
+
+
+
+\begin{document}
+\thispagestyle{fancy}
+
+
+\noindent {\Large{NAME:\underline{\hspace{3in}}}}\\
+
+\noindent This quiz contains 5 problems worth 30 points. You may not use books, notes, or a calculator. You have 30 minutes to take the quiz.\\
+
+\noindent \hrulefill
+\be
+\item (6 points) Let $X=\{a,b,c\},\: Y=\{c,d,e,f\},$ $Z=\{a,d,e\},$ and let the universe $U=\{a,b,c,d,e,f,g\}.$
+\be
+\item Find $X \cap (Y \cup Z).$
+\vfill
+\item Find $ (\overline{X \cup Y}) \cup Z.$
+\vfill
+\item Is $X \subseteq (Y \cup Z)$? Explain your answer.
+\vfill
+\ee
+
+\item (3 points) Let $A=\{0,1,2\}$ and $B=\{2,4\}.$ List the elements in the set $A \times B.$\\
+\vfill
+
+\item (6 points) Let $X=\{a,b,c\}.$\\
+\be
+\item List all subsets of $X.$\\
+\vfill
+\item List all partitions of $X.$\\
+\vfill
+\ee
+\newpage
+
+\item (12 points) Use $A = \{\ZZ, \: \{\sqrt{2}, \: \sqrt{3}, \: \sqrt{5}\}, \: \pi, \sqrt{2} \}$ to answer questions (a) -(f) below.\\
+\be
+\item Find the cardinality of $A.$\\
+\vspace{.2in}
+\item Is $\sqrt{2} \in A$? Explain.\\
+\vspace{.5in}
+\item Is $\sqrt{5} \in A$? Explain.\\
+\vspace{.5in}
+\item Is $\sqrt{2} \subseteq A$? Explain.\\
+\vspace{.5in}
+\item Is $\{\sqrt{2}\} \subseteq A$? Explain.\\
+\vspace{.5in}
+\item Is $\{\sqrt{2}, \sqrt{3}\} \subseteq A$? Explain.\\
+\vspace{.5in}
+\ee
+\item (3 points) A survey of 100 children found that\\
+3 had visited Anchorage, Juneau, and Seward, \\
+4 had visited Anchorage and Juneau,\\
+13 had visited Anchorage and Seward,\\
+3 had visited Seward and Juneau,\\
+44 had visited Anchorage,\\
+23 had visited Seward, and \\
+12 had visited Juneau.\\
+How many of the 100 children had visited none of the  three towns? (Show your work to receive partial credit. A Venn diagram might be a good idea.)
+
+\ee
+\end{document}
