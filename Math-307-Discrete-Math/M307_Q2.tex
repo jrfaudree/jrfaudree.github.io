@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{20pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{Quiz \#2\\ \S 1.2-1.4} 
+\rhead{\sc Spring 2016 \\29 Jan 16}
+\cfoot{}
+\pagestyle{fancy}
+
+
+
+
+\begin{document}
+\thispagestyle{fancy}
+
+
+\noindent {\Large{NAME:\underline{\hspace{3in}}}}\\
+
+\noindent This quiz contains 7 problems worth 30 points. You may not use books, notes, or a calculator. You have 30 minutes to take the quiz.\\
+
+\noindent \hrulefill
+\be
+%1.2.19
+\item (2 points) Given that $p$ is true, $q$ is true, and $r$ is false, determine the truth value of the proposition \fbox{$\neg p \vee \neg (q \wedge r)$}
+\vspace{0.75in}
+\item (4 points) Write the truth table for the proposition \fbox{$ (p \vee q) \wedge \neg p$}
+\vspace{3in}
+\item (3 points each) Let $p$ be the proposition \fbox{If $x > 1,$ then $x$ is not a solution.}
+\be
+\item State the converse of $p.$
+\vspace{0.75in}
+\item State the contrapositive of $p.$
+\vspace{0.75in}
+\ee
+\newpage
+\item (2 points) Negate the proposition \fbox{If the sky is blue, then the pillow is soft.} without using the words ``It is not the case that ...." (Hint: Your answer should include the word \emph{and}.)
+\vfill
+
+
+\item (2 points each) Given that $p$ and $q$ are true, $r$ and $s$ are false. Determine the truth value of each proposition below.
+\be
+\item $\neg p \rightarrow (q \vee r)$
+\vspace{.75in}
+\item $\neg(p \vee \neg q) \leftrightarrow (r \wedge s)$
+\vspace{.75in}
+\item $p \rightarrow (q \rightarrow r)$
+\vspace{0.75in}
+\ee
+\item (5 points each) Determine whether each argument below is valid and justify your answer.
+\be
+\item \begin{tabular}{l}
+$p \rightarrow (q \vee r)$\\
+$p \wedge \neg q$\\
+$r \vee q$\\
+\hline
+$\therefore q$
+\end{tabular}
+
+
+\vfill
+\item \begin{tabular}{l}
+$p$\\
+$p \rightarrow q$\\
+$\neg q \vee r$\\
+\hline
+$\therefore r$
+\end{tabular}
+
+\vfill
+\ee
+\ee
+\end{document}
