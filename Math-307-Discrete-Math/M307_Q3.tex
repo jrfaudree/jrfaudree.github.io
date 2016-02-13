@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{20pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{Quiz \#3\\ \S 1.5-1.6} 
+\rhead{\sc Spring 2016 \\4 Feb 16}
+\cfoot{}
+\pagestyle{fancy}
+
+
+
+
+\begin{document}
+\thispagestyle{fancy}
+
+
+\noindent {\Large{NAME:\underline{\hspace{3in}}}}\\
+
+\noindent This quiz contains 3 problems worth 30 points. You may not use books, notes, or a calculator. You have 30 minutes to take the quiz.\\
+
+\noindent \hrulefill
+\be
+\item (4 points each) Negate each  proposition below.
+\be 
+\item $\exists x ~(P(x) \wedge Q(x))$
+\vfill
+\item $\forall x \exists y ~ (Q(x) \rightarrow P(y))$
+\vfill
+\ee
+\item (7 points) Determine the truth value of each statement and justify your answer.
+\be
+\item $\forall a \in \ZZ,$ if $a\geq 0$, then the graph of $y=ax^2$ is a parabola that opens up.\\
+\vfill
+\item $\exists x \in \QQ,$ $(q > 0) \wedge (\frac{1}{q} < 2).$
+\vfill
+\item $\forall x \in \RR,$ $(x < 1) \vee (2x+1 \geq 3).$
+\vfill
+\ee
+
+
+\newpage
+\item (3 points each) Determine the truth value of each of the propositions below assuming that the domain of discourse is $\RR \times \RR.$ In each case you must justify your answer.
+\be
+\item $\exists y \forall x ~(x^2 < y+1)$
+\vfill
+\item $\forall y \exists x ~(x^2 < y+1)$
+\vfill
+\item $\forall x \forall y ~[(x < y) \rightarrow (x^2 < y^2)]$
+\vfill
+\item $\forall x \exists y ~[(x < y) \rightarrow (x^2 < y^2)]$
+\vfill
+\item $\exists x \forall y ~[(x <y) \rightarrow (x^2 < y^2)]$
+\vfill
+\ee
+\ee
+
+(2 points extra credit) Use symbolic logic and known logical equivalences  (not a truth table) to prove why the two statements below are logically equivalent. \\
+(a) If today is Friday, then we  have a quiz.\\
+(b) Either today is not Friday or we have a quiz.\\
+\vspace{1in}
+\end{document}
