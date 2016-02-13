@@ -1,0 +1,166 @@
+\documentclass[12pt]{article}
+% Time-stamp: <homework-02.tex, saved on Fri, Sep 14, 2007 at 12:46pm>
+\usepackage[margin=1in, head=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+%\usepackage{pdfsync}
+\addtolength{\textwidth}{.5in}
+\addtolength{\leftmargin}{-1in}
+\addtolength{\textheight}{.5in}
+\addtolength{\topmargin}{-0.5in}
+
+%\pagestyle{fancy}
+%\lhead{MATH 200X }
+%\chead{Fall 2007}
+%\rhead{FINAL EXAM}
+%\lfoot{}
+%\cfoot{\thepage}
+%\rfoot{}
+
+\setcounter{secnumdepth}{0}
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\emptyset}{\varnothing}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\clm}{\par\textit{Claim:}\par}
+\newcommand{\diam}{\mathrm{diam}}
+
+\parindent=0in
+\parskip=0.5\baselineskip
+
+\begin{document}
+\begin{center}MATH 307  \: FALL 2008 \\ \textsc{MIDTERM I}\\3 October 2008
+\end{center}
+ \hfill NAME:\hspace{2in}
+
+\hline
+\hline
+\smallskip
+DIRECTIONS: This midterm contains seven problems worth a total of 100 points. It is closed-book and closed-note. Table 1.1.1 is attached to the last sheet of the midterm. When providing an explanation or justification, you  must use complete sentences. All proofs should be formal, including a clear beginning and end.\\
+\smallskip
+\hline
+
+\begin{enumerate}
+\item (15 points) Let $P$ be the proposition:
+ \emph{A sufficient condition for the stock market to fall is for winter to arrive early}.  \\
+\begin{enumerate}
+\item State $P$ as a conditional proposition. (That is, rewrite $P$ as an If-then statement.)\\
+\vfill
+\item Write the converse of $P$.\\
+\vfill
+\item Write the  contrapositive of $P$.\\
+\vfill
+\item Write the negation of $P.$ (Do not use the words ``It is not the case that...")\\
+\vfill
+\item Which, if any, of the statements in parts $b$, $c$, and $d$, logically equivalent to $P$?
+\vfill
+\end{enumerate}
+\newpage
+
+\item (10 points) Use a truth table to determine if the proposition $(p \vee q) \leftrightarrow r$ is logically equivalent to the proposition $(\sim p) \vee (\sim q) \vee r.$ Provide a few words of explanation with your answer.\\
+    
+    \vspace{.3in}
+    
+   {\Large{ \begin{tabular}{|c|c|c|c|}
+      \hline
+      % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+      $p$ & $q$ & $r$ & \hspace{5in} \\
+      \hline
+      \hline
+      T & T & T & \\
+      \hline
+      T & T & F &  \\
+      \hline
+      T & F & T &  \\
+      \hline
+      T & F & F &  \\
+      \hline
+      F & T & T &  \\
+      \hline
+      F & T & F &  \\
+      \hline
+      F & F & T &  \\
+      \hline
+      F & F & F & \\
+      \hline
+    \end{tabular}}}
+    \vfill
+    \newpage
+
+\item (10 points) Use a truth table to determine if the argument below is valid. Provide a few words of explanation with your answer.\\
+      argument
+      \begin{tabular}{l}
+        $(p \to q) \vee r$ \\
+        $\sim r \to p$ \\
+      \hline
+       $\therefore \: q \vee \sim r$
+    \end{tabular}\\
+    
+
+    \vspace{.3in}
+
+  { \Large{ \begin{tabular}{|c|c|c|c|}
+      \hline
+      % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+      $p$ & $q$ & $r$ & \hspace{5in} \\
+      \hline
+      \hline
+      T & T & T & \\
+      \hline
+      T & T & F &  \\
+      \hline
+      T & F & T &  \\
+      \hline
+      T & F & F &  \\
+      \hline
+      F & T & T &  \\
+      \hline
+      F & T & F &  \\
+      \hline
+      F & F & T &  \\
+      \hline
+      F & F & F & \\
+      \hline
+    \end{tabular}}}
+    \vfill
+    \newpage
+
+\item (10 points) Use Theorem 1.1.1 Logical Equivalences to verify the logical equivalence: \\
+$[\sim(q \vee \sim p)] \vee (q \wedge p) \equiv p. $ Supply a reason for each step.
+    \vfill
+    \newpage
+
+\item (15 points) Negate each of the following propositions.\\
+\begin{enumerate}
+\item $\forall x \in \mathbb{R} \: \exists y \in \mathbb{Q}$ such that $\frac{x}{100} < y < x.$\\
+\vfill
+\item $\forall x \in \mathbb{Z},$ if $x \geq 10$ and $x$ is prime, then $x+2$ is not prime or $x+4$ is not prime.
+\vfill
+\item $\forall x \in \mathbb{R}$, $|x|<1$ if and only if $x^2<1.$
+\vfill
+\end{enumerate}
+\newpage
+
+\item (30 points) Determine the truth value for each of the following and justify your answer.
+\begin{enumerate}
+\item For every composite number $c$, $c^2 \geq 16.$
+\vfill
+\item $\forall x \in \mathbb{R}$ if $x^2$ is even, then $x$ is even.
+\vfill
+\item $\forall x \in \mathbb{R}$ such that $x \not = 0, \: \exists y \in \mathbb{R}$ such that $xy > 0.$
+\vfill
+\end{enumerate}
+\newpage
+
+\item \begin{enumerate}
+ \item (5 points) Define what it means for the integer $a$ to be divisible by the integer $b.$\\
+ \vspace{1in}
+
+ \item (10 points) Use the definitions (of divisibility and odd) to prove that, for any two consecutive odd integers, the difference of their squares is a multiple of 8. (Note: for any two numbers $n$ and $m$ the \emph{difference of their squares} means $n^2-m^2.$)
+     \end{enumerate}
+
+
+\end{enumerate}
+\end{document}

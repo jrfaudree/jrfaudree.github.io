@@ -1,0 +1,125 @@
+\documentclass{amsart}
+%\documentstyle[11pt]{article}
+\pagestyle{empty} \setlength{\topmargin}{-.5in}
+\addtolength{\textheight}{2in} \addtolength{\evensidemargin}{-1in}
+\addtolength{\oddsidemargin}{-1in} \addtolength{\textwidth}{1in}
+%\setlength{\parindent}{0pt}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\un}{\mathcal{U}}
+\newcommand{\z}{\mathbb{Z}}
+\begin{document}
+
+
+\Large{
+\begin{center}Math 307\\
+Exam II - Solutions\\
+\begin{enumerate}
+\item (20 points) Let $A=\{1,2,3\}, \: B=\{x \in \real | 0 \leq x \leq 2 \},$ and
+$C= \{x \in \real | -1 \leq x \leq 3\}.$ Assume the universe is the
+set of real numbers.The answers to the first four questions are not
+unique.
+\begin{enumerate}
+\item Give an example of a proper, nonempty subset of $A.$ \\ $\{1\}$
+\item List two distinct elements of the set $B.$ \\ 1,2
+\item List two distinct elements of the set $\mathcal{P}(B),$ the
+power set of $B.$ \\ $\{1\},\{2\}$
+\item Give an example of a nonempty set disjoint from $B.$ \\
+$\{3\}$
+\item Find $B \triangle C.$ \\ $[-1,0) \cup (2, 3]$
+\item Find $B \cap A.$ \\ $\{1,2\}$
+\item Find $B \cup A.$ \\ $[0,2] \cup \{3\}$
+\item Find $\overline{B}.$ \\ $(- \infty, \infty )$
+\item Find $A - C.$ \\ $ \emptyset $
+\item Find $\overline{A} \cup \overline{B}.$\\ Using the fact that $\overline{A} \cup \overline{B}
+= \overline{ A \cap B},$ we get $\{ x \in \real | x \not = 1 \wedge
+x \not = 2 \}$
+\end{enumerate}
+\item (20 points) Let $A=\{1,2,3,4, \cdots, 29,30\}.$ \begin{enumerate}
+\item How many distinct subsets of $A$ are possible? \\ $2^{30}$
+\item How many distinct subsets of $A$ have exactly eight elements?
+\\ $ 30 \choose 8$
+\item Assuming all subsets of $A$ are equally likely, what is the
+probability of picking a subset with exactly eight elements?
+\\ ${30 \choose 8}/ 2^{30}$
+\item How many eight element subsets contain both 1 and 2 or contain
+both 3 and 4? \\ ${28 \choose 6}+{28 \choose 6} - {26 \choose 4}$
+\end{enumerate}
+
+\item(10 points) Use the laws of set theory to simplify
+$$\overline{(\overline{A-B}) \cap A}.$$
+\\ $ \overline{(\overline{A-B}) \cap A}= \overline{(\overline{A-B})} \cup \overline{A}
+= (A-B) \cup \overline{A}= (A \cap \overline{B}) \cup \overline{A}
+ = (A \cup \overline{A}) \cap (\overline{B} \cup \overline{A}) =
+\un \cap  (\overline{B} \cup \overline{A})= (\overline{B} \cup
+\overline{A})$
+\item (10 points) Write and label the converse, inverse, and contrapositive
+of the implication:
+
+If it is Saturday and there is snow,  Tom goes skiing. \\
+converse: If Tom goes skiing, then it's Saturday and there's snow.
+\\
+inverse: If it is not Saturday or there isn't snow, then Tom doesn't
+ski \\
+contrapositive: If Tom isn't skiing, then it isn't Saturday or there
+isn't snow.\\
+
+\item (15 points) Assume the universe is the set of real numbers.
+Determine whether the following propositions are true or false.
+Carefully explain your answers using complete sentences.
+\begin{enumerate}
+\item $\forall x \hspace{.1in}\exists y \hspace{.1in} 0 < x-y < 1$
+\\Answer: True \\
+For any $x,$ pick $y=x-0.5.$ Then, $x-y=0.5$ which is strictly
+between 0 and 1. So for all $x$ we found a $y$ that makes the
+inequality true.\\
+\item $ \exists x \hspace{.1in} \forall y  \hspace{.1in}
+\left[ (x<y) \rightarrow (y^2 > 3) \right]$\\ Answer: True \\
+I'll pick $x = \sqrt{3}.$ (You could pick $x$ to be any number
+greater than or equal to $\sqrt{3}.$) Then for any $y \leq
+\sqrt{3}$, the hypothesis is false, thus the implication is true.
+For any $y > \sqrt{3}$, $y^2 > 3$ and the implication is true. Thus
+we have found
+an $x$ such that the implication is true for all $y$.\\
+\end{enumerate}
+\item (10 points) Negate and simplify the following:
+$$ \forall x \hspace{.1in}\left[(x >0) \rightarrow (
+\exists y \hspace{.1in} 0 < y < \sqrt{x}) \right]$$ \\
+
+$ \neg \left[\forall x \hspace{.1in}\left[(x >0) \rightarrow (
+\exists y \hspace{.1in} 0 < y < \sqrt{x}) \right]\right]$ \\ $
+\Leftrightarrow \exists x \hspace{.1in}\neg\left[\left[(x >0)
+\rightarrow ( \exists y \hspace{.1in} 0 < y < \sqrt{x})
+\right]\right]$ \\ $ \Leftrightarrow \exists x \hspace{.1in}\left[(x
+>0) \vee \neg( \exists y \hspace{.1in} 0 < y < \sqrt{x}) \right]
+$ \\ $\Leftrightarrow \exists x \hspace{.1in}\left[(x >0) \vee (
+\forall y \hspace{.1in} 0 \geq y \vee y \geq \sqrt{x}) \right]$
+
+
+\item (15 points) Establish the validity of the argument below by
+listing a series of numbered steps and reason for the steps.\\
+$a \rightarrow (b \rightarrow c)$ \\
+$d \vee a $\\
+$\neg d \rightarrow b $\\
+$\underline{\neg d \hspace{.4in} } $\\
+$\therefore c$
+\end{enumerate}
+
+\bigskip
+
+\begin{tabular}{ll}
+\underline{Steps} &  \underline{Reasons} \\
+(1) $d \vee a $ & premise \\
+(2) $\neg d$ & premise \\
+(3) $a$ & Rule of Disjunctive Syllogism applied to (1) and (2) \\
+(4) $\neg d \rightarrow b $ & premise \\
+(5) $b$ & Rule of Detachment applied to (2) and (4) \\
+(6) $a \wedge b$ & Rule of Conjunction applied to (5) and (3) \\
+(7) $a \rightarrow (b \rightarrow c)$ & premise \\
+(8) $c$ & Rule of Conditional Proof applied to (7) and (6)
+
+\end{tabular}
+
+\end{document}

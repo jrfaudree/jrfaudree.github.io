@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{\sc Review Test I } 
+\rhead{\sc Spring 2016 }
+\cfoot{}
+\pagestyle{fancy}
+\pgfplotsset{compat=1.12}
+\begin{document}
+\thispagestyle{fancy}
+\quad\\
+
+Test I will be Wednesday 17 February from 1:00PM-2:00PM. It is closed book and closed note. It covers Chapter 1 Sections 1-6 and Chapter 2 Sections 1-2,4-5. \\
+
+\hrulefill
+
+Chapter 1 \\
+
+Section 1: Sets\\
+This section is an introduction to sets. There is a lot of notation and terminology to master such as: $\ZZ,~\QQ,~\RR$ and $\ZZ^+,~\ZZ^-,~\ZZ^{\text{nonneg}},~$etc, $\in,~\subseteq,~\emptyset,~\cap,~\cup,~|A|,~A-B, ~\overline{A}$ disjoint sets and pairwise disjoint sets, universal set, irrational numbers, Venn diagrams, DeMorgan's Laws, partitions, ordered pairs, Cartesian products, and $n$-tuples, $\{x,y\}$ versus $(x,y).$\\
+Also, you will want to remind  yourself of the laws in Theorem 1.1.21.\\
+
+Section 2: Propositions\\
+This is an introduction to propositions and symbolic logic and truth tables. For each of the following symbols, you should be know the truth values (truth tables) and be able to translate back and forth between symbols and English: $\vee,~\wedge,~\neg.$\\
+
+Section 3: Conditional Propositions and Logical Equivalences\\
+All the same from the previous sections with symbols: $\rightarrow,~\leftrightarrow.$ It is important to remember the special language surrounding conditional propositions. Go back over pages 23 \& 24 and phrases such as \emph{only if},\emph{sufficient condition},\emph{necessary condition},\emph{when}. \\
+We also learned the crucial idea of \emph{logical equivalence.} There is special language about reformulations of conditional propositions such as: the converse, the contrapositive, the negation of a conditional propositions. You must know what these are and which are logically equivalent. You should know how to decide if two expressions are logically equivalent.\\
+Finally, you should know DeMorgan's Laws.\\
+
+Section 4: Arguments and Rules of Inference\\
+You should know what is meant by an \emph{argument}, its premises or hypotheses, and its conclusion. You should know how to determine if an argument is valid or invalid. You should know how to us the rules of inference on page 33. (You do not need to memorize them.)\\
+
+Section 5: Quantifiers\\
+Here we learned how to  construct propositions using $\forall$ and $\exists.$ You should know how to go back and forth between symbols and English using these and all the preceding symbols. You should know how to determine the truth values of propositions using these symbols and how to properly justify your answers. Finally, you should know how to negate propositions containing $\forall$ and $\exists.$\\
+
+Section 6: Nested Quantifiers\\
+This is an extension of the previous section. All the same skills apply.\\
+
+Chapter 2\\
+
+Section 1: Mathematical Systems, Direct Proof, and Counterexamples\\
+We practiced writing direct proofs and in the process formalized the definition of \emph{even} and \emph{odd} integers and set operations such as $A-B$ and $A \subseteq B.$ We saw again that a single counterexample can show a proposition is false.\\
+
+Section 2: More Methods of Proof\\
+The methods of proof by contradiction and proof by contrapositive were formally explain and we practiced using them.\\
+
+Section 4: Mathematical Induction\\
+We learned how to apply proof by induction. Here is the formal proof of the number of elements in the power set of a set.\\
+
+Section 5: Strong Form of Induction\\
+We learned of an alternate but equivalent formulation of proof by induction and the conditions under which the strong form is useful. We practiced using it.\\ 
+
+
+
+
+
+\end{document}
