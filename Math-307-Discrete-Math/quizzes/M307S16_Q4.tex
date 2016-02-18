@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{20pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{Quiz \#4\\ \S 2.1,2.2,2.4} 
+\rhead{\sc Spring 2016 \\12 Feb 16}
+\cfoot{}
+\pagestyle{fancy}
+
+
+
+
+\begin{document}
+\thispagestyle{fancy}
+
+
+\noindent {\Large{NAME:\underline{\hspace{3in}}}}\\
+
+\noindent This quiz contains 4 problems worth 30 points. You may not use books, notes, or a calculator. You have 30 minutes to take the quiz.\\
+
+\noindent \hrulefill
+\be
+\item (6 points) Prove that for all integers $m$ and $n$, if $m$ is even and $m+n$ is even, then $n$ is even.\\
+\vspace{2.5in}
+\item (7 points) Use Proof by Contrapositive to prove that for all real numbers $x$ and $y$, if $x+2y \geq 3,$ then $x\geq1$ or $y\geq 1.$
+\vfill
+\newpage
+\item (8 points) Use Mathematical Induction to prove $\frac{1}{1\cdot 2}+\frac{1}{2\cdot 3}+\frac{1}{3 \cdot 4}+\cdots+\frac{1}{n(n+1)}=\frac{n}{n+1}$ for all integers $n \geq 1.$
+\vfill
+\item (9 points) Use Mathematical Induction to prove $ 2n+1 \leq 2^n$ for $n=3,4, \cdots.$
+\vfill
+\ee
+\end{document}

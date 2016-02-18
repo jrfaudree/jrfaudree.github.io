@@ -1,0 +1,103 @@
+\documentclass[12pt]{article}
+% Time-stamp: <homework-02.tex, saved on Fri, Sep 14, 2007 at 12:46pm>
+\usepackage[margin=1in, head=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+%\usepackage{pdfsync}
+\addtolength{\textwidth}{.5in}
+\addtolength{\leftmargin}{-1in}
+\addtolength{\textheight}{.5in}
+\addtolength{\topmargin}{-0.5in}
+
+%\pagestyle{fancy}
+%\lhead{MATH 200X }
+%\chead{Fall 2007}
+%\rhead{FINAL EXAM}
+%\lfoot{}
+%\cfoot{\thepage}
+%\rfoot{}
+
+\setcounter{secnumdepth}{0}
+%\renewcommand{\theenumi}{\alph{enumi}}
+%\renewcommand{\emptyset}{\varnothing}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\clm}{\par\textit{Claim:}\par}
+\newcommand{\diam}{\mathrm{diam}}
+
+\parindent=0in
+\parskip=0.5\baselineskip
+
+\begin{document}
+\begin{center}MATH 307  \: FALL 2008 \\ \textsc{MIDTERM I -- Selected Solutions}
+\end{center}
+
+\begin{enumerate}
+\item Let $P$ be the proposition:
+ \emph{A sufficient condition for the stock market to fall is for winter to arrive early}.  \\
+\begin{enumerate}
+\item State $P$ as a conditional proposition. (That is, rewrite $P$ as an If-then statement.)\\
+If winter arrives early, then the stock market will fall.
+\item Write the converse of $P$.\\
+If the stock markets falls, then winter arrives early.
+\item Write the  contrapositive of $P$.\\
+If the stock market doesn't fall, then winter does not arrive early. 
+\item Write the negation of $P.$ (Do not use the words ``It is not the case that...")\\
+Winter arrives early and the market doesn't fall.
+\item Which, if any, of the statements in parts $b$, $c$, and $d$, logically equivalent to $P$?
+The contrapositive (part c) is equivalent to $P.$
+\end{enumerate}
+
+\item (If you have questions, ask me.)
+
+\item (If you have questions, ask me.)
+
+\item  Use Theorem 1.1.1 Logical Equivalences to verify the logical equivalence: \\
+$[\sim(q \vee \sim p)] \vee (q \wedge p) \equiv p. $ Supply a reason for each step.\\
+
+\smallskip
+
+$[\sim(q \vee \sim p)] \vee (q \wedge p) \equiv (\sim q \wedge p) \vee (q \wedge p)$ by DeMorgan's Law\\
+
+\hspace{1.6in} $\equiv (p \wedge \sim q) \vee (q \wedge p)$ by commutativity\\
+
+\hspace{1.6in} $\equiv p \wedge (\sim q \vee q)$ by the distributive law\\
+
+\hspace{1.6in} $\equiv p \wedge {\bf{t}}$ by the negation law\\
+
+\hspace{1.6in} $\equiv p$ by the identity law.\\
+
+\item Negate each of the following propositions.\\
+\begin{enumerate}
+\item $\forall x \in \mathbb{R} \: \exists y \in \mathbb{Q}$ such that $\frac{x}{100} < y < x.$\\
+$\exists x \in \mathbb{R} \: \forall y \in \mathbb{Q}$,  $\frac{x}{100} \geq y$ or $y \geq x.$\\
+\item $\forall x \in \mathbb{Z},$ if $x \geq 10$ and $x$ is prime, then $x+2$ is not prime or $x+4$ is not prime.\\
+$\exists x \in \mathbb{Z},$ such that $x \geq 10$ and $x$ is prime and $x+2$ is prime and $x+4$ is prime.\\
+\item $\forall x \in \mathbb{R}$, $|x|<1$ if and only if $x^2<1.$\\
+$\exists x \in \mathbb{R}$, ($|x|<1$ and $x^2 \geq 1$) or ($x\geq 1$ and $x^2<1.$)
+\end{enumerate}
+
+\item Determine the truth value for each of the following and justify your answer.
+\begin{enumerate}
+\item For every composite number $c$, $c^2 \geq 16.$\\
+True. By definition, the first composite number is 4. That is, for every composite number $c$, $c \geq 4.$ Now for every real number, if $c\geq 4,$ then $c^2 \geq 16.$\\
+
+\item $\forall x \in \mathbb{R}$ if $x^2$ is even, then $x$ is even.\\
+False. Let $x=\sqrt{2}.$ Then $x \in \mathbb{R}$ and $x^2=2$ which is even and $x$ is not even since it is not an integer. So, $x=\sqrt{2}$ is a counterexample.
+\item $\forall x \in \mathbb{R}$ such that $x \not = 0, \: \exists y \in \mathbb{R}$ such that $xy > 0.$\\
+True. Given any real number $x$ not equal to zero, choose $y=x.$ Then $xy=x^2 \geq 0$ because any real number squared is nonnegative. Furthermore, since $x \not =0,$ $x^2 \not = 0,$ by the zero property. Thus, for any given $x$, we have a choice of $y$ such that $xy$ is always positive.
+\end{enumerate}
+\item \begin{enumerate}
+ \item  Define what it means for the integer $a$ to be divisible by the integer $b.$\\
+ Look in your book.
+
+ \item  Use the definitions (of divisibility and odd) to prove that, for any two consecutive odd integers, the difference of their squares is a multiple of 8. (Note: for any two numbers $n$ and $m$ the \emph{difference of their squares} means $n^2-m^2.$)
+     \end{enumerate}
+     
+     Proof: Let $n$ and $m$ be consecutive odd integers. So, $n=m+2.$ Also, from the definition of odd,  we know there exists an integer $k$ such that $m=2k+1.$ Thus, by substitution, $n=2k+3.$ Now, $n^2-m^2=(2k+3)^2-(2k+1)^2=8k+8=8(k+1).$ Let $k_1=k+1.$ Since $k$ is an integer, $k_1$ is an integer. Thus, $n^2-m^2=8k_1$ where $k_1$ is an integer. Thus, by the definition of divides, we have shown that 8 divides $n^2-m^2.$ Or, equivalently, we have shown that $n^2-m^2$ is a multiple of 8 for any pair of consecutive odd integers $m$ and $n$.
+
+
+\end{enumerate}
+\end{document}
