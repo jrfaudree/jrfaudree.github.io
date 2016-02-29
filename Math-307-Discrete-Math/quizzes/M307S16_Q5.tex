@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{20pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{Quiz \#5\\ \S 3.1-3.2} 
+\rhead{\sc Spring 2016}
+\cfoot{}
+\pagestyle{fancy}
+
+
+
+
+\begin{document}
+\thispagestyle{fancy}
+
+
+\noindent {\Large{NAME:\underline{\hspace{3in}}}}\\
+
+\noindent This quiz contains 4 problems worth 30 points. You may not use books, notes, or a calculator. You have 30 minutes to take the quiz.\\
+
+\noindent \hrulefill
+\be
+\item (5 points) List all strings over $X=\{0,1\}$ of length 3 or less.
+\vfill
+\item (10 points) Let $s_{n}=2n-3$ for $n\geq 1.$
+\be
+\item List the first four terms of $s_n$.
+\vfill
+\item List the first four terms of the sequence $b_k=\sum_{n=1}^k s_n.$
+\vfill
+\item List the first four terms of the sequence $b_k=\prod_{n=1}^k s_n.$
+\vfill
+\ee
+\newpage
+\item (12 points) Let $X=\{1,2,3,4\}$, $Y=\{a,b,c,d\}$ and $Z=\{A,B,C,D,E\}.$ Determine whether each set forms \fbox{a function or not}  and, if it is a function, whether it is \fbox{one-to-one, onto, or a bijection} 
+\be
+
+
+\item $f: X \to Z,$ defined as  $f=\{(1,A), (2,C), (3,D),(4,B)\}$ \\
+\vspace{.3in}
+
+
+\item $f: Z \to Y,$ defined as  $f=\{(A,b), (B,b), (C,c),(D,d), (E,a)\}$ \\
+\vspace{.3in}
+
+\item $f: X \to Y,$ defined as $f=\{(1,a), (2,b), (3,c),(4,d), (3,d)\}$\\
+
+
+
+
+\vspace{.3in}
+\item $f: X \to Y,$ defined as  $f=\{(1,a), (2,a), (3,a),(4,a)\}$ \\
+
+
+\vspace{.3in}
+\ee
+\item (4  points) Sketch $f(x)=\lceil 2x-1 \rceil$ on the axes below.\\
+
+\begin{tikzpicture}[baseline=(current bounding box.center), xscale=2, yscale=1.4]
+\draw[<->] (0,-1.2) -- (0,4.2) node[above] {$y$};
+\draw[<->](-.2,0) -- (2.2, 0) node[right] {$x$};
+\draw (-.1,2) -- (.1,2) node[right]{2};\draw (-.1,4) -- (.1,4) node[right]{4};
+\draw (-.1,1) -- (.1,1) {};\draw (-.1,3) -- (.1,3) {};\draw (-.1,-1) -- (.1,-1) {};
+\draw (1,.1) -- (1,-.1) node[below]{1};\draw (2,.1) -- (2,-.1) node[below]{2};
+\end{tikzpicture}
+\item (4  points) Let $f: \ZZ \times \ZZ \to \ZZ$ by $f(m,n)=m-n.$ Determine whether $f$ is one-to-one, onto, or both and \fbox{justify your answer.}
+\ee
+\end{document}
