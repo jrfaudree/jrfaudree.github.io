@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{\sc Worksheet \S 3.5} 
+\rhead{\sc Spring 2016 \\2 Mar 2016}
+\cfoot{}
+\pagestyle{fancy}
+\pgfplotsset{compat=1.12}
+\begin{document}
+\thispagestyle{fancy}
+
+\quad
+Name: \\
+
+\quad
+Let $X=\{0,1,2\},~Y=\{a,b\},$ and $Z=\{d,e,f,g\}$ Let $R_1$ be a relation from $X$ to $Y$ defined as $R_1=\{(0,a),(0,b),(1,a),(2,b)\}$ and $R_2=\{(a,d),(b,d),(b,f)\}.$
+\be
+\item Write the matrix of each relation above using the ordering of sets $X$, $Y$, and $Z$ as they are listed above.\\
+\vfill
+\item Take a moment to determine whether each relation is a function, one to one, onto.
+\vfill
+\item Why weren't you asked to determine if the relations were symmetric, reflexive, or antisymmetric?
+\vfill
+\item Using the definitions, determine the ordered pairs in $R_2 \circ R_1.$
+\vfill
+\newpage
+\item Now multiply the two matrices from part (1) to show it is (essentially) the matrix of the composition of the two relations. 
+\vfill
+\item Why is the word \emph{essentially} needed here?
+\vfill
+\item Can you explain why you multiplied the matrices in the order you did?
+\vfill
+\ee
+
+\end{document}
