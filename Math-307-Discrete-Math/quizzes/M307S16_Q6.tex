@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{20pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{Quiz \#6\\ \S 3.3-3.5} 
+\rhead{\sc Spring 2016}
+\cfoot{}
+\pagestyle{fancy}
+
+
+
+
+\begin{document}
+\thispagestyle{fancy}
+
+
+\noindent {\Large{NAME:\underline{\hspace{3in}}}}\\
+
+\noindent This quiz contains 3 problems worth 30 points. You may not use books, notes, or a calculator. You have 30 minutes to take the quiz.\\
+
+\noindent \hrulefill
+\be
+%3.3\#20,21 like24-30
+\item (12 points) Let $X=\{1,2,3,4,5\}$ and let $R$ be a relation on $X$ defined by the rule $(x,y) \in R$ if $x+y \leq 6.$
+\be
+\item List the elements of $R.$
+\vfill
+\item Is $R$ reflexive? Explain.
+\vfill
+\item Is $R$ symmetric? Explain.
+\vfill
+\item Is $R$ antisymmetric? Explain.
+\vfill
+\item Is $R$ transitive? Explain.
+\vfill
+\item Is $R$ a partial order? Explain.
+\vfill
+\item Is $R=R^{-1}$? Explain.
+\vfill
+\ee
+\newpage
+%#31
+\item (10 points) Let $X=\{1,2,3,4,5,6,7,8,9,10\}$ and let  $R$ be a relation on $X \times X$ by $(a,b)R(c,d)$ if $a+d=b+c.$ Note that $R$ is an equivalence relation on $X \times X.$
+\be
+\item Give an example of two elements from $X \times X$ that relate to $(3,2).$
+\vfill
+\item Give an example of two elements for $X \times X$ that do \textbf{not} relate to $(3,2).$
+\vfill
+\item Show that $R$ is symmetric.
+\vspace{1in}
+\item List all members of the equivalence class $[ (8,1) ].$
+\vfill
+\ee
+\item (8 points) 
+\be
+\item Write the matrix $A_1$ of the relation $R_1=\{(1,a),(2,a),(2,b),(3,c)\}$ with orderings: 1,2,3; a,b,c.
+\vspace{1in}
+\item Write the matrix $A_2$ of the relation $R_2=\{(a,y),(b,y),(b,z),(c,z)\}$ with orderings: a,b,c;x,y,z.
+\vspace{1in}
+\item List the ordered pairs in the relation $R_2 \circ R_1.$
+\vfill
+\item (2pts Extra Credit) Find the matrix product $A_1A_2$ and explain what its entries tell you about the relation $R_2 \circ R_1.$
+\vspace{1in}
+\ee
+\ee
+\end{document}

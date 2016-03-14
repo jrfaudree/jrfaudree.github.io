@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{20pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{Quiz \#7\\ \S 4.3} 
+\rhead{\sc Spring 2016}
+\cfoot{}
+\pagestyle{fancy}
+
+\begin{document}
+\thispagestyle{fancy}
+
+
+\noindent {\Large{NAME:\underline{\hspace{3in}}}}\\
+
+\noindent This quiz contains 4 problems worth 30 points. You may not use books, notes, or a calculator. You have 30 minutes to take the quiz.\\
+\noindent\hrulefill
+
+\begin{tabular}{ll}
+\begin{tabular}{l|l|c|l|l}
+Theta Form & Name &&Theta Form & Name \\
+\hline
+\hline
+$\theta(1)$& Constant &&$\theta(n^2)$&Quadratic\\
+\hline
+$\theta(lg(lg(n)))$& Log log&& $\theta(n^3)$&Cubic\\
+\hline 
+$\theta(lg(n))$& Log && $\theta(n^k),$ $k \geq 1$&Polynomial\\
+\hline 
+$\theta(n)$&Linear&& $\theta(c^n),$ $c>1$&Exponential\\
+\hline 
+$\theta(n~lg(n))$& $n$ log $n$&& $\theta(n!)$&Factorial\\
+\hline 
+\end{tabular} &
+\begin{tabular}{l}
+Fact from Calc 2: \\$1+a+a^2+\cdots a^{k}=\frac{a^{k+1}-1}{a-1}$\\
+\end{tabular}
+\end{tabular}
+
+\noindent \hrulefill
+\be
+\item (3 points) Fill in the blank below in the definition:
+\begin{quote}
+ For $f(n)$ and $g(n)$ be functions with domain $\{1,2,3,\cdots\},$ we write $f(n)=O(g(n))$\\ 
+ \quad\\
+if \quad \underline{\hspace{4in}} \quad for all but finitely many $n \in \ZZ^+$.
+\end{quote}
+
+\item (12 points) Select a theta notation from the table for each expression and justify your answer.\\
+
+
+\be
+\item $5 \lg n+3n^2 +2n \lg n$
+\vfill
+\item $3+6+9+12+\cdots+(3n)$
+\vfill
+\item $1+2+4+8+\cdots+2^n$
+\vfill
+\ee
+\newpage
+\item (8 points) Answer the questions using the algorithm below:\\
+ \begin{tabular}{l} 
+$i=n$ \\ 
+while $(i > 1)\{ $\\
+\quad for $j=1$ to $i$\\
+\quad\quad$x=x+1$\\
+\quad $i=\lfloor i/2 \rfloor$\\
+$\}$
+\end{tabular}
+\be
+\item Give an expression (in terms of $n$) for the exact number of time the statement $x=x+1$ is evaluated.
+\vspace{1in}
+\item Select a theta notation from those in the table for the number of times the statement $x=x+1$ is evaluated and justify your answer.
+\vfill
+\ee
+\item (7 points) Show that if $f(n)=O(g(n),$ then $g(n)=\Omega(f(n)).$
+\vfill
+\ee
+\end{document}
