@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{\sc Worksheet \S 5.2-5.3} 
+\rhead{\sc Spring 2016 \\21 Mar 2016}
+\cfoot{}
+\pagestyle{fancy}
+\pgfplotsset{compat=1.12}
+\begin{document}
+\thispagestyle{fancy}
+
+\quad
+Name: \\
+
+\quad
+\bc Section 5.2 \ec
+\be
+\item \emph{Without converting to decimal} add the binary numbers: $1110101+110101$
+\vfill
+\item Describe the method you are using to add the binary numbers above.
+\vfill
+\item \emph{Without converting to decimal} add the hexadecimal numbers: $48F9+D62$
+\vfill
+\item Describe the method you are using to add the hexadecimal numbers above.
+\vfill
+\item Take the binary number $10010101101$ and convert it to hexadecimal by:
+\be
+\item converting from binary to decimal and decimal to hexadecimal.
+\vfill
+\item converting directly from binary to hexadecimal.
+\vfill
+\ee
+\ee
+\newpage
+\bc Section 5.3 \ec
+
+This section has two main ideas: (a) the Euclidean Algorithm (how to run it)\\
+\indent and \hspace{2.02in} (b) how to use the Euclidean (what it tells you)\\
+
+You will find this algorithm in pseudo code on page 249. Here is the algorithm in plain English. The input consists of two nonnegative integers $a$ and $b$ and without loss of generality, assume $a \geq b$. Apply the Quotient-Remainder Theorem (page 111) to $a$ and $b$ to obtain a remainder $r.$ Now repeat with $b$ and $r.$ Continue until obtaining the remainder $0.$\\
+
+Here is the trace of the Euclidean Algorithm on $a=225$ and $b=84.$\\
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+iteration&$a$&$b$&Quotient-Remainder Thm&$r$&comments\\
+&&&$a=q \cdot b+r;~0\leq r <b$&&\\
+\hline\hline
+1&225&84&$225=2 \cdot 84 +57$ & 57& $r \not=0$ so repeat\\
+\hline
+2&84&57&$84=1 \cdot 57 + 27$ & 27& $r \not=0$ so repeat\\
+\hline
+3&57&27&$57=2 \cdot 27 +3 $&3&$r \not = 0$ so repeat \\
+\hline
+4&27&3&$27=9 \cdot 3 +0$&0&$r=0$ so return \emph{previous} $r$-value\\
+\hline
+\end{tabular}\\
+The algorithm would return the number \fbox{3}.
+\be
+\item Apply the Euclidean Algorithm to each pair below. Show your work by including the Quotient-Remainder Thm calculation for each iteration.
+\be
+\item $m=2310,~n=805$
+\vfill
+\item $n=18,~m=305$
+\vfill
+\ee
+\newpage
+\item Let $a,b,q,r,d \in \ZZ^+$ and assume $a=q \cdot b +r.$ If $d$ divides $a$ and $d$ divides $b$, does that mean $d$ divides $r$? Explain your answer.
+\vfill
+\item (Read carefully! This is different from \#2.) Let $a,b,q,r,d \in \ZZ^+$ and assume $a=q \cdot b +r.$ If $d$ divides $r$ and $d$ divides $b$, does that mean $d$ divides $a$? Explain your answer.
+\vfill
+\item Now use your answers to \#2 and \#3 above to explain why the Euclidean Algorithm returns the greatest common divisor of its two inputs.
+\vfill
+\item For 1a and 1b above, find the prime factorization of each integer and confirm that the Euclidean Algorithm returns the greatest common divisor of $m$ and $n.$
+\vfill
+\newpage
+
+One of the other useful results of the Euclidean Algorithm is that the calculations used to find the GCD and be reversed to obtain the GCD of two integers \emph{in terms of a linear combination of the two integers.} For example, we found that $\gcd{225,84}=3.$ By reversing the calculations, we can obtain the equation: \fbox{$3=3\cdot 225-8\cdot 84.$}\\
+
+In the table below, columns 1 and 2 are copied from the table on page 1. Column 3 is obtained by solving each equation for $r.$ Column 4 is back substitutions \emph{starting at the last row and working up.}\\
+
+\begin{tabular}{|c|c|c|c|p{2cm}|}
+\hline
+iter-&QR Thm &Solve for $r$&back substitute and simplify&comments\\
+ation&(copied)&&&\\
+\hline\hline
+1&$225=2 \cdot 84 +57$ & $225-2 \cdot 84 =57$& $3 \cdot \Big(225-2 \cdot 84\Big)-2\cdot 84=3$&Replace 57; \\
+&&&$3\cdot 225-8\cdot 84=3$&re-group\\
+\hline
+2&$84=1 \cdot 57 + 27$ & $84-1 \cdot 57 = 27$&$57-2\cdot$ \fbox{$84-1 \cdot 57$}$=3$ &Replace {27};  \\
+&&&$3 \cdot 57-2\cdot 84=3$& re-group\\
+\hline
+3&$57=2 \cdot 27 +3 $&$57-2 \cdot 27 =3 $&$57-2 \cdot \fbox{27} =3 $&START HERE \\
+&&&&work up\\
+\hline
+\hline
+\end{tabular}\\
+
+
+\item For each pair of numbers below, write their GCD as a linear combination of $m$ and $n$.
+\be
+\item $m=2310,~n=805$
+\vfill
+\item $n=18,~m=305$
+\vfill
+\ee
+\ee
+
+\end{document}
+
+Answer:
+2310 - (805 x 2) = 700
+805 - (700 x 1) = 105
+700 - (105 x 6) = 70
+105 - (70 x 1) = 35
+70 - (35 x 2) = 0
+
+For the values 805 and 2310
+GCF = 35
+
+Answer:
+305 - (18 x 16) = 17
+18 - (17 x 1) = 1
+17 - (1 x 17) = 0
+
+For the values 305 and 18
+GCF = 1

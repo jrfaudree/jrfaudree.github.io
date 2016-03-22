@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{\sc Worksheet \S 5.1-5.2} 
+\rhead{\sc Spring 2016 \\21 Mar 2016}
+\cfoot{}
+\pagestyle{fancy}
+\pgfplotsset{compat=1.12}
+\begin{document}
+\thispagestyle{fancy}
+
+\quad
+Name: \\
+
+\quad
+\bc Section 5.1 \ec
+\be
+\item For each integer below (i) trace the standard algorithm (Algorithm 5.1.8 page 226) to determine if it is prime and (ii) find its prime factorization.
+\be
+\item $n=966$
+\vfill
+\item $n=127$
+\ee
+\item For each pair of integers find (i) the greatest common divisor of the pair and (ii) the least common multiple of the pair.
+\be
+\item $n=30,~m=120$
+\vfill
+\item $n=104,~m=363$
+\vfill
+\item $n=72,~m=306$
+\vfill
+\item $n=2^2\cdot 3 \cdot 5^4,~m=2^3 \cdot 5^3 \cdot 7$
+\vfill
+\ee
+\item For \#2d, write  $n$ and $m$ as products of the \emph{same} set of prime factors.
+\vfill
+\newpage
+\item Let $m=p_1^{a_1}p_2^{a_2}p_3^{a_3}\cdots p_n^{a_n}$ and $n=p_1^{b_1}p_2^{b_2}p_3^{b_3}\cdots p_n^{b_n}$ where $a_i,~b_i \in \ZZ^{nonneg}.$
+\be
+\item Is $p_1^{a_1}p_2^{a_2}p_3^{a_3}\cdots p_n^{a_n} $ necessarily the prime factorization of $m$? Explain.
+\vfill
+\item Give  formulas for the greatest common divisor and least common multiple of  $m$ and $n.$
+\vfill
+\ee
+\item Write a formal, direct proof of the following:
+\begin{quote}
+Let $n,~c,$ and $d$ be integers. If $dc\: |\: nc,$ then $d\:|\:n.$
+\end{quote}
+\vfill
+\ee
+\newpage
+\bc Section 5.2 \ec
+\be
+\item When a number is represented in 
+\begin{itemize}
+\item \emph{decimal} form, digits are selected from the set \underline{$\{\hspace{2in}\}$} and each position represents a power of \underline{\hspace{.5in}}\\
+
+So the expansion of the symbols: $8032$ is \underline{\hspace{2in}}\\
+
+\item \emph{binary} form, digits are selected from the set \underline{$\{\hspace{2in}\}$} and each position represents a power of \underline{\hspace{.5in}}\\
+
+So the expansion of the symbols: $1101$ is \underline{\hspace{2in}}\\
+
+\item \emph{hexadecimal} form, digits are selected from the set \underline{$\{\hspace{2in}\}$} and each position represents a power of \underline{\hspace{.5in}}\\
+
+So the expansion of the symbols: $20AF$ is \underline{\hspace{2in}}\\
+\end{itemize}
+
+\item Express the binary number $1101010$ in decimal.
+\vfill
+\item Express the decimal number $357$ in binary.
+\vfill
+\item Express the hexadecimal number $A105$ in decimal.
+\vfill
+\item Express the decimal number $10400$ in hexadecimal.
+\vfill
+\newpage
+\item Assume you are given a decimal integer $n,$ how many bits (digits) would you  need to represent $n$ in binary? (If you don't immediately know the answer, return to \#3 and think about how you calculated it.)
+\vfill
+\item Without actually finding the binary representation, determine the number of bits needed to represent the decimal number $2,500,230.$
+\vfill
+
+\ee
+\end{document}
