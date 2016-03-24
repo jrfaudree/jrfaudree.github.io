@@ -1,0 +1,79 @@
+\documentclass{amsart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\addtolength\topmargin{-1in}
+\addtolength\textheight{1in}
+\addtolength{\oddsidemargin}{-.75in}
+\addtolength{\evensidemargin}{-.75in}
+\addtolength{\textwidth}{1.5in}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\un}{\mathcal{U}}
+\newcommand{\z}{\mathbb{Z}}
+\begin{document}
+\noindent Math 307 Discrete Mathematics\\
+Exam II \\
+7 November 2005 \hfill Name:{\underline{\hspace{2in}}} \\
+
+This exam contains seven questions worth at total of 100 points.
+Books, notes, and calculators are not allowed.
+
+\begin{enumerate}
+\item (15 points)\begin{enumerate}
+\item Use the Euclidean algorithm to find the greatest common
+divisor of 53 and 36.\vfill
+\item Find integers $s$ and $t$ such that
+$53s+36t=\gcd(53,36).$\vfill
+\item Find the inverse, $s,$ of 36 mod 53, if it exists. If it does
+not exists, explain why.\vfill\end{enumerate}
+\newpage
+
+\item (5 points) Calculate $C(11,8).$\vfill
+
+
+\item (15 points) Problems (a) and (b) refer to the algorithm
+below:\\
+
+
+\noindent for $i=1$ to $n$\\
+\indent for $j=1$ to $i$\\
+\indent \indent for $k=1$ to $i$\\
+\indent \indent \indent $x=x+1$\\
+
+\begin{enumerate}
+\item How many times is the statement $x=x+1$ executed if $n=8.$
+\vfill
+\item Select a theta notation from among $$ \theta(1), \theta(\lg n), \theta(n),
+\theta(n\lg n), \theta(n^2), \theta(n^3), \theta(2^n), \theta(n!) $$
+for the number of times the statement $x=x+1$ is executed.\vfill
+\end{enumerate}\newpage
+
+\item (15 points) Use the definition to show that
+$f(n)=2n^2-50n+159n \lg n + 57$ is $O(n^2).$ \vfill
+
+\item (15 points) Let $R$ be a relation on $\real$, the set of real
+numbers defined as $x R y$ if $x+1 \leq y.$
+\begin{enumerate}
+\item Is $R$ reflexive? Explain your answer. \vfill
+\item Is $R$ antisymmetric? Explain your answer. \vfill
+\end{enumerate} \newpage
+
+\item (15 points) Let $R$ be a relation on $\z \times \z$ defined as
+$(a,b) R (c,d)$ if $a+c$ is even.
+\begin{enumerate}
+\item Give an example of an ordered pair $((a,b),(c,d))$ that is in
+the relation $R.$ \vfill
+
+\item Give an example of an ordered pair $((a,b),(c,d))$ that is NOT in
+the relation $R.$ \vfill
+
+\item Note that $R$ is an equivalence relation. Show that $R$ is
+transitive.\vfill
+
+\item Describe $[(1,2)],$ the equivalence class of $(1,2).$ \vfill
+
+\item How many distinct equivalence classes does $R$ have? \vfill
+\end{enumerate} \newpage
+
+\end{enumerate}
+
+\end{document}

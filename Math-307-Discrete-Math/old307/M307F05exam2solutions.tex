@@ -1,0 +1,55 @@
+\documentclass{amsart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\addtolength\topmargin{-1in}
+\addtolength\textheight{1in}
+\addtolength{\oddsidemargin}{-.75in}
+\addtolength{\evensidemargin}{-.75in}
+\addtolength{\textwidth}{1.5in}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\un}{\mathcal{U}}
+\newcommand{\z}{\mathbb{Z}}
+\begin{document}
+\noindent Math 307 Discrete Mathematics\\
+Exam II \\
+SOLUTIONS\\
+
+1.a. 53 =1*36+17\\
+36=2*17+2\\
+17=8*2+1\\
+So, gcd(53,36)=1\\
+
+b. 1=17*53-25*36\\
+
+c. 53-25=28\\
+
+2. $C(11,8)=\frac{11!}{3! \; 8!}=(11*10*9)/(3*2)=165$\\
+
+3. a. $1^2+2^2+3^2+ \cdots +8^2$\\
+
+b. $\theta(n^3)$\\
+
+4. $|2n^2-50n+ 130 n \lg n +58| \leq 2n^2+50n+130 n \lg n +58 \leq
+2n^2 + 50n^2 +130 n^2+58n^2 = 240 n^2$\\
+
+5.a.$R$ is not reflexive since $1 +1 \not \leq 1$ and so $(1,1) \not
+\in R.$\\
+
+b. $R$ is antisymmetric. Let $x,y \in \real$ and $ x \not = y.$
+Assume $(x,y)$ and $(y,x)$ are both in $R.$ Then $x+1 \leq y$ and
+$y+1 \leq x.$ But this means $x+2 \leq y+1 \leq x,$ which is a
+contradiction.\\
+
+6.a. ((1,1),(3,4)); b. ((1,1),(6,4));\\
+c. Suppose $(a,b)R(c,d)$ and $(c,d)R(e,f).$ Then $a+c=2n$ and
+$c+e=2m$. So $a+e=2n+2m-2c.$ So $(a,b)R(e,f).$\\
+
+d. $[(1,2)]$ consists of all ordered pairs $(a,b) \in \z \times \z$
+where the first coordinate (that is, a) is odd.\\
+
+e. two. Those whose first coordinate is odd and those with first
+coordinate even.\\
+
+7.a. P(10,6); b. P(9,5); c. 6*P(9,5); d. P(9,5) +6*P(9,5)-5*P(8,4);
+e. $10^6-10$; f. $C(6,2)*C(4,3)*8$
+\end{document}

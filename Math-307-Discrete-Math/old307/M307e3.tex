@@ -1,0 +1,84 @@
+\documentclass{amsart}
+%\documentstyle[11pt]{article}
+\pagestyle{empty} \setlength{\topmargin}{-.5in}
+\addtolength{\textheight}{2in} \addtolength{\evensidemargin}{-1in}
+\addtolength{\oddsidemargin}{-1in} \addtolength{\textwidth}{1in}
+%\setlength{\parindent}{0pt}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\un}{\mathcal{U}}
+\newcommand{\z}{\mathbb{Z}}
+\begin{document}
+
+* \vfill
+\Large{
+\begin{center}Math 307\\
+Discrete Mathematics\\
+Exam III\\
+17 November 2003\\
+\vspace{1in} Name:{\underline{\hspace{2in}}}\\\end{center}
+
+\vspace{1in} There are seven questions worth a total of 100 points.
+Use standard notation (like what is used in class and in the text).
+This exam is closed note and closed book. No calculators are
+allowed.
+
+\vfill *
+
+\newpage
+
+\begin{enumerate}
+%% MAKE-UP Q: \item (15 points) Use induction to prove $$\frac{1}{1 \cdot 3}+\frac{1}{3 \cdot 5}
+% +\frac{1}{5 \cdot 7}+\cdots +\frac{1}{(2n-1)(2n+1)}
+% =\frac{n}{2n+1}$$ for all integers $n \geq 1.$$
+
+\item (15 points) Use induction to prove $$ 1 \cdot 2 + 2 \cdot 3 +
+3 \cdot 4 + \cdots + n(n+1)=\frac{n(n+1)(n+2)}{3}$$ for all integers
+$n \geq 1.$ Your proof should be detailed, organized, and easy to
+follow.
+\newpage
+
+\item (12 points) \begin{enumerate}
+\item Write the base 10 integer 473 in base 8.
+\vfill
+\item Write the integer $(1CE)_{16}$ in base 10. \vfill
+\end{enumerate}
+
+\item (10 points) Let $a,b,c \in \z.$ Prove that if $a|b$ and $a|c$, then $a|(bx+cy)$ for
+all $x,y \in \z.$ \vspace{2in}
+
+\item (15 points) Let $A=\{0,1,2\}$ and $B=\{1,2,3\}.$
+\begin{enumerate}\item Determine $A \times B.$ \vfill
+\item Let $R \subseteq A \times B$ where $(a,b) \in R$ if $2|(x+y).$
+Determine $R.$ \vfill
+\item Is $R$ a function from $A$ to $B$? Explain your answer. \vfill
+\end{enumerate} \newpage
+
+\item (15 points) Let $|A|=20$ and $|B|=50.$ Determine the
+following:
+\begin{enumerate}\item $|A \times B|.$ \vfill
+\item the number of relations from $A$ to $B$. \vfill
+\item the number of functions from $A$ to $B$. \vfill
+\item the number of one-to-one functions from A to B. \vfill
+\item the number of onto functions from A to B. \vfill
+\end{enumerate}
+
+\item (18 points) Let $f(x): \real \rightarrow \real,$ $f(x)=\sqrt[3]{2-x}.$
+\begin{enumerate} \item Find the image of 3. \vfill
+\item Find the preimage of 2. \vfill
+\item Is $f$ one-to-one? Explain your answer. \vspace{2in}
+\item Is $f$ onto? Explain your answer. \vspace{2in} \end{enumerate}
+\newpage
+
+\item (15 points) \begin{enumerate}\item Use the formula for Stirling
+numbers of the second kind to find $S(4,3).$ \vspace{2in}
+\item Let $m$ be an integer such that $m \geq 2.$ What does the
+number $S(m,m-1)$ count? \vspace{2in}
+\item Give a combinatorial argument for the identity
+$S(m,m-1)={ m \choose 2}.$ \vfill
+
+\end{enumerate}
+\end{enumerate}
+\end{document}

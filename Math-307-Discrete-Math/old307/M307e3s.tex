@@ -1,0 +1,43 @@
+\documentclass{amsart}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\un}{\mathcal{U}}
+\newcommand{\z}{\mathbb{Z}}
+\newcommand{\n}{\mathbb{N}}
+\begin{document}
+Math 307 --- Exam III --- Solutions
+\begin{enumerate}
+\item Let $S(n)$ be the proposition $1 \cdot 2+ 2 \cdot 3 + 3 \cdot 4 + \cdots + n(n+1)=\frac{n(n+1)(n+2)}{3}.$\\
+Base Step:\\
+Let $n=1.$ Then $S(1)$ is the proposition: $1 \cdot 2 = 2 = \frac{1\cdot 2 \cdot 3 }{3}$ which is true.\\
+Inductive Step:\\
+We assume that $1 \cdot 2+ 2 \cdot 3 + 3 \cdot 4 + \cdots + k(k+1)=\frac{k(k+1)(k+2)}{3}.$ We need to prove that $1 \cdot 2+ 2 \cdot 3 + 3 \cdot 4 + \cdots + (k+1)(k+2)=\frac{(k+1)(k+2)(k+3)}{3}.$ We begin with the left-hand side of $S(k+1):$ $$(1 \cdot 2+ 2 \cdot 3 + 3 \cdot 4 + \cdots +k(k+1))+ (k+1)(k+2)=\frac{k(k+1)(k+2)}{3} +(k+1)(k+2)$$ by the inductive hypothesis. Now,
+$$ \frac{k(k+1)(k+2)}{3} +(k+1)(k+2)=\frac{k(k+1)(k+2)+3(k+1)(k+2)}{3}=\frac{(k+1)(k+2)(k+3)}{3}.$$ Thus, we have shown that $S(n)$ is true for all $n \in \n.$
+
+\item \begin{enumerate} \item 731
+\item 462
+\end{enumerate}
+
+\item Since $a|b$, there exists $n \in \z$ such that $an=b.$ Since $a|c$, there exists $m \in \z$ such that $am=c.$ Thus, for any $x,y \in \z$, $xb+yc=xan+yam=a(xn+ym).$ But, $xn+ym \in \z.$ Thus, $a | xb+yc.$
+
+\item \begin{enumerate}\item $\{(0,1),(0,2),(0,3),(1,1),(1,2),(1,3),(2,1),(2,2),(2,3)\}$
+\item $R=\{(0,2),(1,1),(1,3),(2,2)\}$
+\item No. Because the element $1 \in A$ is in two distinct ordered pairs.
+\end{enumerate}
+
+\item\begin{enumerate}\item  $(20)(50)=1000$ \item $2^{1000}$\item $50^{20}$ \item $\frac{50!}{30!}$ \item 0
+\end{enumerate}
+
+\item \begin{enumerate}
+\item $-1$ \item $-6$ \item Yes. If $\sqrt[3]{2-a}=\sqrt[3]{2-a},$ then we know $2-a=2-b$ which implies $a=b.$ Thus, $f$ is one-to-one.
+\item Yes. Given $y=b \in \real,$ pick $x=2-b^3.$ Then $f(x)=\sqrt[3]{2-(2-b^3)}=b.$ So, $f$ is onto.
+\end{enumerate}
+
+\item \begin{enumerate} \item $S(4,3)= (1/3!)\sum_{i=0}^3 (-1)^i{3 \choose i} i^4= (1/6)[3^4 -3*2^4+3*1^4]=\frac{81-48+3}{6}=6$
+\item $S(m,m-1)$ counts the number of ways of placing $m$ distinct objects into $m-1$ identical boxes such that no box is left empty.
+\item In part (b) we described the left-hand side. We need to count the same set of arrangements a different way such that we get the expression on the right. If we have $m$ objects and $m-1$ boxes and no box left empty, it must be the case that all boxes have exactly one item except one box that has exactly two objects. So, first we pick the two objects to be in the same box together. This can be done in $m \choose 2$ ways. Then we have no choice but to place the remaining objects each in a separate box which can be done in onely one way.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}
