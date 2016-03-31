@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{\sc Worksheet \S 6.1} 
+\rhead{\sc Spring 2016 \\30 Mar 2016}
+\cfoot{}
+\pagestyle{fancy}
+\pgfplotsset{compat=1.12}
+\begin{document}
+\thispagestyle{fancy}
+
+\quad
+Name: \\
+
+\quad
+\bc Section 6.1 \ec
+
+Let $X$ be the set of integers from 4 to 300 inclusive.
+\be
+\item How many elements are in $X$?
+\vfill
+\item How many elements of $X$ are even?
+\vfill
+\item How many elements of $X$ are odd?
+\vfill
+\item How many elements of $X$ are divisible by 5?
+\vfill
+\item How many elements of $X$ are greater than 72?
+\vfill
+
+\item How many elements of $X$ have all distinct digits?
+\vfill
+\newpage
+\item How many elements of $X$ contain the digit 7?
+\vfill
+\item How many elements of $X$ do not contain the digit 0?
+\vfill
+\item How many elements of $X$ are greater than 101 and do not contain the digit 6?
+\vfill
+\item How many elements of $X$ have digits in strictly increasing order? (examples: 125, 48, 3)
+\vfill
+\item How many elements of $X$ are of the form $abc$ where $a\not=0,$ $a<b$ and $c<b$?
+\vfill
+\item How many three digits elements of $X$ are there  where  $a<b$ or $c<b$?
+\vfill
+\ee
+
+\end{document}
+

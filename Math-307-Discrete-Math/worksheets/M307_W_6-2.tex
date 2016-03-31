@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{\sc Worksheet \S 6.2} 
+\rhead{\sc Spring 2016 \\1 April 2016}
+\cfoot{}
+\pagestyle{fancy}
+\pgfplotsset{compat=1.12}
+\begin{document}
+\thispagestyle{fancy}
+
+\quad
+Name: \\
+
+\quad
+\bc Section 6.2 \ec
+
+Assume there is a club with 7 girls and 8 boys.
+\be
+\item In how many ways can the members line up for a photograph?
+\vfill
+\item In how many ways can a President, Vice-President, Secretary and Treasurer be elected assume no one holds more than one position?
+\vfill
+\item In how many ways can P, VP, S and T be elected such that girl 1 is P or boy 1 is VP?
+\vfill
+\item In how many ways can the club form a committee of 5 people?
+\vfill
+\newpage
+\item In how many ways can the club form a committee of 2 girls and 2 boys?
+\vfill
+\item In how many ways can the club from a committee of 4 people that contains at least one boy?
+\vfill
+\item In how many ways can the club from a committee of 4 people that contains at most one boy?
+\vfill
+\item In how many ways can the club form a committee of 4 people that contains at least one boy and at least one girl?
+\vfill
+\item In how many ways can the club form a committee of 4 people such that boy 1 and boy 2 do not have to serve together?
+\vfill
+\ee
+
+\end{document}
+
