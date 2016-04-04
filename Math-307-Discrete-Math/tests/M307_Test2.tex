@@ -1,0 +1,247 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%		Problem and Part
+\newcounter{problemnumber}
+\newcounter{partnumber}
+\newcommand{\Problem}{\stepcounter{problemnumber}\setcounter{partnumber}{0}
+       \item[\fbox{\parbox{.18in}{\hfil\theproblemnumber\hfil}}]}
+\newcommand{\Part}{\stepcounter{partnumber}\item[(\alph{partnumber})]}
+\newcommand{\Points}[1]{(#1 points) \quad}
+
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\newcommand\answerbox[3]{#3 \fbox{\rule{#1}{0cm}\rule{0cm}{#2}}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{2pt}
+
+\lhead{\sc Math F307}
+\chead{\Large \sc Test 2} 
+\rhead{\sc Spring 2016}
+\cfoot{}
+\pagestyle{fancy}
+%
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{tabular}{l@{\hspace{.075\linewidth}}  l}
+Your Name (print clearly) &\\
+%Your Instructor\\
+\blankbox{.6\linewidth}{.45in} & Monday 28 March 2016\\
+%\blankbox{.3\linewidth}{.45in}\\
+\end{tabular}
+\bigskip
+
+\bigskip
+\bigskip
+
+{
+\renewcommand{\baselinestretch}{1.8}
+\setlength{\tabcolsep}{.2in}
+\normalsize
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Page&Total Points&\parbox{.8in}{\hfil Score\hfil}\\
+\hline
+1&19&\\
+\hline
+2&29&\\
+\hline
+3&19&\\
+\hline
+4&23&\\
+\hline
+5&10&\\
+\hline
+\hline
+extra credit&5&\\
+\hline
+\hline
+Total&100&\\
+\hline
+\end{tabular}
+
+\end{center}
+}
+
+\bigskip
+
+\begin{center}
+\begin{Large}
+Instructions and information:
+\end{Large}
+\end{center}
+
+\begin{itemize}
+\item Please turn off cell phones or any other thing that will go BEEP.
+
+\item
+Scientific calculators are allowed on this test. You may not use a cell phone or a laptop.
+\item
+Read the directions for each problem. You must always show your work to receive partial credit.  
+
+\item Be wary of doing computations in your head. Instead, write out your
+computations on the exam paper.
+
+\item
+If you need more room, use the backs of the pages and indicate to the
+grader where to look.
+
+\item
+Raise your hand (or come up to the front) if you have a question.
+\item Formulas from Calculus:\\
+\be 
+\item $1+a+a^2+\cdots+ a^{k}=\frac{a^{k+1}-1}{a-1}$\\
+\item $\log_a n = \log_b n / \log_b a$\\
+\item $1+2+3+\cdots+n=\frac{n(n+1)}{2}$
+\ee
+
+\end{itemize}
+
+\newpage
+%%%%%%%%%%%
+%BEGIN TEST
+%%%%%%%%%%%
+\begin{enumerate}
+\item  
+\be
+\item (4 points) Fill in the blanks below:
+\be
+\item A function $f$ from $X$ to $Y$ is \emph{one-to-one} if \underline{\hspace{3in}}\\ 
+
+\underline{\hspace{5.5in}}.\\
+
+\item A function $f$ from $X$ to $Y$ is \emph{onto} if \underline{\hspace{3in}}\\
+
+\underline{\hspace{5.5in}}.\\
+\ee
+\item (4 points) Assume that the domain and the codomain of the function $f(n)=\lfloor n/4 \rfloor$ is the set of all integers. Determine if $f(n)$ is one-to-one, onto, or both.\\
+\vfill
+\item (3 points) Given an example of a function $g(x)$ from $\RR$ to $\RR$ that is one-to-one but not onto and show that your example is not onto. (You do not need to justify the one-to-one property.)
+\vspace{1in}
+\ee 
+\item (8 points) Let $a$ be a sequence defined by $a_n=3n+1,$ for $n=1,2,3,\cdots.$
+\be
+\item Find $a_6.$
+\vspace{.4in}
+\item Find $\sum_{i=1}^3a_i$
+\vspace{.6in}
+\item Find a formula for the subsequence of $a$ obtained by selecting every other term of $a$ starting with the first.
+\vspace{.6in}
+\ee
+\newpage
+\item (14 points) Let $R$ be a relation on the set of positive integers defined by $(x,y) \in R$ if 2 divides $x+y$.
+\be 
+\item Find an example of an ordered pair in $R$.\\
+
+\item Find an example of an ordered pair not in $R$.\\
+
+\item Is $R$ reflexive?\\
+\vfill
+\item Is $R$ antisymmetric?\\
+\vfill
+\item Is $R$ transitive?\\
+\vfill
+\ee
+\item (15 points) Let $S$ be the set of all strings on the set $\{0,1,2\}$ of length 3 or less. Let $R$ be the equivalence relation on $S$ defined by $s_1Rs_2$ if the strings $s_1$ and $s_2$ have the same number of zeros. 
+\be
+\item Explain why the string 12 is related to the string 211.\\
+\vspace{.3in}
+\item Explain why the string 120 is not related to the string 001.\\
+\vspace{.3in}
+\item Find all elements in $[001]$, the equivalence class containing the string 001.\\
+\vfill
+\item How many equivalence classes does $R$ have?\\
+\vfill
+\item List one member of each equivalence class.\\
+\vfill
+\ee
+\newpage
+\item 
+\be
+\item (7 points) Fill in the blank below in the definition:
+\begin{quote}
+ For $f(n)$ and $g(n)$ be functions with domain $\{1,2,3,\cdots\},$ we write $f(n)=O(g(n))$\\ 
+ \quad\\
+if \quad \underline{\hspace{4in}} \quad for all but finitely many $n \in \ZZ^+$.
+\end{quote}
+\item Use the definition above to show $1+2^k+3^k+\cdots+n^k$ is $O(n^{k+1}).$
+\vfill
+\ee
+\item (12 points) For each expression below, select a $\theta$ notation from the table  and justify your answer.
+
+\begin{tabular}{l|l|c|l|l}
+Theta Form & Name &&Theta Form & Name \\
+\hline
+\hline
+$\theta(1)$& Constant &&$\theta(n^2)$&Quadratic\\
+\hline
+$\theta(lg(lg(n)))$& Log log&& $\theta(n^3)$&Cubic\\
+\hline 
+$\theta(lg(n))$& Log && $\theta(n^k),$ $k \geq 1$&Polynomial\\
+\hline 
+$\theta(n)$&Linear&& $\theta(c^n),$ $c>1$&Exponential\\
+\hline 
+$\theta(n~lg(n))$& $n$ log $n$&& $\theta(n!)$&Factorial\\
+\hline 
+\end{tabular}
+\be
+\item $\frac{n^3+5n\lg n}{4n+8}$
+\vfill
+\item $3+9+27+\cdots+3^n.$
+\vfill
+\ee
+\newpage
+\item (8 points) Let $m=2^3\cdot 5\cdot 11^2\cdot 17^3$ and $n=2^2\cdot 7 \cdot 11^5.$
+\be
+\item Find the greatest common divisor of $m$ and $n.$\\
+\vfill
+\item Find the least common multiple of $m$ and $n.$\\
+\vfill
+\ee
+\item (15 points) Let $m=159$ and $n=509.$
+\be
+\item Trace the Euclidean Algorithm for inputs $m$ and $n$ above. (You need to show your steps, at least in abbreviated form and state the output explicitly.)
+\vspace{3in}
+\item What is the significance of the number returned by the Euclidean Algorithm?
+\vspace{.3in}
+\item Write the greatest common divisor of $m$ and $n$ as a linear combination of $m$ and $n.$
+\vspace{2in}
+\ee
+\newpage
+\item (10 points)
+\be
+\item Write the decimal number 900 in binary.
+\vfill
+\item Write the decimal number 900 in hexadecimal.
+\vfill
+\ee
+\end{enumerate}
+Extra Credit (5 points): Prove that $\lg (n!) = \theta(n \lg n).$
+\vfill
+\end{document}
