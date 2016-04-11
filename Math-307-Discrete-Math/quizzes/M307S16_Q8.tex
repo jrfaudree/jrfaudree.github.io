@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{20pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{Quiz \#8\\ \S 6.1-6.2} 
+\rhead{\sc Spring 2016}
+\cfoot{}
+\pagestyle{fancy}
+
+\begin{document}
+\thispagestyle{fancy}
+
+
+\noindent {\Large{NAME:\underline{\hspace{3in}}}}\\
+
+\noindent This quiz contains 4 problems worth 30 points. You may not use books, notes, or a calculator. You have 30 minutes to take the quiz.\\
+
+NOTE: As we discussed in class on  Monday, Problem 1 on the quiz requires you to give  simplified numerical answers (for example $102$ or $17/15$). For all other problems, you may give an unsimplified numerical answer (for example $12! \cdot 7! / 4!$ or $12\cdot P(10,6)\cdot C(18,6).$\\
+\noindent\hrulefill
+
+\be
+\item (2 points each) Calculate the following. Your answers must be in simplified numerical form. Any fractions must be in lowest terms.\\
+\be
+\item $P(8,3)$
+\vspace{.2in}
+\item $P(5,5)$ \vspace{.2in}
+\item $C(10,7)$ \vspace{.2in}
+\item $C(14,1)$ \vspace{.2in}
+\ee
+
+\item (2 points each) The eight letters in the set $X=\{A,B,C,D,E,F,G,H\}$ are used to form strings of length 5. Assume you are allowed to repeat letters when forming a string. So, for example, $ABFFA$ is an allowable string.\\
+\be
+\item How many strings can be formed? \vfill
+\item How many strings begin with the letter $A$ \vfill
+\item How many strings contain the letter $A$? (This questions could be rephrased as: How many strings contain at least one $A$?) \vfill
+\ee
+\newpage
+\item (2 points each) The eight letters in the set $X=\{A,B,C,D,E,F,G,H\}$ are used to form strings of length 5. Assume you are NOT allowed to repeat letters when forming a string. So, for example, $CDGHA$ is an allowable string but $AABBC$ is not.\\
+\be
+\item How many strings can be formed? \vfill
+\item How many strings contain the substring $AB$? \vfill
+\item How many strings contain the substring $AB$ or the substring $CDE$? \vfill
+\ee
+\item (2 points each) A local bookstore has a ``freebie" table holding a total of 21 books, all distinct. Six of the books are math books, seven are history books, and eight are computer science books. You are going to select 6 books from the table. Assume the order in which you select the books does not matter.\be
+\item In how many ways can you select 6 books?  \vfill
+\item How many selections contain exactly 3 math books? \vfill
+\item How many selections have at most 2 history books? \vfill
+\item How many selections have at least two of the three subjects represented? \vfill
+\ee
+\item (2 points) How many binary strings of length $20$ contain exactly $6$ ones. (Recall, \emph{binary} means strings of $0$'s and $1$'s.) \vfill
+\ee
+
+\end{document}
