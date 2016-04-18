@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{20pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{Quiz \#9\\ \S 6.3, 6.4, 6.7} 
+\rhead{\sc Spring 2016}
+\cfoot{}
+\pagestyle{fancy}
+
+\begin{document}
+\thispagestyle{fancy}
+
+
+\noindent {\Large{NAME:\underline{\hspace{3in}}}}\\
+
+\noindent This quiz contains 7 problems worth 30 points. You may not use books, notes, or a calculator. You do not have to simplify your answers. You have 30 minutes to take the quiz.\\
+
+\noindent\hrulefill
+
+\be
+\item (3 points each)
+\be
+\item Determine the  number of strings that can be formed by ordering the letters in the word ENGINEER.
+\vfill
+\item Determine the  number of strings that can be formed by ordering the letters in the word ENGINEER if no two E's are allowed to be consecutive.
+\vfill
+\ee
+\item (4 points) Find the number of integer solutions to $x_1+x_2+x_3+x_4 = 30$ subject to the conditions $x_1 \geq 0,$ $x_2 \geq 0$, $x_3 \geq 1$ and $x_4 \geq 2.$\\
+\vfill
+\item (2 points each) For each 5-combination of $X=\{1,2,3,4,5,6,7,8,9\}$, give the 4-combination that is next lexicographically:
+\be
+\item 34678
+\vfill
+\item 24789
+\vfill
+\ee
+\item (2 points) Explain why the algorithm we described in class (i.e. Algorithm 6.4.9 in your book) that generates all $r$-combinations of a given $n$-set would never produce the following output: 4286.
+\vfill 
+\newpage
+\item (2 points) For each permutation of $X=\{1,2,3,4,5,6,7,8,9\}$, give the permutation that is next lexicographically:
+\be
+\item 873261945
+\vfill
+\item 957341268
+\vfill
+\ee
+\item (2 points each) Find the coefficient of the term when the expression is expanded:
+\be
+\item $x^5y^2z^3;\: (x+y+z)^{10}$ \vfill
+\item $x^2y^3;\:(5x-y)^5$ \vfill
+\ee
+\item (3 points each)
+\be 
+\item Fill in the box below in the statement of the Binomial Theorem:\\
+\begin{center} If $a$ and $b$ are real numbers and $n$ is a positive integer, then \\ \framebox(300,50){} \end{center}
+\item Use the Binomial Theorem to prove that $2^n=C(n,0)+C(n,1)+C(n,2)+ \cdots + C(n,n).$
+\vspace{2in}
+\ee
+\ee
+\end{document}
