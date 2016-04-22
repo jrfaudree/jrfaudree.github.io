@@ -1,0 +1,80 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{\sc Review Test III} 
+\rhead{\sc Spring 2016 }
+\cfoot{}
+\pagestyle{fancy}
+\pgfplotsset{compat=1.12}
+\begin{document}
+\thispagestyle{fancy}
+\quad\\
+
+Test II will be Wednesday April 27 from 1:00PM-2:00PM. It is closed book and closed note. It covers Chapter 6 Section 1-4,7-8, Chapter 7 Section 1-2. \\
+
+\noindent\hrulefill
+
+Chapter 6\\
+
+Section 1: Basic Principles\\
+We learned about the Multiplication Principle, the Addition Principle,  Inclusion-Exclusion, and the strategy of counting the complement. You will not be asked to state these principles explicitly. You should articulate for yourself the conditions under which each of these principle is appropriate. In particular, you should think about what words in a problem would suggest  one strategy or another. \\
+
+Section 2: Permutations and Combinations\\
+We learned about what permutations and combinations are and how to count them. There is a lot of technical terminology and very useful notation. For example, you should be familiar with the notion of an $r$-permutation of $X$, and $r$-combination of $X$. You should know how to use and compute $P(n,r)$ and $C(n,r).$ You also want to articulate explicitly what sort of problems correspond to permutations and which correspond to combinations. There is likely to be one purely computational problem (like on the quiz) but answers to all remaining problems can be left in unsimplified form.\\
+
+Section 3: Generalized Permutations and Combinations\\
+This section took on two particular types of problems: (a) arranging (ordering) collections of objects that are \emph{not} distinct and (b) choosing selections (unordered collections) where the objects are not all distinct. This latter type is often characterized as \emph{selecting with repetition.} You want to practice using notation for these problems. You want to walk through \emph{all} the types of problems in this section. That is: permuting letters in a word, selecting balls from a bag, counting the number of integer solutions to an equation, counting the number of integers with divisibility or other properties are types of problems you should find easy.\\
+
+Section 4: Algorithms for Generating Permutations and Combinations\\
+You should know what lexicographic order means. You should know how to generate all $r$-combinations of a set $X$ and all permutations of $X$ in lexicographic order.\\
+
+Section 7: Binomial Coefficients and Combinatorial Identities\\
+We learned about the Binomial Theorem. You can't use this Theorem if you don't know it! So you are expected to be able to state it formally: $(a+b)^n = \sum_{k=0}^n C(n,k)a^{n-k}b^k.$ You should know how to use it in obvious ways (to find binomial coefficients) and creative ways (plugging in appropriate values for $a$ and $b$ to obtain combinatorial identities).\\
+
+Section 8: The Pigeonhole Principle\\
+While the text contains an evolution of the PHP, it is sufficient to know the most general one (the Third Form). It is a good idea to look through all of the problems here and remind yourself of the point at which PHP is invoked. \\
+
+Note: In addition to problems at the end of each section, there are problems at the end of the chapter. Also, many texts are arranged differently than ours. Consequently, you will find lots of Chapter 7 - type problems  on \emph{earlier} tests.\\
+
+Chapter 7\\
+
+Section 1: Introduction to Recurrence\\
+You should be able to use a given recurrence relation and initial conditions. You should know what it means to \emph{solve} a recurrence relation. You should know how to construct a recurrence relation and appropriate initial conditions to model a sequence or count a collection of objects. Compound interest and strings are standard examples.\\
+
+Section 2: Solving Recurrence Relations\\
+You should know how to use repetition (or working backwards) to solve first-order recurrences. You should know how to use the methods in this section to solve second-order, linear, homogeneous recurrences with constant coefficients. You should know how to check that a solutions is (or isn't correct). You should know how to identify linear and homogeneous recurrences from non-linear and non-homogeneous ones.
+
+\end{document}
