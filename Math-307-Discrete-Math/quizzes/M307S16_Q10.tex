@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+
+\setlength{\headheight}{22pt}
+\setlength{\headsep}{20pt}
+
+\lhead{\sc Math 307\\ Discrete Math}
+\chead{Quiz \#10\\ \S 6.8, 7.1} 
+\rhead{\sc Spring 2016}
+\cfoot{}
+\pagestyle{fancy}
+
+\begin{document}
+\thispagestyle{fancy}
+
+
+\noindent {\Large{NAME:\underline{\hspace{3in}}}}\\
+
+\noindent This quiz contains 4 problems worth 30 points. You may not use books, notes, or a calculator. You do not have to simplify your answers. You have 30 minutes to take the quiz.\\
+
+\noindent\hrulefill
+
+\be
+\item (8 points) Suppose that eleven distinct integers are selected from the set $\{1,2,3,\cdots, 19,20\}.$ Prove that at least two of the eleven have a sum equal to 21.
+\vfill
+\item (8 points) An inventory consists of a list of 200 items, each marked ``available" or ``unavailable." There are 103 available items. Show that there are at least two available items in the list exactly 5 items apart.
+\vfill
+\newpage
+
+\item Assume a person deposits \$200  into an account at the beginning of \emph{each year} and that the account earns 10\% interest compounded annually. Assume no money is withdrawn from the account. Let $A_i$ denote the amount in the account at the end of $i$ years.
+\be
+\item (3 points) Find $A_i$ for $i=1,2,3.$ (Actually do the calculation. It isn't hard.)
+\vfill
+\item (4 points) Find a recurrence relation for $A_n.$
+\vspace{1in}
+\ee
+\item (7 points) Suppose that we have $n$ dollars and that each day we buy either coffee (\$1), tea (\$1), a cookie (\$2), a bagel (\$3), or a burrito (\$3). Let $R_n$ be the number of ways of spending all the money. Derive a recurrence relation for the sequence $R_1,\: R_2,\: R_3, \cdots$ [Assume order is taken into account. So the \$4 purchase (coffee, coffee, cookie) is different from the purchase (coffee, cookie, coffee). Also make sure you include appropriate and complete initial conditions.]
+\vfill
+
+\ee
+\end{document}
