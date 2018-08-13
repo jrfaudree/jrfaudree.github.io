@@ -1,0 +1,54 @@
+/*
+CSS for M614S15, thanks to help from Thomas
+*/
+
+body{
+  font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size:100%;
+  width:100%;
+}
+
+h1 {
+  text-align:center;
+}
+
+h2 {
+  text-align:center;
+}
+
+img {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 5px;
+}
+
+iframe{
+    float:right;
+    width:73%;
+    height:1000px
+}
+.side{
+    float:left;
+    width:25%;
+}
+
+a:link {   /* unvisited link */
+    color: RoyalBlue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: DarkBlue;
+    text-decoration: none;
+}
+
+a:hover {  /* mouse over link */
+    color: DeepSkyBlue;
+    text-decoration: underline;
+}
+
+a:active { /* selected link */
+    color: blue;
+    text-decoration: underline;
+}
