@@ -1,0 +1,79 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}\headsep = 0.2 in
+%\parskip = 0.2in
+%\parindent = 0.0in
+
+\usepackage{amsmath,amssymb,latexsym,graphicx,amsthm,enumerate}
+\usepackage{palatino, url, multicol,tikz}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{exercise}{Exercise}%[section]
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+\def\bi{\begin{itemize}}
+\def\ei{\end{itemize}}
+\def\bs{\begin{slide}}
+\def\es{\end{slide}}
+%\def\bx{\begin{exercise}}
+\newcommand{\bx}[1]{\begin{exercise}({#1} pts.)}
+\def\ex{\end{exercise}}
+\def\t{\times}
+%\def\[{\left[}
+%\def\]{\right]}
+%\def\({\left(}
+%\def\){\right)}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\Longleftrightarrow}}
+\newcommand{\bv}[1]{\ensuremath{ \mathbf{\vec{#1}}} }
+\renewcommand{\d}{\displaystyle}
+\newcommand{\bcd}{\boldsymbol{\cdot}}
+
+\begin{document}
+{\bf Math 253 Calculus III Fall 2018 \hfill Quiz \# 11,  5 December 2018 }\\
+\\
+{\bf Name: \rule{3.5in}{1pt}}\\
+\\
+\noindent There are 20 points possible on this quiz. This is a closed
+book quiz and closed note quiz. Calculators are not allowed. If you have any questions, please
+raise your hand.
+
+\begin{enumerate}
+\item (7 points) Let $\textbf{F}(x,y,z)=2x\sin y\;\textbf{i} +(x^2 \cos y +e^z)\;\textbf{j}+(ye^z+1)\;\textbf{k}.$
+\be
+\item  Find a potential for  $\textbf{F}.$
+\vspace{1.5in}
+
+\item Use part (a) to evaluate $\int_C \textbf{F} \cdot d\textbf{r}$ where  $C$ is the curve: $x=t+1,\: y=\pi t,$ and $z=t^2$ for $0 \leq t \leq 1.$
+\vfill
+\ee
+\newpage
+\item (7 points) Evaluate $\oint_C xy \;dx +x^2y \; dy$ where $C$ consists of the curve $y=\sqrt{x}$ from $(0,0)$ to $(4,2)$ followed by the line segments from $(4,2)$ to $(0,2)$ and from $(0,2)$ to $(0,0).$ (You do not need to simplify your answer.)
+\vfill
+
+\item (6 points) Let $\textbf{F}= ye^x\;\textbf{i} +e^x\;\textbf{j}+xz\;\textbf{k}.$
+	\be
+	\item Find $\text{curl}\; \textbf{F}.$
+	\vspace{2in}
+	\item Find $\text{div}\; \textbf{F}.$
+	\vspace{1.5in}
+	\ee
+	
+\end{enumerate}
+\end{document}

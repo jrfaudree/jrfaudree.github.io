@@ -1,0 +1,77 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}\headsep = 0.2 in
+%\parskip = 0.2in
+%\parindent = 0.0in
+
+\usepackage{amsmath,amssymb,latexsym,graphicx,amsthm,enumerate}
+\usepackage{palatino, url, multicol,tikz}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{exercise}{Exercise}%[section]
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+\def\bi{\begin{itemize}}
+\def\ei{\end{itemize}}
+\def\bs{\begin{slide}}
+\def\es{\end{slide}}
+%\def\bx{\begin{exercise}}
+\newcommand{\bx}[1]{\begin{exercise}({#1} pts.)}
+\def\ex{\end{exercise}}
+\def\t{\times}
+%\def\[{\left[}
+%\def\]{\right]}
+%\def\({\left(}
+%\def\){\right)}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\Longleftrightarrow}}
+\newcommand{\bv}[1]{\ensuremath{ \mathbf{\vec{#1}}} }
+\renewcommand{\d}{\displaystyle}
+\newcommand{\bcd}{\boldsymbol{\cdot}}
+
+\begin{document}
+{\bf Math 253 Calculus III Fall 2018 \hfill Quiz \# 8,  7 November 2018 }\\
+\\
+{\bf Name: \rule{3.5in}{1pt}}\\
+\\
+\noindent There are 20 points possible on this quiz. This is a closed
+book quiz and closed note quiz. Calculators are not allowed. If you have any questions, please
+raise your hand.
+
+\begin{enumerate}
+%section 15.3
+\item (5 points) Evaluate the integral $\iint\limits_D \sin(x^2+y^2) \, dA$ where $D$ is the region between the circles with center at the origin and radii 1 and 3.
+\vfill
+\item (4 points) Convert the integral $\d{\int_0^1 \int_0^{\sqrt{1-y^2}}xy^2 \, dx \,dy}$ to polar coordinates. (You do not need to evaluate the integral.)
+
+\vfill
+\newpage
+\item (3 points) Evaluate $\int_0^{\pi/4} \int_0^{\cos{\theta}} 3r\, dr\, d\theta.$
+\vfill
+\item (4 points) Let $D$ be the lamina enclosed by curves $y=0,$ $y=\cos x$ for $-\pi/2 \leq x \leq \pi/2.$ Assume $D$ has density $\rho(x,y)=y.$
+\begin{enumerate}
+\item Set up but do not evaluate the double integral for $M_x$ the moment about the $x$-axis.
+\vfill
+\item Assume the mass of the lamina $m=\pi/4,$ the moment about the $x$-axis $M_x=4/9$, and the moment about the $y$-axis $M_y=0.$ Find the center of mass.
+\vfill
+\end{enumerate}
+\item (4 points) Set up but do not evaluate the double integral  to find the surface area of the part of the paraboloid $z=5-x^2-y^2$ above the plane $z=1.$
+\vfill
+\end{enumerate}
+\end{document}

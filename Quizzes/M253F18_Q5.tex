@@ -1,0 +1,77 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}\headsep = 0.2 in
+%\parskip = 0.2in
+%\parindent = 0.0in
+
+\usepackage{amsmath,amssymb,latexsym,graphicx,amsthm,enumerate}
+\usepackage{palatino, url, multicol,tikz}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{exercise}{Exercise}%[section]
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+\def\bi{\begin{itemize}}
+\def\ei{\end{itemize}}
+\def\bs{\begin{slide}}
+\def\es{\end{slide}}
+%\def\bx{\begin{exercise}}
+\newcommand{\bx}[1]{\begin{exercise}({#1} pts.)}
+\def\ex{\end{exercise}}
+\def\t{\times}
+%\def\[{\left[}
+%\def\]{\right]}
+%\def\({\left(}
+%\def\){\right)}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\Longleftrightarrow}}
+\newcommand{\bv}[1]{\ensuremath{ \mathbf{\vec{#1}}} }
+\renewcommand{\d}{\displaystyle}
+\newcommand{\bcd}{\boldsymbol{\cdot}}
+
+\begin{document}
+{\bf Math 253 Calculus III Fall 2018 \hfill Quiz \# 5,  10 October 2018 }\\
+\\
+{\bf Name: \rule{3.5in}{1pt}}\\
+\\
+\noindent There are 20 points possible on this quiz. This is a closed
+book quiz and closed note quiz. Calculators are not allowed. If you have any questions, please
+raise your hand.
+
+\begin{enumerate}
+%section 14.3
+\item (5 points) Find all second order partial derivatives of $f(x,y)=x e^{2y} -x^2y^{-1}.$
+\vfill
+\item (2 points) Find $\partial P / \partial V$ for the ideal gas law: $PV=mRT.$
+\vfill
+\newpage
+%section 14.4
+\item (5 points) Find the tangent plane to the surface $f(x,y)=\frac{1+2y}{2+x}$ at the point $(-3,4).$
+\vfill
+%section 14.2
+\item Let $f(x,y)=x^3-x \cos ( y) + y.$
+	\begin{enumerate}
+	\item (5 points) Find the differential of $f(x,y).$
+	\vfill
+	\item (3 points) Use the differential estimate the change in $f(x,y)$ as $(x,y)$ changes from $(1,0)$ to   $(0.9,0.2).$
+	\vfill
+	\end{enumerate}
+
+\end{enumerate}
+\end{document}

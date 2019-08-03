@@ -1,0 +1,152 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}\headsep = 0.2 in
+%\parskip = 0.2in
+%\parindent = 0.0in
+
+\usepackage{amsmath,amssymb,latexsym,graphicx,amsthm,enumerate}
+\usepackage{palatino, url, multicol}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{axiom}{Axiom}
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{exercise}{Exercise}%[section]
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+\def\bi{\begin{itemize}}
+\def\ei{\end{itemize}}
+\def\bs{\begin{slide}}
+\def\es{\end{slide}}
+%\def\bx{\begin{exercise}}
+\newcommand{\bx}[1]{\begin{exercise}({#1} pts.)}
+\def\ex{\end{exercise}}
+\def\t{\times}
+%\def\[{\left[}
+%\def\]{\right]}
+%\def\({\left(}
+%\def\){\right)}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\Longleftrightarrow}}
+\newcommand{\bv}[1]{\ensuremath{ \mathbf{\vec{#1}}} }
+\renewcommand{\d}{\displaystyle}
+
+\begin{document}
+{\bf Math 253 Calculus III Fall 2018 \hfill Quiz \# 0,  28 Aug 2018 }\\
+\\
+{\bf Name: \rule{3.5in}{1pt}}\\
+\\
+\noindent There are 20 points possible on this quiz. This is a closed
+book quiz and closed note quiz. Calculators are not allowed. If you have any questions, please
+raise your hand.
+
+\begin{enumerate}
+\item Let $A(3,-2,4)$ and $B(1,2,5)$ be points in $\mathbb{R}^3.$
+\begin{enumerate}
+\item Find $|AB|,$ the distance between the points $A$ and $B.$
+\vspace{0.75in}
+\item Find the distance from point $A$ to the $xz$-plane.
+\vspace{0.75in}
+\item Find the distance from point $A$ to the $x$-axis.
+\vspace{0.75in}
+\end{enumerate}
+\item 
+\begin{enumerate}
+\item Describe the surface in $\mathbb{R}^3$ represented by the equation $z=5.$ (You may provide a sketch if you like but you are not required to do so.)
+\vfill
+\item Describe the set of points $(x,y,z)$ in $\mathbb{R}^3$ such that $z=5$ and $x=1.$ Note, the set of points you describe must satisfy \emph{both} equations. (You may provide a sketch if you like but you are not required to do so.)
+\vfill
+\end{enumerate}
+\newpage
+\item 
+\begin{enumerate}
+\item Find the equation of the sphere with center $(-3,1,6)$ and radius 3.
+\vfill
+\item Describe the intersection of the sphere and the $xz$-plane.
+\vfill
+\item Describe the intersection of the sphere and the $yz$-plane.
+\vfill
+
+\end{enumerate}
+\end{enumerate}
+\end{document}
+%Book probs 1.1
+\item (2 points) Let $\:\mathcal{U}=\mathbb{Z}^+,$ $X=\{1,2,3,4,5\}$ and $Y=\{2n \: | \: n \in \mathbb{Z}^+ \}.$ For each set below, list the elements or use set builder notation to indicate the members of the set.
+\begin{multicols}{2}
+\begin{enumerate}
+\item $X \cap Y$
+\item $\overline{X} \cap \overline{Y}$
+\end{enumerate}
+\end{multicols}
+\vspace{1in}
+
+\item (2 points) In each problem below, determine if $A \subseteq B$ and justify your answer.
+\begin{multicols}{2}
+\begin{enumerate}
+\item $A=\{3n \: | \: n \in \mathbb{Z}^+\}, \: B=\{2n \: | \: n \in \mathbb{Z}^+ \}$
+\item $A=\{10, 20, 30 \}, \: B=\{2n \: | \: n \in \mathbb{Z}^+ \}$
+\end{enumerate}
+\end{multicols}
+\vspace{1in}
+
+
+%Similar probs 1.1
+\item (1point) What is the cardinality of the set $A=\{\: 1, \:2, \: \{1,2\}, \: \emptyset, \:3,\: 4\:\}$?\\
+%$B=\{\: a,  \{a,b\}, \{b,c,d,e\} \: \emptyset \}.$\\
+%$C=\{\: 1, \: 3, \: 5, \: \{2,4,6\}, \emptyset \}.$
+
+%Book problem 1.2
+\item (1 point) A coin is flipped 10 times. Write the negation  of the proposition: \emph{Some heads and some tails were obtained.}\\
+\vfill
+
+%Similar problem 1.3
+\item (2 points) Given the conditional proposition: \emph{P: \: If the marble is red, then the house is not blue.}
+\begin{enumerate}
+\item In words, write the negation of $P$
+\vfill
+\item In words, write the \emph{converse} of $P.$
+\vfill 
+\end{enumerate}
+\newpage
+
+%Book problem
+\item (1 point) Determine the truth value of the proposition: If $3+5 < 2,$ then $1+3 \not=4.$\\
+
+ %fill in the blank
+ \item (4 points) Fill in the blanks below:
+ \begin{enumerate}
+ \item Let $A$ and $B$ be sets. De Morgan's Laws for sets say $\overline{A \cup B} =$ \underline{\hspace{1.5in}}.\\
+ \item Let $p$ and $q$ be propositions. Then $p \rightarrow q \equiv$ \underline{\hspace{1.5in}} $\equiv$ \underline{\hspace{1.5in}}.\\
+ \item Let $p$ and $q$ be propositions. Then De Morgan's Laws for Logic say $\neg(p \wedge q ) \equiv $ \underline{\hspace{1.5in}}.\\
+ \end{enumerate}
+ 
+%Problem 1.2 and 1.3
+\item (3 points) Given $p$ and $q$ are true and $r$ is false, determine the truth value of the proposition below. Justify your answer.
+$$ (p \rightarrow r) \: \leftrightarrow (q \wedge(\neg p \vee r))$$
+\vspace{1in}
+
+%problem 1.2 and 1.3
+\item (4 points) Write a truth table for $ p \rightarrow \neg ( q \vee  p)$.
+\vspace{3in}
+
+
+
+
+\end{enumerate}
+ \end{document}
+
+
+ 
