@@ -1,0 +1,195 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[11pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, multicol,
+%setspace,
+%graphics, 
+fancybox, fancyhdr,
+graphicx, enumerate,
+subfig, tikz, pgfplots,array}
+
+%\singlespacing
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+\def\bi{\begin{itemize}}
+\def\ei{\end{itemize}}
+\def\bs{\begin{slide}}
+\def\es{\end{slide}}
+\def\bx{\begin{exercise}}
+\def\ex{\end{exercise}}
+\def\t{\times}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\Longleftrightarrow}}
+\newcommand{\bv}[1]{\ensuremath{ \mathbf{\vec{#1}}} }
+\renewcommand{\d}{\displaystyle}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+
+\usetikzlibrary{calc}
+
+%for tikz pictures
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+
+%
+% Answerbox:
+%
+%\newcommand\answerbox[3]{#3 \fbox{\rule{#1}{0cm}\rule{0cm}{#2}}}
+%
+%\setlength{\headsep}{2pt}
+
+\lhead{\sc{Math 320 Combinatorics}}
+\chead{\large \sc Midterm I} 
+\rhead{\sc Fall 2019}
+\cfoot{}
+\pagestyle{fancy}
+%
+\begin{document}
+\thispagestyle{fancy}
+
+\vspace{0.1in}
+Your Name \\
+
+\vspace{0.051in}
+
+\framebox(200,30){}\\
+
+%\vspace{.1in}
+%\begin{tabular}{l@{\hspace{.4in}}l}
+%Your Name & Your Signature\\
+%\framebox(200,30){} & \framebox(200,30){} \\
+%\end{tabular}
+%
+%%\bigskip
+%
+%\begin{tabular}{l@{\hspace{.4in}}l}
+%Instructor Name & \\
+%\framebox(200,30){}&  \\
+%\end{tabular}
+{
+\renewcommand{\baselinestretch}{1.8}
+\setlength{\tabcolsep}{.2in}
+\normalsize
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Problem&Total Points&\parbox{.8in}{\hfil Score\hfil}\\
+\hline
+1&24&\\
+\hline
+2&12&\\
+\hline
+3&18&\\
+\hline
+4&15&\\
+\hline
+5&15&\\
+\hline
+6&16&\\
+\hline
+\hline
+Extra Credit & (5) & \\
+%\hline
+\hline
+Total&100&\\
+\hline
+%Current Course Grade&\multicolumn{2}{c|  }{}\\
+%\hline
+
+\end{tabular}
+
+\end{center}
+}
+\begin{itemize}
+\item 
+This test is closed notes and closed book.
+
+\item No calculator is needed since all answers can be left in ``choose" form. (So \: \fbox{$\d{6^8{10 \choose 4}}$} \: is an acceptable answer.)
+
+\item
+In order to receive full credit, you must {\bf show your work.}  
+
+
+%\item
+%\textbf{PLACE A BOX AROUND \fbox{YOUR FINAL ANSWER} to each question} where appropriate. 
+\item
+Raise your hand if you have a question.
+
+\end{itemize}
+
+\newpage
+\vspace*{-0.3in}
+\begin{enumerate}
+%%%Problem 1: Simple Counting
+\item (24 points) Let $S=\{a,b,c,d,e,f,g,h,i,j\}$ be a set of 10 letters. (Answers without work are acceptable.)
+	\begin{enumerate}
+	\item How many permutations of $S$ have all of the vowels before all of the consonants?
+	\vfill
+	\item How many 6-character passwords are possible using only letters from S?
+	\vfill
+	\item How many 6-character passwords have at least one repeated letter?
+	\vfill
+	\item How many 6-character passwords have all characters  in alphabetical order? (So the passwords \: \textbf{bcfhij} and \textbf{acdehi} would be counted but password \: \textbf{bcaefg} would not, since the letter $a$ is out of order. Indeed the letters in the password must all be distinct.)
+	\vfill
+	\end{enumerate}
+	
+
+%%%Problem 2: Counting  and functions
+\item (12 points)
+	\begin{enumerate}
+	\item How many functions $f:[n] \to [k]$ are onto?
+	\vfill
+	\item How large does $n$ need to be to guarantee that, for every function $f:[n] \to [20]$, there exists some $b \in [20]$ such that $|f^{-1}(b)| \geq 3$?
+	\vfill 
+	\end{enumerate}
+\newpage
+%%%%%Problem 3: Counting Questions
+\item (18 points) There are 100 pieces of candy and 35 children. Find the number of ways to distribute the candy to the children in each of the following situations.
+	\begin{enumerate}
+	\item The pieces of candy are indistinguishable and each child gets at least one piece. (The children are considered to be different from each other.)
+	\vfill
+	\item The pieces of candy are all different and each child gets exactly one piece of candy. (So some candy is left over.)
+	\vfill
+	\item The pieces of candy are all different but you distribute them among 35 identical paper bags assuming no bag is left empty.
+	\vfill
+	\end{enumerate}
+	%%%integer partitions
+\item (15 points)
+	\begin{enumerate}
+	\item By enumeration, determine $P(4,2)$, the number of 2-partitions of 4 and $P(5,3)$ the number of $3$-partitions of $5.$ \\
+	\vfill
+
+	\item For $n \geq 4,$ determine a formula for $P(n,n-2)$, the number of $(n-2)$-partitions of $n,$ and explain why your answer is correct.
+	\end{enumerate}
+\vspace{4in}
+
+\newpage	
+%%%Combinatorial proof
+\item (15 points) Give a \textbf{combinatorial} proof of the identity below.\\
+
+\begin{quote} For any positive integers $m$ and $n$, $\d{{m+n \choose k} = \sum_{j=0}^k{m \choose j}{n \choose k-j}}$ \end{quote}
+\newpage
+%%%Bijective Proof & partitions of [n]
+\item (16 points) The following question concerns the proposition below: 
+
+\begin{quote} \textbf{Proposition:} If $n \geq 1,$ then $S(n,2)=2^{n-1}-1.$ \end{quote}
+
+	\begin{enumerate}
+	\item List all 2-partitions of $[4]$ and show that the proposition holds for $n=4.$\\
+	\vspace{1.5in}
+	\item Give a \textbf{bijective} proof of the proposition. Hint: Create a bijection between the $2$-partitions of $[n]$ and the nonempty subsets of $[n-1].$
+	\end{enumerate}
+	\newpage
+	
+\end{enumerate}
+\textbf{Extra Credit:} (5 points) Consider any 5 points in the $xy$-plane with integer coordinates. (That is, point $A(-3,18)$ had integer coordinates but point $B(2,4/3)$ does not.) Prove that there must exist two of the five points such that the midpoint of the line segment joining those two points also has integer coordinates.
+\vfill
+\end{document}
