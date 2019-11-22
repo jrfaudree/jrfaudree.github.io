@@ -1,0 +1,293 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[11pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, multicol,
+%setspace,
+%graphics, 
+fancybox, fancyhdr,
+graphicx, enumerate,
+subfig, tikz, pgfplots,array}
+\usepackage{ stmaryrd }
+%% The next line says how the "vertex" style of nodes should look: drawn as small circles.
+\tikzstyle{vertex}=[circle, draw, inner sep=0pt, minimum size=6pt]
+%%
+%% Next, we make a \vertex command as a shorthand in place of \node[vertex} to get that style.
+\newcommand{\vertex}{\node[vertex]}
+
+%\singlespacing
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+\def\bi{\begin{itemize}}
+\def\ei{\end{itemize}}
+\def\bs{\begin{slide}}
+\def\es{\end{slide}}
+\def\bx{\begin{exercise}}
+\def\ex{\end{exercise}}
+\def\t{\times}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\Longleftrightarrow}}
+\newcommand{\bv}[1]{\ensuremath{ \mathbf{\vec{#1}}} }
+\renewcommand{\d}{\displaystyle}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\def\ldb{\llbracket}
+\def\rdb{\rrbracket}
+
+\newcommand{\textmultiset}[2]{\bigl(\!{\binom{#1}{#2}}\!\bigr)}
+\newcommand{\displaymultiset}[2]{\left(\!{\binom{#1}{#2}}\!\right)}
+\newcommand\multiset[2]{\mathchoice{\displaymultiset{#1}{#2}}
+                                {\textmultiset{#1}{#2}}
+                                {\textmultiset{#1}{#2}}
+                                {\textmultiset{#1}{#2}}}
+
+
+\usetikzlibrary{calc}
+
+%for tikz pictures
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+
+%
+% Answerbox:
+%
+%\newcommand\answerbox[3]{#3 \fbox{\rule{#1}{0cm}\rule{0cm}{#2}}}
+%
+%\setlength{\headsep}{2pt}
+
+\lhead{\sc{Math 320 Combinatorics}}
+\chead{\large \sc Midterm II} 
+\rhead{\sc Fall 2019}
+\cfoot{}
+\pagestyle{fancy}
+%
+\begin{document}
+\thispagestyle{fancy}
+
+\vspace{0.1in}
+Your Name \\
+
+\vspace{0.051in}
+
+\framebox(200,30){ Solutions }\\
+
+%\vspace{.1in}
+%\begin{tabular}{l@{\hspace{.4in}}l}
+%Your Name & Your Signature\\
+%\framebox(200,30){} & \framebox(200,30){} \\
+%\end{tabular}
+%
+%%\bigskip
+%
+%\begin{tabular}{l@{\hspace{.4in}}l}
+%Instructor Name & \\
+%\framebox(200,30){}&  \\
+%\end{tabular}
+{
+\renewcommand{\baselinestretch}{1.8}
+\setlength{\tabcolsep}{.2in}
+\normalsize
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Problem&Total Points&\parbox{.8in}{\hfil Score\hfil}\\
+\hline
+1&15&\\
+\hline
+2&12&\\
+\hline
+3&16&\\
+\hline
+4&18&\\
+\hline
+5&12&\\
+\hline
+6&12&\\
+\hline
+6&15&\\
+\hline
+\hline
+Extra Credit & (6) & \\
+%\hline
+\hline
+Total&100&\\
+\hline
+%Current Course Grade&\multicolumn{2}{c|  }{}\\
+%\hline
+
+\end{tabular}
+
+\end{center}
+}
+\begin{itemize}
+\item 
+This test is closed book.
+
+\item A student may bring one $8 \times 11$ sheet of paper with writing on the front.
+
+\item No calculator is needed since all answers can be left in ``choose" form. (So \: \fbox{$\d{6^8{10 \choose 4}}$} \: is an acceptable answer.)
+
+\item
+In order to receive full credit, you must {\bf show your work.}  
+
+
+%\item
+%\textbf{PLACE A BOX AROUND \fbox{YOUR FINAL ANSWER} to each question} where appropriate. 
+\item
+Raise your hand if you have a question.
+
+\end{itemize}
+
+\newpage
+\vspace*{-0.3in}
+\begin{enumerate}
+%% inclusion-exclusion
+\item (15 points) After a day of skiing, a family of 4 throws their mittens into a bin. The next day, each member grabs two mittens (one right-hand and one left-hand). Count the number of ways this can happen such that not a single member of the family has both of their own mittens. (Use Inclusion-Exclusion.)\\
+
+\vspace{.5in}
+\textbf{answer:} We are trying to avoid having a person get both of their own mittens. So we label the family members: 1,2,3,4 and let $p_i$ be the property that person $i$ grabs their own pair of mittens.  Thus, the number of ways the four can grab mittens such that none grab their own pair is $N_{=}( \emptyset).$ \\
+
+We will count each ``part" of the inclusion-exclusion formula separately, then put it all together at the end.\\
+
+The number of ways to distribute the mittens with no restrictions is\\ 
+$$N_{\geq}( \emptyset)=(4!)^2,$$ since there are $4!$ to distribute the left-hand mittens and $4!$ ways to distribute the right-hand mittens.\\
+
+The number of ways to distribute the mittens such that person $i$ gets their own pair is: 
+$$N_{\geq}(p_i)=(3!)^2$$ and there are $4$ different choices for $i$.\\  
+
+The number of ways to distribute the mittens such that both person $i$ and person $j$ gets their own pair is: 
+$$N_{\geq}(p_i p_j)=(2!)^2$$ and there are ${4 \choose 2}=6$ different choices for pairs of family members $i$ and $j.$\\
+
+The number of ways to distribute the mittens such that person $i$, person $j$ and person $k$ gets their own pair is: 
+$$N_{\geq}(p_ip_jp_k)=(1!)^2$$ and there are ${4 \choose 4}=4$ different choices for $i,\: j$ and $k.$\\
+
+The number of ways to distribute the mittens such that every member of the family gets their own pair is
+$$N_{\geq}(p_ip_jp_kp_\ell)=1$$ and there is only one way to chose the whole family.\\
+
+Now a straight application of inclusion-exclusion gives
+
+$$N_{=}( \emptyset)=(4!)^2-4\cdot(3!)^2+6\cdot(2!)^2-4\cdot (1!)^2+1.$$
+\newpage
+\item (12 points) 
+	\begin{enumerate}
+	\item Find the coefficient of $x^{20}$ in $(x^3+x^4+x^5+x^6+ \cdots)^4$\\
+	\vfill
+	\textbf{Answer:} \\
+	
+	\begin{tabular}{lcl}
+	$\ldb (x^3+x^4+x^5+x^6+ \cdots)^4 \rdb_{x^{20}}$&$=$& $\ldb x^{12}(1+x+x^2+x^3+\cdots)^{4} \rdb_{x^{20}}$\\
+	&$=$& $\ldb (1+x+x^2+x^3+\cdots)^{4} \rdb_{x^{8}}$\\
+	&$=$& $\multiset{4}{8}={8+4-1 \choose 8}={11 \choose 8}$\\
+	\end{tabular}
+	\vfill
+	\item Find $\displaystyle{\left\ldb \frac{a}{b+cx}\right \rdb_{x^k/k!}}$
+	\vfill
+	\begin{tabular}{lcl}
+	$\displaystyle{\left\ldb \frac{a}{b+cx}\right \rdb_{x^k/k!}}$&$=$& $\displaystyle{\frac{a}{b}\left\ldb \frac{1}{1-\left(\frac{-cx}{b}\right)}\right \rdb_{x^k/k!}}$\\
+	&$=$& $\displaystyle{\frac{a}{b}\left(\frac{-c}{b}\right)^{k}k!}$\\
+	\end{tabular}
+	\vfill
+
+	\end{enumerate}
+\item (16 points) In each case, find a concise ordinary generating function for answering the question and also identify what coefficient you need.
+	\begin{enumerate}
+	\item How many solutions to $z_1+z_2+z_3=20$ are possible such that each $z_i$ is an integer satisfying $1 \leq z_1 \leq 5,$ $0 \leq z_2$ and $0 \leq z_3$?
+	\vfill
+	\textbf{Answer:} Generating function: 
+	$$(x+x^2+x^3+x^4+x^5)(1+x+x^2+x^3+x^4+\cdots)^2=\frac{x(1-x^5)}{(1-x)^3}$$\\
+	coefficient: $x^{20}$\\
+	\vfill
+	\item How many ways to make change for a dollar using only nickels, dimes and quarters?
+	\vfill
+	\textbf{Answer:} Generating function: 
+	$$(1+x^5+x^{10}+x^{15}+\cdots)(1+x^{10}+x^{20}+x^{30}+ \cdots)(1+x^{25}+x^{50}+x^{75}+\cdots)=\frac{1}{(1-x^5)(1-x^{10})(1-x^{25})}$$\\
+	coefficient: $x^{100}$
+	\vfill
+	\end{enumerate}
+	\newpage
+\item (15 points) Solve the recurrence relation below using the generating function technique.\\
+$$ a_0=1 \quad \quad \text{  and  } \quad \quad a_n=3a_{n-1}+2^n, \text{  for  } n \geq 1$$
+
+\textbf{Answer:} Let $\displaystyle{f(x)=\sum_{i=0}^\infty a_nx^n}$ be the ordinary generating function for the sequence. \\
+
+Using the recurrence we obtain: $a_nx^n=3a_{n-1}x^n+2^nx^n$, for $n \geq 1.$\\
+
+Summing across all valid choices of $n$, we obtain $$\displaystyle{\sum_{i=1}^\infty a_ix^i=\sum_{i=1}^\infty 3a_{i-1}x^n+\sum_{i=1}^\infty 2^nx^n.}$$
+
+Using the definition of $f(x)$ to substitute in, we obtain
+$$\displaystyle{f(x)-1=3xf(x)+\frac{1}{1-2x}-1.}$$
+
+Solve for $f(x)$: $\displaystyle{f(x)=\frac{1}{(1-3x)(1-2x)} = \frac{3}{1-3x}-\frac{2}{1-2x}}.$
+
+Now, 
+$$a_n=\left\ldb f(x) \right\rdb_{a_n}=\left\ldb  \frac{3}{1-3x} \right\rdb_{a_n}-\left\ldb\frac{2}{1-2x} \right\rdb_{a_n}=3(3^n)-2(2^n)=3^{n+1}-2^{n+1}.$$
+
+\vfill
+\item (12 points) Let $k\geq 2.$ Prove that if $\delta(G)=k,$ then $G$ contains a cycle on at least $k+1$ vertices.\\
+
+%\textbf{Proof:} Let $G$ be a graph such that $\delta(G)=k.$ Let $P$ be a longest path in $G$ and let $x$ be the first vertex on $P.$ Since $P$ cannot be made longer, all edges incident to $v$ must be incident to other vertices of $P.$ Since $d(v) \geq \delta(G)=k,$ $v$ must be adjacent to $k$ vertices on $P$. Let $u$ be the neighbor of $v$ farthest along the path $P$. By our choice of $u$ the path from $v$ to $u$ along with the edge $uv$ must form a cycle and it must contain $v$ and all of the vertices adjacent to $v.$ Thus the cycle contains at least $k+1$ vertices.
+
+\vfill
+
+\item (12 points) Draw the tree with Pr\"{u}fer sequence $(7,5,10,5,1,8,10,7).$
+
+\begin{tikzpicture}
+\vertex (2) at (0,-1)[label=above:$2 $]{};
+\vertex (9) at (0,1)[label=above:$ 9$]{};
+\vertex (7) at (1,0)[label=above:$7 $]{};
+\vertex (10) at (2,0)[label=below:$10 $]{};
+\vertex (4) at (2,1)[label=above:$4 $]{};
+\vertex (8) at (3,0)[label=above:$ 8$]{};
+\vertex (1) at (4,0)[label=above:$ 1$]{};
+\vertex (5) at (5,0)[label=above:$5 $]{};
+\vertex (3) at (6,1)[label=above:$3 $]{};
+\vertex (6) at (6,-1)[label=below:$6 $]{};
+\draw (2)--(7)--(9) (7)--(10)--(8)--(1)--(5)--(3) (5)--(6) (10)--(4);
+\end{tikzpicture}
+\vfill
+\newpage
+%%%chromatic poly	
+\item (15 points) Let $G$ be the graph pictured below.\\
+\begin{tikzpicture}[scale=1.3]
+\vertex[fill=red] (a) at (0,0)[label=above:$a$]{};
+\vertex[fill=blue] (b) at (1,1)[label=above:$b$]{};
+\vertex (c) at (1,-1)[label=below:$c$]{};
+\vertex[fill=red] (d) at (2,0)[label=above:$d$]{};
+\vertex (e) at (3,0)[label=above:$e$]{};
+\vertex[fill=red] (f) at (4,0)[label=above:$f$]{};
+\draw (c)--(a)--(b)--(c)--(d)--(e)--(f)(b)--(d);
+\end{tikzpicture}
+	\begin{enumerate}
+	\item Determine the chromatic  number of $G$. Explain your answer.\\
+	
+	
+From the coloring above, we know $\chi(G) \leq 3.$ On the other hand, vertices $a,\:b$ and $c$ form a $K_3$ and so $\chi(G) \geq 3.$ Thus, $\chi(G)=3.$\\
+	
+	\item Find $p(G,k),$  the chromatic polynomial of $G$. Explain your answer. \\
+	
+Claim: $p(G,k)=k(k-1)(k-2)(k-1)(k-1)(k-1)$	
+
+POC: Apply the multiplication principle to the vertices in alphabetical order. (That is, there are $k$ choices to color vertex $a$ and $k-1$ choices for vertex $b$ since $b$ must have a different color than $a$... and so forth. )
+	\end{enumerate}
+\end{enumerate}	
+\textbf{Extra Credit:} (6 points) 
+\begin{enumerate}
+	\item Give an example of a graph $G$ such that $\chi(G)=4$ but $G$ has no subgraph isomorphic to $K_4.$\\
+	
+	Any wheel constructed from an odd cycle will do.
+	\item Use your answer from part $a$ to construct a graph $G$ such that $\chi(G)=5$ but $G$ has no subgraph isomorphic to $K_4.$ (Hint: You might want to start with 4 disjoint copies of your graph from part (a).)\\
+	
+	Let $W$ be the wheel on 6 vertices made by joining a vertex to a 5 cycle. Make 4 copies of $W:$ $W_1$, $W_2$, $W_3$ and $W_4$. Observe that for each $W_i$ there are 6 distinct vertices and thus $6^4$ ways of picking one vertex from each $W_i.$ \\
+	
+Add an additional $6^4$ vertices such that each is adjacent to one vertex in each $W_i$ and each is adjacent to a different set. \\
+	
+\end{enumerate}
+\vfill
+\end{document}
