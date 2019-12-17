@@ -1,0 +1,276 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[11pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, multicol,
+%setspace,
+%graphics, 
+fancybox, fancyhdr,
+graphicx, enumerate,
+subfig, tikz, pgfplots,array}
+\usepackage{ stmaryrd }
+%% The next line says how the "vertex" style of nodes should look: drawn as small circles.
+\tikzstyle{vertex}=[circle, draw, inner sep=0pt, minimum size=6pt]
+%%
+%% Next, we make a \vertex command as a shorthand in place of \node[vertex} to get that style.
+\newcommand{\vertex}{\node[vertex]}
+
+%\singlespacing
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\def\be{\begin{enumerate}}
+\def\ee{\end{enumerate}}
+\def\bi{\begin{itemize}}
+\def\ei{\end{itemize}}
+\def\bs{\begin{slide}}
+\def\es{\end{slide}}
+\def\bx{\begin{exercise}}
+\def\ex{\end{exercise}}
+\def\t{\times}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\Longleftrightarrow}}
+\newcommand{\bv}[1]{\ensuremath{ \mathbf{\vec{#1}}} }
+\renewcommand{\d}{\displaystyle}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\def\ldb{\llbracket}
+\def\rdb{\rrbracket}
+
+\newcommand{\textmultiset}[2]{\bigl(\!{\binom{#1}{#2}}\!\bigr)}
+\newcommand{\displaymultiset}[2]{\left(\!{\binom{#1}{#2}}\!\right)}
+\newcommand\multiset[2]{\mathchoice{\displaymultiset{#1}{#2}}
+                                {\textmultiset{#1}{#2}}
+                                {\textmultiset{#1}{#2}}
+                                {\textmultiset{#1}{#2}}}
+
+
+\usetikzlibrary{calc}
+
+%for tikz pictures
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+
+%
+% Answerbox:
+%
+%\newcommand\answerbox[3]{#3 \fbox{\rule{#1}{0cm}\rule{0cm}{#2}}}
+%
+%\setlength{\headsep}{2pt}
+
+\lhead{\sc{Math 320 Combinatorics}}
+\chead{\large \sc Final Exam} 
+\rhead{\sc Fall 2019}
+\cfoot{}
+\pagestyle{fancy}
+%
+\begin{document}
+\thispagestyle{fancy}
+
+\vspace{0.1in}
+Your Name \\
+
+\vspace{0.051in}
+
+\framebox(200,30){ SOLUTIONS }\\
+
+
+\begin{enumerate}
+%counting, stirline numbers,
+\item (16 points) Let $S(n,k)$ denote the Stirling numbers of the second kind.
+	\be
+	\item Use complete enumeration of appropriate set partitions to determine $S(4,2).$\\
+	
+	answer: $S(4,2)=7.$\\
+	1,234\\
+	2,134\\
+	3,124\\
+	4,123\\
+	12,34\\
+	13,24\\
+	14,23\\
+		
+	\item Give a combinatorial justification that $S(n,2)=2^{n-1}-1.$ (That is, we were given a formula for $S(n,k)$. You cannot use this formula. Essentially, you are asked to show that this formula is correct when $k=2.$)\\
+	
+	ANSWER: We need to describe how to count the number of ways to partition the set $[n]$ into 2 blocks. Since every partition of $[n]$ must contain the element $1$ in one of the two blocks, we will describe (and therefore count) the partitions of $[n]$ according to elements in the same block as $1.$ \\
+	
+	For each element in $\{2,3,4,\cdots, n\},$ there are two choices: to be in the same block as 1 or be in the other block. Thus, there are $2^{n-1}$ different ways to place all of the elements in the set $\{2,3,4,\cdots, n\}.$ All of these different $2^{n-1}$ choices are indeed 2-partitions of $[n],$ save one: the instance in which \emph{all} elements of $\{2,3,4,\cdots, n\}$ are placed into the same block as 1. The problem in this case is that the second block is empty. Thus, we must subtract this from our count.\\
+	
+	\item How  many different functions with domain $[n]$ and \textbf{codomain} $[k]$ are possible?\\
+	
+	answer: For each item in $[n]$ there are $[k]$ choices. Thus, the number of function is $k^n.$\\
+	
+	\item How many different functions with domain $[n]$ and \textbf{range} $[k]$ are possible?\\
+	
+	answer: \fbox{$k! S(n,k)$}  \\
+	Since the function is onto, the set of inverse images of elements in the range must form a \emph{partition} of the domain. The number of partitions of $[n]$ into $k$-parts is $S(n,k).$ The number of ways to assign each block to an image in $[k]$ is $k!.$
+	\ee 
+\newpage
+%inclusion-exclusion
+\item (10 points) Use inclusion-exclusion to determine how many integers in $[100]$ are not divisible by $4$, $6$, or $7$. A calculation is sufficient. You do not need to simplify your answer.\\
+
+answer:\\
+Let $p_i$ be the property that number between 1 and 100 is divisible by $i$ for $i \in \{4,6,7\}.$ In this notation, we want the quantity $N_{=} (\emptyset).$ A straight application of Inclusion-Exclusion gives:\\
+
+\begin{tabular}{rcl}
+$N_{=} (\emptyset)$ & $=$ & $N_{\geq}{(\emptyset)}-N_{\geq}{(p_4)}-N_{\geq}{(p_6)}-N_{\geq}{(p_7)}+N_{\geq}{(p_4,p_6)}+N_{\geq}{(p_4,p_7)}+N_{\geq}{(p_6,p_7)}-N_{\geq}{(p_4,p_6,p_7)} $\\
+&&\\
+	&$=$& $100-\left\lfloor \frac{100}{4} \right\rfloor-\left\lfloor \frac{100}{6} \right\rfloor-\left\lfloor \frac{100}{7} \right\rfloor+\left\lfloor \frac{100}{12} \right\rfloor+\left\lfloor \frac{100}{28} \right\rfloor+\left\lfloor \frac{100}{42} \right\rfloor-\left\lfloor \frac{100}{84} \right\rfloor$ \\ &&\\
+	&$=$ & $100-25-16-14+8+3+2-1$\\
+\end{tabular}
+%partition numbers
+\item (15 points) Let $P(n,k)$ count the number of integer partitions of $n$ into $k$ parts.
+	\be
+	\item Use complete enumeration to determine $P(6,3).$\\
+	
+	answer: $P(6,3)=3.$\\
+	1,1,4\\
+	1,2,3\\
+	2,2,2\\
+	
+		\item Give a combinatorial proof of the identity below:
+	\begin{quote} If $n\geq1$ and $k \geq 1$, then $P(n,k)=P(n-1,k-1)+P(n-k,k).$ \end{quote}
+	\ee
+	
+	answer: Let $S$ be the  number of integer partitions of $n$ into exactly $k$ parts.  By definition $|S|=P(n,k).$\\
+	On the other hand, we can take the elements of $S$ and partition then according to the size of the smallest part. Specifically, let $S_1$ be the elements in $S$ with smallest part equal 1 and let $S_2$ be the elements of $S$ with smallest part at least 2.\\
+	Claim: $|S_1|=P(n-1,k-1)$\\
+	Since every partition in $S_1$ has smallest part equal 1, by deleting this part of size 1, there is a one-to-one correspondence between partitions in $S_1$ and integer partitions of $n-1$ with $k-1$ parts. \\
+	Claim: $|S_2|=P(n-k,k)$\\
+	Since every partition in $S_2$ has the property that all of its parts are at least 2, we can remove one from each part without reducing any part to zero. Thus, while the  number of parts is still $k$, the integer being partitioned is now $n-k.$\\
+	
+\newpage
+%generating functions
+\item (16 points)
+	\be
+	\item Write an ordinary generating function to count the number of ways to distribute 20 identical pieces of candy to two adults and three children. Assume the adults receive at most one piece of candy and the children receive at least one piece of candy. Identify what coefficient you need.\\
+	
+	answer: $\left\ldb (1+x)^2(x+x^2+x^3+\cdots)^3 \right\rdb_{x^{20}}$\\
+	
+	\item Let $g(x)=(1+x^2+x^4)(x+x^2+x^3+\cdots)(1+x+x^2+x^3+\cdots)^2.$
+	\be 
+	\item Write a concise form of $g(x).$\\
+	
+	answer: $\d g(x)=\frac{x(1+x^2+x^4)}{(1-x)^3}$\\
+	
+	\item Find $\displaystyle{\left\ldb g(x) \right\rdb_{x^6}}.$ Simplify your answer.\\
+	
+	answer: $ \d \left\ldb g(x)\right\rdb_{x^{6}}=\left\ldb\frac{x(1+x^2+x^4)}{(1-x)^3}\right\rdb_{x^{6}} = \left\ldb\frac{1}{(1-x)^3}\right\rdb_{x^{5}}+\left\ldb\frac{1}{(1-x)^3}\right\rdb_{x^{3}}+\left\ldb\frac{1}{(1-x)^3}\right\rdb_{x}.$\\
+	
+	So $ \d \left\ldb g(x)\right\rdb_{x^{6}}=\multiset{3}{5}+\multiset{3}{3}+\multiset{3}{1}=21+10+3=34.$\\
+	
+	\item Given an example of a problem for which $\displaystyle{\left\ldb g(x) \right\rdb_{x^k}}$ is an answer.\\
+	
+	Answer: In how many ways can $k$ identical candies be handed out to four people (A,B,C,D) such that $A$ gets zero, two or four candies, $B$ gets at least 4 candies and there are no restrictions on how many $C$ and $D$ get?\\
+	
+	\ee
+	\ee
+\newpage
+%%recurrence relaiton
+%\item (10 points) Use generating functions to solve the first order recurrence relation:
+%$$a_0=4 \text{     and     } a_n=2a_{n-1}+1, \text{ for } n\geq 1$$
+%\newpage
+%
+%%simple graph theory
+%\item (10 points) Let $G$ be a graph on $n$ vertices such that $\delta(G) \geq \left\lfloor \frac{n}{2} \right\rfloor.$ Prove that for every pair of vertices $u$ and $v,$ there exists a $uv$-path in $G$ of length at most 2. (Recall that the \emph{length} of a path counts the number of edges, not the number of vertices.)
+%\vfill
+%\newpage
+%% ramsey theory
+\item (15 points) Prove that $R(K_{1,3},K_3)=7.$
+	\be
+	\item Draw and label the graphs $K_{1,3}$ and $K_3.$\\
+	
+	
+	\begin{tikzpicture}
+	\node at (-1,0){$K_{1,3}$}; \node at (4,0){$K_{3}$};
+	\vertex (a) at (0,0){}; 
+	\foreach \i in {-1,0,1}{
+		\vertex (\i) at (1,\i){};
+		\draw (a) -- (\i);
+		}
+	\vertex (x) at (2,0){};\vertex (y) at (3,1){};\vertex (z) at (3,-1){};
+	\draw (x) -- (y) -- (z)--(x);
+	\end{tikzpicture}
+	
+	\item Demonstrate that $R(K_{1,3},K_3)>6.$ (Note that an example is not sufficient. You must explain how that example implies the lower bound.)\\
+	
+	
+	\begin{tikzpicture}
+	\foreach \i in {0,1,2}{
+		\vertex (x\i) at (\i,1){};
+		\vertex (y\i) at (\i,0){};
+		}
+	\foreach \i in {0,1,2}{
+		\foreach \j in {0,1,2}{
+		\draw[blue] (x\i) -- (y\j);
+		}
+		}
+	\foreach \i in {0,2}{
+		\draw[red] (x1) -- (x\i); \draw[red] (y1) -- (y\i);
+		}
+	\draw[red] (x0) to [bend left] (x2); \draw[red] (y0) to [bend right] (y2);
+	\end{tikzpicture}
+	
+	Observe that the red graph consists of two disjoint 3-cycles. Thus, every vertex has degree 2 in the red graph and therefore cannot have degree 3. So, the red graph has no $K_{1,3}.$\\
+	Observe that the blue graph is bipartite and therefore has no odd cycles at all. Thus, the blue graph cannot have a 3-cycle.\\
+	
+	\item Demonstrate that $R(K_{1,3},K_3)=7.$ 	
+	
+	proof: It is sufficient to prove that every 2-coloring of the edges of a $K_7$ will always contain a red $K_{1,3}$ or a blue $K_3.$\\
+	Let $v$ be an arbitrary vertex in a 2-colored $K_7$ and observe that $deg(v)=6.$\\
+	Case 1: Vertex $v$ is incident to at least 3 red edges. \\
+	Then $v$ along with three of the vertices adjacent to $v$ via red edges forms a red $K_{1,3}.$\\
+	
+	Case 2: Vertex $v$ is incident to at most 2 red edges. \\
+	Then, $v$ is incident to at least 4 blue edges. Label the vertices to which $v$ is adjacent via blue edges as: $x_1,x_2,x_3,x_4.$ Observe that if even a single $\{x_ix_j\}$ edge is blue, then the 2-colored graph has a blue $K_3.$ On the other hand, if all of the edges of the form $\{x_ix_j\}$ are red, the graph has a red $K_4,$ which clearly contains a red $K_{1,3}.$\\
+	
+	\ee
+\newpage
+%designs
+\item (12 points) Let $\mathcal{V} =[n]$ for an integer $n\geq 3$ and let $k$ be an integer such that $2 \leq k \leq n-1.$
+	\be
+	\item Let $\mathcal{B}$ be the set of all $k$-subsets of $\mathcal{V}.$ Does $(\mathcal{V},\mathcal{B})$ form a balanced incomplete block design? Prove your answer is correct.\\
+	
+	answer: yes.\\
+	proof: We must show that the design is (i) incomplete, (ii) regular, (iii) uniform, and (iv) balanced. (While it ain't hard, we do have to address each of these in order to know an arbitrary design is actually a BIBD.)\\
+	(i) incomplete: By definition the blocks have order $k <n.$\\
+	(ii) regular: For every $x \in [n],$ there exist $\d {n-1 \choose k-1}$ different $k$-subsets of $[n]$ containing $x.$ Thus, every $x \in [n]$ appears in the same number of blocks of the design, making the design regular.\\
+	(iii) uniform: By definition, every block is a $k$-subset. Since all blocks have the same cardinality, the design is uniform.\\
+	(iv) balanced: For every distinct pair of elements $x,y \in [n],$ the pair will appear in $\d {n-2 \choose k-2}$ distinct $k$-subsets of $[n].$ Thus, every distinct pair of elements $x,y$ appears together in the same number of blocks of the design, making the design balanced.\\
+	
+	\item Let $B=\{1,2,3\} \subseteq \mathcal{V}$ and assume $n \geq 5.$ Can $B$ be the base block of a cyclic design? Prove your answer is correct.\\
+	
+	answer: no.\\
+	proof: If $B$ were the only base block of a cyclic design, then the blocks of the design would look like:\\
+	1,2,3\\
+	2,3,4\\
+	3,4,5\\
+	4,5,x\\
+	5,x,y\\
+	and so forth...\\
+	
+	Observe that, depending upon $n$, the variety in the position of $x$ could be 1 or 6. There are similar cases for $y.$ What is certain is that we have already listed \emph{all} of the blocks that contain $3$. Since in this design, 3 appears with 1 only one time but appears with 2 twice, the design is not balanced.\\
+
+	\ee
+
+\vfill
+\newpage
+%basic counting
+\item (16 points) 
+	\be
+	\item A store has 20 varieties of doughnuts. In how many ways can you fill an order for a dozen doughnuts assuming there are no restrictions on the types of doughnuts. (That is, you may choose several of the same variety. Assume the store has a least 12 of each variety.)
+	\vfill
+	\item A store has 20 varieties of doughnuts. In how many ways can you pick a different variety of doughnut for each for your 7 best friends.
+	\vfill
+	
+	\item A nice teacher brings a box of 12 \textbf{identical} glazed doughnuts for her class of 8 (nonidentical) students. In how many ways can the doughnuts be given to the students assuming each student gets at least one doughnut but at most two doughnuts. (Assume the doughnuts are not divided.)
+	\vfill
+	\item A nice teacher brings a box of 12 \textbf{different} doughnuts for her class of 8 (nonidentical) students. In how many ways can the doughnuts be given to the students assuming each student gets at least one but there is no other restriction. (So some student could get 5 doughnuts. Assume that the order in which a student gets his/her doughnuts does not matter.)
+	\vfill
+	\ee
+	\end{enumerate}
+\end{document}
