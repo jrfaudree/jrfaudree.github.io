@@ -1,0 +1,103 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, head=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+
+\addtolength{\textwidth}{.5in}
+\addtolength{\leftmargin}{-1in}
+\addtolength{\textheight}{.5in}
+\addtolength{\topmargin}{-0.5in}
+
+%command for double parentheses
+\newcommand{\textmultiset}[2]{\bigl(\!{\binom{#1}{#2}}\!\bigr)}
+\newcommand{\displaymultiset}[2]{\left(\!{\binom{#1}{#2}}\!\right)}
+\newcommand\multiset[2]{\mathchoice{\displaymultiset{#1}{#2}}
+                                {\textmultiset{#1}{#2}}
+                                {\textmultiset{#1}{#2}}
+                                {\textmultiset{#1}{#2}}}
+
+\setcounter{secnumdepth}{0}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\clm}{\par\textit{Claim:}\par}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\sect}{\textsection}
+
+\parindent=0in
+\parskip=0.5\baselineskip
+
+\begin{document}
+\begin{center}MATH 320: Topics in Combinatorics  \\ Fall 2019 \\ Final Exam Review\end{center}
+
+\hrulefill
+
+\noindent\textbf{Logistics:} The Final Exam will be two hours long and will be cumulative. It will cover Chapters 1-3, 6, and Sections 1 and 2 of Chapter 7. You may bring in one page of notes with writing on both sides. \\
+
+\hrulefill
+
+\noindent\textbf{Chapters 1 and 2:} 
+
+\begin{itemize}
+\item vocabulary: lists, words, passwords, binary number, ternary number, repetition allowed, repetition not allowed, power set, set of subsets, permutation, $k$-permutation, combination, committee, multiset, Cartesian product of two sets, relation from set $A$ to set $B$, function from set $A$ to set $B$, bijection, one-to-one correspondence, one-to-one, onto, domain, codomain, range, function composition, inverse relation/function, equivalence relation, equivalence classes, congruence modulo $n$, divisibility, partition of a set, blocks of a partition, circular arrangements, $k$-to-one function, Stirling numbers of the second kind, Bell numbers,  integer partitions and parts of an integer partition
+
+\item notation: $[n]$, $(n)_k$, $\displaystyle{n \choose k}$, $\displaystyle{\multiset{n}{k}}$, $\text{rng}(f)$, $\text{dom}(f)$, $\text{co}(f)$, $S(n,k)$, $P(n,k)$
+
+\item useful theorems/results: product principle, sum principle, the bijection principle, inherited properties, equivalence principle, pigeonhole principle (recall the most general versions Theorem 1.5.4 and Theorem 1.5.6), the Binomial Theorem,,
+
+\item tasks/problems:
+	\begin{itemize}
+	\item Know the denominations and suits of a standard deck of 52 cards.
+	\item Counting the complement.
+	\item "Best of $2n-1$" series.
+	\item Checking that a function is well-defined.
+	\item How to determine equivalence classes.
+	\item The relationship between equivalence classes on the set $A$ and partitions of the set $A.$
+	\item Know how to give a \emph{bijective} proof or a \emph{combinatorial} proof.
+	\item Counting using the language of distributions.
+	\item Be able to fill out the chart on page 81.
+	\end{itemize}
+
+\item things you won't be asked
+	\begin{itemize}
+	\item to recall the great number of combinatorial identities
+	\item the formulas on pages 68 and 69 for how to calculate Bell numbers and  Stirling numbers.
+	\end{itemize}
+\end{itemize}
+
+
+\noindent\textbf{Chapter 3:} 
+
+\begin{itemize}
+\item Section 1: Inclusion-Exclusion
+We did a short review of this on Monday in the context of Section 6.3. You will want to remind yourself of the notation and the sort of problems that lend themselves to this technique.\\
+\item Section 2: Mathematical Induction
+This section is largely review from Proofs with the exception of an increased emphasis on proving inequalities and the use of this technique to solving recurrence relations.\\
+\item Section 3 and 4: Intro to Generating Functions
+Remind yourself what a generating function is and how it is useful. Recall the difference between OGFs and EGFs. Remind yourself if the elementary formulas (e.g. $1+ax+a^2x^2 + a^3x^3+ \cdots$ and  $1+ax+a^2 x^2 + a^3x^3+ \cdots a^nx^n$). Ideally you are thinking about these formulas and not simply copying them onto your note sheet. There is also notation to recall about ``coefficient extraction." There are convolution formulas. We had to recall the method of partial fractions.\\
+\item Sections 5 and 6: Generating Functions and Solutions to Recurrence Relations
+Recall that these two sections comprise a story that goes: We can use OGFs and EGFs to find solutions to recurrence relations and in some particular instances, we can use these techniques to develop plug-n-chug formulas for solutions.\\
+\end{itemize}
+
+\noindent\textbf{Chapter 6:}
+
+\begin{itemize}
+\item Section 6.1 Introduction to Graph Theory
+This section was an introduction to notation, terminology, examples, and several elementary theorems. You will want to carefully read this section and make sure you are familiar with all of these.\\
+\item Section 6.2 Trees
+This section introduced acyclic graphs and Cayley's Formula (Theorem 6.2.5) which involved Pr\"{u}fer Codes. It ended with a discussion of binary trees.\\
+\item Section 6.3 Coloring
+This sections discussed vertex coloring in graphs and introduces much new terminology (e.g. \emph{proper $k$-coloring}) and notation (e.g. $\chi(G)$ and $p(G,k)$).\\
+\item Section 6.4 Ramsey Theory
+This section was an introduction to Ramsey numbers $R(a,b)$ and $R(G,H)$.  In addition to knowing what these numbers mean, the goal was to become familiar with the sort of reasoning and argument needed to prove $R(a,b)=n.$\\
+\end{itemize}
+
+\noindent\textbf{Chapter 7:}
+\begin{itemize}
+\item Section 7.1 Construction Methods for designs\\
+The focus of this section was an introduction to the notion of a balanced incomplete block design with parameters $(b,v,r,k,\lambda)$, followed by some methods of constructing designs including complementary designs, cyclic designs, and repetition.
+\item Section 7.2 Symmetric Designs\\
+We discussed only parts of this section. You should know what it means for a design to be symmetric. You should know what the adjacency matrix of a design is. Given a symmetric design, you should know how to find the residual and derived designs.\\
+\end{itemize}
+\end{document}
