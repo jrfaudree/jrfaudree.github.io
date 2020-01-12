@@ -1,0 +1,473 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx,color,enumerate,multicol}
+\usepackage[top=1in,bottom=0.5in,left=1in, right=1in]{geometry}
+
+\usepackage{tikz}
+
+%% Use Minion fonts if available.  Otherwise Times.
+\IfFileExists{MinionPro.sty}{\usepackage[lf]{MinionPro}}{}
+\usepackage{amsmath,amsthm,amsbsy}
+\IfFileExists{MinionPro.sty}{}{\usepackage{times,txfonts}}
+
+%% Setup aproblem environment, 
+%% aproblem items
+%% subproblems environment
+%% subproblem items
+\makeatletter
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newlength\probsep
+\newlength\pshrinking
+\newif\iffirstprob
+\newenvironment{aproblems}%
+  {\ifhmode\unskip\par\fi\setcounter{probcount}{0}\probsep\parskip
+  \sbox\@tempboxa{\textbf{9.}}\pshrinking\wd\@tempboxa\advance\pshrinking\labelsep
+  \let\hproblem\aproblem
+  \advance\linewidth -\pshrinking
+  \advance\@totalleftmargin\pshrinking
+  \advance\leftskip\pshrinking}%
+  {\ifhmode\unskip \par\fi\advance\leftskip-\pshrinking}%
+
+\newcommand{\aproblem}{%
+  \setcounter{subprobcount}{0}%
+  \stepcounter{probcount}%
+  \def\@currentlabel{\arabic{probcount}}%
+  \ifhmode
+    \unskip \par
+  \fi
+%  \addpenalty{-4000}%
+  \iffirstprob\else\addvspace\probsep\fi
+  \firstprobfalse
+  \hskip -\labelwidth\hskip -\labelsep 
+  \hbox to\labelwidth{\hss\textbf{\arabic{probcount}.}}\hskip\labelsep
+}%
+
+\newcommand{\subprob}{\item\def\@currentlabel{\arabic{probcount}\alph{\thelistlabel}}}
+\newcommand{\skipproblem}{\stepcounter{probcount}}
+
+
+%% The following commands put defined left and right headers on the top, and a page number
+%% on the bottom of all pages beyond page 1
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[R]{\ifx\@docdate\@empty\else\@docdate\fi}
+\headheight 15pt
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\def\docdate#1{\gdef\@docdate{#1}}
+\makeatother
+
+%% General formatting parameters
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+
+\doclabel{Math F251: Recitation 1}
+\docdate{}
+
+\begin{document}
+\renewcommand{\d}{\displaystyle}
+\aproblem Find an equation of a line that has slope $-2$
+and passes through the point $(3,-5)$.  Write the equation
+of the line in point-slope form \textbf{and} then again 
+in $y$-intercept form.
+\vfill
+
+\aproblem Suppose the average surface temperature of the earth
+is modeled by the linear function
+\[
+T = 0.02t + 8.50
+\]
+where $T$ is temperature in C$^{\circ}$ and $t$ represents years since 1900. 
+
+\begin{quote}
+  \begin{enumerate}[(a)]
+  \item What units do the slope and the $T$-intercept have?
+  \vskip 1cm
+  \item What do the slope and $T$-intercept represent in physical terms?  \vskip 2cm
+  \item Use the equation to predict the average global surface
+    temperature in 2100.  \vskip1cm
+%    \item Rewrite the formula for temperature above 
+%in point-slope form where the point is determined by 
+%the the temperature in the year 2100.
+\vfill
+
+  \end{enumerate}
+\end{quote}
+
+\newpage
+\subsection*{Quadratic Functions}
+
+\aproblem A ball is dropped from the upper observation deck
+of the CN Tower 450 m above the ground. The height above the ground
+$h$ after $t$ seconds is given by the equation $h(t) = - 4.9 t^2 +
+0.96 t + 449.36$.
+\begin{quote}
+  \begin{enumerate}[(a)]
+  \item When does the ball hit the ground? (Use a calculator!) \vfill
+
+  \item Sketch a rough picture of the graph $h(t)$. Given the
+  physical understanding of the problem, what would be
+  a reasonable domain for the function $h(t)$?
+  \vfill
+
+  \end{enumerate}
+\end{quote}
+
+\subsection*{Essential Graphs}
+Set your calculator/computer aside. You should know the 
+graphs the following functions in this section by 
+heart. In your sketches, clearly indicate any asymptotes and intercepts.
+
+\aproblem Sketch the graphs of the following functions:
+
+
+  \begin{multicols}{3}{
+      % make sure you added \usepackage{enumerate}
+      \vspace*{-0.5in}
+      \begin{enumerate}[(a)]
+      \item $y = x$
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-4 ,0) -- (4 ,0) node[below] {$x$};
+\foreach \x in {-3,...,3}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-4) -- (0,4) node[left] {$y$};
+\foreach \y in {-3,...,3}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+      \item $y = x^2$
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-4 ,0) -- (4 ,0) node[below] {$x$};
+\foreach \x in {-3,...,3}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-4) -- (0,4) node[left] {$y$};
+\foreach \y in {-3,...,3}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+      \item $y = x^3$
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-4 ,0) -- (4 ,0) node[below] {$x$};
+\foreach \x in {-3,...,3}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-4) -- (0,4) node[left] {$y$};
+\foreach \y in {-3,...,3}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+      \end{enumerate}}
+  \end{multicols}
+
+\newpage
+
+\aproblem Sketch the graphs of the following functions:
+
+
+  \begin{multicols}{3}{
+      % make sure you added \usepackage{enumerate}
+      \vspace*{-0.5in}
+      \begin{enumerate}[(a)]
+      \item $y = \sqrt{x}$ 
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-4 ,0) -- (4 ,0) node[below] {$x$};
+\foreach \x in {-3,...,3}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-4) -- (0,4) node[left] {$y$};
+\foreach \y in {-3,...,3}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+      \item $y = \sqrt[3]{x}$
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-4 ,0) -- (4 ,0) node[below] {$x$};
+\foreach \x in {-3,...,3}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-4) -- (0,4) node[left] {$y$};
+\foreach \y in {-3,...,3}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+      \item $y = \d \frac 1 x$
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-4 ,0) -- (4 ,0) node[below] {$x$};
+\foreach \x in {-3,...,3}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-4) -- (0,4) node[left] {$y$};
+\foreach \y in {-3,...,3}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+      \end{enumerate}}
+  \end{multicols}
+
+
+\aproblem Sketch the graphs of the following functions:
+
+
+  \begin{multicols}{3}{
+      % make sure you added \usepackage{enumerate}
+      \vspace*{-0.5in}
+      \begin{enumerate}[(a)]
+      \item $y = \d \frac{1}{x^2}$
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-4 ,0) -- (4 ,0) node[below] {$x$};
+\foreach \x in {-3,...,3}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-4) -- (0,4) node[left] {$y$};
+\foreach \y in {-3,...,3}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+      \item $y = e^x$
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-4 ,0) -- (4 ,0) node[below] {$x$};
+\foreach \x in {-3,...,3}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-4) -- (0,4) node[left] {$y$};
+\foreach \y in {-3,...,3}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+
+      \item $y = \ln x$
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-4 ,0) -- (4 ,0) node[below] {$x$};
+\foreach \x in {-3,...,3}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-4) -- (0,4) node[left] {$y$};
+\foreach \y in {-3,...,3}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+      \end{enumerate}}
+  \end{multicols}
+
+
+\aproblem Sketch the following functions on $[- 2 \pi, 2
+\pi]$
+
+%\begin{quote}
+  \begin{multicols}{2}{
+      % make sure you added \usepackage{enumerate}
+      \vspace*{-0.45in}
+      \begin{enumerate}[(a)]
+      \item $y = \sin x$
+
+\begin{tikzpicture}[scale=0.65][>=latex]
+%x axis
+\draw[->] (-5 ,0) -- (5 ,0) node[below] {$x$};
+\foreach \x in {-4,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-2.5) -- (0,2.5) node[left] {$y$};
+\foreach \y in {-1,...,1}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+\item $y = \cos x$
+
+\begin{tikzpicture}[scale=0.65][>=latex]
+%x axis
+\draw[->] (-5 ,0) -- (5 ,0) node[below] {$x$};
+\foreach \x in {-4,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-2.5) -- (0,2.5) node[left] {$y$};
+\foreach \y in {-1,...,1}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+\columnbreak
+\item $y = \tan x$
+
+\begin{tikzpicture}[scale=0.65][>=latex]
+%x axis
+\draw[->] (-5 ,0) -- (5 ,0) node[below] {$x$};
+\foreach \x in {-4,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-2.5) -- (0,2.5) node[left] {$y$};
+\foreach \y in {-1,...,1}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+\end{enumerate}}
+\end{multicols}
+%\end{quote}
+\newpage
+\subsection*{Graphs of Functions Related by Transformations}
+
+\vskip -0.4cm
+Once you know the graph of one function, it's easy to sketch
+the graphs of other functions that related to it by 
+certain simple transformations. Again, set technology aside
+and sketch these the old-fashioned way.
+
+\aproblem  \textbf{Translations}. Graph the following functions.
+
+\begin{quote}
+  \begin{multicols}{2}{
+      % make sure you added \usepackage{enumerate}
+      \vspace*{-0.45in}
+      \begin{enumerate}[a)]
+      \item $y = x^2 - 2$
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-5 ,0) -- (5 ,0) node[below] {$x$};
+\foreach \x in {-4,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-5) -- (0,5) node[left] {$y$};
+\foreach \y in {-4,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+      \item $y = (x+2)^2$
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-5 ,0) -- (5 ,0) node[below] {$x$};
+\foreach \x in {-4,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-5) -- (0,5) node[left] {$y$};
+\foreach \y in {-4,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+      \end{enumerate}}
+  \end{multicols}
+\end{quote}
+
+\aproblem \textbf{Refections.} Sketch the graphs of the  following functions.
+
+\vskip -0.4cm
+\begin{quote}
+  \begin{multicols}{2}{
+      % make sure you added \usepackage{enumerate}
+      \vspace*{-0.45in}
+      \begin{enumerate}[a)]
+      \item $y = - \sqrt{x}$ 
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-5 ,0) -- (5 ,0) node[below] {$x$};
+\foreach \x in {-4,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-5) -- (0,5) node[left] {$y$};
+\foreach \y in {-4,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+      \item $y = \sqrt{-x}$
+
+\begin{tikzpicture}[scale=0.5][>=latex]
+%x axis
+\draw[->] (-5 ,0) -- (5 ,0) node[below] {$x$};
+\foreach \x in {-4,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-5) -- (0,5) node[left] {$y$};
+\foreach \y in {-4,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+      \end{enumerate}}
+  \end{multicols}
+\end{quote}
+
+\vskip -0.4cm
+\aproblem  Graph the following functions.
+\begin{multicols}{3}{
+      % make sure you added \usepackage{enumerate}
+      \vspace*{-0.45in}
+      \begin{enumerate}[(a)]
+      \item $f(x) = 4 - x^2$
+
+\begin{tikzpicture}[scale=0.45][>=latex]
+%x axis
+\draw[->] (-5 ,0) -- (5 ,0) node[below] {$x$};
+\foreach \x in {-4,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-5) -- (0,5) node[left] {$y$};
+\foreach \y in {-4,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+ 
+ \item $f(x) = e^{-x} - 3$ 
+
+\begin{tikzpicture}[scale=0.45][>=latex]
+%x axis
+\draw[->] (-5 ,0) -- (5 ,0) node[below] {$x$};
+\foreach \x in {-4,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-5) -- (0,5) node[left] {$y$};
+\foreach \y in {-4,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+
+\item $f(x) = \ln (x + 3) + 1$ 
+
+\begin{tikzpicture}[scale=0.45][>=latex]
+%x axis
+\draw[->] (-5 ,0) -- (5 ,0) node[below] {$x$};
+\foreach \x in {-4,...,4}
+\draw[shift={(\x,0)}] (0pt,2pt) -- (0pt,-2pt);
+%y axis
+\draw[->] (0,-5) -- (0,5) node[left] {$y$};
+\foreach \y in {-4,...,4}
+\draw[shift={(0,\y)}] (2pt,0pt) -- (-2pt,0pt);
+% \node[below left] at (0,0) {\footnotesize $0$};
+\end{tikzpicture}
+      \end{enumerate}}
+\end{multicols}
+%\aproblem (bonus question) Explain the difference between a \emph{linear} function and a \emph{nonlinear} function. Give both a graphical explanation and an algebraic explanation.
+%\vfill
+\end{document}
