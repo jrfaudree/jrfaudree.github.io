@@ -1,0 +1,147 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,latexsym} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate, enumitem}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz,xcolor, pgfplots}
+\pagestyle{fancy} 
+\lfoot{UAF Calculus 1}
+\rfoot{\S Review Week - day 4 }
+
+\usetikzlibrary{calc}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+
+\vspace*{-0.7in}
+\begin{center}
+  \large \sc{Review Day 4: Inverse Function, Exponential Functions, \& Logarithmic Functions }
+\end{center}
+\begin{enumerate}
+\item In your own words, explain what it means for $f^{-1}(x)$  to be the \emph{inverse} of $f(x)$? You might try explaining it using graphs, algebra, or numerical calculations.
+\vfill
+\item Without doing a bunch of algebra, find $f^{-1}(x)$ for each function below:
+\begin{multicols}{2}
+\begin{enumerate}
+	\item $f(x)=2x$
+	\item $f(x)= x^3$
+	\end{enumerate}
+	\end{multicols}
+	\vfill
+\item Without explicitly finding a formula for $f^{-1}(x)$, find $f^{-1}(1)$ for each function below:\\
+\begin{multicols}{3}
+\begin{enumerate}
+	\item $f(x)=x-20$
+	\item \begin{tabular}{|c||c|c|c|c|c|c|c|c|c|}
+$x$&0&0.25&0.5&0.75&1&1.25&1.5&1.75&2.0\\
+\hline
+$f(x)$&20&10&5&3&2.5&2&1.5&1&0.25\\
+\end{tabular}
+
+	\end{enumerate}
+	\end{multicols}
+	\vfill
+\item Explain why the directions ``Find $f^{-1}(1)$" don't make sense for the following examples:
+
+\begin{multicols}{3}
+\begin{enumerate}
+	\item $f(x)=x^2-3$
+	\item \begin{tabular}{|c||c|c|c|c|c|c|c|c|c|}
+$x$&0&1&2&3&4&5&6&7&8\\
+\hline
+$f(x)$&-3&1&5&8&6&2&3&1&0\\
+\end{tabular}
+
+	\end{enumerate}
+	\end{multicols}
+	\vfill
+\newpage
+\item Give a not-too-big rough sketch of $f(x)=\sin x$ and ask yourself whether or not it makes since to be asked to find $\sin^{-1}(1)$. (Recall that $\sin^{-1}(1)$ could be written $\arcsin(1)$ or $\text{invsin}(1).$)\\
+
+\tikz{ \draw[<->] (-4,0) -- (4,0); \draw [<->] (0,-2) -- (0,2);}
+\vfill
+
+
+\item Evaluate the following:
+
+	\begin{enumerate}
+	\begin{multicols}{2}
+	\item $\arcsin(1)$
+	\item $\arccos(-\sqrt{3}/2)$
+	\end{multicols}
+	\vspace{1in}
+	\begin{multicols}{2}
+	\item $\arctan(1)$
+	\item $\arcsin(10)$
+	\end{multicols}
+	\vspace{1in}
+	\end{enumerate}
+
+\newpage
+\begin{center} Exponential Functions \& Logarithms \end{center}
+
+\item On the axes below, sketch:
+\begin{enumerate}
+\begin{multicols}
+\item $y=e^x$ and $y=2^x$\\
+
+\tikz{ \draw[<->] (-3,0) -- (2,0); \draw [<->] (0,-1) -- (0,2);}\\
+\columnbreak
+
+
+\item $y=\ln x$ and $y=\log_2(x)$\\
+
+\tikz{ \draw[<->] (-2,0) -- (4,0); \draw [<->] (0,-2) -- (0,2);}\\
+\end{multicols}
+\end{enumerate}
+
+
+	
+\vfill
+\item Find the exact value of each expression.
+\begin{multicols}{2}
+\begin{enumerate}
+	\item $\log_2 16$
+	\item $e^{\ln 5}$
+	\end{enumerate}
+	\end{multicols}
+	\vspace{1in}
+
+\newpage
+\item Solve each equation below for $x$.
+\begin{multicols}{2}
+\begin{enumerate}
+	\item $10=2e^{x+1}$
+	\item $\ln (x^2-1)=1$
+	\end{enumerate}
+	\end{multicols}
+	\vfill
+\item Sketch each function. Include domain, range, intercepts and asymptotes.\\
+\begin{multicols}{2}
+\begin{enumerate}
+	\item $f(x)=\ln(x+1)$
+	
+	\tikz{ \draw[<->] (-4,0) -- (4,0); \draw [<->] (0,-4) -- (0,4);}
+	
+	\item $f(x)=- \ln x$
+	
+	\tikz{ \draw[<->] (-4,0) -- (4,0); \draw [<->] (0,-4) -- (0,4);}
+	
+	\end{enumerate}
+	\end{multicols}
+	\vfill
+
+\end{enumerate}
+\end{document}
