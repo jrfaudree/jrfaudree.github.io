@@ -1,0 +1,79 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,latexsym} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate, enumitem}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz,xcolor, pgfplots}
+\pagestyle{fancy} 
+\lfoot{UAF Calculus 1}
+\rfoot{\S 2.2 }
+
+\usetikzlibrary{calc}
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+
+\vspace*{-1in}
+\begin{center}
+   \sc{Lecture Notes: \S 2.2 }
+\end{center}
+\begin{enumerate}
+
+\item Sketch the graph of an example of a function $f$ that satisfies \emph{all} of the given conditions.
+	\begin{enumerate}
+	\item $f(0)=2$
+	\item $f(3)=1$
+	\item $\d{\lim_{x \to 0}f(x)}=1$
+	\item $\d{\lim_{x \to 3^-} f(x)= -2}$
+	\item $\d{\lim_{x \to 3^+} f(x)= 4}$
+	\item $\d{\lim_{x \to -1^+}f(x)= \infty}$
+	\end{enumerate}
+\vfill
+\item Sketch a graph $f(x)$ such that $\d \lim_{x \to 3} f(x) = \infty.$ \vfill 
+
+\item 
+	\begin{enumerate}
+	\item Use a calculator and a table of values to determine the limit: $\d{\lim_{x \to 1^-} x \sec(\pi x/2)}.$
+	\vfill
+	\item Use mathematical reasoning to show that your answer in part (a) is correct.
+	\vfill
+	\end{enumerate}
+
+\newpage
+\item Without using a calculator, determine the (infinite) limit. Explain your reasoning.
+\begin{enumerate}
+\item $\displaystyle{\lim_{x \to 3^-}\frac{\sqrt{x}}{x-3}}$\\
+\vfill
+\item $\displaystyle{\lim_{x \to 3^+}\frac{\sqrt{x}}{x-3}}$\\
+\vfill
+
+\item $\displaystyle{\lim_{x \to 3^+}\frac{{2-10x}}{x-3}}$\\
+\vfill
+
+\item $\displaystyle{\lim_{x \to 3^+}\ln(x-3)}$\\
+\vfill
+
+\item Why didn't we ask you to find $\displaystyle{\lim_{x \to 3^-}\ln(x-3)}$?\\
+\vfill
+
+\item $\displaystyle{\lim_{x \to 0^+}\left(\frac{1}{x}-\ln(x)\right)}$\\
+\vfill
+
+\end{enumerate}
+%\item Let $f(x)=8-x^2$ have domain $(-\infty,1) \cup (1,\infty).$ Sketch $f(x)$ and explain why $f(x)$ has a limit as $x$ approaches 1 even though $f(x)$ is undefined at $x=1.$
+\end{enumerate}
+\end{document}
