@@ -1,0 +1,88 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx,latexsym} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate, enumitem}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz,xcolor, pgfplots}
+\pagestyle{fancy} 
+\lfoot{UAF Calculus 1}
+\rfoot{\S 2.2 }
+
+\usetikzlibrary{calc}
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+
+\vspace*{-1in}
+\begin{center}
+   \sc{Worksheet: \S 2.3 }
+\end{center}
+\begin{enumerate}
+\item Fill in the blanks below. Assume $a$ and $c$ are fixed constants. (Note that these are all in your text but not in this order.)\textbf{Assume $\d \lim_{x \to a} f(x) $ and $\d \lim_{x \to a} g(x) $ exist. }
+	\begin{enumerate}
+	
+	\item $\d \lim_{x \to a} c = \underline{\hspace{2in}} $ \\ \vfill
+	
+	\item $\d \lim_{x \to a} x = \underline{\hspace{2in}} $ \\ \vfill
+
+	\item $\d \lim_{x \to a} \left(f(x) + g(x) \right) = \underline{\hspace{2in}} $ \\ \vfill
+	
+	\begin{enumerate} \item What do the rules above imply about $\d \lim_{x \to 12} (x+\pi)$? \end{enumerate} 
+	 \vfill
+
+	 \item $\d \lim_{x \to a} \left(f(x) - g(x) \right) = \underline{\hspace{2in}}$ \\ \vfill
+	 
+	  \item $\d \lim_{x \to a} cf(x) = \underline{\hspace{2in}}$ \\ \vfill
+	  
+	  \begin{enumerate} \item What do the rules above imply about $\d \lim_{x \to 5} 2x+3$? \end{enumerate}  \vfill
+	  
+	  \item $\d \lim_{x \to a} f(x)g(x)= \underline{\hspace{2in}}$ \\ \vfill
+	  
+	  \item $\d \lim_{x \to a}x^n= \underline{\hspace{2in}}$ \\ \vfill
+	  
+	  \item $\d \lim_{x \to a} \left(f(x)\right)^n= \underline{\hspace{2in}}$ \\ \vfill
+	  
+	  \item $\d \lim_{x \to a} \frac{f(x)}{g(x)}= \underline{\hspace{2in}}$  provided \underline{\hspace{2in}} \\ \vfill
+	  
+	  \item $\d \lim_{x \to a} \sqrt[n]{x}= \underline{\hspace{2in}}$ \\ \vfill
+	  
+	  \item $\d \lim_{x \to a} \sqrt[n]{f(x)}= \underline{\hspace{2in}}$ \\ \vfill
+
+	\end{enumerate}
+\newpage
+
+\item If $\d \lim_{x \to \sqrt{2}} f(x) = 8 $ and $\d \lim_{x \to \sqrt{2}} g(x) = e^2$, then evaluate $$\d \lim_{x \to \sqrt{2}} \left(\frac{g(x)}{(3-f(x))^2}+2\sqrt{g(x)}\right) \hspace{2in} \quad$$
+
+\vfill
+
+\item Use the previous rules to evaluate (a) and explain why you \emph{cannot} use the rules to evaluate (b).\\
+	\begin{enumerate}
+	\item $\d \lim_{w \to -\frac{1}{2}} \frac{2w+1}{w^3}$
+	\vfill
+	\item $\d \lim_{t \to 1} \frac{t^2+t-2}{t^2-1}$
+	\vfill
+	\end{enumerate}
+	
+\item (One more super-useful rule!) If \hspace{2in}, then $\d \lim_{x \to a} f(x) = \lim_{x \to a} g(x) $
+\vfill
+\item Use this rule \emph{and what you know about zeros of polynomials} to evaluate\\
+
+\noindent $\d \lim_{t \to 1} \frac{t^2+t-2}{t^2-1}$
+
+
+\end{enumerate}
+\end{document}
