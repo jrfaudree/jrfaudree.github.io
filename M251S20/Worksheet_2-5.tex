@@ -1,0 +1,48 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz,pgfplots}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+\pagestyle{fancy} 
+\lfoot{UAF Calculus 1}
+\rfoot{2-5}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.9in}
+\begin{center}
+  \large \sc{Section 2-5 examples}
+\end{center}
+\small
+\begin{enumerate}
+\item Sketch the graph of a function with a removable discontinuity at $x=2$, a jump discontinuity at $x=-2$ and that is continuous for all other real numbers.
+\vspace{2in}
+\item Determine where the function $h(x)=\begin{cases} \sin x & x < \pi \\ 0 &  x =\pi \\ x+1-\pi & \pi < x
+\end{cases}$ is not continuous and \textbf{justify} your answer. Sketch the graph of the function.
+\vfill
+\item Use continuity to evaluate the limit $\displaystyle{\lim_{x \to 10} \frac{x^2}{\sqrt{x-5}}}.$ 
+\vspace{1in}
+\newpage
+\item Determine the value of $c$ that will make $f(x)=\begin{cases} c-x^2 & x\leq 1 \\ 5x-2 & x > 1\end{cases}$ continuous everywhere.
+\vfill
+\item Use the Intermediate Value Theorem to show that there is a root of the equation $5+2x-x^4=0$ in the interval $(1,2).$
+\vfill
+
+\end{enumerate}
+ \end{document}
