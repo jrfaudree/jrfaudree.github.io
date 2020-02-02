@@ -1,0 +1,80 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz,pgfplots}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+\pagestyle{fancy} 
+\lfoot{UAF Calculus 1}
+\rfoot{2-3}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.9in}
+\begin{center}
+  \Large \sc{Section 2-6 (day 1)}
+\end{center}
+\small
+
+Evaluate the limits below. You may use graphs or numerical calculation to confirm your answer, but your \emph{formal} answer must be \textbf{algebraic}.\\
+\begin{enumerate}
+
+\item $\d{\lim_{x\to-\infty}\frac{3x^2+4x}{2x^4+7}}$\\
+\vspace{.5in}
+
+\item $\d{\lim_{x\to \infty}\frac{5x^{5/2}-8x^2+1}{2x^2+7}}$\\
+\vspace{.5in}
+
+\item $\d{\lim_{x\to\infty} \frac{2e^x}{8-\sqrt{5}e^x}}$\\
+\vfill
+
+\item $\d{\lim_{x\to-\infty} \frac{2e^x}{8-\sqrt{5}e^x}}$\\
+\vfill
+\hspace*{-.2in} Hint: $x^3=\sqrt{x^6}$ provided $x >0.$ 
+\item $\d{\lim_{x\to\infty}\frac{\sqrt{3x^6-x}}{x^3 + 1}}$\\
+\vfill
+
+\item $\d{\lim_{x\to-\infty}\frac{\sqrt{3x^6-x}}{x^3 + 1}}$\\
+\vfill
+
+\item $\d{\lim_{x\to-\infty} e^{\arctan x}}$\\
+\vfill
+
+\newpage
+
+\item $\d{\lim_{x\to\infty} [ \ln (2 + 3x) - \ln (1+x) ]}$\\
+\vfill
+
+\item $\d{\lim_{x\to\infty}(\sqrt{x^2+x} - x)}$\\
+\vfill
+
+\item $\d{\lim_{x\to-\infty}} \sqrt[3]{x}-x^3$\\
+\vfill
+
+\item $\d{\lim_{x\to\infty}e^{-2x} +\cos x}$\\
+\vfill
+
+\item $\d{\lim_{x\to\infty}e^{-2x} \cos x}$ (Hint: Use the Squeeze Theorem.)\\
+\vfill
+
+\item Find all vertical and horizontal asymptotes in the graph of the function $\d g(s)=\frac{\sqrt{3s^2+1}}{2s+1}.$
+
+\vspace{3in}
+
+\end{enumerate}
+ \end{document}
