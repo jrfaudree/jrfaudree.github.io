@@ -1,0 +1,262 @@
+% !TEX TS-program = pdflatexmk
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% TiKZ.
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+
+% Commands to set various header/footer components.
+\makeatletter
+\def\doctitle#1{\gdef\@doctitle{#1}}
+\doctitle{Use {\tt\textbackslash doctitle\{MY LABEL\}}.}
+\def\docdate#1{\gdef\@docdate{#1}}
+\docdate{Use {\tt\textbackslash docdate\{MY DATE\}}.}
+\def\doccourse#1{\gdef\@doccourse{#1}}
+\let\@doccourse\@empty
+\def\docscoring#1{\gdef\@docscoring{#1}}
+\let\@docscoring\@empty
+\def\docversion#1{\gdef\@docversion{#1}}
+\let\@docversion\@empty
+\makeatother
+
+% Headers and footers layout.
+\makeatletter
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Clears all headers/footers.
+\lhead{\emph{\@doctitle\hfill\@docdate}
+\ifnum \value{page} > 1\relax\else\\
+\emph{Name: \rule{3.5in}{1pt}\hfill \@docscoring}
+\\
+\emph{Circle one: \quad Faudree (F01) \hskip 1ex\rule{1pt}{9pt}\hskip 1ex Bueler (F02) \hskip 1ex\rule{1pt}{9pt}\hskip 1ex VanSpronsen (UX1)}
+\fi}
+
+\rfoot{\emph{\@docversion}}
+\lfoot{\emph{\@doccourse}}
+\cfoot{\emph{\thepage}}
+\renewcommand{\headrulewidth}{0pt}%
+\makeatother
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+% A problem is a section-like command. Use \problem{5} to
+% start a problem worth 5 points.
+\newcounter{probcount}
+\newcounter{subprobcount}
+\setcounter{probcount}{0}
+\newcommand{\problem}[1]{%
+\par
+\addvspace{4pt}%
+\setcounter{subprobcount}{0}%
+\stepcounter{probcount}%
+\makebox[0pt][r]{\emph{\arabic{probcount}.}\hskip1ex}\emph{[#1 points]}\hskip1ex}
+\newcommand{\thesubproblem}{\emph{\alph{subprobcount}.}}
+
+% Subproblems are an enumerate-like environment with a consistent
+% numbering scheme. 
+% Use \begin{subproblems}\item...\item...\end{subproblems}
+\newenvironment{subproblems}{%
+\begin{enumerate}%
+\setcounter{enumi}{\value{subprobcount}}%
+\renewcommand{\theenumi}{\emph{\alph{enumi}}}}%
+{\setcounter{subprobcount}{\value{enumi}}\end{enumerate}}
+
+% Blanks for answers in normal and math mode.
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\mblank}[1]{\underline{\hspace{#1}}}
+\def\emptybox(#1,#2){\framebox{\parbox[c][#2]{#1}{\rule{0pt}{0pt}}}}
+
+% Misc.
+\renewcommand{\d}{\displaystyle}
+\newcommand{\ds}{\displaystyle}
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+
+
+\doctitle{Math 251: Quiz 3}
+\docdate{4 February 2020}
+\doccourse{UAF Calculus I}
+\docversion{v-1}
+\docscoring{\blank{0.8in} / 25}
+\begin{document}
+There are 25 points possible on this quiz. No aids (book, calculator, etc.)
+are permitted.  Show all work for full credit.
+
+
+\problem{9} Evaluate each limit below. Your answer for each should be either a real number, $+ \infty,$ $- \infty$, or DNE. Show your work to receive full credit. 
+\begin{subproblems}
+\item  $\ds \lim_{x\to -3}\frac{x^2+4x+3}{x^2+x-6}$
+\vfill
+
+\item  $\ds \lim_{x\to 9} \:\frac{3-\sqrt{x}}{9x-x^2}$
+\vfill
+
+\item $\ds \lim_{h\to 0^-}\frac{2h^2+10h}{|h|}$
+\vfill
+
+
+\end{subproblems}
+\problem{4} Use the Intermediate Value Theorem to \textbf{show} that the equation $e^x=4-5x$ has a root in the interval $(0,1).$
+\vfill
+
+\newpage
+
+\problem{8} Consider the function 
+$\ds
+f(x)=\begin{cases} 2x+4 & x < 0\\ 1 & x=0\\
+\sqrt{x+16} & x>0.
+\end{cases}
+$
+\begin{subproblems}
+\item On the axes below, sketch a graph of $f(x).$\\
+\begin{tikzpicture}
+\draw[->, thick] (-4,0)--(4,0);
+\node at (4.2,-.2){$x$};
+\draw[->, thick] (0,-2)--(0,2);
+\node at (-.2,2.2){$y$};
+\end{tikzpicture}
+\item Evaluate the limit below  or explain why the limit fails to exist.\\
+
+\noindent  $\d{\lim_{x \to 0} f(x)=}$\\
+\vspace{1in}
+\item Is $f$ continuous at $x=0$? Explain using the definition of continuity.
+\vspace{1in}
+\end{subproblems}
+\vfill
+\problem{4} The graphs of $f(x)$ and $g(x)$ are given. Use them to evaluate each limit, if it exists. If the limit does not exist, explain why.\\
+
+\begin{multicols}{2}
+\begin{tabular}{ll}
+\begin{tikzpicture}[scale=.5]
+\foreach \i in {-2,-1,0,...,4}{\draw (\i,-2) -- (\i,4);}
+\foreach \j in {-2,-1,0,...,4}{\draw (-2,\j) -- (4,\j);}
+\draw[thick,->] (-2,0) -- (4,0); \draw[thick,->] (0,-2) -- (0,4);
+\node at (3.5,-.3){$x$};\node at (-.3,3.5){$y$};
+\draw[ultra thick, smooth, <->] plot coordinates {(-2,3)(0,1)(2,3)(4,0)};
+\node[fill=white,inner sep=1.5pt] at (2,-.5){2};
+\node[fill=white,inner sep=1.5pt] at (-.5,2){2};
+\node[fill=white,inner sep=1.5pt] at (3.5,3.5){$f(x)$};
+\end{tikzpicture}
+&
+\begin{tikzpicture}[scale=.5]
+\foreach \i in {-2,-1,0,...,4}{\draw (\i,-2) -- (\i,4);}
+\foreach \j in {-2,-1,0,...,4}{\draw (-2,\j) -- (4,\j);}
+\draw[thick,->] (-2,0) -- (4,0); \draw[thick,->] (0,-2) -- (0,4);
+\node at (3.5,-.2){$x$}; \node at (-.2,3.5){$y$};
+\draw[ultra thick, smooth, <->] plot coordinates {(-2,-1)(0,2)(1,2)(2,1)(4,-2)};
+\node[fill=white,inner sep=1.5pt] at (2,-.5){2};
+\node[fill=white,inner sep=1.5pt] at (-.6,2){2};
+\node[fill=white,inner sep=1.5pt] at (3.5,3.5){$g(x)$};
+\end{tikzpicture}
+\end{tabular}
+
+\columnbreak
+
+\begin{subproblems}
+\item  $\d{\lim_{x \to 2}\: \frac{5f(x)}{2+g(x)}=}$\\
+
+\item $\d{\lim_{x \to 2} \:x^2f(x)=}$\\
+
+\end{subproblems}		
+\end{multicols}
+%\problem{3} Use the graph of the function of $f(x)$ to answer the questions below.\\ CHANGE GRAPH
+%%\begin{center}
+%\begin{tikzpicture}
+%\begin{axis}[scale=1.3, thick, my style, xtick={-8,-6,...,8}, ytick={-4,-2,...,8},
+%xmin=-8, xmax=8, ymin=-5, ymax=8, minor y tick num=1,
+%        minor x tick num=1, mark size=3.0pt]
+% %%asymptote
+%\addplot[dashed,<->, thick] coordinates {(4,-5) (4,8)};
+%%points solid
+%\addplot[mark=*,only marks] coordinates {(-4,-4)(4,5)(1,6)};
+%%points open
+%\addplot[mark=*,fill=white,only marks] coordinates {(-4,0)
+%(1,3) (6,3)};
+%\addplot[ultra thick, smooth,->] coordinates {(-6,4) (-8,4)};
+%\addplot[ultra thick, smooth] coordinates {(-4,0) (-6,4)};
+%\addplot[ultra thick, smooth,] coordinates {(-4,0) (0,1) (1,3)};
+%\addplot[ultra thick, smooth] coordinates {(1,6)(4,5)};
+%\addplot[ultra thick, smooth,<->] coordinates {(4.2,-5) (5,2) (7.5,3.5)};
+%\foreach \i in {-8,-7,-6,...,8}{
+%	\addplot[dotted, gray, domain=-8:8]{\i};
+%	\addplot[dotted, gray] coordinates {(\i,-5) (\i,8)};
+%	}
+%\end{axis}
+%\end{tikzpicture}
+%%\end{center}
+%\hfill
+%\begin{subproblems}
+%\item Where does $f$ fail to be defined?
+%\item Where does $f$ fail to have a limit?
+%\item Where does $f$ fail to be continuous?
+%\end{subproblems}
+
+\end{document}
+\problem{4}\begin{subproblems}
+\item
+What is wrong with the following equation?\qquad $\ds \frac{x-4x^3}{x} = 1-4x^2$
+\vskip 0.75in
+
+\item 
+In view of part a, explain why the following equation is correct.\qquad
+$\ds
+\lim_{x\to0}\frac{x-4x^3}{x} = \lim_{x\to0}1-x^2
+$
+\vskip 0.75in
+\end{subproblems}
+
+
+
+%\begin{subproblems}
+%\item In the diagram below, graph $f(x)$.
+%\begin{center}
+%\begin{tikzpicture}[scale=1.0]
+%\draw [help lines,dashed] (-6.2,-3.2) grid (6.2,3.2);
+%
+%\draw [thick, ->] (-6.2,0)--(6.2,0) node[right] {$x$};
+%\draw [thick, ->] (0,-3.2)--(0,3.2) node[above]{$f(x)$};
+%
+%\foreach \i in {-4,-2,2,4}
+%{	\node[below] at (\i,0) {$\i$};
+%}
+%\foreach \i in {-2,2}
+%{	\node[left] at (0,\i) {$\i$};
+%}
+%\end{tikzpicture}
+%\end{center}
+
+%\item Explain why $f(x)$ isn't continuous at $x=0$.
+%\end{subproblems}
+%\vskip 2cm
+
+%\problem{4} Use the Intermediate Value Theorem to justify the
+%claim that there exists a number $x$ satisfying
+%$\ds 2^x-x-4 = 0.$
+\newpage
+
+
+\problem{3} What property of the square root function allows you to move the limit inside the square root, as done below.
+
+$$\lim_{x \to 5} \sqrt{x^2+9} = \sqrt{\lim_{x \to 5} (x^2+9)}$$
+
+\vfill
+\end{document}
