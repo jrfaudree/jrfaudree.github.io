@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx,color,enumerate,multicol}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{tikz,pgfplots}
+
+%% Use Minion fonts if available.  Otherwise Times.
+\IfFileExists{MinionPro.sty}{\usepackage[lf]{MinionPro}}{}
+\usepackage{amsmath,amsthm,amsbsy}
+\IfFileExists{MinionPro.sty}{}{\usepackage{times,txfonts}}
+
+%% Setup aproblem environment, 
+%% aproblem items
+%% subproblems environment
+%% subproblem items
+\makeatletter
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newlength\probsep
+\newlength\pshrinking
+\newif\iffirstprob
+\newenvironment{aproblems}%
+  {\ifhmode\unskip\par\fi\setcounter{probcount}{0}\probsep\parskip
+  \sbox\@tempboxa{\textbf{9.}}\pshrinking\wd\@tempboxa\advance\pshrinking\labelsep
+  \let\hproblem\aproblem
+  \advance\linewidth -\pshrinking
+  \advance\@totalleftmargin\pshrinking
+  \advance\leftskip\pshrinking}%
+  {\ifhmode\unskip \par\fi\advance\leftskip-\pshrinking}%
+
+\newcommand{\aproblem}{%
+  \setcounter{subprobcount}{0}%
+  \stepcounter{probcount}%
+  \def\@currentlabel{\arabic{probcount}}%
+  \ifhmode
+    \unskip \par
+  \fi
+%  \addpenalty{-4000}%
+  \iffirstprob\else\addvspace\probsep\fi
+  \firstprobfalse
+  \hskip -\labelwidth\hskip -\labelsep 
+  \hbox to\labelwidth{\hss\textbf{\arabic{probcount}.}}\hskip\labelsep
+}%
+
+\newcommand{\subprob}{\item\def\@currentlabel{\arabic{probcount}\alph{\thelistlabel}}}
+\newcommand{\skipproblem}{\stepcounter{probcount}}
+
+
+%% The following commands put defined left and right headers on the top, and a page number
+%% on the bottom of all pages beyond page 1
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[R]{\ifx\@docdate\@empty\else\@docdate\fi}
+\headheight 15pt
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\def\docdate#1{\gdef\@docdate{#1}}
+\makeatother
+
+%% General formatting parameters
+\parindent 0pt
+\parskip 6pt plus 1pt
+
+\let\d\displaystyle
+\doclabel{Math F251X: Midterm 1 Review}
+\docdate{10 February 2020}
+
+
+\begin{document}
+\textbf{Logistics:} 
+\begin{itemize}
+	\item It covers material from Chapters 1 and 2, though Chapter 2 is emphasized. 
+	\item One-hour in length.
+	\item No books, notes, calculators or other aids.
+	\item Students in the first class will stay in class till the hour is over. Bring a book or other homework. No phones for the entire hour.
+	\item There is an extra-credit question.
+	\item You cannot re-do a midterm.
+	\item Using your cell phone or computer for any reason during the Midterm will result in a grade of zero.
+	\end{itemize}
+	
+\vspace{.25in}
+
+\textbf{Things to Keep in Mind:}
+\begin{itemize}
+	\item \emph{All} of the problems will be familiar to any student who attended class, did the homework, and took the quizzes.
+	\item \textbf{Be a good test taker.} If you are stuck on a problem, leave it and come back. Pay attention to the time and make sure you get to every problem. Attack each problem under the assumption that you have the tools to solve it. If time permits, check every problem by working it a different way or by checking the plausibility of your answer.
+	\item \textbf{Be active, not passive,} when reviewing for this (and all) midterms. It is better to work problems and/or take a practice test, then to read the book, read over your notes, or look over solutions to quizzes/tests/homework.
+	\item Don't skip Recitation. It will be an active review. Focus on your weak areas.
+	\item Is there any good thing about preparing for and taking a Midterm?
+\end{itemize}
+\textbf{Topic Review}
+\textbf{Chapter 2}
+\begin{enumerate}
+\item Identify all of the following given a picture of the graph of $f(x).$
+	\begin{itemize}
+	\item domain \& range
+	\item regions where the function is (or isn't) continuous
+	\item points where the derivative of the function fails to exist
+	\item limits of various kinds (infinite, one-sided, two-sided)
+	\item values of the function (Given $x$, find $y$. Given $y$, find $x$.)
+	\end{itemize}
+\item Evaluate limits algebraically. \\
+Recall the various types: one-sided, two-sided, infinite, at infinity\\
+Recall various strategies: get a common denominator, factor and cancel, rationalize, divide by the highest power of $x$ in the denominator, and more.\\
+
+\item Understand the relationship between limits and asymptotes.
+\item Know the definition of continuity and \emph{how to use it to show a function is or is not continuous at a point.}\\
+
+\item Know how to find the derivative of $f(x)$ at $x=a$ using the definition.\\
+
+\item Know how to \emph{interpret} the derivative of $f(x)$ at $x=a.$ 
+	\begin{itemize}
+	\item as the slope of the tangent line to the graph of $f(x)$ at $x=a$
+	\item as instantaneous rate of change of $f$ with respect to $x$ at $x=a.$
+	\end{itemize}
+\item Know what the Intermediate Value Theorem says.
+\end{enumerate}
+\textbf{Chapter 1}
+\begin{enumerate}
+\item Know how to graph the catalog of essential functions (as discussed in section 1.2) and transformations of these (as discussed in section 1.3).\\
+
+\item Know how to find the domain of a function.
+\end{enumerate}
+\newpage
+\begin{center} Evaluating Limits: Decision Tree \end{center}
+
+\begin{enumerate}
+\item  $\d \lim_{x \to -2} \frac{x^2 + 2x}{x^2 - 3x - 10}$
+\vfill
+\item  $\d \lim_{x \to 1^+} \left( \ln \left( \frac{ 7 - x^2}{1+x} \right)\right)$
+\vfill
+
+\item  $\d \lim_{x \to 4} \frac{2\sqrt{x}-4}{4-x}$
+\vfill
+\item  $\d \lim_{x \to 4^+} \frac{-\sqrt x}{(4-x)^3}$
+\vfill
+\item  $\d \lim_{x \to 4} \frac{ \frac 1{x^2} - \frac 1 {16}}{x-4}$
+\vfill
+
+\item  $ \d \lim_{x \to - \infty} \frac{\sqrt{7 + 25x^6}}{2+x^3}$
+\vfill
+\item  $ \d \lim_{x \to 0^-} \frac{|x(x+2)|}{x}$
+\vfill
+\end{enumerate}	
+\newpage
+\begin{center} Evaluating Limits: Solutions \end{center}
+
+\begin{enumerate}
+\item  $\d \lim_{x \to -2} \frac{x^2 + 2x}{x^2 - 3x - 10}$
+\vfill
+\item  $\d \lim_{x \to 1^+} \left( \ln \left( \frac{ 7 - x^2}{1+x} \right)\right)$
+\vfill
+
+\item  $\d \lim_{x \to 4} \frac{2\sqrt{x}-4}{4-x}$
+\vfill
+\item  $\d \lim_{x \to 4^+} \frac{-\sqrt x}{(4-x)^3}$
+\vfill
+\item  $\d \lim_{x \to 4} \frac{ \frac 1{x^2} - \frac 1 {16}}{x-4}$
+\vfill
+
+\item  $ \d \lim_{x \to - \infty} \frac{\sqrt{7 + 25x^6}}{2+x^3}$
+\vfill
+\item  $ \d \lim_{x \to 0^-} \frac{|x(x+2)|}{x}$
+\vfill
+\end{enumerate}	
+
+\end{document}
