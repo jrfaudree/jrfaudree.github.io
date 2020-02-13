@@ -1,0 +1,111 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace, adjustbox}
+\usepackage{array%,tikz, pgfplots
+}
+
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+%
+\pagestyle{fancy} 
+\lfoot{UAF Calculus I}
+\rfoot{3-2 Product and Quotient Rule}
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+ {\large{ \sc{Section 3.2 Product Rule and Quotient Rule}}}
+\end{center}
+\begin{enumerate}
+
+\item Complete \textbf{The Product Rule:} If $f$ and $g$ are differentiable, then 
+\begin{quote}  $\d{\frac{d}{dx} \left[f(x) g(x)]\right] =} $ \end{quote}
+\vspace{.2in}
+
+\item Complete \textbf{The Quotient Rule:}  If $f$ and $g$ are differentiable, then
+\begin{quote} 
+$\frac{d}{dx} \left[ \frac{f(x)}{g(x)} \right] = $ \end{quote}
+\vspace{.2in}
+\item Find the derivatives for each function below. \emph{Do not use the Product Rule or the Quotient Rule  if you don't have to!}
+	\begin{enumerate}
+	\item $\d{f(x)=5x^3e^x}$
+	\vfill
+	\item $\d{f(x)=\frac{2x^2-5}{4-x}}$
+	\vfill
+	\item $\d{f(x)=(1-x^2)(e^x+x)}$
+	\vfill
+	\item $\d{g(x)=\frac{\sqrt{x}}{8}(1-x\sqrt{x})}$
+	\vfill
+	
+	\newpage
+	\item $\d{h(x)=\frac{10x-x^{3/2}}{4x^2}}$
+	\vfill
+	\item $\d{y=\frac{\sqrt[3]{x}}{2x+1}}$
+	\vfill
+	\item $\d{v(t)=\frac{2te^t}{t^2+1}}$
+	\vfill
+	\end{enumerate}
+\item   The graphs of $f(x)$ (shown thick) and the graphs of $g(x)$ (shown dashed) are shown below. If $h(x) = f(x)g(x)$, find $h'(0)$.
+
+  \begin{flushleft}
+   \begin{tikzpicture}[scale=.7]
+\draw[ultra thin] (-3.5,-3.1) grid (6.2,3.1);
+\draw[thick,<->] (-3.2,0) -- (3.2,0);
+\draw[thick,<->] (0,-3.1) -- (0,3.1);
+%%%%% f(x) %%%%
+\draw [ultra thick, <->] (-3,1) to  (3,3)  to (6,-1);
+\draw (6.2, -1) node[right] {$f(x)$};
+%%%%% g(x) %%%%%
+\draw[ultra thick, dashed, <->] (-3,2) to (1,-2) to (6, -2);
+\draw (6.2,-2) node[right] {$g(x)$};
+%%grid marks
+\foreach \i in {-3,-2, ..., 6}
+{\draw (\i,0) node[below] {\i};
+%\draw (\i+.5, -.1) -- (\i+.5, .1);
+}
+\foreach \i in { -3, -2, -1,1,2, 3}
+{\draw (0,\i) node[left] {\i};}
+%\foreach \i in { -2, -1,0,1,2}{
+%\draw (-.1, \i+.5) -- (.1,\i+.5);}
+\end{tikzpicture}
+
+  \end{flushleft}
+  
+\item Suppose that $f(5) = 1$, $f'(5) = 6$, $g(5) = -3$
+and $g'(5) = 2$. Find the following values. 
+
+
+  \begin{multicols}{3}{
+      % make sure you added \usepackage{enumerate}
+      \vspace*{-0.45in}
+      \begin{enumerate}[(a)]
+      \item $(f - g)'(5)$
+      \item $(fg)'(5)$
+      \item $(g/f)'(5)$
+      \end{enumerate}}
+  \end{multicols}
+\vskip1in
+\end{enumerate}
+\end{document}
