@@ -1,0 +1,91 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace, adjustbox}
+\usepackage{array%,tikz, pgfplots
+}
+
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+%spring 2020 file
+\pagestyle{fancy} 
+\lfoot{UAF Calculus I}
+\rfoot{3-6 Derivatives of Logarithms}
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+ {\large{ \sc{Section 3.6 Derivatives of Logarithmic Functions}}}
+\end{center}
+\begin{enumerate}
+\item Fill in the derivative rules below:\\
+	\begin{multicols}{2}
+	$\d{\frac{d}{dx}\left[\arcsin(x) \right]=}$\\
+	\vspace{.15in}
+	
+	$\d{\frac{d}{dx}\left[\arccos(x) \right]=}$\\
+	\vspace{.15in}
+	
+	$\d{\frac{d}{dx}\left[\arctan(x) \right]=}$\\
+	\vspace{.15in}
+	
+	$\d{\frac{d}{dx}\left[\log_b(x) \right]=}$\\
+	\vspace{.15in}
+	
+	$\d{\frac{d}{dx}\left[\ln(x) \right]=}$\\
+	\vspace{.15in}
+	\end{multicols}
+\item Find the derivative of each function below:\\
+	\begin{multicols}{3}
+	\begin{enumerate}
+	\item $y=\ln(x^5)$
+	\vfill
+	\item $y=(\ln x )^5$
+	\vfill 
+	\item $y= \ln(5x)$
+	\vfill
+	\end{enumerate}
+	\end{multicols}
+\vfill
+\item Find the derivative of each function below:
+	\begin{enumerate}
+	\item $f(x)=x^2\log_2(5x^3 +x)$
+	\vfill
+	\item $g(x)=\ln(x^2 \tan^2x)$
+	\vfill
+	\end{enumerate}
+	\newpage
+\item Find $\frac{dy}{dx}$ for $y=\ln\sqrt{ \frac{x + \sin x}{x^2-e^x}}.$
+\vfill
+\item Find $y'$ for each of the following:
+	\begin{enumerate}
+	\item $y=\ln|x|$
+	\vfill
+	\item $y=\frac{e^{-x}\sin x}{\sqrt{1-x^2}}$
+	\vfill
+	\item $y=x^{\sqrt[3]{x}}$
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
