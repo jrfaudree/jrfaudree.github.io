@@ -1,0 +1,82 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace, adjustbox}
+\usepackage{array%,tikz, pgfplots
+}
+
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+%spring 2020 file
+\pagestyle{fancy} 
+\lfoot{UAF Calculus I}
+\rfoot{3-7 Rates of Change Applications}
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+ {\large{ \sc{Section 3.7 Rates of Change in the Natural and Social Sciences}}}
+\end{center}
+\begin{enumerate}
+\item A particle moves according to the law of motion $s(t)=2-15t+4t^2-\frac{1}{3}t^3,$ for $t \geq 0$, where $t$ is measured in seconds and $s$ is measured in feet.
+	\begin{enumerate}
+	\item Find the velocity at time $t.$
+	\vfill
+	\item What is the velocity after 1 second?
+	\vfill
+	\item When is the particle at rest?
+	\vfill
+	\item When is the particle moving in the positive direction?
+	\vfill
+	\item Draw a diagram of the particle from $t=0$ to $t=6.$
+	\vfill
+	\item Find the \emph{displacement} of the particle during the first 6 seconds.
+	\vfill
+	\item Find the \emph{total distance traveled} by the particle during the first 6 seconds.
+	\vfill
+	\item Find the acceleration of the particle.
+	\vfill
+	\item Graph the acceleration function.
+	\vfill
+	\item When is the particle speeding up?
+	\vfill
+	\end{enumerate}
+\newpage
+\item The height (in meters) of a projectile shot vertically upward from a point 10 meters above ground lever with an initial velocity of 20 meters per second is $h=10+20t-4.9t^2.$
+	\begin{enumerate}
+	\item When does the projectile reach its maximum height?
+	\vfill
+	\item What is its maximum  height?
+	\vfill
+	\item When does the projectile hit the ground?
+	\vfill
+	\item What what velocity does it hit the ground?
+	\vfill
+	\end{enumerate}
+\item A tank holds 1000 gallons of a fluid, which drains from the bottom of the tank in 30 minutes. The function below give the volume of fluid remaining in the tank after $t$ minutes:
+$$V(t)=1000 \left( 1-\frac{1}{30}t \right)^2 \text{  for   } 0 \leq y \leq 30$$
+Find  the rate at which the fluid is draining from the tank after 10 minutes. When is the fluid flowing the fastest? Slowest?
+\vspace{2.5in}
+\end{enumerate}
+\end{document}
