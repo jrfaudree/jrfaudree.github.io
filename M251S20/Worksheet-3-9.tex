@@ -1,0 +1,100 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace, adjustbox}
+\usepackage{array%,tikz, pgfplots
+}
+
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+%
+\pagestyle{fancy} 
+\lfoot{UAF Calculus I}
+\rfoot{3-9}
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+ {\large{ \sc{Section 3.9: Related Rates}}}
+\end{center}
+ 	
+Here are the steps I will take to solve a problem like this:
+\begin{enumerate}
+\item Identify the \fbox{knowns.} 
+\item Identify the quantity you \fbox{want.} 
+\item Find an \fbox{equation that relates the knowns and the wants.}
+\item Now derivative \fbox{implicitly with respect to $t.$} 
+\item Plug in and solve.
+\end{enumerate}
+We'll repeat this procedure with a bunch of examples.
+\begin{enumerate}
+\item Air is being pumped into a spherical balloon so
+that its volume increases at a rate of 4.5 ft$^3$/min. How fast is the
+radius of the balloon increasing when the diameter is 4 ft?
+\vfill
+\item Water is being pumped out of a cylindrical tank with a radius of 10 meters and a height of 20 meters. The height of the water is decreasing at a rate of 0.2 meters per minute. At what rate is the water being pumped out?
+\vfill
+\newpage
+
+\item  Water runs into a conical tank at the rate of 9
+ft$^3$/min. The tank stands point down and has a height of 10 ft and a
+base radius of 5 ft. How fast is the water level rising when the water
+is 6 ft deep?  (Hint: Use similar triangles.)
+\vfill
+\item  A rectangular solid has a fixed width of 10 cm but its length is increasing at a rate of 2 cm/s while is height is decreasing at a rate of 1 cm/s. At what rate is the volume of the solid changing when the length is 20 cm and the height is 15 cm?
+%A street light is mounted at the top of a
+%10-ft-tall pole. A woman 5 ft tall walks away from the pole along a
+%straight path at a speed of 5 ft/s. How fast is the tip of her shadow moving when she is 40 ft from the pole?
+\vfill
+\item  The standard 12 foot ladder rests against a vertical
+wall. If the bottom of the ladder slides away from the wall at a rate
+of 1ft/s, how fast is the top of the ladder sliding down the wall when
+the bottom of the ladder is 6 ft from the wall? 
+\vfill
+\newpage
+%\item A pebble dropped into a calm pond, causing ripples
+%in the form of circles. The radius $r$ of the outer ripple is
+%increasing at a constant rate of 1 foot per second. When the radius is
+%4 feet, at what rate is the area $A$ of the water disturbed changing?
+%\vfill
+\item  A hot air balloon rising straight up from a level
+field is tracked by a range finder 500 feet from the lift-off
+point. At the moment the range finder's elevation angle is $\pi/4$,
+the angle is increasing at the rate of 0.14 radians/min. How fast is
+the balloon rising at that moment? 
+\vfill
+%\newpage
+
+\item  A police cruiser, approaching a right-angled
+intersection from the north, is chasing a speeding car that has turned
+the corner and is now moving straight east. When the cruiser is 0.6 mi
+north of the intersection and the car is 0.8 mi to the east, the
+police determine that the distance between them and the car they are
+chasing is increasing at a rate of 20 mph. If the cruiser is moving at
+60 mph at the instant of measurement, what is the speed of the car?
+[Hint: You'll need to relate \textit{three} quantities here!]
+\vfill
+
+\end{enumerate}
+\end{document}
