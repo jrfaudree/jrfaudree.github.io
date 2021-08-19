@@ -1,0 +1,204 @@
+\documentclass[12pt]{article}
+\usepackage[margin=1in]{geometry}                % See geometry.pdf to learn the layout options. There are lots.
+\geometry{letterpaper}                   % ... or a4paper or a5paper or ... 
+%\geometry{landscape}                % Activate for for rotated page geometry
+\usepackage[parfill]{parskip}    % Activate to begin paragraphs with an empty line rather than an indent
+\usepackage{graphicx, ulem}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{multirow,caption,hyperref}
+\usepackage{enumitem}
+\usepackage[scaled=0.86]{helvet}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+%\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{axiom}{Axiom}
+\newtheorem{exercise}{Exercise}%[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{example}[theorem]{Example}
+\newcommand\RR{{\mathbb R}}
+\newcommand\NN{{\mathbb N}}
+\newcommand\ZZ{{\mathbb Z}}
+\newcommand\QQ{{\mathbb Q}}
+\newcommand\CC{{\mathbb C}}
+\newcommand\EE{{\mathbb E}}
+\newcommand\bc{\begin{center}}
+\newcommand\ec{\end{center}}
+\newcommand\be{\begin{enumerate}}
+\newcommand\ee{\end{enumerate}}
+\newcommand\bi{\begin{itemize}}
+\newcommand\ei{\end{itemize}}
+\newcommand\bs{\begin{slide}}
+\newcommand\es{\end{slide}}
+\newcommand\bx{\begin{exercise}}
+\newcommand\ex{\end{exercise}}
+\newcommand{\ol}[1]{\overline{#1}}
+\newcommand{\oimp}[1]{\overset{#1}{\Longleftrightarrow}}
+\newcommand{\bv}[1]{\ensuremath{ \vec{\mathbf{#1}}} }
+\newcommand{\mc}[1]{\ensuremath{\mathcal{#1}}}
+\newcommand{\ARP}{\cite{McMSch02}}
+\newcommand{\Aut}[1]{\ensuremath{{\mathscr Aut}(#1)}}
+\newcommand{\Con}[1]{\ensuremath{{\mathscr Con}(#1)}}
+\newcommand{\Mod}[1]{\ (\text{mod}\ #1)}
+\newcommand{\Mon}[1]{\ensuremath{{\mathscr Mon}(#1)}}
+\newcommand{\Pyr}[1]{\ensuremath \rm{ Pyr} (#1)}
+\newcommand{\mix}{\ensuremath{\diamondsuit}}
+\newcommand{\covers}{\ensuremath{\searrow}}
+\newcommand{\normale}{\vartrianglelefteq}
+\newcommand{\normal}{\vartriangleleft}
+\newcommand{\nin}{\not\in}
+
+
+\newcommand{\sups}[1]{\textsuperscript{#1}}
+\newcommand{\subs}[1]{\textsubscript{#1}}
+%\date{}                                           % Activate to display a given date or no date
+\usepackage[scaled=0.86]{helvet}
+\begin{document}\normalem
+\begin{center}
+ \textsc{Teaching Seminar (MATH F600)\hfill Fall 2021}
+\end{center}
+
+\rule{\textwidth}{.1pt}
+
+\textbf{Instructor} Jill Faudree\\
+\textbf{Office} Chapman 306B\\
+\textbf{Office Phone} 907-474-7385\\
+\textbf{e-mail} {\tt jrfaudree@alaska.edu} (preferred method)\\
+\textbf{Course Web Page:} {\tt http://jrfaudree.github.io/M600f21/M600f21\_home.html}\\
+%\textbf{Course Slack:} {\tt dmsteachingseminar.slack.com}\\
+\textbf{Classroom and class meeting times} Chapman 104, Th 2:00-3:30 PM. \\
+\textbf{Office Hours:}  MWF 10:15-11:30 Chap 306B, and by appointment. To make an appointment, just drop me an e-mail. You are also welcome to stop by my office at any time and see if I am free.\\
+\textbf{Prerequisites:} Graduate standing.
+
+\rule{\textwidth}{.1pt}  
+
+\textsc{Course Overview and Goals} 
+
+The course description in the catalog reads as follows:
+\begin{quote}Fundamentals of teaching mathematics in a university setting. Topics may include any aspect of teaching: university regulations, class and lecture organization, testing, book selection, teaching evaluations, etc. Specific topics will vary on the basis of student and instructor interest. Individual classroom visits will also be used for class discussion.\end{quote}
+At its most basic, the intent of this course is to provide you with some of the fundamental tools you will need to approach your duties as a TA working in the department. However, those skills have broader application, and all of us using advanced degrees in mathematics in our work are called upon to teach in some form or another (we all have to make presentations about our work, for example). So while our focus is on college teaching, our work will encompass  applications to other settings (e.g., poster presentations, formal presentations, etc.). I am also very interested in making sure you feel the course is responding to your needs and interests, so you should feel free at any time to suggest a topic or a reading for incorporation into the course.
+ 
+
+
+\textsc{Course Mechanics}\\
+Our approach this semester will be to explore both the literature and folk wisdom of the practical, theoretical and experimental elements of teaching mathematics in an academic setting. Every week there will be a required task such as a reading or a write up of some activity. The homework assignment will form the catalyst for class discussion. There will be opportunities for open discussion. We will also have student presentations.
+
+%I have also created a course Slack, so that we can provide each other support and discuss things that come up that are relevant to the course or your jobs as TAs outside of class. If you haven't received an invitation to the Slack, let me know and I'll make sure you receive one soon.
+ 
+\textbf{Required Texts:} 
+I will be providing copies of all required readings.
+
+\textbf{Class meetings:} This class meets once a week. I will provide an agenda for each week's class meeting on the course website.
+
+\textbf{Homework:} Most weeks will have a modest homework assignment which will be due by 5:00pm the day before class (ie Wednesdays).
+
+%\textbf{Homework:} Every week you will be expected to complete a reading and prepare a written response to it. Homework is due at 5:00 PM the day before class and should be submitted by e-mail (this is so I can incorporate your responses into our discussion). I will provide \LaTeX templates for each homework assignment.
+
+\textbf{Attendance} and {\bf class participation} are required. Class participation includes critiquing oral presentations, asking questions in class and participating in class discussions. 
+
+%\textbf{Presentations:} You will be required to present material to the class multiple times over the course of the semester. You will also be required to act as a {\em helper} to someone who is presenting by functioning as a practice audience for that person and providing them feedback about the material they are preparing to present. You will be graded on your performance in each of these roles. More details about expectations will be provided during the first two weeks of class.
+
+\textbf{Exams:} %There will be one in-class exam and a final exam. I reserve the right to make part of any exam take-home. Make-up Midterms will be given only for excused absences and only if approved in advance. Also, all members of the class are required to take a standardized Mathematics Field Test to gain data on the effectiveness of our major. {\em Taking this test is required to pass the course}, but your performance will not affect your grade in the seminar.
+%The midterm exam is scheduled for Thursday March 6\sups{th}.
+The final exam will be a take-home exam. I will be available during the final exam time slot (3:15-5:15pm Tuesday 7 December) to answer questions.
+
+\textbf{Evaluation:} The course is pass fail. In order to receive a passing grade in this course a student must
+\bi
+\item Attend class sessions. Any student with 2 or more unexcused absences will receive a failing grade. Except in extreme emergencies, absences {\em must} be approved in advance. 
+\item Participate in class sessions. Students should have any materials needed for class and are expected to listen to others as well as add to class discussions. This includes preparing and making presentations in class as assigned.
+\item Complete assignments on time. Students can miss at most 1 assignment.
+%\item Must complete two satisfactory presentations and provide feedback on classmate lectures.
+\item Attend a lecture by a professor in the department, and prepare a report on your class visitation (more details will be provided later in the semester).
+\ei
+\begin{table}[htp]
+\caption*{Tentative Schedule of Topics }
+\begin{center}
+\begin{tabular}{c|p{2in}||c|p{2in}}
+{Date}&{Topic}&{Date}&{Topic}\\
+\hline\hline
+8/26/2019 & Welcome, introductions, general guidelines,& 10/21/2019 & Practice Presentations II \\
+9/2/2019 & Answering a question & 10/28/2019 & Working at the board \\
+9/9/2019 & Tutoring best practices & 11/4/2019 & Class size and pedagogy \\
+9/16/2019 & Grading student work & 11/11/2019 & Discussion of Class Observations \\
+9/23/2019 & Understanding confused students/Blooms Taxonomy & 11/18/2019 & Teaching through writing \\
+9/30/2019 & Preparing for class & 11/25/2019 & Assessment models\\
+10/7/2019 & Practice Presentations I & 12/2/2019 & Final Meeting \\
+10/14/2019 & Applying math education research to your teaching \\
+
+
+\end{tabular}
+\end{center}
+\label{default}
+\end{table}%
+
+
+\textsc{Course Policies and Other Issues}
+
+
+\textbf{e-mail:} {You are responsible for checking your {\tt alaska.edu} e-mail account every day before class.} This is the e-mail address I have access to, and this is what I will use to get in touch with you.
+
+\noindent\textbf{Ask, Ask, Ask:}  There are many faculty members in the department who would be happy to spend a couple of minutes to give you their perspective on teaching or answer questions that you may have (and some who might go on a LOT longer if you don't stop them!).
+
+\textbf{UAF Speaking Center} located in 507 Gruening (tel 474-5470). They will provide coaching and practice. Walk-ins are welcome but appointments are best.
+
+\textbf{University and Department Policies:} Your work in this course is governed by the UAF Honor
+Code. The Department of Mathematics and Statistics has specific policies on incomplete grades,
+late withdrawals, and early final exams, some of which are listed below. A complete listing
+can be found at
+\url{https://www.uaf.edu/dms/policies/}.
+
+\noindent{\bf COVID-19 statement:} Students should keep up-to-date on the university's policies, practices, and mandates related to COVID-19 by regularly checking this website: \url{https://sites.google.com/alaska.edu/coronavirus/uaf?authuser=0}
+
+Further, students are expected to adhere to the university's policies, practices, and mandates and are subject to disciplinary actions if they do not comply.
+
+\noindent{\bf Student protections statement:} UAF embraces and grows a culture of respect, diversity, inclusion, and caring. Students at this university are protected against sexual harassment and discrimination (Title IX). Faculty members are designated as responsible employees which means they are required to report sexual misconduct. Graduate teaching assistants do not share the same reporting obligations. For more information on your rights as a student and the resources available to you to resolve problems, please go to the following site: \url{https://catalog.uaf.edu/academics-regulations/students-rights-responsibilities/}.
+
+\noindent{\bf Disability services statement:} I will work with the Office of Disability Services to provide reasonable accommodation to students with disabilities.
+
+\noindent{\bf Student Academic Support:}
+\begin{itemize}
+\setlength\itemsep{0em}
+        \item Speaking Center (907-474-5470,
+        {uaf-speakingcenter@alaska.edu}, Gruening 507)
+\item Writing Center (907-474-5314, {uaf-writing-center@alaska.edu}, Gruening 8th floor)
+\item UAF Math Services, {uafmathstatlab@gmail.com}, Chapman Building (for math fee paying students only)
+\item Developmental Math Lab, Gruening 406
+\item The Debbie Moses Learning Center at CTC (907-455-2860, 604 Barnette St, Room 120,\\ \url{https://www.ctc.uaf.edu/student-services/student-success-center/})
+\item For more information and resources, please see the Academic Advising Resource List (\url{https://www.uaf.edu/advising/lr/SKM_364e19011717281.pdf})
+\end{itemize}
+
+\noindent{\bf Student Resources:}
+\begin{itemize}
+\setlength\itemsep{0em}
+\item Disability Services (907-474-5655, {uaf-disability-services@alaska.edu}, Whitaker 208)
+\item Student Health \& Counseling [6 free counseling sessions] (907-474-7043, \url{https://www.uaf.edu/chc/appointments.php}, Whitaker 203)
+\item Center for Student Rights and Responsibilities (907-474-7317, {uaf-studentrights@alaska.edu}, Eielson 110)
+\item Associated Students of the University of Alaska Fairbanks (ASUAF) or ASUAF Student Government (907-474-7355, {asuaf.office@alaska.edu}, Wood Center 119)
+\end{itemize}
+
+\noindent{\bf Nondiscrimination statement:}
+The University of Alaska is an affirmative action/equal opportunity employer and educational institution. The University of Alaska does not discriminate on the basis of race, religion, color, national origin, citizenship, age, sex, physical or mental disability, status as a protected veteran, marital status, changes in marital status, pregnancy, childbirth or related medical conditions, parenthood, sexual orientation, gender identity, political affiliation or belief, genetic information, or other legally protected status. The University's commitment to nondiscrimination, including against sex discrimination, applies to students, employees, and applicants for admission and employment. Contact information, applicable laws, and complaint procedures are included on UA's statement of nondiscrimination available at www.alaska.edu/nondiscrimination. For more information, contact:
+
+\begin{tabular}{l}
+UAF Department of Equity and Compliance\\
+1760 Tanana Loop, 355 Duckering Building, Fairbanks, AK  99775\\
+907-474-7300\\
+{uaf-deo@alaska.edu}
+\end{tabular}
+
+\hfill
+
+ \scriptsize syllabus version: \today \normalsize
+
+
+
+
+\end{document}  
