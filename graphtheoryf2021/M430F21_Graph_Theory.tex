@@ -1,0 +1,203 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in, head=1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr}
+\usepackage{graphicx,hyperref}
+
+\addtolength{\textwidth}{.5in}
+\addtolength{\leftmargin}{-1in}
+\addtolength{\textheight}{.5in}
+\addtolength{\topmargin}{-0.5in}
+
+\setcounter{secnumdepth}{0}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\clm}{\par\textit{Claim:}\par}
+\newcommand{\diam}{\mathrm{diam}}
+\newcommand{\sect}{\textsection}
+
+\parindent=0in
+\parskip=0.5\baselineskip
+
+\begin{document}
+\begin{center}MATH 430: Topics in Mathematics -- Graph Theory  \\ Fall 2021 \\ 3 meeting hours / week  \\ Time: 8:00-9:00am, Location: Chapman 206 or Zoom
+\end{center}
+
+\hrulefill
+
+\textbf{Instructor:} Jill Faudree\\
+\textbf{Contact Details:} Chapman 306B, jrfaudree@alaska.edu, 474-7385\\
+\textbf{Office Hours:} (\textbf{\emph{tentative}})  T Th 8:00-9:00am and by appointment. Also, you are welcome to drop by. Note that these hours may change depending on student demands and scheduling concerns.\\
+\textbf{Textbook:} \emph{Introduction to Graph Theory}, 2nd edition, by Doug West (ISBN-13: 978-0130144003)\\
+\textbf{Online Access to Course Materials:} 
+\begin{itemize}
+	\item \textbf{Canvas} for written homework, class announcements, and grades.
+	\item Dr. Faudree's webpage (\textbf{http://jrfaudree.github.io/graphtheoryf2021home.html}) for all other course materials including the day-to-day schedule, review sheets and midterm/final exam solutions. 
+	\end{itemize}
+\textbf{Prerequisites:} A grade of C or better in MATH 265 Introduction to Mathematical Proofs or permission of instructor.\\
+
+\hrulefill
+
+{\textsc{Course Overview and Goals:}}
+
+One goal of this course is to provide an introduction to Graph Theory beyond what appears in MATH 307 Discrete Mathematics.  We expect to cover graphic sequences, extremal graph theory, acyclic graphs, matchings, connectivity, planarity and coloring. For each of these topics we will highlight a beautiful theorem and at least one application. 
+
+Another goal of this course is that you gain additional experience communicating mathematics
+to your peers and writing formal mathematical proofs.
+The teacher is here to help you with this process -- to provide a framework for this practice and guidance on how to improve. 
+
+You will regularly be asked to explain ideas informally to your peers in class and will end the semester by giving a formal oral presentation to the class. You are expected to be active in class by posing and answering questions from students and from the teacher.  There will be weekly written assessments in the form of homework, quizzes and tests. These assessments will provide opportunities to practice writing mathematics formally\\
+
+{\textsc{Course Mechanics}:}
+
+We will meet together for 3 hours each week. Each meeting will begin by summarizing the definitions and theorems from the assigned reading and answering all assigned reading questions. All students should come to class prepared to participate in the start-of-class review. Note that class participation is part of your grade.
+
+Following the warm-up discussion of the reading, the instructor will field questions and discuss in more detail the proofs, examples, and ideas from the topic of the day. 
+
+Homework problems will be assigned at the end of every class. The homework assigned in one week will be due at the beginning of the next week.
+
+I reserve the right to adjust the mechanics described here depending on the needs of the
+class.\\
+
+{\sc{Class Participation}}
+
+Class participation includes \emph{volunteering} to remind the class about definitions, examples or statements of theorems from the assigned reading or to offer solutions to one of the assigned warm-up problems. It includes asking and answering questions in addition to avoiding dominating the conversation. All students should participate in every class in some form.\\
+
+{\sc{Homework}}
+
+Problems sets and due dates will appear on the course github page though solutions will appear on Canvas. All homework will be turned in online via Canvas. For most problems, students will use \LaTeX \: to format their homework.  Resources for using \LaTeX \: can be found on the github site and I am happy to help students troubleshoot getting it installed and using it.
+
+The solutions to most common problems can be found in some form on the internet. Using these sources is ok provided your (i) acknowledge the source and (ii) write up you solution independently (ie no cut-and-paste solutions). 
+
+More detailed homework guidelines can be found on the github course site.
+
+Two times during the semester a student may turn in their homework up to a week late for half credit.\\ 
+
+{\sc{Quizzes}}
+
+There are short quizzes most weeks modeled after the homework problems. A student who understands their solutions to the homework problems will find the quizzes to be easy, free points. The goal of the quizzes is to encourage a solid grasp of terminology and to encourage students to focus on understanding the homework solutions.\\
+
+{\sc{Tests and Final Exam}}
+
+There will be three tests, tentatively scheduled for weeks 5,9, and 13. I expect all three to be written (paper and pencil), 1-hour, in-class tests. However, I reserve the right to make them take-home or a combination of take-home and in-class.
+
+There will be a final exam in week 16. It will be cumulative. I expect it to be written, 2-hours and in-class. \\
+
+{\sc{Project}}
+
+All students will pick a topic from Graph Theory that interests them and present that topic to the class using a slide presentation. Some sources for topics include: topics from our text that we will not cover in class, applications of topics we have not covered in class, open problems, articles from Mathematics Magazine or the College Mathematics Journal, research articles (for example from Furman's electronic Journal of Undergraduate Mathematics). Basically the only requirement is that the topic be something we have not covered in class. Ideally, it is something \emph{you} find interesting.\\
+
+\textbf{Grades} will be calculated according to the following rubric:
+
+\begin{tabular}{|l|c|}
+  \hline
+  % after \\: \hline or \cline{col1-col2} \cline{col3-col4} ...
+  class participation & 5\%\\
+  homework & 10\% \\
+  quizzes&10\%\\
+  tests & 3 $\times$15\% $=$ 45\%\\
+  project & 10\%\\
+  final exam & 20\% \\
+  \hline
+\end{tabular}
+
+Grade Bands: A, A- (90 - 100\%), B+,B, B- (80 - 89\%), C+, C, C- (70 - 79\%), D+, D, D-
+(60 - 69\%), F (0 - 59\%).  I reserve the right to lower the thresholds. The grade of $A+$ is reserved for outstanding performance in the course overall.\\
+
+\textsc{(tentative) Schedule of Topics:}
+
+\begin{tabular}{c | c}
+week & topics \\
+\hline \hline\\
+1& Sections 1.1-1.3\\ \hline
+2& Sections 1.4, 2.1-2.2\\ \hline
+3& Sections 2.2 and 2.3\\ \hline
+4& Sections 3.1 and 3.2\\ \hline
+5& Test 1, Section 3.3\\ \hline
+6& Section 4.1 and 4.2\\ \hline
+7& Section 4.2 and 4.3\\ \hline
+8& Section 5.1 and 5.2\\ \hline
+9& Test 2, Section 5.3\\ \hline
+10& Sections 5.3 and 6.1\\ \hline
+11& Section 6.2\\ \hline
+12& Section 6.3\\ \hline
+13& Section 7.1, Test 3 \\ \hline
+14& Section 7.2, Thanksgiving\\ \hline
+15& Project Presentations\\ \hline
+16& Final Exam\\ 
+\end{tabular}
+
+\textsc{Miscellaneous Other Issues:}
+
+\textbf{Communication:} I will communicate with you using three different channels: (1) class, (2) Canvas (for general announcements) and (3) email (for private correspondence). I will not email you casually. If you receive an email from me, you need to read it and respond, if necessary.  Class time and email is also the best way for you to communicate with me. 
+
+\textbf{Incomplete Grade} 
+Incomplete (I) will only be given in DMS courses in cases where the student has completed the majority (normally all but the last three weeks) of a course with a grade of C or better, but for personal reasons beyond his/her control has been unable to complete the course during the regular term. Negligence or indifference are not acceptable reasons for the granting of an incomplete grade. 
+
+\textbf{Late Withdrawals} 
+A withdrawal after the deadline (currently 9 weeks into the semester) from a DMS course will normally be granted only in cases where the student is performing satisfactorily (i.e., C or better) in a course, but has exceptional reasons, beyond his/her control, for being unable to complete the course. These exceptional reasons should be detailed in writing to the instructor, department head and dean.
+
+\textbf{No Early Final Examinations}
+Final examinations for DMS
+  courses shall not be held earlier than the date and time published
+  in the official term schedule. Normally, a student will not be
+  allowed to take a final exam early. Exceptions can be made by
+  individual instructors, but should only be allowed in exceptional
+  circumstances and in a manner which doesn't endanger the security of
+  the exam.
+
+\textbf{Academic Dishonesty}
+Academic dishonesty, including cheating and plagiarism, will not
+be tolerated.  It is a violation of the Student Code of Conduct
+and will be punished according to UAF procedures.
+
+ %\begin{center} \textsc{Syllabus Addendum} \end{center}
+ 
+ \noindent{\bf COVID-19 statement:} Students should keep up-to-date on the university's policies, practices, and mandates related to COVID-19 by regularly checking this website: \url{https://sites.google.com/alaska.edu/coronavirus/uaf?authuser=0}
+
+Further, students are expected to adhere to the university's policies, practices, and mandates and are subject to disciplinary actions if they do not comply.
+
+\noindent{\bf Student protections statement:} UAF embraces and grows a culture of respect, diversity, inclusion, and caring. Students at this university are protected against sexual harassment and discrimination (Title IX). Faculty members are designated as responsible employees which means they are required to report sexual misconduct. Graduate teaching assistants do not share the same reporting obligations. For more information on your rights as a student and the resources available to you to resolve problems, please go to the following site: \url{https://catalog.uaf.edu/academics-regulations/students-rights-responsibilities/}.
+
+\noindent{\bf Disability services statement:} I will work with the Office of Disability Services to provide reasonable accommodation to students with disabilities.
+
+\noindent{\bf Student Academic Support:}
+\begin{itemize}
+\setlength\itemsep{0em}
+        \item Speaking Center (907-474-5470,
+        {uaf-speakingcenter@alaska.edu}, Gruening 507)
+\item Writing Center (907-474-5314, {uaf-writing-center@alaska.edu}, Gruening 8th floor)
+\item UAF Math Services, {uafmathstatlab@gmail.com}, Chapman Building (for math fee paying students only)
+\item Developmental Math Lab, Gruening 406
+\item The Debbie Moses Learning Center at CTC (907-455-2860, 604 Barnette St, Room 120,\\ {https://www.ctc.uaf.edu/student-services/student-success-center/})
+\item For more information and resources, please see the Academic Advising Resource List (\url{https://www.uaf.edu/advising/lr/SKM_364e19011717281.pdf})
+\end{itemize}
+
+\noindent{\bf Student Resources:}
+\begin{itemize}
+\setlength\itemsep{0em}
+\item Disability Services (907-474-5655, {uaf-disability-services@alaska.edu}, Whitaker 208)
+\item Student Health \& Counseling [6 free counseling sessions] (907-474-7043, \url{https://www.uaf.edu/chc/appointments.php}, Whitaker 203)
+\item Center for Student Rights and Responsibilities (907-474-7317, {uaf-studentrights@alaska.edu}, Eielson 110)
+\item Associated Students of the University of Alaska Fairbanks (ASUAF) or ASUAF Student Government (907-474-7355, {asuaf.office@alaska.edu}{asuaf.office@alaska.edu}, Wood Center 119)
+\end{itemize}
+
+\noindent{\bf Nondiscrimination statement:}
+The University of Alaska is an affirmative action/equal opportunity employer and educational institution. The University of Alaska does not discriminate on the basis of race, religion, color, national origin, citizenship, age, sex, physical or mental disability, status as a protected veteran, marital status, changes in marital status, pregnancy, childbirth or related medical conditions, parenthood, sexual orientation, gender identity, political affiliation or belief, genetic information, or other legally protected status. The University's commitment to nondiscrimination, including against sex discrimination, applies to students, employees, and applicants for admission and employment. Contact information, applicable laws, and complaint procedures are included on UA's statement of nondiscrimination available at www.alaska.edu/nondiscrimination. For more information, contact:
+
+\begin{tabular}{l}
+UAF Department of Equity and Compliance\\
+1760 Tanana Loop, 355 Duckering Building, Fairbanks, AK  99775\\
+907-474-7300\\
+{uaf-deo@alaska.edu}
+\end{tabular}
+
+\hfill
+
+ \scriptsize syllabus version: \today \normalsize
+
+
+
+
+\end{document}
