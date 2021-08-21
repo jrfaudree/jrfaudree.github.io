@@ -1,0 +1,164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% This top part of the document is called the 'preamble'.  Modify it with caution!
+%
+% The real document starts below where it says 'The main document starts here'.
+
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+
+% Comment the following line to use TeX's default font of Computer Modern.
+\usepackage{times,txfonts}
+
+\newtheoremstyle{homework}% name of the style to be used
+  {18pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {}% measure of space to indent
+  {\bfseries}% name of head font
+  {:}% punctuation between head and body
+  {2ex}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+\theoremstyle{homework} 
+
+% Set up an Exercise environment and a Solution label.
+\newtheorem*{exercisecore}{Exercise \@currentlabel}
+\newenvironment{exercise}[1]
+{\def\@currentlabel{#1}\exercisecore}
+{\endexercisecore}
+
+\newcommand{\localhead}[1]{\par\smallskip\noindent\textbf{#1}\nobreak\\}%
+\newcommand\solution{\localhead{Solution:}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Stuff for getting the name/document date/title across the header
+\makeatletter
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[C]{\ifx\@docdate\@empty\else\@docdate\fi}
+\fancyhead[R]{\ifx\@docauthor\@empty\else\@docauthor\fi}
+\headheight 15pt
+
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\doclabel{Use {\tt\textbackslash doclabel\{MY LABEL\}}.}
+\def\docdate#1{\gdef\@docdate{#1}}
+\docdate{Use {\tt\textbackslash docdate\{MY DATE\}}.}
+\def\docauthor#1{\gdef\@docauthor{#1}}
+\docauthor{Use {\tt\textbackslash docauthor\{MY NAME\}}.}
+\makeatother
+
+% Shortcuts for blackboard bold number sets (reals, integers, etc.)
+\newcommand{\Reals}{\ensuremath{\mathbb R}}
+\newcommand{\Nats}{\ensuremath{\mathbb N}}
+\newcommand{\Ints}{\ensuremath{\mathbb Z}}
+\newcommand{\Rats}{\ensuremath{\mathbb Q}}
+\newcommand{\Cplx}{\ensuremath{\mathbb C}}
+%% Some equivalents that some people may prefer.
+\let\RR\Reals
+\let\NN\Nats
+\let\II\Ints
+\let\CC\Cplx
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% The main document start here.
+
+% The following commands set up the material that appears in the header.
+\doclabel{Math 401: Homework 1}
+\docauthor{Your name goes here!}
+\docdate{August 24, 2020}
+
+\begin{document}
+
+\begin{exercise}{1.2.6 [Modified]}
+Use the triangle inequality to establish the following inequalities:
+\begin{enumerate}[(a)]
+\item $|a-b| \le |a| + |b|$;
+\item $||a|-|b|| \le |a-b|$.
+\end{enumerate}
+\end{exercise}
+\begin{proof}
+\end{proof}
+
+\begin{exercise}{1.2.7(b), (d)}
+Given a function $f$ and a subset $A$ of its domain, let $f(A)$ represent the range of $f$ over the set A;
+that is, $f(a)=\{f(x):x\in A\}$.
+\end{exercise}
+\begin{enumerate}
+\item[(b)] Find two sets $A$ and $B$ for which $f(A\cap B) \neq f(A)\cap f(B)$.
+\item[(d)] Form and prove a conjecture concerning $f(A\cup B)$ and $f(A)\cup f(B)$.
+\end{enumerate}
+\begin{proof}[Proof (b)]
+\end{proof}
+\begin{proof}[Proof (d)]
+\end{proof}
+
+\begin{exercise}{1.2.11}
+Form the logical negation of each claim. Do not use the easy way out: "It is not the case that$\ldots$" 
+is not permitted
+\begin{enumerate}[(a)]
+\item For all real numbers satisfying $a<b$, there exists $n\in\Nats$ such that $a+(1/n)<b$.
+\item There exist a real number $x>0$ such that $x<1/n$ for all $n\in\Nats$.
+\item Between every two distinct real numbers there is a rational number.
+\end{enumerate}
+\end{exercise}
+\solution
+\begin{enumerate}[(a)]
+\item 
+\item 
+\item 
+\end{enumerate}
+
+\begin{exercise}{[1.2 Supplement]} Show that the sequence $(x_1, x_2, x_3,\ldots)$ defined in Example
+1.2.7 is bounded above by 2.  That is, show that for every $i\in\Nats$, $x_i\le 2$.
+\end{exercise}
+\begin{proof}
+\end{proof}
+
+
+\begin{exercise}{1.3.5}  Let $A$ be bounded above and let $c\in\Reals$.
+Define  $cA = \{ca:a\in A\}$.
+\begin{enumerate}[(a)]
+\item If $c\ge 0$, show that $\sup(cA) = c\sup(A)$.
+\item Postulate a similar statment for $\sup(cA)$ when $c<0$.
+\end{enumerate}
+\end{exercise}
+\begin{proof}[Proof (a)]
+\end{proof}
+
+Statement for part (b): 
+
+
+\begin{exercise}{1.3.7} Prove that if $a$ is an upper bound for $A$ and if $a$ is also an element of $A$,
+then $a=\sup A$.
+\end{exercise}
+\begin{proof}
+\end{proof}
+
+\begin{exercise}{1.3.8} Compute, without proof, the suprema and infima of the 
+following sets.
+\begin{enumerate}[(a)]
+\item $\{m/n: \text{ $m,n\in\Nats$ with $m<n$} \}$.
+\item $\{(-1)^m/n: n,m\in\Nats\}$.
+\item $\{n/(3n+1): n\in\Nats\}$.
+\item $\{m/(m+n):m,n\in\Nats\}$.
+\end{enumerate}
+\end{exercise}
+\solution
+\begin{enumerate}[(a)]
+\item
+\item
+\item
+\item
+\end{enumerate}
+
+\end{document}
