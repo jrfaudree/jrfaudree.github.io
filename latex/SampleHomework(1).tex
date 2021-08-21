@@ -1,0 +1,87 @@
+%%% Preamble starts here.
+\documentclass{math265}
+
+% Include any special packages you might use.  Uncomment the
+% following to use Times as the default font insteand of
+% TeX's default font of Computer Modern.
+% \usepackage{times,txfonts}
+
+% The following commands set up the material that appears
+% in the header.
+\doclabel{Math 265: Sample Assignment}
+\docauthor{Jill Faudree}
+\docdate{February 12, 2019}
+
+% If you want, you can make new commands, e.g. the following
+% which uses \Ints to make a blackboard-bold Z.
+%
+% \newcommand\Ints{\mathbb{Z}}
+
+% I've provided a file (math215extras.tex) with some commonly used extra 
+% commands. If you've downloaded it, you can include it in your document
+% by uncommenting the line below.  Feel free to make changes to that file.
+%
+% \input{math215extras.tex}
+
+%%%% Main document starts here.
+
+\begin{document}
+
+\begin{exercise}{1.1} Suppose $p$ is even and $q$ is any integer.
+  Then $pq$ is even.
+\end{exercise}
+\begin{pf}
+Since $p$ is even, there exists an integer $k$ such that
+$p=2k$.  Hence
+\begin{align*}
+  pq &= (2k)q\\
+     &= 2(kq).
+\end{align*}
+Since $kq\in\mathbb{Z}$, we conclude that $2 \mid p$ and hence $p$ is even.
+\end{pf}
+
+\begin{exercise}{1.2}\label{ex:oddtimesodd} 
+  Suppose $p$ is odd and $q$ is odd.
+  Then $pq$ is odd.
+\end{exercise}
+\begin{pf}
+Suppose that $pq$ is even.  Then $2\mid pq$.  Since $2$ is prime,
+either $2\mid p$ or $2\mid q$.  Suppose $2\mid p$.  Then $p=2k$ for some
+integer $k$ and hence $p$ is even.  On the other hand, a
+similar argument show that if $2\mid q$ then $q$ is even.  
+
+We have therefore shown that if $pq$ is even, then either $p$ is
+even or $q$ is even.  By the contrapositive,  it follows that if
+if $p$ and $q$ are odd, then $pq$ is odd.
+\end{pf}
+
+\begin{exercise}{1.3} The square root of 2 is irrational.
+\end{exercise}
+\begin{pf}
+Suppose to the contrary that $\sqrt{2}$ is rational. Then
+there are integers $a$ and $b$ with no common factors such that 
+\begin{equation*}
+\sqrt{2} = \frac{a}{b}.
+\end{equation*}
+Squaring this equation we find that
+\begin{equation}\label{step1}
+2 b^2 = a^2.
+\end{equation}
+Hence $2|a^2$ and therefore $a^2$ is even.  
+If $a$ were odd, then Exercise \ref{ex:oddtimesodd} would imply
+that $a^2$ is even. But $a^2$ is even and hence $a$ is even.
+So $a=2k$ for some integer $k$.  It follows from equation
+\eqref{step1} that 
+\begin{align*}
+  2 b^2 &= (2k)^2\\
+        &= 4 k^2.
+\end{align*}
+Hence
+\begin{equation*}
+b^2 = 2 k^2.
+\end{equation*}
+Arguing as before we see that $b$ must also be even.  So $2$ is a
+common factor of $a$ and $b$, which is a contradiction.
+\end{pf}
+
+\end{document}
