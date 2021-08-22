@@ -1,0 +1,86 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Calculus 1}
+\rfoot{Sect 2.1 }
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+  \large \sc{Section 2.1: Preview of Calculuis}
+\end{center}
+
+
+
+\begin{enumerate}
+\item The point $P(2,3)$ lies on the graph of $f(x)=x+\frac{2}{x}.$
+	\begin{enumerate}
+	\item If possible, find the slope of the secant line between the point $P$ and each of the points with $x$ values listed below. For each estimate the slope to 4 decimal places. NOTE: You do not need the graph of the function to answer this numerical question.\\
+		{\LARGE{\begin{center}
+		\begin{tabular}{l | l | c}
+		\multicolumn{2}{c}{point $Q$}& slope of secant line $PQ$\\
+		$x$-value&\quad$y$-value \quad \quad& $PQ$\\
+		\hline
+		$x=4$&&\\
+		\hline
+		$x=3$&&\\
+		\hline
+		$x=2.5$&&\\
+		\hline
+		$x=2.25$&&\\
+		\hline
+		$x=2.1$&&\\
+		\hline
+		$x=0$&&\\
+		\hline
+		$x=1$&&\\
+		\hline
+		$x=1.5$&&\\
+		\hline
+		$x=1.75$&&\\
+		\hline
+		$x=1.9$&&\\
+		\hline
+		\end{tabular}
+		\end{center}}}
+	\item  Now, use technology to sketch a rough graph $f(x)$ on the interval $(0,5]$ and add the secant lines from part $a$. (Your graph may be messy...It's ok.) Label the secant lines with their respective slopes. What can you conclude about the slope of the tangent line to $f(x)$ at $x=2$?
+	\vfill
+	\item Write a best guess for the equation of the line tangent to $f(x)$ at point $P$. Is your equation plausible?
+	\vspace{.5in}
+	\end{enumerate}
+	\newpage
+
+\item The table shows the position of a cyclist after accelerating from rest.\\
+
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|}
+$t$ (minutes) &0&30&60&90&120&150&180&210&240\\
+\hline
+$d$ (miles) &0&9.2&18.7&23.1&38.1&46.6&59.7&72.6&80\\
+\end{tabular}
+\begin{enumerate}
+\item Estimate the cyclist's average velocity in miles per hour  during:
+\begin{enumerate}
+\item the first hour\\ \vfill
+\item the second hour\\ \vfill
+\end{enumerate}
+\item Estimate how fast the cyclist was going 1.5 hours into the ride.\\  \vspace{2.5in}
+
+\item What does any this have to do with secant lines and tangent lines?
+\vfill
+\end{enumerate}
+\end{enumerate}
+\end{document}
