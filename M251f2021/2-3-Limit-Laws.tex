@@ -1,0 +1,65 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+
+\pagestyle{fancy} 
+\lfoot{Uses a calculator}
+\rfoot{2-3 Limit Laws}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 2-2: Limit Laws}\\
+\end{center}
+Read Section 2.3. Work the embedded problems. \\
+\hrulefill
+
+The goal for every problem below is to (a) correctly evaluate the limit, (b) write the mathematics correctly, and (c) articulate \emph{why} you can use the technique you used in part (a).
+\begin{enumerate}
+\item $\displaystyle{\lim_{x \to \sqrt{2}} 5x -\sqrt{8x^2-1} }$
+\vfill
+\item $\displaystyle{\lim_{t \to 0} \frac{e^{2t}-1}{1 + \sin( \pi t)} }$
+\vfill
+\item $\displaystyle{\lim_{x \to -1} \frac{x^2+8x+7}{2x^2+3x+1}}$
+\vfill
+\newpage
+\item $\displaystyle{\lim_{x \to 5^-} \frac{x+1}{5x-x^2} }$
+\vfill
+\item $\displaystyle{\lim_{x \to -10} \frac{2x + g(x)}{\pi f(x)}}$ assuming  that  $\displaystyle{\lim_{x \to -10} g(x) = \frac{1}{2}}$ and  $\displaystyle{\lim_{x \to -10} f(x) =1}$
+\vfill
+\item The last two problems reference the function $f(x) = \begin{cases} \frac{1}{2x} &\text{if } 0 < x \leq 2
+\\ 0 &\text{if }  2<x \end{cases}$
+
+\begin{enumerate}
+\item $\displaystyle{\lim_{x \to 2} f(x)}$
+\vfill
+\item $\displaystyle{\lim_{x \to 2^+} e^{f(x)}}$
+\end{enumerate}
+\end{enumerate}
+\end{document}
+
