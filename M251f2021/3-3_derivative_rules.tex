@@ -1,0 +1,99 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{3-3 Derivative Rules}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 3-3: Derivative Rules}\\
+\end{center}
+Read Section 3.2. Work the embedded problems. \\
+\hrulefill
+
+\begin{enumerate}
+\item Fill in the following rules:\\
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\displaystyle{\frac{d}{dx}\left[c\right]=}$\\
+
+	\item $\displaystyle{\frac{d}{dx}\left[x^n\right]=}$\\
+
+	\item $\displaystyle{\frac{d}{dx}\left[c\:f(x)\right]=}$\\
+
+	\item $\displaystyle{\frac{d}{dx}\left[f(x) + g(x)\right]=}$\\
+
+	\end{enumerate}
+	\end{multicols}
+\item Apply the rules to find the derivative of:
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\displaystyle{f(x)=e^3}$\\
+
+	\item $\displaystyle{f(x)=x^{-4}}$\\
+
+	\item $\displaystyle{H(x)=4x^{1/2}}$\\
+
+	\item $\displaystyle{j(x)=\frac{\sqrt{2}}{2}+x-x^{2.3}}$\\
+
+	\end{enumerate}
+	\end{multicols}
+\item Fill in the following rules:\\
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\displaystyle{\frac{d}{dx}\left[f(x)\: g(x)\right]=}$\\
+
+	\item $\displaystyle{\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right]=}$\\
+
+	\end{enumerate}
+	\end{multicols}
+	
+\item Find the derivative of each of the following:
+	\begin{enumerate}
+	\item $H(x)=(3x^2+1)(\frac{1}{x}+x)$
+	\vfill
+	\item $G(x)=\frac{x^2}{x^2+1}$
+	\vfill
+	\end{enumerate}
+\newpage
+\item Notation:
+\vspace{1in}
+\item Higher order derivatives\\
+
+Example: $y=x^3-2\sqrt{x}+ \pi$
+\vspace{2in}
+\item The vertical height of an object is given by $s(t)=-16t^2+20t+100.$ Find $s'(t)$ and $s''(t)$. Include units.
+\vspace{2in}
+\end{enumerate}
+\end{document}
+
