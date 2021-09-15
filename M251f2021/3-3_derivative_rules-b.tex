@@ -1,0 +1,88 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{3-3 Derivative Rules}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 3-3: Derivative Rules (day 2)}\\
+\end{center}
+Read Section 3.3. Work the embedded problems. \\
+\begin{enumerate}
+\item Review (aka mini-quiz)\\
+	\begin{enumerate}
+	\item Fill in the following rules -- from memory if possible!\\
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\displaystyle{\frac{d}{dx}\left[f(x)\: g(x)\right]=}$\\
+
+	\item $\displaystyle{\frac{d}{dx}\left[\frac{f(x)}{g(x)}\right]=}$\\
+
+	\end{enumerate}
+	\end{multicols}
+	
+	\item Find the derivative of each of the following. Use whatever rule you choose. Simplify if you have time.
+	\begin{enumerate}
+	\item $H(x)=\frac{1}{3x}(8+x^2)$
+	\vfill
+	\item $G(x)=\frac{3x}{8+ x^2}$
+	\vfill
+	\end{enumerate}
+	\end{enumerate}
+\item Determine the point (or points) where the graph $f(x)=x^3$ has a slope of 2. Write the equation of the tangent line at this point (or points). On the same axes, sketch $f(x)$ and the tangent line(s).
+\vfill
+
+\newpage
+\item The concentration of an antibiotic in the bloodstream $t$ hours after being injected is given by $\displaystyle{C(t)=\frac{2t^2+t}{t^3+50}}$ where $C$ is measured in milligrams per liter of blood.	
+	\begin{enumerate} 
+	\item Find $C(0)$ and $C(10)$ and explain (in complete sentences,  including units) what these numbers mean in the context of the problem. \\
+	\vfill
+	\item Find $C'(t)$. (Yes. This will be challenging/painful. I put the simplified answer at the bottom of this page so you can check your answer!)
+	\vfill
+	
+	\item It is the case that $C'(0)=0.02$ and $C'(10)=-0.018.$ Explain (in a complete sentence or sentences) what these numbers mean. \textbf{Include units.}\\
+	\vfill
+	
+	\item Briefly describe what seems to be occurring as the number of hours increases.
+	\vfill
+	\end{enumerate}
+\item An ant walking along a sidewalk has traveled $s(t)=t^4-2t^2$ inches in $t$ minutes.  Find the acceleration of the ant (with units) when the velocity of the ant is 0.
+\vfill
+\item Bonus Problem: Find the point on the graph of $f(x)=x^3$  such that the tangent line at that point has an $y$ intercept of 6.
+
+\hfill {\small{$C'(t)=\frac{-2(t^4+t^3-100t-25)}{(t^3+50)^2}$}}
+
+\end{enumerate}
+\end{document}
+
