@@ -1,0 +1,116 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$} }}
+
+%axis equal 
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{3-7 Derivatives of $f^{-1}$}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 3-7: Derivatives of Inverse Functions}\\
+\end{center}
+\begin{enumerate}
+\item Goal: Understand and use the rule below:\\
+
+\vspace{1in}
+\item Fill out the rows of the chart below. Start with asterisked rows.\\
+	\begin{enumerate}
+	\item $f(x)=x^3$\\
+	
+	\hspace*{-.5in}\begin{tabular}{c|c|c|c|c|c|c|c}
+	&&&&&&point:&slope at\\
+	&$f(x)$ &\quad\quad $f'(x)$ \quad\quad& $a$-value& \quad\quad$b=f(a)$ \quad\quad& \quad\quad$f'(a)$ \quad\quad& \quad $(a,b)$&  $(a,b)$\\
+	\hline
+	&&&&&&\\
+	*&$f(x)=x^3$ &  & 2&  &  & & \\
+	&&&&&&\\
+	\hline
+	\hline
+	&&&&&&point:&slope at\\
+	&$f^{-1}(x)$ & $(f')^{-1}(x)$ & $b$-value& $a=f^{-1}(b)$ & $(f^{-1})'(b)$ & $(b,a)$&  $(b,a)$\\
+	\hline&&&&&&\\ &&&&&&\\ &&&&&&\\
+	\end{tabular}
+	
+%	\item $f(x)=\frac{1}{x^{2}}$\\
+%	
+%\hspace*{-.5in}	\begin{tabular}{c|c|c|c|c|c|c|c}
+%&&&&&&point:&slope at\\
+%	&$f(x)$ & $f'(x)$ & $a$-value& $b=f(a)$ & $f'(a)$ & \quad$(a,b)$& $(a,b)$\\
+%	\hline
+%	&&&&&&\\
+%	*&$f(x)=\frac{1}{x^{2}}$ && 3&  &  & & \\
+%	&&&&&&\\
+%	\hline
+%	\hline
+%	&&&&&&point:&slope at\\
+%	&$f^{-1}(x)$ &\quad\quad $(f')^{-1}(x)$ \quad\quad& $b$-value& \quad\quad$a=f^{-1}(b)$ \quad\quad& $(f^{-1})'(b)$ &$(b,a)$&$(b,a)$\\
+%	\hline&&&&&&\\ &&&&&&\\ &&&&&&\\
+%	\end{tabular}
+
+	
+	\item $f(x)=\sin(x)$\\
+	
+\hspace*{-.5in}	\begin{tabular}{c|c|c|c|c|c|c|c}
+&&&&&&point:&slope at\\
+	&$f(x)$ & $f'(x)$ & $a$-value& $b=f(a)$ & $f'(a)$ & $(a,b)$&  $(a,b)$\\
+	\hline
+	&&&&&&\\
+	*&$f(x)=\sin(x)$ &  & &  &  & & \\
+	&&&&&&\\
+	\hline
+	\hline
+	&&&&&&point:&slope at\\
+	&$f^{-1}(x)$ &\quad\quad$(f')^{-1}(x)$ \quad\quad& $b$-value&\quad\quad $a=f^{-1}(b)$ \quad\quad& $(f^{-1})'(b)$ & \quad $(b,a)$&  $(b,a)$\\
+	\hline&&&&&&\\ &&&$\sqrt{3}/2$&&&\\ &&&&&&\\
+	\end{tabular}
+
+	
+	\end{enumerate}
+\newpage
+\item Use the rule from (1) to find a formula for the derivative of $g(x)=\sin^{-1}(x).$
+\vspace{1.5in}
+\item Rules for the arccosine and arctangent functions.\\
+\vspace{1.5in}
+\item Find the derivatives for each function below.
+	\begin{enumerate}
+	\item $f(x)=\cos^{-1}(\sqrt{x})$
+	\vfill
+	\item $f(x)=\left(\tan^{-1}(x)\right)^2$
+	\vfill
+	\item $f(x)=x\sin^{-1}(x)$
+	\vfill
+	\item $f(x)=\tan^{-1}(\frac{1}{x})$
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
