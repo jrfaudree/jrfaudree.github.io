@@ -1,0 +1,55 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$} }}
+
+%axis equal 
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{Ch 4 (half-day 2)}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 4.1 (half-day 2)}\\
+\end{center}
+\begin{enumerate}
+\item What is wrong with the following answers:\\
+
+\fbox{Problem: Find the derivative of $f(x)=2xe^x$}\quad \fbox{Answer: $2(e^x+xe^x)$}\\
+
+\fbox{Problem: Find the derivative of $y=2\tan^{-1}(x)$}\quad \fbox{Answer: $dy/dx=0\cdot \tan^{-1}(x) + 2 \cdot \frac{1}{1+x^2}$}\\
+
+\item \textbf{A 15-ft ladder is leaning against a wall. The top of the ladder slides down the wall. Assume that the ladder is rigid and does not shorten or lengthen as it slides.} The top is sliding down the wall at a rate of $0.1$ ft/hr. How fast is the angle between the ladder and the ground changing when the top of the ladder is 10 feet high?
+\vfill
+\newpage
+\item An airplane is flying overhead at a constant elevation of 4000ft. A man is viewing the plane from a position 3000ft from the base of a radio tower. The airplane is flying horizontally away from the man. What is the speed of the plane if the distance between the person and the plane is increasing at the rate of 300ft/sec at the instant the plane is passing over the radio tower?
+\vfill
+\end{enumerate}
+\end{document}
+

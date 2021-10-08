@@ -1,0 +1,89 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$} }}
+
+%axis equal 
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{End Ch 3, Start of Ch 4}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{The end of Chapter 3 and the start of Chapter 4}\\
+\end{center}
+\begin{enumerate}
+
+\item (A quick refresher from Monday.) Find the derivatives of the functions below.
+
+%\begin{multicols}{2}
+	\begin{enumerate}
+	\item $y=e^{2x}+\ln(2x)$
+	\vspace{.5in}
+	\item $y=e^2+e^{\sin(cx)}$ where $c$ is a constant.
+	\vfill
+	\item $y=x^3 \sin ( 10^x)$
+	\vfill
+	\item $w(r)= \ln( \tan^{-1}(r))$
+	\vfill
+	\item $f(x)=x^{\ln (x)}$ Hint: Use logarithmic differentiation (which means to start by taking the natural log of both sides of the equation.)
+	\vfill
+	\end{enumerate}
+\item For each of the functions: $f(x)=P_0e^{kt}$, $f(x)=x^2$ and $f(x)=x^{10}$ write $f'(x)$ in terms of $f(x).$ Can you tell what $f^{(50)}$ is?
+\vfill
+%\end{multicols}
+\newpage
+\item Chapter 4 is about applications of the derivative. Section 4.1 is about Related Rate Problems. \\
+\emph{Example:} A 15-ft ladder is leaning against a wall. The top of the ladder slides down the wall. Assume that the ladder is rigid and does not shorten or lengthen as it slides. Draw a picture. Label with variables the lengths that are changing over time. Label with constants that things that are fixed. Which variables do you expect to have a positive derivative with respect to time? Negative? Zero? What equations can you think of that related some of the variables in your picture?\vfill
+%\newpage
+\item A list of derivative rules you will need to \emph{know}  how and when to use.
+\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\displaystyle{\frac{d}{dx} \left[ f(x) g(x)\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \frac{f(x)}{g(x)}\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ f(g(x))\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \sin(x)\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \cos(x)\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \tan(x) \right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \sec(x)\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \cot(x) \right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \csc(x)\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \sin^{-1}(x)\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \cos^{-1}(x)\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \tan^{-1}(x) \right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ e^x\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ a^x\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \ln(x)\right]=}$
+	\item $\displaystyle{\frac{d}{dx} \left[ \log_a(x)\right]=}$
+	\end{enumerate}
+\end{multicols}
+
+\end{enumerate}
+\end{document}
+
