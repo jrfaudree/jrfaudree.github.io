@@ -1,0 +1,76 @@
+%%% Preamble starts here.
+\documentclass{amsart}
+%for the heading
+\usepackage{fancyhdr, enumerate,hyperref}
+%for the picture. 
+\usepackage{tikz, calc}
+%adjust the page width
+\usepackage[margin=1in]{geometry}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\urlstyle{same}
+%% The next line says how the "vertex" style of nodes should look: drawn as small circles.
+\tikzstyle{vertex}=[circle, draw, inner sep=0pt, minimum size=6pt,fill=white]
+%%
+%% Next, we make a \vertex command as a shorthand in place of \node[vertex} to get that style.
+\newcommand{\vertex}{\node[vertex]}
+
+\linespread{1.1}
+
+
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+
+% header
+\lhead{\sc  Graph Theory}
+\chead{\sc Open Problem/Project Ideas } 
+\rhead{Fall 2021}
+\cfoot{}
+\pagestyle{fancy}
+
+%%%% Main document starts here.
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{enumerate}
+\item Our textbook
+	\begin{enumerate}
+	\item the Reconstruction Conjecture (pg 38)
+	\item Ringel's Conjecture \& Graceful Tree Conjecture (pg 87)
+	\item the Overfull Conjecture \& the 1-factorization Conjecture (pg 279)
+	\item Tutte's 4-flow Conjecture (pg 311)
+	\item Cycle Double Cover Conjecture (pg 313)
+	\item Strong Perfect Graph Conjecture (pg 320)\\
+	\end{enumerate}
+
+\item A site listing open problems specifically for undergraduates. \url{http://dimacs.rutgers.edu/~hochberg/undopen/graphtheory/graphtheory.html}\\
+
+\item A site of open problems hosted by Doug West \url{https://faculty.math.illinois.edu/~west/openp/}\\
+
+\item A massive site of open problems with an indicator (third column ``Rec") of problems recommended for undergraduates. \url{http://www.openproblemgarden.org/category/graph_theory}\\
+
+\item Furman's Electronic Journal of Undergraduate Mathematics. \url{https://scholarexchange.furman.edu/fuejum/}\\
+
+\item Mathematics Magazine and College Mathematics Journal (articles available through Rasmuson Library)\\
+
+You would find articles here by googling "graph theory" and "Mathematics Magazine" and starting to follow a google-trail.\\
+
+\item Electronic Journal of Combinatorics \url{https://www.combinatorics.org/}\\
+
+\item Everyone should know about the searchable database: MathSciNet \url{https://mathscinet.ams.org/mathscinet}.\\
+Note that it is accessible on-campus or via vpn.
+\end{enumerate} 
+
+\end{document}
