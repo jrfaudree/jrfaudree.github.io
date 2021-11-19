@@ -1,0 +1,166 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% This top part of the document is called the 'preamble'.  Modify it with caution!
+%
+% The real document starts below where it says 'The main document starts here'.
+
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage[top=1in, bottom=1in, left=1.25in, right=1.25in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+%for the picture. 
+\usepackage{tikz, calc}
+%% The next line says how the "vertex" style of nodes should look: drawn as small circles.
+\tikzstyle{vertex}=[circle, draw, inner sep=3pt, minimum size=6pt]
+%%
+%% Next, we make a \vertex command as a shorthand in place of \node[vertex} to get that style.
+\newcommand{\vertex}{\node[vertex]}
+% Comment the following line to use TeX's default font of Computer Modern.
+\usepackage{times,txfonts}
+
+\newtheoremstyle{homework}% name of the style to be used
+  {18pt}% measure of space to leave above the theorem. E.g.: 3pt
+  {12pt}% measure of space to leave below the theorem. E.g.: 3pt
+  {}% name of font to use in the body of the theorem
+  {}% measure of space to indent
+  {\bfseries}% name of head font
+  {:}% punctuation between head and body
+  {2ex}% space after theorem head; " " = normal interword space
+  {}% Manually specify head
+\theoremstyle{homework} 
+
+% Set up an Exercise environment and a Solution label.
+\newtheorem*{exercisecore}{Exercise \@currentlabel}
+\newenvironment{exercise}[1]
+{\def\@currentlabel{#1}\exercisecore}
+{\endexercisecore}
+
+\newcommand{\localhead}[1]{\par\smallskip\noindent\textbf{#1}\nobreak\\}%
+\newcommand\solution{\localhead{Solution:}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Stuff for getting the name/document date/title across the header
+\makeatletter
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot[C]{\ifnum \value{page} > 1\relax\thepage\fi}
+\fancyhead[L]{\ifx\@doclabel\@empty\else\@doclabel\fi}
+\fancyhead[C]{\ifx\@docdate\@empty\else\@docdate\fi}
+\fancyhead[R]{\ifx\@docauthor\@empty\else\@docauthor\fi}
+\headheight 15pt
+
+\def\doclabel#1{\gdef\@doclabel{#1}}
+\doclabel{Use {\tt\textbackslash doclabel\{MY LABEL\}}.}
+\def\docdate#1{\gdef\@docdate{#1}}
+\docdate{Use {\tt\textbackslash docdate\{MY DATE\}}.}
+\def\docauthor#1{\gdef\@docauthor{#1}}
+\docauthor{Use {\tt\textbackslash docauthor\{MY NAME\}}.}
+\makeatother
+
+% Shortcuts for blackboard bold number sets (reals, integers, etc.)
+\newcommand{\Reals}{\ensuremath{\mathbb R}}
+\newcommand{\Nats}{\ensuremath{\mathbb N}}
+\newcommand{\Ints}{\ensuremath{\mathbb Z}}
+\newcommand{\Rats}{\ensuremath{\mathbb Q}}
+\newcommand{\Cplx}{\ensuremath{\mathbb C}}
+%% Some equivalents that some people may prefer.
+\let\RR\Reals
+\let\NN\Nats
+\let\II\Ints
+\let\CC\Cplx
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% The main document start here.
+
+% The following commands set up the material that appears in the header.
+\doclabel{Graph Theory: Review for Midterm 3}
+\docauthor{}
+\docdate{\date}
+
+\begin{document}
+The final exam will be given Monday 6 December from 8:00am-10:00am.\\
+
+You may bring a page of notes, handwritten, front and back.\\
+
+\noindent \textbf{Topics by Section}\\
+
+\fbox{1.1}  graph, vertex set, edge set, endpoints, loop, multiple edges, adjacent, neighbors, complement, clique, independent set, stable set, bipartite graph, subgraph, connected, disconnected, isomorphism, isomorphism class\\
+
+
+\fbox{1.2}  walk, trail, path, internal vertices of a walk/trail/path, endpoints of a walk/trail/path, length, closed, components, isolated vertex, cut-edge, cut-vertex, induced subgraph, bipartition, $X,Y$-bigraph, Eulerian circuit, Eulerian graph, even graph, maximal path, maximum path, $C_k$, $P_k$, $K_n$, $K_{n,m}$, biclique, Petersen graph\\
+
+\fbox{1.3} degree of a vertex, $d_G(v)$, $\Delta(G)$, $\delta(G)$, maximum degree, minimum degree, $k$-regular graph, $N_G(v)$, order, size, $n(G)$, $e(G)$, degree sequence, graphic sequence\\
+
+\fbox{2.1} acyclic, forest, tree, leaf, pendant vertex, spanning subgraph, spanning tree, star, distance, $d_G(u,v)$, diameter, $diam(G)$, eccentricity, $\epsilon(v)$, radius, $rad(G)$, center\\
+
+\noindent \textbf{major theorems / useful results}\\
+
+\fbox{1.2}\\
+Every $uv$-walk contains a $uv$-path.\\
+Every graph with $n$ vertices and $k$ edges contains at least $n-k$ components.\\
+An edge is a cut-edge iff it lies on a cycle.\\
+A graph is bipartite iff it has no odd cycle.\\
+A graph is Eulerian iff it has at most one nontrivial component and all vertices have even degree.\\
+Even graphs decompose into cycles.\\
+Every graph with a nonloop edge has at least two vertices that are not cut-vertices.\\
+
+\fbox{1.3}\\
+The Degree-Sum Formula\\
+A $k$-regular bipartite graph has the same number of vertices in each partite set.\\
+If the $n$-vertex graph $G$ has $\delta(G) \geq (n-1)/2,$ then $G$ must be connected.\\
+The minimum number of edges in an $n$-vertex graph is $\lfloor n^2/4 \rfloor.$\\
+For every degree sequence with an even sum, there is a (multi)graph that realizes that sequence.\\
+Havel-Hakimi Theorem and implied algorithm\\
+
+\fbox{2.1}\\
+Every tree with at least two vertices has at least two leaves.\\
+Deleting a leaf from a tree on at least two vertices gives a tree on $n-1$ vertices.\\
+A list of equivalent definitions of a tree.\\
+Adding a single edge to a tree produces a unique cycle.\\
+Every connected graph contains a spanning tree.\\
+If $G$ is a simple graph with $diam(G) \geq 3$, then $diam(\overline{G}) \leq 3$\\
+The center of a tree is $K_1$ or $K_2.$\\
+If $H \subseteq G$, then for every $u,v \in V(H)$ $d_H(u,v) \geq d_G(u,v).$\\
+
+
+\fbox{2.2}  Pr\"{u}fer code, Cayley's Formula\\
+
+
+\fbox{2.3}  minimum weight spanning tree, weighted graph, Kruskal's Algorithm for finding minimum weight spanning trees, Dijkstra's Algorithm for finding the distance between all vertices and a given vertex, Breadth-First Search for finding distances in an unweighted graph, Chinese Postman Problem\\
+
+\fbox{3.1} matchings, perfect matching, saturated/unsaturated vertices, maximal/maximum matchings, $M$-alternating path, $M$-augmenting path, symmetric difference, Berge's Theorem (3.1.10), Hall's Condition, Hall's Theorem (3.1.11), vertex cover, K\"{o}nig-Egerv\'{a}ry Theorem (3.1.16)\\
+
+\fbox{3.2} Augmenting Path Algorithm, Hungarian Algorithm\\
+
+\fbox{3.2}  Stable matchings, Gale-Shapley Proposal Algorithm\\
+
+\fbox{4.1} separating set/vertex cut, connectivity, $\kappa(G)$, $k$-connectivity, disconnecting set of edges, $k$-edge-connectivity, edge-connectivity, $\kappa'(G),$ edge cut\\
+
+Whitney's Theorem (4.1.9) If $G$ is a simple graph, $\kappa(G) \leq \kappa'(G) \leq \delta(G).$\\
+
+Them 4.1.11 If $G$ is 3-regular, then $\kappa(G) = \kappa'(G).$\\
+
+\fbox{4.2} internally disjoint $uv$-paths, $xy$-cut\\
+
+Whitney's Theorem (4.2.2) A graph $G$ with at least 3 vertices is 2-connected if and only if for each pair $u,v \in V(G)$ there exist internally disjoint $uv$-paths.\\
+
+Theorem 4.2.4 (a list of 4 statements equivalent to being 2-connected)\\
+
+Menger's Theorem: If $x,y$ are nonadjacent vertices of the graph $G,$ then the minimum number of edges in an $xy$-cut is equal to the maximum number of pairwise internally disjoint $xy$-paths.\\
+
+\fbox{5.1} $k$-coloring, color class, proper coloring, $k$-colorable, chromatic number, $k$-chromatic, color-critical, clique number, greedy coloring algorithm\\
+
+Proposition 5.1.7 For every $G$, $\chi(G) \geq \omega(G)$ and $\chi(G) \geq \frac{n(G)}{\omega(G)}.$\\
+
+Proposition 5.1.13 $\chi(G) \leq \Delta(G)$\\
+
+Brooks' Theorem (5.1.22)\\
+
+\end{document}
+
+
