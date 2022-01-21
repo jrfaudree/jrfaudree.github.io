@@ -1,0 +1,112 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{2-3 Limit Laws}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 2-3: Limit Laws}\\
+\end{center}
+goals:\\
+\begin{itemize}
+\item Know how to evaluate limits algebraically (that is, using the limit laws from this section)
+\item Recognize when a limit needs some algebraic manipulation and when it doesn't.
+\item Understand the idea behind the Squeeze Theorem.
+\end{itemize}
+
+Recall that in the Section 2.2 notes we established \quad \fbox{ $\d \lim_{x \to 0} \frac{\sin(x)}{x}=1.$}\\
+
+Rule: \hfill Example\\
+
+\begin{enumerate}
+\item \hfill $\d \lim_{x \to 5} 14 = \hspace{1in}$\\
+\vfill
+\item \hfill $\d \lim_{x \to 5} x = \hspace{1in}$\\
+\vfill
+
+\item \hfill $\d \lim_{x \to 0}\frac{\sin(x)}{x} +(2x+\sqrt{2})  = \hspace{1in}$\\
+\vfill
+
+\item \hfill $\d \lim_{x \to 0 } \lim_{x \to 0}\frac{\sin(x)}{x} -(2x+\sqrt{2}) = \hspace{1in}$\\
+\vfill
+
+\item \hfill $\d \lim_{x \to 0 }   \lim_{x \to 0}\frac{35\sin(x)}{x}= \hspace{1in}$\\
+\vfill
+\item \hfill $\d \lim_{x \to 4} (5x+20)(x-2) = \hspace{1in}$\\
+\vfill
+\item \hfill $\d \lim_{x \to 4}   \frac{5x+20}{x-2}= \hspace{1in}$\\
+\vfill
+\item \hfill $\d \lim_{x \to -2}  (8+5x)^5= \hspace{1in}$\\
+\vfill
+\item \hfill $\d \lim_{x \to -1} \sqrt{15-x} = \hspace{1in}$\\
+\vfill
+
+
+\end{enumerate}
+
+
+\newpage
+\begin{enumerate}
+\item lesson:\\
+
+$\displaystyle{\lim_{x \to \sqrt{2}} 5x -\sqrt{8x^2-1} }$
+\vfill
+\item lesson:\\
+
+$\displaystyle{\lim_{t \to 2} \frac{x^2-4}{x-2} }$
+\vfill
+\item  lesson:\\
+
+$\displaystyle{\lim_{x \to 5} \frac{3-\sqrt{x+4}}{5-x}}$
+\vfill
+\newpage
+\item lesson:\\
+
+$\displaystyle{\lim_{x \to 2} \frac{\frac{1}{4} - \frac{1}{2+x}}{x-2} }$
+\vfill
+\item lesson:\\
+
+$\displaystyle{\lim_{x \to 2^-} \frac{x^2+4}{x-2} }$
+\vfill
+\item The last two problems reference the function $f(x) = \begin{cases} \frac{1}{2x} &\text{if } 0 < x \leq 2
+\\ 0 &\text{if }  2<x \end{cases}$
+
+\begin{enumerate}
+\item $\displaystyle{\lim_{x \to 2} f(x)}$
+\vfill
+\item $\displaystyle{\lim_{x \to 2^+} e^{f(x)}}$
+\end{enumerate}
+\newpage
+\item Squeeze Theorem
+\end{enumerate}
+\end{document}
+
