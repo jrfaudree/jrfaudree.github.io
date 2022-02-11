@@ -1,0 +1,71 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$} }}
+
+%axis equal 
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{3-6 Chain Rule}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 3-6: The Chain Rule}\\
+\end{center}
+Read Section 3.6. Work the embedded problems. \\
+\begin{enumerate}
+\item Two Versions of the Chain Rule
+\vspace{2in}
+\item Use version \fbox{B} to find $\frac{dy}{dx}$ if $y=3 \sqrt{u}$ and $u=\cos(x)+1.$\\
+\vfill
+\item For each function below, decompose the function into the form $y=f(u)$ and $u=g(x)$ and then find $\frac{dy}{dx}$ using version \fbox{B}.
+	\begin{enumerate}
+	\item $y=(3x-5)^8$
+	\vfill
+	\item $y=\displaystyle{\large{\frac{1}{x^3+\tan(x)}}}$
+	\vfill
+	\end{enumerate}
+	\newpage
+	
+\item Find $\frac{dy}{dx}$ using version $\fbox{A}.$
+	\begin{enumerate}
+	\item $y=(\frac{1}{x^2}+\frac{x^2}{3})^4$
+	\vfill
+	\item $y= \cos(2x)$
+	\vfill
+	\item $y=\sqrt{x^2+\sin(x)}$
+	\vfill
+	\item $y=x\tan(\frac{\pi x}{4})$
+	\vfill
+	\item $y=\frac{x}{\sin^2(x)}$
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
