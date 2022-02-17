@@ -1,0 +1,128 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+\lhead{\sc \quad \\ Math 265}
+\chead{\sc Review: Midterm I } 
+\rhead{\sc \quad \\ Spring 2022}
+\cfoot{}
+\pagestyle{fancy}
+\pgfplotsset{compat=1.12}
+\begin{document}
+\thispagestyle{fancy}
+
+Midterm I will be on Wednesday 23 February during our regular class time. So you will have 1 hour to complete the Midterm. Notes, books and other aid are not allowed.\\
+
+\begin{center} Chapter 1: Sets\end{center}
+Section 1
+\begin{itemize}
+\item Terms to know: element of a set, cardinality of a set, set builder notation, natural numbers, integers, rational numbers, real numbers, interval notation
+\item Symbols to know $\NN,\: \ZZ,\: \QQ, \RR, \in$ and basic set notation
+\item You should know how to go back and forth between different kinds of set notation.
+\end{itemize}
+Section 2
+\begin{itemize}
+\item terms to know: ordered pair, Cartesian product, ordered $n$-tuple
+\item symbols to know: $A \times B$
+\item You should know how to count the number of elements in $A \times B$ provided $A$ and $B$ are finite.
+\item Know how to distinguish between $A \in B$ or $A \subseteq B.$
+\end{itemize}
+Section 3 and 4
+\begin{itemize}
+\item terms to know: subset, the power set of a set,
+\item symbols to know: $\subseteq$, $\mathcal{P}(A)$
+\item Know how to determine the cardinality of the power set of a finite set.
+\end{itemize}
+Section 5 and 6
+\begin{itemize}
+\item Know how to find the union, intersection and difference of two sets.
+\item symbols to know: $\cup, \: \cap, \: -$ and $\overline{A}$.
+\item Know how to find the complement of a set.
+\end{itemize}
+Section 7
+\begin{itemize}
+\item Know now to draw and to read a Venn diagram.
+\end{itemize}
+Section 8
+\begin{itemize}
+\item terms to know: indexed sets
+\item notation to know: $\cup_{i \in I} A_i$, $\cap_{i \in I} A_i$
+\end{itemize}
+Section 9-10
+\begin{itemize}
+\item Know the Division Algorithm.
+\item You will \emph{not} be asked about the Well-ordering Principle or Russell's Paradox.
+\end{itemize}
+
+\begin{center} Chapter 2: Logic \end{center}
+
+\begin{itemize}
+\item terms to know: statement, the mathematical meaning of \emph{and, or} and \emph{not}, truth table, conditional statement, biconditional, quantifiers
+\item symbols to know: $\vee,\: \wedge,\: \sim,\: \Leftarrow, \: \Leftrightarrow, \: \forall, \: \exists$
+\item You need to be familiar with \emph{alternate} formulations of these logical statements in English. (See especially the bottom of page 44.)
+\item Know how to decide if a statement with \emph{and}, \emph{or} or \emph{not} is true or false.
+\item Know how to decide if a conditional, biconditional, or quantified statement is true or false.
+\item Know how to determine if two statements are logically equivalent or not.
+\item Know DeMorgan's Laws (page 51).
+\end{itemize}
+
+
+\begin{center} Definitions \end{center}
+
+For all of the terms below, you must be able to formally state the definition from your textbook. 
+\be
+\item odd, even, same parity, opposite parity
+\item divides, multiple, divisor
+\item prime
+\item greatest common divisor, least common multiple
+\item congruent modulo $n$
+\item rational number, irrational number
+\ee
+
+\begin{center} Proof Techniques \end{center}
+\be
+\item direct proof
+\item using cases
+\item by contrapositive
+\item by contradiction
+\ee
+
+\begin{center} Things to Keep in Mind \end{center}
+\be
+\item If a proof technique is not prescribed, you MUST state the method you are using.
+\item You should put in the ``boiler-plate'' language even if you cannot figure out the whole proof.
+\item You should expect to \emph{use} all of the hypotheses.
+\item I will \emph{not} ask you to prove something that is false.
+\ee
+\end{document}
