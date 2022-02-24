@@ -1,0 +1,65 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace, adjustbox}
+\usepackage{array%,tikz, pgfplots
+}
+
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+%\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+%middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+%
+\pagestyle{fancy} 
+\lfoot{UAF Calculus I}
+\rfoot{4-1}
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+ {\large{ \sc{Section 4-1: Related Rates}}}
+\end{center}
+ 	
+A strategy.
+\begin{itemize}
+\item Draw a \fbox{picture}.
+\item Identify what you \fbox{want} and what you \fbox{know} 
+\item \fbox{Take derivative with respect to $t.$} 
+\item \fbox{Solve} for what you \fbox{want}.
+\end{itemize}
+
+\hrulefill
+
+\begin{enumerate}
+\item A rock is dropped into lake triggering a circular wave. If the radius of the wave is increasing at a rate of 14 inches per second, how fast is the area of the circle changing when the radius is 20 inches?
+\vfill
+\item A 15-ft ladder is leaning against a wall. The top of the ladder slides down the wall. Assume that the ladder is rigid and does not shorten or lengthen as it slides. The top is sliding down the wall at a rate of $0.1$ ft/hr. How fast is the angle between the ladder and the ground changing when the top of the ladder is 10 feet high?
+\vfill
+\newpage
+\item An airplane is flying overhead at a constant elevation of 4000ft. A man is viewing the plane from a position 3000ft from the base of a radio tower. The airplane is flying horizontally away from the man. What is the speed of the plane if the distance between the person and the plane is increasing at the rate of 300ft/sec at the instant the plane is passing over the radio tower?
+\vfill
+
+\item  (4.1.11) A 6-ft-tall person walks away from a 10-ft lamppost at a constant rate of 3 ft/sec. What is the rate at which the top of the shadow moves away from the person when the person is 10 feet from the pole?
+\item (4.1.25) A conical tank is leaking water. The dimensions of the tank are a height of 16 ft and a radius of $5$ feet. How fast does the depth of the water change when the water is 10 feet high if the cone leaks at a rate of 10 cubic feet per minute?
+\item (4.1.38) You stand 40 feet from a bottle rocket on the ground and watch as it takes off vertically into the air at a rate of 20 ft/sec. Find the rate at which the angle of elevation changes when the rocket is 50 ft in the air.
+\end{enumerate}
+\end{document}
