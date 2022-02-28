@@ -1,0 +1,215 @@
+\documentclass[11pt]{article}
+%{amsart}
+%\pagestyle{empty} 
+\setlength{\topmargin}{-0.8in} % usually -0.25in
+\addtolength{\textheight}{1.4in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in} %\setlength{\parindent}{0pt}
+
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.1}\tiny\normalsize}
+\normalspacing
+
+% macros
+\usepackage{amsmath,amssymb,mathrsfs,amsthm,xspace,alltt,verbatim,fancyhdr,mathtools}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=true]{hyperref}
+\usepackage{fancyvrb}
+\usepackage{tikz}
+
+\newtheorem*{lem*}{Lemma}
+
+
+\newcommand{\be}{\begin{enumerate}}
+ \newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bT}{\mathbf{T}}
+
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\QQ}{{\mathbb{Q}}}
+\newcommand{\ZZn}{{\mathbb{Z}}_n}
+\newcommand{\NN}{{\mathbb{N}}}
+\newcommand{\ip}[2]{\mathrm{\left<#1,#2\right>}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\newcommand{\Log}{\operatorname{Log}}
+
+\newcommand{\grad}{\nabla}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\pylab}{\textsc{pylab}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.} }
+\newcommand{\pts}[1]{(\emph{#1 pts})}
+
+\newcommand{\probpts}[2]{\prob{#1} \pts{#2} \quad}
+\newcommand{\ppartpts}[2]{\textbf{(#1)} \pts{#2}}
+\newcommand{\epartpts}[2]{\medskip\noindent \textbf{(#1)} \pts{#2}}
+
+\lhead{\sc{Math 265 Proofs}}
+\chead{\large \sc Midterm I} 
+\rhead{\sc Spring 2022}
+\cfoot{}
+\pagestyle{fancy}
+\begin{document}
+\thispagestyle{fancy}
+
+
+\medskip
+\large
+\vspace{.1in}
+\begin{tabular}{l@{\hspace{.4in}}l}
+Your Name & Your Signature\\
+\framebox(200,30){} & \framebox(200,30){} \\
+\end{tabular}
+
+%\bigskip
+
+\vfill
+{
+\renewcommand{\baselinestretch}{1.8}
+\setlength{\tabcolsep}{.2in}
+\normalsize
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Problem&Total Points&\parbox{.8in}{\hfil Score\hfil}\\
+\hline
+1&15&\\
+\hline
+2&14&\\
+\hline
+3&14&\\
+\hline
+4&15&\\
+\hline
+5&10&\\
+\hline
+6&12&\\
+\hline
+7&10&\\
+\hline
+8&10&\\
+\hline
+\hline
+%\hline
+Total&100&\\
+\hline
+%Current Course Grade&\multicolumn{2}{c|  }{}\\
+%\hline
+
+\end{tabular}
+
+\end{center}
+}
+\vfill
+\begin{itemize}
+\item 
+You have 1 hour.
+
+\item If you have a cell phone with you, it should be turned off and put away. (Not in your pocket)
+
+\item You may not use a calculator, book, notes or aids of any kind.
+
+\item In order to earn partial credit, you must show your work.
+
+\end{itemize}
+\newpage
+\begin{enumerate}
+%logical equivalence
+\item (15 points)
+	\begin{enumerate}
+	\item Complete the definition below.\\
+	
+	Given integers $a$ and $b$ and $n \in \mathbb{N}$, we say that $a$ and $b$ are congruent modulo $n$ if\\
+	\vspace{.5in}
+	\item \textbf{Use the definition and a direct proof} to prove the statement below. Do not use any previous results from the text or in homework.\\
+	\begin{quote} If $a \in \mathbb{Z}$ and $a \equiv 1 (\text{mod } 7)$, then $a^2  \equiv 1 (\text{mod } 7).$ \end{quote}
+	\vfill
+	\end{enumerate}
+\newpage
+\item (14 points)
+	\begin{enumerate}
+	\item List the elements in the set $\{x \in \mathbb{Z} \: : \: |3x| \leq 6 \}.$
+	\vfill
+	\item List the elements in the set $\{X \subseteq \{a,b,c\} \: : \: a \not \in X\}.$
+	\vfill
+	\item Write the set $\{ \cdots, \frac{- \pi }{4}, \frac{ -\pi }{2},0,\frac{ \pi }{4},\frac{ \pi }{2},\frac{3 \pi }{4},\pi, \cdots  \}$ in set-builder notation. 
+	\vfill
+	\item Determine the cardinality of the set $\{ \emptyset, \{\emptyset\}, \{ 1,2\}, \{1,2,3\}\}.$
+	\vfill
+	\end{enumerate}
+\item (14 points) Let $A=\{0,1,2,3,4\}$ and $\mathcal{P}(A)$ denote the power set of $A.$
+	\begin{enumerate}
+	\item Determine $|\mathcal{P}(A)|,$  the cardinality of $\mathcal{P}(A)$.\\
+	
+	\item List 3 distinct \textbf{elements} of $\mathcal{P}(A)$ such that each element has a different cardinality. Use correct notation.
+	\vfill
+	\item List 3 distinct \textbf{subsets} of $\mathcal{P}(A)$ such that each subset has different cardinality. Use correct notation.
+	\vfill
+	\newpage
+	\end{enumerate}
+\item (15 points) Let $A=\{0,1,2\}, B=\{1,2,3,4\}$ and define the universal set $U=\{0,1,2,3, \cdots, 9\}$. Find:
+	\begin{enumerate}
+	\item $A \cup B$\\
+	\vspace{.3in}
+	
+	\item $\overline{A \cup B}$\\ 
+	\vspace{.3in}
+	
+	\item $ | A \times B |$\\ 
+	\vspace{.3in}
+	
+	\item $ (A \times A) \cap (B \times B)$\\
+	\vspace{.3in}
+	
+	\item $ (A \times A) - (A \times B)$\\
+	\vspace{.3in}
+	\end{enumerate}
+
+
+\item (10 points) Complete the truth table for the statement  $P \Leftrightarrow (Q \vee \sim R).$\\
+
+\begin{center}
+\begin{tabular}{c|c|c|p{0.7\textwidth}}
+P&Q&R&\\
+\hline \hline
+T&T&T&\\ \hline
+T&T&F&\\ \hline
+T&F&T&\\ \hline
+T&F&F&\\ \hline
+F&T&T&\\ \hline
+F&T&F&\\ \hline
+F&F&T&\\ \hline
+F&F&F&\\ 
+\end{tabular}
+\end{center}
+\newpage
+\item (12 points) Negate the two statements below. Your answer should be a complete sentence in English. (You are not asked to determine the truth value of these statements.)
+	\begin{enumerate}
+	\item There exists a real number $r$ such that $r>1$ and $r^2 < 1.001.$
+	\vfill
+	\item If $a \in X,$ then $a \not \in Y-X.$
+	\vfill
+	\end{enumerate}
+\item (10 points) Prove the statement below with a contrapositive proof.
+
+
+\begin{quote} Let $x,y \in \mathbb{Z}.$ If $3x -5y$ is odd, then $x$ and $y$ do not have the same parity. \end{quote}
+\vfill
+\vspace{5in}
+\newpage
+\item (10 points) Prove the statement below using a proof by contradiction.
+
+\begin{quote} Let $a,b \in \mathbb{Z}.$ If $4 \mid (a^2+b^2)$, then $a$ is even or $b$ is even. \end{quote}
+\vfill
+\end{enumerate}
+\end{document}
