@@ -1,0 +1,77 @@
+\documentclass[11pt]{report}
+
+\usepackage{geometry,amsmath,amssymb,amsthm}
+
+\geometry{margin=1.in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+
+\begin{document}
+\hfill Math 265
+
+\hfill \today
+
+\begin{center}
+\Large{\textbf{Ch 8 \& Ch 9}} \\
+\end{center}
+\begin{enumerate}
+\item Recall that we proved the following result in class:\\
+
+Let $a,b \in \mathbb{N}.$ If $a \mid bc$ and $\gcd(a,b)=1,$ then $a \mid c.$\\
+
+\item Let $p$ and $q$ be distinct prime numbers and let $c$ be an integer. Prove that if $p\mid qc$ then $p \mid c.$\\
+
+Observe that since $p$ and $q$ are distinct primes, $\gcd(p,q) =1.$ Since $\gcd(p,q) =1$ and, by hypothesis, $p\mid qc$ where $c \in \mathbb{Z},$ we can apply the result in item 1 above to conclude $p \mid c.$\\
+
+\item Prove that the previous statement is false without the hypothesis that $p$ and $q$ are distinct prime numbers. \\
+
+Let $p$ be an odd prime and let $q=2p$ and $c=2.$ Then $qc=4p$ and $p \mid qc$ but $p\nmid c.$\\
+
+\item Prove one of DeMorgan's Laws:\\
+Let $A$ and $B$ be sets with universe $U$. Prove $\overline{A \cup B} = \overline{A} \cap \overline{B}.$\\
+
+\textbf{proof:} Let $A$ and $B$ be sets with universe $U$. \\
+
+First we will show that $\overline{A \cup B} \subseteq \overline{A} \cap \overline{B}.$\\
+
+Let $x \in \overline{A \cup B}.$ Then $x \not \in A \cup B.$ Thus, $x\not \in A$ and $x \not \in B. $ Thus, $x \in \overline{A}$ and $x  \in \overline{B}.$ Thus, $x \in \overline{A} \cap \overline{B}.$ Thus, we have shown that if $\overline{A} \cap \overline{B},$ then $x \in \overline{A} \cap \overline{B}.$  Thus, $\overline{A \cup B} \subseteq \overline{A} \cap \overline{B}.$\\
+
+
+Next we will show that $\overline{A} \cap \overline{B}\subseteq\overline{A \cup B} $\\
+
+Let $x \in \overline{A} \cap \overline{B}.$ Thus, $x \in \overline{A}$ and $ x \in \overline{B}.$ Thus, $x \not \in {A}$ and $ x \not \in {B}.$ Thus, $x \not \in A \cup B.$ Thus, $x \in \overline{A \cup B}.$ Thus,  we have shown that if $x \in \overline{A} \cap \overline{B},$  then $\overline{A} \cap \overline{B}.$ Thus, $\overline{A} \cap \overline{B} \subseteq  \overline{A \cup B}.$\\
+
+Because  $\overline{A \cup B} \subseteq \overline{A} \cap \overline{B}$ and $\overline{A} \cap \overline{B}\subseteq\overline{A \cup B},$ it follows that $\overline{A \cup B} = \overline{A} \cap \overline{B}.$ \\
+
+
+\item We said in class that we can think of the statement \fbox{$A \subseteq B$} as equivalent to the statement \fbox{If $a \in A$, then $a \in B$.}\\
+
+Write the contrapositive and the negation of the boxed statements.\\
+
+\emph{contrapostive:} If $a \not \in B,$ then $a \not \in A.$\\
+
+\emph{negation:} There is an element $x$ such that $x \in A$ and $x \not \in B.$\\
+
+\item Prove the proposition below using the contrapositive and the negation.\\
+
+\textbf{Proposition:} $\{n \in \mathbb{Z} \: : \: 4\mid n \} \subseteq \{n \in \mathbb{Z} \: : \: 2\mid n\}.$\\
+
+\textbf{Proof by contrapositive}\\
+Let $A=\{n \in \mathbb{Z} \: : \: 4\mid n \}$ and let $B= \{n \in \mathbb{Z} \: : \: 2\mid n\}.$ Suppose $x \not \in B.$ Then, by the definition of $B$, $x$ is not an integer or $x$ is not divisible by 2. If $x$ is not an integer, then $x \not \in A.$ On the other hand, if $x$ is an integer but is not divisible by 2, then $x$ is an odd integer. If $x$ is odd, then $x$ is not divisible by 4 since all integers divisible by 4 are even. Since $x$ is not divisible by 4, $x \not \in A.$\\
+
+Thus, in both cases, if $x \not \in B,$ it follows that $x \not \in A.$ Thus, we have shown that $A \subseteq B$.\\
+
+\textbf{Proof by contradiction}\\
+Let $A=\{n \in \mathbb{Z} \: : \: 4\mid n \}$ and let $B= \{n \in \mathbb{Z} \: : \: 2\mid n\}.$ Suppose $x \in A$ and $x \not \in B.$ Since $x \in A,$ $x$ is divisible by $4$ and there exists an integer $k$ such that $4k=x.$ Thus, $x=2(2k)$ where $2k \in \mathbb{Z}$ demonstrating that $x$ is even. \\
+
+Since $x \not \in B,$ it follows that $2 \nmid x.$ Thus, $x$ is odd.\\
+
+Now we have the contradiction that $x$ is both even and odd. Thus it cannot be the case that $x \in A$ and $x \not \in B.$ Thus, we have shown that $A \subseteq B$.
+
+\end{enumerate}
+\end{document}
