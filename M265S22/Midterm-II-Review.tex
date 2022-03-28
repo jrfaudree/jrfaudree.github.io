@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[margin=.8in]{geometry}
+\usepackage{amsmath,amssymb,amsthm, latexsym, mathrsfs, pdfsync, 
+fancybox, fancyhdr, 
+graphicx, enumerate,
+subfig, multicol}
+\usepackage{tikz}
+\usepackage{pgf}
+\usepackage{pgfplots}
+\usetikzlibrary{calc}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+\lhead{\sc \quad \\ Math 265}
+\chead{\sc Review: Midterm II } 
+\rhead{\sc \quad \\ Spring 2022}
+\cfoot{}
+\pagestyle{fancy}
+\pgfplotsset{compat=1.12}
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{center} Preliminaries \end{center}
+
+The midterm will be given without the use of aids of any kind. You will have one hour to complete the midterm. The midterm will cover Chapters 7-10. All of the problems will be proofs.  For some problems, you will be asked to use a particular technique to prove a statement. For others, it will be your choice what method to use. In all cases, you are expected to write complete, formal, appropriately detailed proofs.\\
+
+\begin{center} Definitions \end{center}
+
+For all of the terms below, you must be able to formally state and use the definition from your textbook. 
+\be
+\item odd, even, same parity, opposite parity
+\item divides, multiple, divisor
+\item prime
+\item greatest common divisor, least common multiple
+\item congruent modulo $n$
+\item rational number, irrational number
+\item subsets, set equality
+\ee
+
+All of the terms below should be familiar to you.
+\be
+\item element of a set, {cardinality of a set}, set builder notation, {natural numbers, integers, rational numbers, irrational numbers, real numbers}, interval notation
+\item ordered pair, {Cartesian product, ordered $n$-tuple}
+\item {subset, the power set of a set}
+\item {union, intersection and difference of two sets, complement of a set}
+\item the mathematical meaning of \emph{and, or} and \emph{not}, conditional statement, biconditional, quantifiers, logically equivalent, contrapositive, negation
+\ee
+
+\begin{center} Proof Techniques \end{center}
+\be
+\item direct proof
+\item using cases
+\item by contrapositive
+\item by contradiction
+\item if-and-only-if proofs
+\item existence statements
+\item proofs involving sets (that is, statements including $A \subseteq B$ or $A=B$)
+\item methods of disproving statements
+\item proof by induction (both strong and weak)
+\ee
+
+\begin{center} Things to Keep in Mind \end{center}
+\be
+\item If a proof technique is not prescribed, you MUST state the method you are using.
+\item You should put in the ``boiler-plate'' language even if you cannot figure out the whole proof.
+\item You should expect to \emph{use} all of the hypotheses.
+\item I will \emph{not} ask you to prove something that is false.
+\ee
+
+
+
+\end{document}
