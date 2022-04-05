@@ -1,0 +1,46 @@
+\documentclass[11pt]{report}
+
+\usepackage{geometry,amsmath,amssymb,amsthm}
+
+\geometry{margin=1.in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+
+\begin{document}
+\hfill Math 265
+
+\hfill \today
+
+\begin{center}
+\Large{\textbf{Ch 11: Relations}} \\
+\end{center}
+\begin{enumerate}
+\item State the definitions of
+	\begin{enumerate}
+	\item a relation $R$ on a set $A$.
+	\item a reflexive relation
+	\item a symmetric relation
+	\item a transitive relation
+	\item an equivalence relation\\
+	\end{enumerate}
+\item Let $n \in \mathbb{N}.$ Prove that the relation $R$ on $\mathbb{Z}$ defined as $a \: R \: b$ if $a \equiv b \text{ mod } n$ is transitive.\\
+\newpage
+\item For each relation below, determine whether it is reflexive, symmetric, or transitive.
+	\begin{enumerate}
+	\item $R=\{(x,y) \in \mathbb{R} \times \mathbb{R} \: | \: x^2+y^2 \leq 4\}$\\
+	\vfill
+	\item $R$ is a relation on $\mathcal{P}(\mathbb{N})$ such that $ A R B$ if $|A-B| \leq 2.$\\
+	\vfill
+	\newpage
+	\item $R$ is a relation on $\mathcal{P}(\mathbb{N})$ such that $ A R B$ if $A-\{1,2\}=B-\{1,2\}.$\\
+	\vfill
+	\item $R$ is a relation on $\mathbb{Z}$ defined as $(m,n) \in R$ if $3m-5n$ is even.\\
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
