@@ -1,0 +1,130 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$} }}
+
+%axis equal 
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{Review Midterm II}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Review for Midterm II}\\
+\end{center}
+\noindent\textbf{Logistics}\\
+
+You will have one hour to take the midterm. The first page of the midterm is attached to an announcement in Canvas so that you can see what the directions are. (There is nothing interesting here; we just think you should waste no time reading it!)\\
+
+All you need to take the exam is a writing utensil. Scratch paper or extra paper will be provided for you, if needed. Books, notes and calculators are not allowed. There will be no problems the require (or need) a calculator. \\
+
+Our midterm will start promptly at 10:15am, ending at 11:15am. I will be here prior to that to answer in questions. Some students will finish early. To ensure that later students to don't get an unfair advantage, all students are required to stay in class until 11:15. If you know you are someone who finishes early, you should bring something to work on that \textbf{does not require your phone, laptop or tablet.}\\
+
+\noindent\textbf{Taking a Math Test}\\
+
+\begin{itemize}
+\item Showing your work is the only way we can give you partial credit.
+\item If you want the reader to understand your work, you need to be organized.
+\item You will lose points for writing things that are incorrect.
+\end{itemize}
+
+
+\noindent\textbf{Topics}\\
+
+\noindent Since Midterm 1, we have covered several topics from the end of Chapter 3. But all of these topics were about the mechanics of taking derivatives and were tested explicitly on the Derivative Proficiency. Thus, there will not be any problems that simply ask you to take a derivative, however many problems will require that you take a derivative in order to work the problem so you can't just forget all of that material.\\ 
+
+\noindent \fbox{Section 4.1}\\
+Related Rate Problems. All of these problems are word problems asking for a rate of change of some quantity with respect to time. 
+
+Example:  An airplane is flying overhead at a constant elevation of 4000 feet as it passes directly over a man standing on the ground. If the plane is flying at a speed of 600 feet per second, how fast is the plane moving away from the man 5 seconds after it passes over his head? Assume the plane is flying in a straight line.\\
+
+\noindent \fbox{Section 4.2}\\
+Linear Approximations and Differentials. These problems ask you to find the linear approximation or differential of a function for particular values and then use these things (the linear approximation or differential) to estimate other things.
+
+Example:  Find the linear approximation of $f(x)=5 \sin (x)$ when $a=0$ and use it to estimate $5 \sin (-0.1)$
+
+Example:  Find the differential of $f(x)=4 \sqrt{x}$ when $x=9$ and use it to estimate  how much $f$ will change if $x$ changes from $9$ to $9.01$\\
+
+
+\noindent \fbox{Section 4.3}\\
+Maxima and minima. Absolute and local. Critical points. These problems are of two types: Finding ABSOLUTE extrema on closed-bounded intervals and finding local extrema in general.
+
+Example: Find the absolute maximum and the absolute minimum of $f(x)=x^2-3x^{2/3}$ on $[0,8].$
+
+Example: Identify any local extrema of $y=x^2- \frac{1}{x^2}.$\\
+
+\noindent \fbox{Section 4.5}\\
+Derivatives and the Shape of a Graph. These problems ask you to use $f'$ and $f''$ to determine when the original function, $f$, is increasing or decreasing, concave up or concave down, has extrema, has inflection points, and to draw sophisticated graphs.
+
+Example: Draw some not-too-complicated graph. Now assume it is $f'$. What can you say about the graph of $f$?
+
+Example: If $f' >0$ for $x>0$, $f' <0$ for $x<0$, $f'' > 0$ for $-2 \leq x \leq 2$ and $f'' < 0$ for $x<-2$ and for $x>2,$ sketch $f.$
+
+\noindent \fbox{Section 4.6}\\
+Limits at Infinity and Asymptotes. The problems either ask yo to evaluate a limit as $x \to \pm \infty$ or ask to find and justify the existence of a  horizontal asymptote.
+
+Example: Determine if the graph of $f(x)=\frac{3x^3-e^x}{2x^3}$ has a horizontal asymptote. Justify your answer.\\
+
+\noindent \fbox{Section 4.7}\\
+Optimization Problems. These are word problems where you are asked to maximize or minimize some quantity. Crucial steps here include\\
+ (a) identify the quantity to be maximized/minimized, \\
+ (b) write the quantity from part (a) as a function of one variable,\\
+ (c) identify the domain of the function from part (b), \\
+ (d) take derivative and find critical points for function from part (b), \\
+ (e) check/justify that your cp actually corresponds to a max/min,\\
+ (f) answer the question.
+ 
+ Example: Go work problems from old midterms.\\ 
+
+\noindent \fbox{Section 4.8}\\
+L'Hopital's Rule. Be able to use L'Hopital's Rule to evaluate limits of a variety of indeterminate forms.\\
+
+Example: Evaluate $\lim_{x \to 0^+} x \ln(x^4)$\\
+
+\noindent \fbox{Section 4.10}\\
+Antiderivatives and Initial Value Problems 
+
+Example: Evaluate $\int (\frac{3}{sqrt{x}}-\csc^2(x)) \: dx$
+
+Example: If an object as acceleration $a(t) = x + \sin(x),$ find its velocity equation assuming $v(0)=10.$
+
+
+\noindent \fbox{Section 5.1}\\
+Approximating areas. Use rectangles with left- or right-hand endpoints to estimate the area under a curve. 
+
+Example: Use $L_8$ (ie eight rectangles with left-hand endpoints) to estimate the area under $y=\sqrt{x}$ on the interval $[0,4].$ No need to get a decimal approximation. (!!)
+
+
+\noindent \fbox{Section 5.2}\\
+The Definite Integral as Signed Area under a Curve.\\
+
+Example: Sketch the graph of $y=10 - 5x.$ Use this graph to evaluate $\int_{1}^6 (10-5x) \:dx$.
+
+\end{document}
+
