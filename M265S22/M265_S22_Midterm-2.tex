@@ -1,0 +1,156 @@
+\documentclass[11pt]{article}
+%{amsart}
+%\pagestyle{empty} 
+\setlength{\topmargin}{-0.8in} % usually -0.25in
+\addtolength{\textheight}{1.4in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in} %\setlength{\parindent}{0pt}
+
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.1}\tiny\normalsize}
+\normalspacing
+
+% macros
+\usepackage{amsmath,amssymb,mathrsfs,amsthm,xspace,alltt,verbatim,fancyhdr,mathtools}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=true]{hyperref}
+\usepackage{fancyvrb}
+\usepackage{tikz}
+
+\newtheorem*{lem*}{Lemma}
+
+
+\newcommand{\be}{\begin{enumerate}}
+ \newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bT}{\mathbf{T}}
+
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\QQ}{{\mathbb{Q}}}
+\newcommand{\ZZn}{{\mathbb{Z}}_n}
+\newcommand{\NN}{{\mathbb{N}}}
+\newcommand{\ip}[2]{\mathrm{\left<#1,#2\right>}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\newcommand{\Log}{\operatorname{Log}}
+
+\newcommand{\grad}{\nabla}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\pylab}{\textsc{pylab}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.} }
+\newcommand{\pts}[1]{(\emph{#1 pts})}
+
+\newcommand{\probpts}[2]{\prob{#1} \pts{#2} \quad}
+\newcommand{\ppartpts}[2]{\textbf{(#1)} \pts{#2}}
+\newcommand{\epartpts}[2]{\medskip\noindent \textbf{(#1)} \pts{#2}}
+
+\lhead{\sc{Math 265 Proofs}}
+\chead{\large \sc Midterm II} 
+\rhead{\sc Spring 2022}
+\cfoot{}
+\pagestyle{fancy}
+\begin{document}
+\thispagestyle{fancy}
+
+
+\medskip
+\large
+\vspace{.1in}
+\begin{tabular}{l@{\hspace{.4in}}l}
+Your Name & Your Signature\\
+\framebox(200,30){} & \framebox(200,30){} \\
+\end{tabular}
+
+%\bigskip
+
+\vfill
+{
+\renewcommand{\baselinestretch}{1.8}
+\setlength{\tabcolsep}{.2in}
+\normalsize
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Problem&Total Points&\parbox{.8in}{\hfil Score\hfil}\\
+\hline
+1&20&\\
+\hline
+2&10&\\
+\hline
+3&10&\\
+\hline
+4&10&\\
+\hline
+5&10&\\
+\hline
+extra credit&5&\\
+\hline
+\hline
+%\hline
+Total&600&\\
+\hline
+%Current Course Grade&\multicolumn{2}{c|  }{}\\
+%\hline
+
+\end{tabular}
+
+\end{center}
+}
+\vfill
+\begin{itemize}
+\item 
+You have 1 hour.
+
+\item If you have a cell phone with you, it should be turned off and put away. (Not in your pocket)
+
+\item You may not use a calculator, book, notes or aids of any kind.
+
+\item In order to earn partial credit, you must show your work.
+
+\end{itemize}
+\newpage
+\begin{enumerate}
+%disprove
+\item (20  points) Disprove the following two statements.
+	\begin{enumerate}
+	\item For all sets $A$, $B$ and $C,$ if $A \not\subseteq B$ and $B \not\subseteq C$, then $A \not\subseteq C.$
+	\vfill
+	\item There exists a natural number $n$ such that $3 \mid n$ and $3 \mid (n+1).$
+	\vfill	
+	\end{enumerate}
+\newpage
+
+
+%plain induction
+\item (10 points) Prove that for all integers $n\geq 2,$ 
+$$\left(1-\frac{1}{2^2} \right)\left( 1-\frac{1}{3^2} \right)\left( 1-\frac{1}{4^2} \right)\cdots\left(1-\frac{1}{n^2}  \right) =\frac{n+1}{2n}.$$
+\vfill
+\newpage
+%iff
+\item (10 points) Suppose $A$, $B$ and $C$ are sets. Prove that $A \subseteq B$ if and only if $A-B=\emptyset.$\\
+(Hint: You may not want to use the method of direct proof here.)
+\vfill
+\newpage
+%inequality induction
+\item (10 points) Use induction to prove that for every integer $n$ such that $n\geq2,$ $5^n+9 < 6^n.$
+%set containment
+\vfill
+\newpage
+\item (10 points) Prove that for all sets $A$ and $B$, $\mathcal{P}(A) \cup \mathcal{P}(B) \subseteq \mathcal{P}(A \cup B).$ (Note $\mathcal{P}(A)$ is the power set of the set $A.$)
+\end{enumerate}
+\vfill
+%extra credit
+(5 points extra credit) Suppose $a,b \in \mathbb{N}.$ Then $a=lcm(a,b)$ if and only if $b \mid a.$
+\vfill
+
+\end{document}

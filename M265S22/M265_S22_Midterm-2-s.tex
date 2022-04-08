@@ -1,0 +1,186 @@
+\documentclass[11pt]{article}
+%{amsart}
+%\pagestyle{empty} 
+\setlength{\topmargin}{-0.8in} % usually -0.25in
+\addtolength{\textheight}{1.4in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in} %\setlength{\parindent}{0pt}
+
+\newcommand{\normalspacing}{\renewcommand{\baselinestretch}{1.1}\tiny\normalsize}
+\normalspacing
+
+% macros
+\usepackage{amsmath,amssymb,mathrsfs,amsthm,xspace,alltt,verbatim,fancyhdr,mathtools}
+\usepackage[final]{graphicx}
+\usepackage[pdftex,colorlinks=true]{hyperref}
+\usepackage{fancyvrb}
+\usepackage{tikz}
+
+\newtheorem*{lem*}{Lemma}
+
+
+\newcommand{\be}{\begin{enumerate}}
+ \newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bT}{\mathbf{T}}
+
+\newcommand{\CC}{{\mathbb{C}}}
+\newcommand{\RR}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\ZZ}{{\mathbb{Z}}}
+\newcommand{\QQ}{{\mathbb{Q}}}
+\newcommand{\ZZn}{{\mathbb{Z}}_n}
+\newcommand{\NN}{{\mathbb{N}}}
+\newcommand{\ip}[2]{\mathrm{\left<#1,#2\right>}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\newcommand{\Log}{\operatorname{Log}}
+
+\newcommand{\grad}{\nabla}
+
+\newcommand{\Matlab}{\textsc{Matlab}\xspace}
+\newcommand{\Octave}{\textsc{Octave}\xspace}
+\newcommand{\pylab}{\textsc{pylab}\xspace}
+
+\newcommand{\prob}[1]{\bigskip\noindent\textbf{#1.} }
+\newcommand{\pts}[1]{(\emph{#1 pts})}
+
+\newcommand{\probpts}[2]{\prob{#1} \pts{#2} \quad}
+\newcommand{\ppartpts}[2]{\textbf{(#1)} \pts{#2}}
+\newcommand{\epartpts}[2]{\medskip\noindent \textbf{(#1)} \pts{#2}}
+
+\lhead{\sc{Math 265 Proofs}}
+\chead{\large \sc Midterm II} 
+\rhead{\sc Spring 2022}
+\cfoot{}
+\pagestyle{fancy}
+\begin{document}
+\thispagestyle{fancy}
+
+
+\medskip
+\large
+\vspace{.1in}
+\begin{tabular}{l@{\hspace{.4in}}l}
+Your Name & Your Signature\\
+\framebox(200,30){solutions} & \framebox(200,30){} \\
+\end{tabular}
+
+%\bigskip
+
+\begin{enumerate}
+%disprove
+\item (20  points) Disprove the following two statements.
+	\begin{enumerate}
+	\item For all sets $A$, $B$ and $C,$ if $A \not\subseteq B$ and $B \not\subseteq C$, then $A \not\subseteq C.$\\
+	
+	We must prove the negation of the statement:  There exist sets $A$, $B$ and $C$ such that $A \not\subseteq B,$  $B \not\subseteq C$, and $A \subseteq C.$ Thus, a simple counter-example is sufficient.\\
+	
+	Example: Let $A=\{1\}, B=\{2,3\}$ and $C=\{1,2\}.$ Observe that $A \not\subseteq B,$  $B \not\subseteq C$, and $A \subseteq C.$\\
+
+	\item There exists a natural number $n$ such that $3 \mid n$ and $3 \mid (n+1).$\\
+	
+	We must prove the negation of the statement:  For every natural number $n$ either $3 \nmid n$ or $3 \nmid (n+1).$ \\
+	
+	(direct) Let $n$ be an arbitrary natural number. If $3 \nmid n,$ then the statement holds. If $3 \mid n$, then there exists an integer $k$ such that $3k=n.$ Thus, $n+1=3k+1.$ Now $3 \nmid (3k+1)$ since $3 \nmid 1.$\\
+	
+	(by contradiction) Suppose $n$ is a natural number such that $3 \mid n$ and $3 \mid (n+1).$ Thus, there exist integers $k$ and $\ell$ such that $3k=n$ and $3\ell=n+1.$ Thus, we have the contradiction that 
+	$$1=(n+1)-n=3\ell-3k=3(\ell-k)$$ implies $3 \nmid 1.$ Thus, no such $n$ can exist.\\
+	
+	\end{enumerate}
+\newpage
+
+
+%plain induction
+\item (10 points) Prove that for all integers $n\geq 2,$ 
+$$\left(1-\frac{1}{2^2} \right)\left( 1-\frac{1}{3^2} \right)\left( 1-\frac{1}{4^2} \right)\cdots\left(1-\frac{1}{n^2}  \right) =\frac{n+1}{2n}.$$
+
+
+\textbf{Proof:} (by induction on $n$) \\
+Base Step: Let $n=2.$ Observe that $\left(1-\frac{1}{2^2} \right)=\frac{3}{4} = \frac{2+1}{2\cdot 2}.$ Thus, the proposition holds for $n=2.$\\
+
+Inductive Step: Let $k \in \mathbb{N}$ such that $k \geq 2.$ Suppose that  $$\left(1-\frac{1}{2^2} \right)\left( 1-\frac{1}{3^2} \right)\left( 1-\frac{1}{4^2} \right)\cdots\left(1-\frac{1}{k^2}  \right) =\frac{k+1}{2k}.$$ We must show that 
+
+$$\left(1-\frac{1}{2^2} \right)\left( 1-\frac{1}{3^2} \right)\left( 1-\frac{1}{4^2} \right)\cdots\left(1-\frac{1}{k^2}  \right)\left(1-\frac{1}{(k+1)^2}  \right) =\frac{k+2}{2k+2}.$$
+
+Observe \\
+\begin{align*}
+\left(1-\frac{1}{2^2} \right)\left( 1-\frac{1}{3^2} \right)\cdots\left(1-\frac{1}{(k+1)^2}  \right)&=\left[\left(1-\frac{1}{2^2} \right)\left( 1-\frac{1}{3^2} \right)\cdots\left(1-\frac{1}{k^2}  \right)\right]\left(1-\frac{1}{(k+1)^2}  \right)\\
+&=\left[ \frac{k+1}{2k} \right]\left(1-\frac{1}{(k+1)^2}  \right)\\
+&=\left( \frac{k+1}{2k} \right)\left(\frac{(k+1)^2-1}{(k+1)^2}  \right)\\
+&=\left( \frac{1}{2k} \right)\left(\frac{k(k+2)}{(k+1)}  \right)\\
+&=\frac{k+2}{2k+2} ,\\
+\end{align*}
+where the inductive hypothesis is used in line 2 above and the remainder is algebra.\\
+Thus, we have shown that if the proposition holds for index $k$, then it holds for index $k+1.$\\
+
+Thus, we have shown by induction that for all integers $n\geq 2,$ 
+$$\left(1-\frac{1}{2^2} \right)\left( 1-\frac{1}{3^2} \right)\left( 1-\frac{1}{4^2} \right)\cdots\left(1-\frac{1}{n^2}  \right) =\frac{n+1}{2n}.$$
+
+\newpage
+%iff
+\item (10 points) Suppose $A$, $B$ and $C$ are sets. Prove that $A \subseteq B$ if and only if $A-B=\emptyset.$\\
+(Hint: You may not want to use the method of direct proof here.)\\
+
+\textbf{Proof:} (Option 1: by contrapositive) Let $A$, $B$ and $C$ be sets. Observe that the statement \fbox{$A \subseteq B$ if and only if $A-B=\emptyset$} is equivalent to the statement\\ \fbox{$A \not\subseteq B$ if and only if $A-B\not=\emptyset.$} We will prove the second equivalent statement.\\
+ 
+ $\Rightarrow:$ Suppose $A \not\subseteq B.$ Thus, by definition, there exists an element $a \in A$ such that $a \not \in B.$ Thus, $a \in A-B,$ and so $A-B \not = \emptyset.$\\
+ 
+ $\Leftarrow:$ Suppose $A-B\not=\emptyset.$ Then, there exists an element $a \in A-B.$ Thus, $a \in A$ and $a \not \in B.$ Thus, $A \not\subseteq B.$ \\
+ 
+ \textbf{Proof:} (Option 2: by contradiction) Let $A$, $B$ and $C$ be sets.\\
+ $\Rightarrow:$ Suppose $A \subseteq B$ and $A-B \not = \emptyset.$ Since $A-B \not = \emptyset,$ there exists an element, say $a$, in $A-B.$ So, $a \in A$ and $a \not \in B. $ But this implies that $A \not \subseteq B,$ which contradicts the assumption that $A \subseteq B.$\\
+  
+ $\Leftarrow:$ Suppose $A -B = \emptyset$ and $A \not\subseteq B.$ Since $A \not\subseteq B,$ there must exist some $a \in A,$  such that $a \not\in B.$ But if such an element $a$ exists, then $a \in A-B$ which contradicts the assumption that $A-B=\emptyset.$\\
+  
+ \textbf{Proof:} (Option 3: direct) Let $A$, $B$ and $C$ be sets.\\
+ 
+ $\Rightarrow:$ Suppose $A \subseteq B.$ Thus, by the definition of subset, if $a \in A,$ then $a \in B. $ Thus, there does not exist any element $x$ such that $x \in A$ and $x \not \in B.$ Thus, there exists no element $x$ such that $x \in A-B.$ Thus, $A-B=\emptyset,$ which is what we needed to show. \\
+ 
+ $\Leftarrow:$ Suppose $A -B = \emptyset.$ Since the set $A-B$ contains no elements, by the definition of set difference, it follows that there does not exist a single element $x$ such that $x \in A$ and $x \not in B.$ Hence, for every $a \in A,$ it must be that $a \in B.$ Thus, by definition of subset, $A \subseteq B,$ which is what we wanted to show. 
+
+\newpage
+%inequality induction
+\item (10 points) Use induction to prove that for every integer $n$ such that $n\geq2,$ $5^n+9 < 6^n.$\\
+
+\textbf{Proof:} (by induction on $n$) \\
+Base Step: Let $n=2.$ Observe that $5^2+9=34 < 36=6^2.$ Thus, the proposition holds for $n=2.$\\
+
+Inductive Step: Let $k$ be an integer such that $k\geq 2.$ Suppose that $5^k+9 < 6^k.$ We want to show that $5^{k+1} +9 < 6^{k+1}.$ First note that if $5^k+9 < 6^k,$ then $5^k< 6^k-9.$ Observe
+\begin{align*}
+5^{k+1}+9&=5(5^k)+9&\\
+&<5(6^k-9)+9& \text{ by the inductive hypothesis}\\
+&=5\cdot 6^k-45+9&\\
+&<5\cdot 6^k+9&\text{because }-45<0\\
+&<6\cdot 6^k+9&\text{because }5<6\\
+&=6^{k+1}+9,&\\
+\end{align*}
+which is what we wanted to show.
+Thus, if the proposition holds for $k$, it holds for $k+1.$\\
+Thus, by induction, the proposition is true for all integers $n \geq 2.$
+%set containment
+\vfill
+\newpage
+\item (10 points) Prove that for all sets $A$ and $B$, $\mathcal{P}(A) \cup \mathcal{P}(B) \subseteq \mathcal{P}(A \cup B).$ (Note $\mathcal{P}(A)$ is the power set of the set $A.$)
+
+\textbf{Proof:} Let $A$ and $B$ be sets. Let $X \in \mathcal{P}(A) \cup \mathcal{P}(B).$ Thus, $X \subseteq A$ or $X \subseteq B.$ If  $X \subseteq A$, then $X \subseteq A \cup B.$ Thus, $X \in \mathcal{P}(A \cup B).$ If  $X \subseteq B$, then $X \subseteq A \cup B.$ Thus, $X \in \mathcal{P}(A \cup B).$ \\
+Thus, we have shown that if $X \in \mathcal{P}(A) \cup \mathcal{P}(B),$ then $X \in \mathcal{P}(A \cup B).$ Thus, it follows that $\mathcal{P}(A) \cup \mathcal{P}(B) \subseteq \mathcal{P}(A \cup B).$
+\end{enumerate}
+\vfill
+%extra credit
+(5 points extra credit) Suppose $a,b \in \mathbb{N}.$ Then $a=lcm(a,b)$ if and only if $b \mid a.$
+
+\textbf{Proof:}  Suppose $a,b \in \mathbb{N}.$
+
+$\Rightarrow:$ Suppose $a=lcm(a,b).$ Then $a=bn$ for some integer $n$. Hence $b \mid a.$\\
+
+$\Leftarrow:$ Suppose $b \mid a.$ Then $a=bn$ for some integer $n$ and $a=a\cdot 1$, thus the number $a$ is a common multiple of $a$ and $b$. So $a \geq lcm(a,b).$ On the other hand, $lcm(a,b) \geq a$ since any multiple of $a$ is at least $1 \cdot a.$ \\
+
+Since $a \geq lcm(a,b)$ and $a \leq lcm(a,b),$ it follows that $a=lcm(a,b).$
+
+\end{document}
