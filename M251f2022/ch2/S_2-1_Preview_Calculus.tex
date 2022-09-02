@@ -1,0 +1,107 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Calculus 1}
+\rfoot{Sect 2.1 }
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+  \large \sc{Section 2.1: Preview of Calculuis}
+\end{center}
+goals: To understand
+\begin{itemize}
+\item the difference between a secant line and a tangent line.
+\item how to use secant lines to estimate the slope of a tangent line.
+\item how to use average velocity to estimate instantaneous velocity.
+\item why our present tools force us to \emph{estimate} slope or instantaneous velocity and not calculate it explicitly.
+\end{itemize}
+
+
+\begin{enumerate}
+\item REVIEW: Write the equation of the line through the points $P(-3,1)$ and $Q(2,4)$.
+\vspace{1.5in}
+\item The point $P(2,3)$ lies on the graph of $f(x)=x+\frac{2}{x}.$ For each value of $x$ in the table below, find the slope of the secant line between $P(2,3)$ and $Q(x,f(x)),$ \emph{if possible}.\\
+		{\LARGE{\begin{center}
+		\begin{tabular}{l | l | c}
+		\multicolumn{2}{c}{point $Q$}& slope of secant line $PQ$\\
+		$x$-value&\quad$y$-value \quad \quad& $PQ$\\
+		\hline
+		$x=4$&&\\
+		\hline
+		$x=3$&&\\
+		\hline
+		$x=2.5$&&\\
+		\hline
+		$x=2.25$&&\\
+		\hline
+		$x=2.1$&&\\
+		\hline
+		$x=2$&&\\
+		\hline
+		$x=1.9$&&\\
+		\hline
+		$x=1.75$&&\\
+		\hline
+		$x=1.5$&&\\
+		\hline
+		$x=1$&&\\
+		\hline
+		\end{tabular}
+		\end{center}}}
+		\newpage
+	\begin{enumerate}
+	\item  Now, use technology to sketch a rough graph $f(x)$ on the interval $(0,5]$ and add the secant lines from part $a$. (Your graph may be messy...It's ok.) Add in the tangent line to the graph at $P.$ Label the secant lines with their respective slopes. What can you conclude about the slope of the tangent line to $f(x)$ at $P$?
+	\vfill
+	\item Write a best guess for the equation of the line tangent to $f(x)$ at point $P$. Is your equation plausible?
+	\vspace{1.5in}
+	
+	\end{enumerate}
+	\newpage
+
+\item The table shows the position of a cyclist after accelerating from rest.\\
+
+\begin{tabular}{|c||c|c|c|c|c|c|c|c|c|}
+$t$ (hours) &0&0.5&1&1.5&2&2.5&3&3.5&4\\
+\hline
+$d$ (miles) &0&6.2&13.4&23.1&33.4&44.6&54.7&62.6&70\\
+\end{tabular}
+\begin{enumerate}
+\item What is the cyclist's average velocity on the 4 hours of the bike ride?
+\vfill
+\item Estimate the cyclist's average velocity in miles per hour on each of the time intervals below:
+\begin{enumerate}
+\item $[0,1.5]$\\ \vfill
+\item $[0.5,1.5]$\\ \vfill
+\item $[1,1.5]$\\ \vfill
+\item $[1.5,2]$\\ \vfill
+\item $[1.5,2.5]$\\ \vfill
+\item $[1.5,3]$\\ \vfill
+\end{enumerate}
+
+\item The calculations above can be used to estimate the \emph{instantaneous} velocity of the cyclist at what time? What would your estimate be?\\  \vfill
+\end{enumerate}
+\newpage
+BONUS: If you understood what we did in class today, you should be able to answer the questions below.
+\item In words, what is a secant line, what is a tangent line and how are they different?
+\vfill
+\item Justify the assertion that the problem of finding the slope of the tangent to a graph at a point is the same problem as finding the instantaneous velocity of an object given its position.
+\vfill
+\item Explain why the method we use to find the slope of the secant line (i.e. $m_{sec}=\frac{y_2-y_1}{x_2-x_1ß}$)  \emph{cannot} be used to find the slope of the tangent line?
+\vfill
+\end{enumerate}
+\end{document}
