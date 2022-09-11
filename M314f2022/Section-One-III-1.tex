@@ -1,0 +1,92 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Calculus 1}
+\rfoot{review functions }
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+  \large \sc{Section One.III.1: Gauss-Jordan Reduction}
+\end{center}
+
+\textbf{Fact:} There are many different echelon forms of a SoLE (matrix).\\
+
+We observed this as a class on Friday's quiz!!!\\
+
+\textbf{Today's Ideas:} Gauss-Jordan Reduction, which consists of adding some steps after achieving echelon form, results in a unique matrix. Moreover, the reversible nature of elementary row operations can be used to establish that the nature of solution sets of SoLE are not dependent upon its reduced form.
+
+\noindent \hrulefill
+
+\noindent Example of Gauss-Jordan Reduction\\
+
+Given a SoLe: $\systeme{x_1-2x_2+x_3=0,2x_2-8x_3=8,5x_1-5x_3=10}$ in matrix form $\begin{bmatrix} 1&-2&1&0\\0&2&-8&8\\5&0&-5&10 \end{bmatrix}$ \\
+
+\vfill
+
+\noindent \textbf{Step 1:} Put the matrix into echelon form. Recall this is a left-to-right, top-to-bottom process.\\
+
+$\begin{bmatrix} 1&-2&1&0\\0&2&-8&8\\5&0&-5&10 \end{bmatrix} \quad \textcolor{blue}{\overrightarrow{\rho_3-5\rho_1 \mapsto \rho_3}} \quad \begin{bmatrix} 1&-2&1&0\\0&2&-8&8\\0&10&-10&10 \end{bmatrix} \quad \textcolor{blue}{\overrightarrow{\rho_3-5\rho_2 \mapsto \rho_3}} \quad 
+\begin{bmatrix} 1&-2&1&0\\0&2&-8&8\\0&0&30&-30 \end{bmatrix}$\\
+
+\vfill
+
+\noindent\textbf{Step 2:} Make all leading coefficients 1. (Done in one step.) \\
+
+$\begin{bmatrix} 1&-2&1&0\\0&2&-8&8\\0&0&30&-30 \end{bmatrix}$ \quad 
+\begin{tabular}{c} 
+\textcolor{blue}{$\frac{1}{2}\rho_2\mapsto \rho_2$}\\ 
+\textcolor{blue}{$\overrightarrow{\frac{1}{30}\rho_3\mapsto \rho_3}$} 
+\end{tabular}
+\quad
+$\begin{bmatrix} 1&-2&1&0\\0&1&-4&4\\0&0&1&-1 \end{bmatrix}$\\
+
+\vfill
+
+\noindent\textbf{Step 3:}  Use leading 1's to eliminate \emph{all} nonzero entries in that column. This is a right-to-left, bottom-to-top process. \\
+
+$\begin{bmatrix} 1&-2&1&0\\0&1&-4&4\\0&0&1&-1 \end{bmatrix}$
+\quad 
+\begin{tabular}{c} 
+\textcolor{blue}{$\rho_1-\rho_3\mapsto \rho_1$}\\ 
+\textcolor{blue}{$\overrightarrow{\rho_2-4\rho_3\mapsto \rho_2}$}
+\end{tabular}
+\quad
+$\begin{bmatrix} 1&-2&0&1\\0&1&0&0\\0&0&1&-1 \end{bmatrix}$
+\quad 
+\begin{tabular}{c} 
+\textcolor{blue}{$\overrightarrow{\rho_1+2\rho_2\mapsto \rho_1}$}
+\end{tabular}
+\quad
+$\begin{bmatrix} 1&0&0&1\\0&1&0&0\\0&0&1&-1 \end{bmatrix}$
+
+\vfill
+
+\emph{pivots} and \emph{pivoting}:
+
+\vspace{1in}
+
+\emph{definition:} A matrix or SoLe is in \textbf{reduced row echelon form} if 
+
+\vspace{1in}
+\newpage
+\noindent Example: Use Gauss-Jordan Reduction to put the SoLE $\systeme{w-3x+z=5,-w+x+5z=2,x+y+z=0}$ into reduced row echelon form and solve. 
+\vfill
+
+\textbf{Notes:}
+\vfill
+\end{document}
