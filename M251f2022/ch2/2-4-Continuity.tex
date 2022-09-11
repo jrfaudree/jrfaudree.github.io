@@ -1,0 +1,70 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{2-4 Continuity}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 2-4: Continuity}\\
+\end{center}
+Read Section 2.4. Work the embedded problems. \\
+\hrulefill
+
+\begin{enumerate}
+\item Pictures of graph discontinuities
+\vfill
+\item Definition of continuity at a point
+\vfill
+\item Sketch the graph of a function $f(x)$ with the following properties:\\
+\begin{enumerate}
+\item the domain of $f(x)$ is the interval $[0,10].$
+\item $f(x)$ is continuous except at $x=0$ where it has in infinite discontinuity and $x=5$ where it has a jump discontinuity.
+\end{enumerate}
+\vfill
+\newpage
+\item Determine the point(s), if any, at which the function \mbox{$h(x)=\frac{x+2}{x^2-4}$} is discontinuous. Justify your answer. Classify any discontinuity as jump, removable, infinite, or other.
+\vfill
+\item Find the value(s) of k that makes the function continuous over the given interval.\\
+$f(x)=\begin{cases} e^{kx} & \text{if } 0 \leq x < 4 \\
+				2x+1 & \text{if } 4 \leq x \leq 10 \\
+				\end{cases}$
+\vspace{1in}
+\item The Intermediate Value Theorem
+\vfill
+BONUS:
+\item Use the Intermediate Value Theorem to show that the equation $x^4+x-3=0$ must have a solution in
+the interval from $x=1$ to $x=2.$
+\vfill
+
+\end{enumerate}
+\end{document}
+
