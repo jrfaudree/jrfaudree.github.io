@@ -1,0 +1,125 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Calculus 1}
+\rfoot{review functions }
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+\begin{center}
+  \large \sc{Section Two.I.1: Vector Spaces (cont.)}
+\end{center}
+
+We (or the book) proved that the following are vector spaces:
+\begin{itemize}
+	\item $V_1=\left\{\begin{bmatrix} x \\ y \end{bmatrix} \: : \: y=2x\right\}$ under regular vector addition and scalar multiplication.
+\item  $V_2=\{f: \mathbb{R} \to \mathbb{R} \: : \: f(x)+3f'(x)=0\}$ under regular function addition and scalar multiplication.
+\item $V_3=\{a_2x^2+a_1x+a_0 \: : \: a_2,a_1,a_0 \in \mathbb{R}\}$ under regular polynomial addition and scalar multiplication.
+\end{itemize}
+
+Explain why the following examples are \emph{not} vector spaces. Try to find as many reasons as you can.
+\begin{enumerate}
+	\item $V=\left\{\begin{bmatrix} x \\ y \end{bmatrix} \: : \: y=x+2\right\}$ under regular vector addition and scalar multiplication.
+	\vfill
+\item  $V=\{f: \mathbb{R} \to \mathbb{R} \: : \: f(x)+3f'(x)=1\}$ under regular function addition and scalar multiplication.
+\vfill
+\item $V=\{a_2x^2+a_1x+a_0 \: : \: a_2,a_1,a_0 \in \mathbb{Z}\}$ under regular polynomial addition and scalar multiplication. The symbol $\mathbb{Z}$ denotes all integers: $...-2,-1,0,1,2,3,4,...$
+\vfill
+\end{enumerate}
+\newpage
+\noindent\textbf{Lemma 1.16} In any vector space $V$ and for any $\vec{v} \in V$ and $r \in \mathbb{R},$\\
+\vspace{1.5in}
+
+\begin{center}
+  \large \sc{Section Two.I.2: Subspaces and Spanning Sets}
+\end{center}
+
+\noindent\textbf{Definition:}\\
+
+\vspace{0.5in}
+
+\noindent\textbf{Example: } Let $V=\mathbb{R}^3,$ the vector space of 3-dimensional real-valued vectors under the usual vector and scalar operations. Let $W=\left\{\begin{bmatrix} x \\ y \\ z \end{bmatrix} \: : \: x+y-z=0\right\}.$ Show $W$ is a subspace of $V.$
+
+
+\end{document}
+
+\noindent\textbf{Example:} Do Gauss-Jordan reduction on the matrix below but record the steps as linear combinations of rows.\\
+
+$\begin{bmatrix}
+1&2&1\\-1&2&0\\3&0&8\\
+\end{bmatrix} 
+\overrightarrow{r_1+r_2 \mapsto r_2}
+\begin{bmatrix}
+1&2&1\\0&4&1\\3&0&8\\
+\end{bmatrix}
+\overrightarrow{r_3-3r_1 \mapsto r_3}
+\begin{bmatrix}
+1&2&1\\0&4&1\\0&-6&5\\
+\end{bmatrix}
+\overrightarrow{r_3+\frac{3}{2}r_2 \mapsto r_3}
+\begin{bmatrix}
+1&2&1\\0&4&1\\0&0&\frac{13}{2}\\
+\end{bmatrix}
+$
+
+\vspace{.3in}
+
+$\begin{bmatrix}
+\vec{r_1}\\\vec{r_2}\\\vec{r_3}\\
+\end{bmatrix} 
+\overrightarrow{r_1+r_2 \mapsto r_2}
+\begin{bmatrix}
+\vec{r_1}\\\vec{r_1}+\vec{r_2}\\\vec{r_3}\\
+\end{bmatrix}
+\overrightarrow{r_3-3r_1 \mapsto r_3}
+\begin{bmatrix}
+\vec{r_1}\\\vec{r_1}+\vec{r_2}\\\vec{r_3}-3\vec{r_1}\\
+\end{bmatrix}
+\overrightarrow{r_3+\frac{3}{2}r_2 \mapsto r_3}
+\begin{bmatrix}
+\vec{r_1}\\\vec{r_1}+\vec{r_2}\\(\vec{r_3}-3\vec{r_1})+\frac{3}{2}(\vec{r_1}+\vec{r_2})\\
+\end{bmatrix}
+$
+
+\vspace{.3in}
+
+Observation: Every linear combination of a 3-dimensional row vector gives a 3-dimensional row vector. Nothing bad happens.\\
+
+ \vfill
+
+\textbf{definition} A \emph{vector space} of $\mathbb{R}$ consists of a set $V$ along with two operations: $+$ and $\cdot$ such that for all $\vec{u}, \vec{v}, \vec{w} \in V$ and for all $r,s \in \mathbb{R}$ all of the following ten conditions hold:
+\begin{enumerate}
+\item $V$ is closed under vector addition: \\ \vfill
+\item Vector addition is commutative:\\ \vfill
+\item Vector addition is associative: \\ \vfill
+\item $V$ has an additive identity: \\ \vfill
+\item $V$ has additive inverses: \\ \vfill
+\item $V$ is closed under scalar multiplication:\\ \vfill
+\item Scalar multiplication distributes over scalar addition:\\ \vfill
+\item Scalar multiplication distributes over vector addition:\\ \vfill
+\item Scalar multiplication is associative:\\ \vfill
+\item The scalar number acts as a multiplicative identity:\\  \vfill
+\end{enumerate} 
+\newpage
+\noindent Demonstrate that the following are vector spaces.\\
+Example 1: $V=\left\{\begin{bmatrix} x \\ y \end{bmatrix} \: : \: y=2x\right\}$ under regular vector addition and scalar multiplication.
+\vfill
+Example 2: $V=\{f: \mathbb{R} \to \mathbb{R} \: : \: f(x)+3f'(x)=0\}$ under regular function addition and scalar multiplication.
+\vfill
+
+\end{document}
