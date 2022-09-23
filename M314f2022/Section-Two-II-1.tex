@@ -1,0 +1,63 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Calculus 1}
+\rfoot{review functions }
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Section Two.I.2: Linear Independence}
+\end{center}
+\begin{enumerate}
+\item Below are several \emph{subsets} of $V=\mathbb{R}^3.$ Which ones span $\mathbb{R}^3$? Are some more efficient than others?
+	
+	\begin{enumerate}
+	\item $A=\{(1,1,0),(0,1,0) \}$
+	\vfill
+	\item $B=\{(1,0,0),(0,1,0),(0,0,1) \}$
+	\vfill
+	\item $C=\{(1,0,0),(0,1,0),(0,0,1),(1,1,0) \}$
+	\vfill
+	\item $D=\{(0,1,0),(0,0,1),(1,1,0) \}$
+	\vfill
+	\end{enumerate}
+\item \textbf{Definition:} Let $S$ be a subset of the vectors in the vector space $V.$ We say $S$ is \textbf{linearly independent} if
+\vspace{1.5in}
+\item Determine if the set $T=\{\vec{u}=(1,2,0),\vec{v}=(1,1,1),\vec{w}=(1,3,-1)\}$ of vectors in $\mathbb{R}^3$ are linearly independent.
+\vspace{2in}
+\newpage
+\item Determine if the set $S=\{\vec{s_1}=(1,2,1,1),\vec{s_2}=(1,1,1,1),\vec{s_3}=(3,4,0,-1),\vec{s_4}=(0,8,-1,4) \}$ of vectors in $\mathbb{R}^4$ are linearly independent.
+\vspace{2in}
+
+\textbf{Lemma 1.5} $S=\{\vec{s_1},\vec{s_2},\vec{s_3},\cdots,\vec{s_n}\}$ is a subset of the vector space $V.$\\
+
+$S$ is linearly independent \\
+
+\vfill
+
+\item $V$ is a vector space and $S \subseteq V$, $\vec{v} \in V.$ What can you conclude if $[S\cup\{\vec{v}\}]=[S]$? Can your reverse this implication?
+\vfill
+\item $V$ is a vector space and $S \subseteq V$, $\vec{s} \in S.$ What can you conclude if $[S-\{\vec{s}\}]=[S]$? Can you reverse this implication?
+\vfill
+\item Let $S$ be a subset of the vector space $V.$ If, for every $\vec{v} \in {S},$ $[S-\vec{v}] \not=[S]$ (that is, the subspace $[S-\vec{v}]$ is smaller than the space $[S]$), what can you conclude about $S$? Does the reverse implication still hold? 
+\vfill
+
+ \end{enumerate}
+\end{document}
