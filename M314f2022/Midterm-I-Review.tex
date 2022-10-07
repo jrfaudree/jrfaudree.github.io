@@ -1,0 +1,169 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{Dimension }
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Midterm I Review}
+\end{center}
+
+\noindent Logistics:\\
+The midterm will be one hour. You may bring in a single sheet of hand written notes. You should bring some form of technology that will allow you to input a matrix and find its reduced echelon form.\\
+There will be one problems for which you must describe and perform elementary row operations to transform a matrix into reduced echelon form.\\
+
+\noindent Chapter 1: Linear Systems\\
+
+\noindent Section 1.1.1 Gauss's Method\\
+
+\textbf{Terminology:}  linear combination, elementary row operations, Gauss's Method, echelon form\\
+
+\noindent Section 1.1.2 Describing the Solution Set\\
+
+\textbf{Terminology:} echelon form, leading 1's, parametrized, matrix echelon form, column vector, row vector, components, scalar multiplication\\
+
+\noindent Section 1.1.3 General = Particular + Homogeneous\\
+
+\textbf{Terminology:} homogeneous system, particular solution, homogeneous solution\\
+
+\textbf{Theorems/Lemmas} \\
+(3.1) Every solution set can be expressed as the sum of a particular solution and the solution set of a homogeneous system.\\
+(3.7) For a linear system and for any particular $p$, the solutions set equals $\{p+h \: | \: h  \text{satisfies the associated homogeneous system}\}$.\\
+(3.10) Solutions sets of linear systems are either empty, unique, or have infinitely many elements.\\
+
+\noindent Section 1.3.1 Gauss-Jordan Reduction\\
+
+\textbf{Terminology:} Gauss-Jordan Reduction, reduced row echelon form, row equivalent matrices, \\
+
+\textbf{Theorems/Lemmas} \\
+(1.5) Elementary row operations are reversible.\\
+
+\noindent Section 1.3.2 The Linear Combination Lemma\\
+
+\textbf{Theorems/Lemmas:} \\
+(2.3) Linear combinations of linear combinations are linear combinations.\\
+(2.4) Row equivalent matrices have rows that are linear combinations of each other. That is, if $A'=rref(A),$ then the rows of $A'$ are a linear combinations of the rows of $A.$\\
+(2.5) The nonzero rows of a matrix in reduced echelon form are not linear combinations of each other. Note that with the language of Section 2.2.1, we would restate this as: The nonzero rows of a matrix in reduced echelon form are linearly independent.\\
+(2.6) The reduced echelon form of a matrix is unique (unlike the echelon form of a matrix).\\
+
+
+\noindent Chapter 2: Vector Spaces\\
+
+\noindent Section 2.1.1 Definition and Examples\\
+
+\textbf{Terminology:} vector space, trivial vector space\\
+
+\textbf{Theorems/Lemmas:} \\
+(1.16) In any vector space $V,$ for any $\vec{v} \in V$ and $r \in \mathbb{R},$ the following are true: $0 \cdot \vec{v}=\vec{0}$ and $r \cdot \vec{0} = \vec{0}$ and $-1\cdot \vec{v} + \vec{v} = \vec{0}.$\\
+
+
+\noindent Section 2.1.2 Subspaces and Spanning Sets\\
+
+\textbf{Terminology:}  subspace, span\\
+
+\textbf{Theorems/Lemmas:} \\
+(2.9) Any set that is closed under $r_1\vec{v_1}+r_2\vec{v_2},$ for every $r_1,r_2 \in \mathbb{R}$ and every $\vec{v_1},\vec{v_2}.$\\
+(2.15) In a vector space, the span of any subset of vectors is a subspace.\\
+
+\noindent Section 2.2.1 Linear Independence\\
+
+\textbf{Terminology:} linear dependence, linear independence\\
+
+\textbf{Theorems/Lemmas:}  \\
+(1.2) Let $S$ be a subset of the vector space $V.$ The addition of vector $\vec{v}$ to $S$ doesn't change span$(S)$ occurs if and only if $\vec{v}$ is already in span$(S)$. (That is, $\vec{v}$ can be written as a linear combination of vectors in $S.$ That is, $S \cup \{\vec{v}\}$ is linearly dependent)\\
+(1.3) The deletion of the vector $\vec{v}$ from $S$ doesn't change span$(S)$ can occur if and only if $\vec{v}$ is already in span$(S)$.\\
+(1.5) A subset $S=\{\vec{s_1},\vec{s_2},\cdots,\vec{s_n}\}$ of a vector space is linearly  independent if and only if the only solution to the system $c_1\vec{s_1}+c_2\vec{s_2}+\cdots +c_n\vec{s_n}=\vec{0}$ is $c_1=c_2=\cdots=c_n=0.$\\
+(1.14) A set of vectors is linearly independent if and only if the removal of any vector from the set results in a smaller span.\\
+(1.15) Let $S$ be a set of vectors and let $\vec{v} \not \in S.$ The set $S \cup \vec{v}$ is linearly independent if and only if $\vec{v} \not \in [S].$\\
+(1.20) Any subset of a linearly independent set is also linearly independent. Any superset of a linearly dependent set is also linearly dependent.\\
+
+\noindent Section 2.3.1 Basis\\
+
+\textbf{Terminology:} basis,  representation of $\vec{v}$ with respect to a basis $B.$\\
+
+\textbf{Theorems/Lemmas:}\\
+(1.12) In any vector space $V$, a subset $B$ is a basis if and only if every vector of $V$ can be expressed as a linear combination of $B$ in exactly one way.\\
+
+\noindent Section 2.3.2 Dimension\\
+
+\textbf{Terminology:} finite-dimensional vector space, dimension\\
+
+\textbf{Theorems/Lemmas:}\\
+(2.3) Given two bases for the same vector space $V$, it is possible to exchange one vector from one basis with a vector from the other basis and still have a basis for $V.$\\
+(2.4) If $V$ is finite-dimensional, then all bases have the same number of vectors.\\\\\\
+(2.10) No linearly independent set from a finite dimensional vector space $V$ can have more vectors than $dim(V).$\\
+(2.12) Any linearly independent set can be expanded to a basis.\\
+(2.13) Any set that spans the vector space $V$ can be reduced to a basis.\\
+(2.14) If $dim(V)=n$ and $S$ is a subset of $V$ with $n$ vectors, then $S$ spans $V$ if and only if $S$ is linearly independent. (Restate in a practical manner, if  $dim(V)=n$ and $S$ is a subset of $V$ with $n$ vectors, then determining whether $S$ is a bases is reduced to showing only ONE of linear independence OR spanning.)\\
+(implied) Every set that spans the finite-dimensional vector space $V$ with dimension $n$ must have at least $n$ vectors.
+
+\noindent Section 2.3.3 Vector Spaces and Linear Spaces\\
+
+\textbf{Terminology}: column space, row space, column rank, row rank, rank of a matrix, transpose of a matrix\\
+
+\textbf{Theorems/Lemmas:}\\
+(3.4) The nonzero rows of a matrix in rref are linearly independent.\\
+(3.10) Row operations do not change the column rank.\\
+(3.11) Row rank equals column rank.\\
+NOTE: We are omitting the last two results from this midterm. We will revisit these post midterm 1.\\
+
+\newpage
+\begin{center} Sample Problems \end{center}
+
+\begin{enumerate}
+
+\item Determine if the vector $(1,2,3,-2)$ is in the span of the vectors $(1,0,1,0), (0,1,1,1),(0,0,1,2).$
+
+\item Solve each system below. Write your answer in parametrized form. Show your work.
+	\begin{enumerate}
+	\item $\systeme{2x+y-z=1,4x-y=3}$
+	\item $\systeme{x-z=1,y+2z-w=3,x+2y+3z-w=7}$
+	\item $\systeme{x-y+z=0,y+w=0,3x-2y+3z+w=0,-y-w=0}$
+	\end{enumerate}
+	
+\item For each system above, describe the solutions as a particular and homogeneous solution.
+
+\item For which values of $k$ are there no solutions, many solutions or a unique solution.\\
+
+\begin{tabular}{rl}
+$x-2y$&$=3$\\$2x+ky$&$=6$
+\end{tabular}
+
+\item Give examples of two 3 by 3 matrices in reduced echelon form that have their leading ones in the same columns but that are not row equivalent. Explain why your answer is correct.\\
+
+\item Determine whether or not the following are vector spaces.
+	\begin{enumerate}
+	\item $ \{ a_0+a_1x \: : \: a_0+2a_1=0 \} $ under the usual operations of polynomial addition and scalar multiplication
+	\item $ \{ \bpm a& b \\ c& d\\ \epm \: : \: a=b, c+d=1 \} $ under the usual operations of matrix addition and scalar multiplication
+	\end{enumerate}
+	
+\item Determine if the set $\{  \bpm 1\\1\\2\\0\epm,  \bpm 0\\1\\1\\0\epm,  \bpm 2\\0\\1\\1\epm,  \bpm 1\\0\\0\\1\epm,\} $ spans all of $\mathbb{R}^4.$
+
+\item Pick a random 4 by 5 matrix $A$. Find a basis for the row space of $A$. Find a basis for the column space of $A.$ Determine the rank of $A.$
+
+\item Demonstrate that the set $S=\{1, 1+x, x+x^2, 2+x^3, x+2x^3\}$, a subset the vector space $\mathcal{P}_3$, is linearly dependent but that is spans $\mathcal{P}_3$. Find a subset of $S$ that forms a basis of $\mathcal{P}_3,$ call is $B.$ Write the polynomial $1+x-x^2-x^3$ with respect to the basis $B.$
+
+\end{enumerate}
+\end{document}
