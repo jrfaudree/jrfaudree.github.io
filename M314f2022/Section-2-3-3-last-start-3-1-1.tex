@@ -1,0 +1,67 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{Dimension }
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{The Last of Section 2.3.3: Vector Spaces and Linear Systems}
+\end{center}
+\begin{enumerate}
+\item Below is a homogeneous system of linear equations, the coefficient matrix $A$ and the reduced echelon form of matrix $A$, called $B.$ Answer the questions below.\\
+
+$\systeme{v+2w+x+2y+z=0, -v-2w+x+y+z=0, 2v+4w+y=0,x+y+z=0} \hfill A= \bpm 1&2&1&2&1 \\ -1&-2&1&1&1 \\ 2&4&0&1&0 \\ 0&0&1&1&1 \epm \hfill B= \bpm 1&2&0&0&0 \\ 0&0&1&0&1 \\ 0&0&0&1&0\\0&0&0&0&0 \epm $
+
+\begin{enumerate}
+\item What is the rank of $A$?\\
+
+\item Find the set of solutions to the system and express the set in vector form.
+\vfill
+\item Is the set of solutions a vector space? Why or why not?
+\vfill
+\item What is the \emph{dimension} of the solution set and why?
+\vfill
+\end{enumerate}
+\item (Theorem 3.13) Let $A$ be an $m \times n$ matrix with rank $r$. What sort of number can $r$ be? If $A$ is the coefficient matrix of a homogeneous system, how many equations and how many unknowns are there? What can you say about the solution set?
+\vfill 
+\newpage
+\item (Corollary 3.14) Let $A$ be an $n \times n$ matrix. The followins statements are equivalent:
+	\begin{enumerate}
+	\item $A$ has rank $n$
+	\item (what can you say about the rows?)\\
+	\item (what can you say about the columns?)\\
+	\item (what can you say about SoLE's with $A$ as a coefficient matrix?)\\
+	\item (is $A$ singular or nonsingular?)\\
+	\end{enumerate}
+\end{enumerate}	
+\begin{center} Section 3.1.1 \end{center}
+\begin{enumerate}
+\item Let $V=\mathbb{R}^3$ and $W=\mathcal{P}_2$. Give an intuitive argument that these are not really different vector spaces.
+\vfill
+\item \textbf{Definition} 
+\vfill
+\item (Lemma 1.11) 
+\vfill
+\end{enumerate}
+\end{document}
