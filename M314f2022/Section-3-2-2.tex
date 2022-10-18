@@ -1,0 +1,95 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Section 3.2.2 Range Space and Null Space}
+\end{center}
+\begin{enumerate}
+\item \textbf{Review} For vector spaces $V$ and $W$, the function $f:V \to W$ is called a \emph{homomorphism} or \emph{linear map} if
+\vspace{0.5in}
+
+\item (Some preliminary terminology) Assume $f:V \to W$, $S \subseteq V$, and $T \subseteq W.$ \\
+
+\textbf{image:}\\
+
+\vspace{0.25in}
+
+\textbf{inverse image:}\\
+
+\vspace{0.25in}
+
+\textbf{inverse function:}\\
+
+\vspace{0.25in}
+
+\item (Lemma 2.1, Definition 2.2, and some notation) Assume $f:V \to W$ is a linear map between vector spaces $V$ and $W$ and assume $V'$ is a subspace of $V$.  
+\vfill
+\newpage
+\item (Lemma 2.10, Definition 2.11, and some notation) Assume $f:V \to W$ is a linear map between vector spaces $V$ and $W$ and assume $W'$ is a subspace of $W$.  
+\vfill
+\item (Theorem 2.14 and Corollary 2.17) Assume $f:V \to W$ is a linear map between vector spaces $V$ and $W.$
+\vfill
+\item (Theorem 2.20) Assume $f:V \to W$ is a linear map between vector spaces $V$ and $W$ and $dim(V)=n.$ The following are equivalent statements.
+\vfill
+\end{enumerate}
+\newpage
+\textbf{Examples:}
+	\begin{enumerate}
+	%example 1
+	\item $f: \mathbb{R}^2 \to \mathbb{R}$ defined as $f\left(\bbm x \\y \ebm\right)= x+y$
+	\begin{enumerate}
+	\item Find the image of $\bbm 1\\2 \ebm.$\\
+	
+	\item Find the image of $S$ where $S=\{ \bbm x\\10-x \ebm \: : \: x \in \mathbb{R}\}$
+	\vfill
+	\item Find the inverse image of 
+	\vfill
+	\item Find the range space of $f$ and determine its rank.
+	\vfill
+	\item Find the null space and nullity of $f.$
+	\vfill
+	\end{enumerate}
+\newpage
+%example 2
+	\item $f: \mathbb{R}^2 \to \mathbb{R}^3$ defined as $f\left(\bbm x \\y \ebm\right)=\bbm x\\y\\y \ebm$
+	\begin{enumerate}
+	\item Find the image of $\bbm 1\\2 \ebm.$\\
+	
+	\item Find the image of $S$ where $S=\{ \bbm 0\\y \ebm \: : \: y \in \mathbb{R}\}$
+	\vfill
+	\item Find the inverse image of 
+	\vfill
+	\item Find the range space of $f$ and determine its rank.
+	\vfill
+	\item Find the null space and nullity of $f.$
+	\vfill
+	\end{enumerate}
+	\end{enumerate}
+
+\end{document}
