@@ -1,0 +1,64 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Section 3.2.2 Range Space and Null Space (day 3)}
+\end{center}
+
+\begin{enumerate}
+\item Summary of our 3.2.2 Examples
+	\begin{enumerate}
+	\item $f: \mathbb{R}^2 \to \mathbb{R}$ defined as $f\left(\bbm x \\y \ebm\right)= x+y$\\
+	$\mathcal{R}(f)=\mathbb{R},\:$ $\text{rank}(f)=1, \: \mathcal{N}(f)=f^{-1}(0)=\text{span}\left( \left\{ \bbm 1 \\ -1 \ebm \right\}\right), \:\text{nullity}(f)=1$\\
+	dimension of domain $= 2=1+1= \text{rank}(f) + \text{nullity}(f)$\\
+	
+	\item $f: \mathbb{R}^2 \to \mathbb{R}^3$ defined as $f\left(\bbm x \\y \ebm\right)=\bbm x\\y\\y \ebm$\\
+	$\mathcal{R}(f)=\text{span}\left( \left\{ \bbm 1\\0\\0\\ \ebm, \bbm 0\\ 1\\1\\ \ebm \right\} \right),\:$ $\text{rank}(f)=2, \: \mathcal{N}(f)=f^{-1}(\bbm 0\\0\\0 \ebm)= \left\{ \bbm 0 \\ 0 \ebm \right\} \:\text{nullity}(f)=0$\\
+	dimension of domain $= 2= 2+0=\text{rank}(f) + \text{nullity}(f)$\\
+	\end{enumerate}
+\item (Theorem 2.14 and Corollary 2.17) Assume $f:V \to W$ is a linear map between vector spaces $V$ and $W.$
+\vspace{0.7in}\\
+Why?\\
+\vfill
+\item (Theorem 2.20) Assume $f:V \to W$ is a linear map between vector spaces $V$ and $W$ and $dim(V)=n.$ The following are equivalent statements.\\
+
+	\begin{enumerate}
+	\item The function $f$ is a one-to-one map.\\
+	
+	\item The rank of $f$ is\\
+	
+	\item The nullity of $f$ is\\
+	
+	\item The relation $f^{-1}$ is\\
+	
+	\item If $\langle \vec{b_1}, \vec{b_2}, \cdots \vec{b_n}\rangle$ forms a basis for $V$, then $\langle f(\vec{b_1}), f(\vec{b_2}), \cdots f(\vec{b_n})\rangle$\\
+	
+		\end{enumerate}
+\end{enumerate}
+\end{document}

@@ -1,0 +1,66 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Section 3.3.1: Representing Linear Maps with Matrices}
+\end{center}
+
+\begin{enumerate}
+\item The Big Idea: A linear map between vector spaces can always be described as a matrix which can be used to find the image of vectors using the matrix-vector product. (a thinking-free automation)
+
+\item The Big Idea in a formal way:\\
+Let $f: V \to W$ be a \textbf{linear map} between \textbf{vector spaces} $V$ and $W$ with \textbf{bases} $B=\langle \vec{b_1}, \vec{b_2},\cdots,\vec{b_n}\rangle,$ (for $V$ of dimension $n$) and $D=\langle \vec{d_1}, \vec{d_2},\cdots,\vec{d_m}\rangle,$ (for $W$ of dimension $m$). \\
+
+Then the matrix $M$ representing the linear map has dimensions \\
+
+with columns formed as follows\\
+\vfill
+
+The image of a vector $\vec{v} \in V$ can be found by \\
+\vfill
+
+\item Fact we will use: Any linear map $f:V \to W$ between vector spaces can be determined by 
+\vspace{1in}
+\newpage
+\item Example: $f: \mathbb{R}^3 \to \mathbb{R}^2$\\
+
+bases: $B=\left\langle \vec{b_1}=\bpm 1\\1\\0\epm, \vec{b_2}=\bpm 0\\2\\0\epm,\vec{b_3}=\bpm 0\\1\\1\epm\right\rangle$ and $D=\left\langle \vec{d_1}=\bpm 1\\0\epm, \vec{d_2}=\bpm -1\\-1\epm\right\rangle$\\
+
+image of basis vectors: $f(\vec{b_1})=\bpm 1 \\ -1 \epm$, $f(\vec{b_2})=\bpm 0 \\ 2 \epm$, $f(\vec{b_3})=\bpm 0 \\ 0 \epm$
+
+	\begin{enumerate}
+	\item Find the image of $\vec{v}=\bpm 1\\2\\3 \epm$ under $f$ and express its image with respect to the basis $D$ \textbf{via actual thinking...}
+	\vfill
+	\item Find the image of $\vec{v}=\bpm 1\\2\\3 \epm$ under $f$ and express its image with respect to the basis $D$ \textbf{via automation.}
+	\vfill
+	\end{enumerate}
+ 
+
+\end{enumerate}
+\end{document}
