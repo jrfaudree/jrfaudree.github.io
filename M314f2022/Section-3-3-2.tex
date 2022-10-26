@@ -1,0 +1,66 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Section 3.3.2: Any Matrix Represents a Linear Map}
+\end{center}
+
+\begin{enumerate}
+\item The Big Idea from 3.3.1: A linear map between vector spaces can always be described as a matrix which can be used to find the image of vectors using the matrix-vector product. (a thinking-free automation)
+
+\item Review Example: $h: \mathbb{R}^3 \to \mathbb{R}^2$ by $h\left( \bbm 1\\0\\0 \ebm \right) = \bbm 0\\1\ebm$, $h\left( \bbm 0\\1\\0 \ebm \right) = \bbm -1\\0\ebm$, $h\left( \bbm 1\\1\\1 \ebm \right) = \bbm 0\\0\ebm.$ Assume the basis for $\mathbb{R}^3$ is $B=\langle \bbm 1\\0\\0 \ebm,\bbm 0\\1\\0 \ebm,\bbm 1\\1\\1 \ebm\rangle$ and $\mathcal{E}_2$ for $\mathbb{R}^2.$ Find $\text{rep}_{B,\mathcal{E}_2}(h)$ and use it to find the image of $\vec{v}=\bbm 1,2,3 \ebm.$
+
+\vfill
+
+
+\item The Big Idea from 3.3.2: Given any $m \times n$ matrix $M$, we can view $M$ as a linear map between two vector spaces $V \to W$ of dimensions \hspace{1.5in} with respect to any pair of bases.\\
+
+\item Simple Example: Let $M=\bbm 1&3 \\ 0&-1 \\ 1&1 \\ 2&3 \ebm.$ 
+\vfill
+\newpage
+\item Let $M$ be an $m \times n$ matrix representing the linear map $h: V \to W,$ for vector spaces $V$ and $W$ of dimensions $n$ and $m$ respectively. (There is an underlying assumption that bases for $V$ and $W$ are known.)
+	\begin{enumerate}
+	\item \textbf{Theorem 2.4:} Rank of $M = \text{rank of } h$
+	\vfill
+	**Revisit example in \#4\\
+	\item \textbf{Corollary 2.6} 
+	\begin{itemize}
+	\item $h$ is onto if and only if rank of $M$ is\\
+	\item $h$ is one-to-one if and only if rank of $M$ is\\
+	\end{itemize}
+	\vspace{1in}
+	\item \textbf{Lemma 2.9:} $h$ is an isomorphism if and only of $M$ is  \\
+	\vfill
+	\end{enumerate}
+\item Give examples of singular and nonsingular homomorphisms from $\mathbb{R}^3 \to \mathbb{R}^3.$
+\vfill
+
+
+\end{enumerate}
+\end{document}
