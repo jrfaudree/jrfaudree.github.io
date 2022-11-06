@@ -1,0 +1,93 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Section 3.5.1 and 3.5.2 Change of Basis}\\
+  
+  Motivating Example
+\end{center}
+
+\begin{enumerate}
+\item (S 2.3.1) Recall $\mathcal{E}_3=\left\langle \vec{e_1}=\bpm 1\\0\\0 \epm,\vec{e_2}=\bpm 0\\1\\0\epm,\vec{e_3}=\bpm 0\\0\\1 \epm \right\rangle.$ Let $B=\left\langle \vec{b_1}=\bpm 1\\-1\\0\epm, \vec{b_2}=\bpm1\\1\\-2 \epm, \vec{b_3}=\bpm 1\\1\\1\epm \right\rangle.$\\
+Let $\vec{v}=\bpm 1\\-2\\3\epm.$ Find each representation below. \\
+
+\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\text{rep}_{\mathcal{E}_3}(\vec{v})=$\\
+	\vspace{1.5in}
+
+	
+	\item $\text{rep}_{B}(\vec{v})=$\\
+	\vspace{1.5in}
+	
+	\item  $\text{rep}_{\mathcal{E}_3}(\vec{b_1})=$\\
+\vspace{1.5in}
+
+	\item  $\text{rep}_{\mathcal{E}_3}(\vec{b_2})=$\\
+
+	\vspace{1.5in}
+
+	\item  $\text{rep}_{\mathcal{E}_3}(\vec{b_3})=$\\
+
+	\vspace{1.5in}
+
+	\item $\text{rep}_{B}(\vec{e_1})=$\\
+	\vspace{1in}
+
+	\vfill
+	\item $\text{rep}_{B}(\vec{e_2})=$\\
+	\vspace{1in}
+
+	\vfill
+	\item $\text{rep}_{B}(\vec{e_3})=$\\
+	\vspace{1in}
+
+	\vfill
+	\end{enumerate}
+\end{multicols}
+\newpage
+\item (S 3.3.1) Define $h:\mathbb{R}^3 \to \mathbb{R}^3$ by $\bpm x\\y\\z \epm \mapsto \bpm y+z \\ x+z \\ x+y \epm$ assuming \underline{\hspace{2in}} \\
+\begin{enumerate}
+	\item Find the matrix representation of $h$, $\text{Rep}_{\mathcal{E}_3,\mathcal{E}_3}(h).$
+	\vfill
+	\item Find $h(\vec{v})$ for $\vec{v}=\bpm 1\\-2\\3\epm_{\mathcal{E}_3}.$
+	\vfill
+	\end{enumerate}
+
+\item (S 3.3.1) 
+	\begin{enumerate}
+	\item Find $\text{Rep}_B(h(\vec{v}))$ for $\vec{v}=\bpm 1\\-2\\3\epm_{\mathcal{E}_3}.$
+	\vspace{3in}
+
+	\item Find $\text{Rep}_{B,B}(h).$
+	\vfill
+	
+	\end{enumerate}
+\end{enumerate}
+\end{document}

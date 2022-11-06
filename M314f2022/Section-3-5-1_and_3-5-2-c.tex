@@ -1,0 +1,51 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Section 3.5.1 and 3.5.2 Change of Basis}\\
+  
+  Do an example on your own
+  
+  \end{center}
+\textbf{Example:}  $$\mathcal{E}_3=\left\langle \vec{e_1}=\bpm 1\\0\\0 \epm,\vec{e_2}=\bpm 0\\1\\0\epm,\vec{e_3}=\bpm 0\\0\\1 \epm \right\rangle \hspace{.5in} B=\left\langle \vec{b_1}=\bpm 1\\1\\0\epm, \vec{b_2}=\bpm1\\1\\1 \epm, \vec{b_3}=\bpm 2\\0\\1\epm \right\rangle$$ 
+$$h:\mathbb{R}^3 \to \mathbb{R}^3 \text{ has matrix representation } A=\bpm  5&-3&-6 \\ 3&-1&-6 \\ 3&-3&-4\epm \text{ w.r.t } \mathcal{E}_3$$ 
+\begin{enumerate}
+\item Find $S=\text{Rep}_{B,\mathcal{E}_3}(id),$ the matrix that translates vectors in base $B$ to vectors in $\mathcal{E}_3$.
+\vfill
+\item Find $T=\text{Rep}_{\mathcal{E}_3,B}(id),$ the matrix that translates vectors in base $\mathcal{E}_3$ to vectors in base $B.$
+\vfill
+\item Find $C=\text{Rep}_{B,B}(h),$ the matrix representation of $h$ with respect to basis $B.$
+\vfill
+\newpage
+\item Check that your answers are correct by mapping the vector $\vec{v}=\bpm 2\\-2\\6 \epm_{\mathcal{E}_3}$ using matrix $A$ and using matrix $C$ and showing that those output vectors are the same.
+\newpage
+\item Draw a ``potato picture" of what the matrices $A, S,T,$ and $C$ represent.
+\vfill
+\end{enumerate}
+\end{document}

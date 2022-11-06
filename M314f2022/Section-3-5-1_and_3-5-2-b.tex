@@ -1,0 +1,39 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Section 3.5.1 and 3.5.2 Change of Basis}\\
+  
+  Observations from Monday's Motivating Example
+\end{center}
+\textbf{Example:}  $$\mathcal{E}_3=\left\langle \vec{e_1}=\bpm 1\\0\\0 \epm,\vec{e_2}=\bpm 0\\1\\0\epm,\vec{e_3}=\bpm 0\\0\\1 \epm \right\rangle \hspace{.5in} B=\left\langle \vec{b_1}=\bpm 1\\-1\\0\epm, \vec{b_2}=\bpm1\\1\\-2 \epm, \vec{b_3}=\bpm 1\\1\\1\epm \right\rangle$$ 
+$$h:\mathbb{R}^3 \to \mathbb{R}^3 \text{ defined by } \bpm x\\y\\z \epm \mapsto \bpm y+z \\ x+z \\ x+y \epm \text{ w.r.t } \mathcal{E}_3$$ 
+
+
+\end{document}
