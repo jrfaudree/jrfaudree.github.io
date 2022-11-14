@@ -1,0 +1,53 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Introduction to the Determinant } \end{center}
+ \begin{enumerate}
+ \item Make a list of statements equivalent to: \textbf{The $n \times n$ matrix $A$ is nonsingular.} 
+ \vfill
+ \item Make the analogous list for: \textbf{The $n \times n$ matrix $A$ is singular.}
+ \vfill
+ \item Cor 4.11 (pg 259) The matrix $\bpm a&b\\c&d \epm$ is nonsingular if and only if
+ \vspace{0.5in}
+ \newpage
+ \begin{center} The Definition of the Determinant (from 4.3.1 text)\end{center}
+ \item \textbf{definition:} Let $A=(a_{ij})$ be an $n \times n$ matrix. Then $A_{ij}$ is the $(n-1) \times (n-1)$ matrix obtained by deleting the $i$th row and $j$th column from $A.$\\
+ \item \textbf{example:} Find $B_{23}$ for $B=\bpm 1&2&4\\4&1&-1\\2&-3&5 \epm.$
+ \vspace{0.7in}
+  \item \textbf{definition:} The \emph{determinant} of the $n \times n$ matrix $A=(a_{ij})$, denoted by $det(A),$ is defined as follows.
+  \begin{itemize}
+  \item For $A=(a_{11})$, $det(A)=a_{11}$
+  \item For $n\geq2,$ $det(A)$ is the sum of $n$ terms of the form $\pm a_{1j}\: det(A_{1j}),$ with the plus and minus signs alternating starting with a plus. Specifically,
+  
+  $$det(A)=a_{11}\: det(A_{11})-a_{12}\: det(A_{12})+a_{13}\: det(A_{13})-\cdots+ (-1)^{n-1}a_{1n}\: det(A_{1n})$$
+  \end{itemize}
+  \item Find $det(B).$
+ \end{enumerate}
+  \end{document}

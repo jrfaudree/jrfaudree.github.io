@@ -1,0 +1,73 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Properties of the Determinant } \end{center}
+ \begin{enumerate}
+ \item \textbf{Theorem 1:} The determinant of an $n \times n$ matrix $A$ can be computed by cofactor expansion across any row or down any column where the signs of the cofactors are determined by the figure below:
+ 
+ $\bbm +&-&+&-& \cdots \\
+ -&+&-&+& \cdots \\
+ +&-&+&-& \cdots \\
+ \vdots&&&&\ddots\\
+ \ebm$
+ \vfill
+ \item \textbf{Theorem 2:} The determinant of a triangular matrix is the product of the entries on the main diagonal.
+ \vfill
+ \item \textbf{Theorem 3:} (How Row Operations Change the Determinant) Let $A$ be a square matrix.
+ \begin{itemize}
+ 	\item If matrix $B$ is obtained by \textbf{adding a multiple of one row of $A$ to another row of $A$,} then, $det(B)=det(A).$
+	\item If matrix $B$ is obtained by \textbf{interchanging two rows of $A$,} then, $det(B)=-det(A).$
+	\item If matrix $B$ is obtained by \textbf{multiplying a rows of $A$ by the constant $k$,} then, $det(B)=k\cdot det(A).$ 
+\end{itemize}
+ \vfill
+ \item \textbf{Theorem 4:}  A square matrix $A$ is invertible if and only if $det(A) \not = 0.$
+ \vfill
+ \item \textbf{Theorem 5:} If $A$ is a square $n \times n$ matrix, then $det(A)=det(A^T).$
+ \vfill
+ \item \textbf{Theorem 6:} If $A$ and $B$ are square matrices, then $det(AB)=det(A)\cdot det(B).$
+ \vfill
+ 
+  \end{enumerate}
+  %%%%%%%%EXAMPLES
+  \newpage
+  \begin{center}{Examples of Properties of the Determinant } \end{center}
+  
+  Let $A=\bpm 2&0&5\\ 0&1&3\\-1&0&4 \epm$ and $B=\bpm 2&8&5\\ 0&1&3\\0&0&4 \epm$ 
+  \begin{enumerate}
+  \item Find $det(A)$ by expanding along row 1 and along column 2.\\
+  \vfill
+  \item Find $det(B)$\\
+  \vfill
+  \item Let $C$ be obtained from $A$ by (i) exchanging rows 1 and 3 followed by (ii) adding 2*row 1 to row 3. Find $det(A)$.\\
+  \vfill 
+  \item Find $D=BA$ and find $det(D)$ two ways.\\
+  \vfill
+  \end{enumerate}
+  \end{document}
