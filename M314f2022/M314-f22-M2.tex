@@ -1,0 +1,207 @@
+\documentclass[12pt]{article}
+\usepackage[top=1in, bottom=1in, left=.75in, right=.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{graphicx, xcolor}
+\usepackage{txfonts}
+\usepackage{multicol,coordsys,pgfplots,systeme}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+\usepackage{anyfontsize}
+% \usepackage{times}
+% \usepackage[lf]{MinionPro}
+\usepackage{tikz,pgfplots}
+%\def\degC{{}^\circ{\rm C}}
+\def\ra{\rightarrow}
+\usetikzlibrary{calc}
+\pgfplotsset{compat = newest}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}}}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+
+\parindent 0pt
+\parskip 4pt
+\pagestyle{fancy}
+\fancyfoot[C]{\emph{\thepage}}
+\fancyhead[L]{\ifnum \value{page} > 1\relax\emph{Math 314: Midterm 2}\fi}
+\fancyhead[R]{\ifnum \value{page} > 1\relax\emph{Fall 2022}\fi}
+\headheight 15pt
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\let\ds\displaystyle
+\def\continued{{\emph {Continued....}}}
+\def\continuing{{\emph {Problem \arabic{probcount} continued....}}\par\vskip 4pt}
+
+
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newcommand{\thesubproblem}{\emph{\alph{subprobcount}.}}
+\def\problem#1{\setcounter{subprobcount}{0}%
+\addtocounter{probcount}{1}{\emph{\arabic{probcount}.\hskip 1em(#1)}}\par}
+\def\subproblem#1{\par\hangindent=1em\hangafter=0{%
+\addtocounter{subprobcount}{1}\thesubproblem\emph{#1}\hskip 1em}}
+\def\probskip{\vskip 10pt}
+\def\medprobskip{\vskip 2in}
+\def\subprobskip{\vskip 45pt}
+\def\bigprobskip{\vskip 4in}
+
+\begin{document}
+{\emph{\fontsize{26}{28}\selectfont Math 314\hfill
+{\fontsize{32}{36}\selectfont Midterm 1}
+\hfill Fall 2022}}
+\vskip 2cm
+\strut\vtop{\halign{\emph#\hskip 0.5em\hfil&#\hbox to 2in{\hrulefill}\cr
+\emph{\fontsize{18}{22}\selectfont Name:}&\cr
+\noalign{\vskip 10pt}
+%\emph{\fontsize{18}{22}\selectfont Student Id:}&\cr
+%\noalign{\vskip 10pt}
+%\emph{\fontsize{18}{22}\selectfont Calculator Model:}&\cr
+}}
+%\hfill
+%\vtop{\halign{\emph{\fontsize{18}{22}\selectfont #}\hfil& \emph{\fontsize{18}{22}\selectfont\hskip 0.5ex $\square$ #}\hfil\cr
+%Section: & 001 (Jill Faudree)\cr
+%\noalign{\vskip 4pt}
+%         & 002 (Ryan Bridges)\cr
+%\noalign{\vskip 4pt}
+%         & 005 (Leah Berman)\cr}}
+%
+\vfill
+{\fontsize{18}{22}\selectfont\emph{Rules:}}
+
+You have one hour to complete the exam. 
+
+Partial credit will be awarded, but you must show your work.
+
+You may have a single handwritten sheet of notes.
+
+\textbf{Except for problem 1,} you may use technology to find the reduced echelon form of a matrix or to multiply matrices. 
+
+
+%Place a box around your  \fbox{FINAL ANSWER} to each question where appropriate.
+
+%If you need extra space, you can use the back sides of the pages.
+%Please make it obvious  when you have done so.
+
+Turn off anything that might go beep during the exam.
+
+Good luck!
+\vfill
+\def\emptybox{\hbox to 2em{\vrule height 16pt depth 8pt width 0pt\hfil}}
+\def\tline{\noalign{\hrule}}
+\centerline{\vbox{\offinterlineskip
+{
+\bf\sf\fontsize{18pt}{22pt}\selectfont
+\hrule
+\halign{
+\vrule#&\strut\quad\hfil#\hfil\quad&\vrule#&\quad\hfil#\hfil\quad
+&\vrule#&\quad\hfil#\hfil\quad&\vrule#\cr
+height 3pt&\omit&&\omit&&\omit&\cr
+&Problem&&Possible&&Score&\cr\tline
+height 3pt&\omit&&\omit&&\omit&\cr
+&1&&10&&\emptybox&\cr\tline
+&2&&10&&\emptybox&\cr\tline
+&3&&25&&\emptybox&\cr\tline
+&4&&20&&\emptybox&\cr\tline
+&5&&20&&\emptybox&\cr\tline
+&6&&15&&\emptybox&\cr\tline
+%&9&&15&&\emptybox&\cr\tline
+&Extra Credit&&5&&\emptybox&\cr\tline
+&Total&&100&&\emptybox&\cr
+}\hrule}}}
+\newpage
+\quad
+\newpage
+\begin{enumerate}
+%%%multiply matrices easy
+%%%S 3.4.2
+\item (10 points) Find the product $AB$ for the matrices below, \emph{by hand}.\\
+
+$A=\bpm 1&-2&0\\0&-1&4 \epm$ and $B=\bpm 1&0&-2&0\\0&2&5&1\\-3&0&0&1\epm$
+
+\newpage
+%%inverses easy
+%%%S 3.4.4
+\item (10 points) Let $A=\bpm 1&0&2\\2&1&0\\2&-1&4\epm.$ \emph{Demonstrate} how 10 find $A^{-1}.$
+	
+\newpage
+
+%%%%% linear maps, rank, null space, matrix of linear map
+%%%%S 3.2.1, 3.2.2, 3.3.1
+\item (25 points) Let $h: \mathcal{P}_2 \to \mathbb{R}^3$ by $h(ax^2+bx+c)=\bpm a \\ a+c \\ 2c \epm$ is a linear map. \\
+	\begin{enumerate}
+	\item Show that $h$ respects scalar multiplication.
+	
+	\vspace{3in}
+	\item Find the image of $x^2+4x-2$ under $h.$
+	\vfill
+	\item Is $\bpm 1\\3\\6 \epm$ in the range of $h$? Justify your answer.
+	\vfill
+	
+	\hfill \textbf{... continued on next page ....}
+	\newpage
+	\textbf{... continued from the previous page ....}
+	
+	Recall that $h: \mathcal{P}_2 \to \mathbb{R}^3$ by $h(ax^2+bx+c)=\bpm a \\ a+c \\ 2c \epm.$ \\
+	\item Determine the null space of $h.$
+	\vspace{2in}
+	\item Determine the rank of $h$ by finding a basis for the range space of $h.$
+	\vspace{2in}
+	
+	\item Is $h$ an isomorphism? Explain.
+	\vspace{1in}
+	\end{enumerate}
+\newpage
+\item (20 points) Let $h: \mathbb{R}^3 \to \mathbb{R}^3$ is a linear map with matrix representation $H =\bpm 2&-1&1\\0&1&-1\\0&0&2 \epm$ \\(with respect to $\mathcal{E}_3$ in both domain and codomain)\\
+It is a fact that $H^{-1} = \bpm 1/2 & 1/2 & 0\\0&1&1/2 \\ 0&0&1/2\epm.$
+
+
+	\begin{enumerate}
+	\item Find $h\left( \: \bpm -1 \\ 3 \\ 2 \epm \: \right)$
+	\vfill 
+	\item Find the inverse image of $\bpm 4\\-2\\6 \epm$ or state that it does not exist.
+	\vfill
+	\item Explain why the information given in the problem implies that the nullity of $h$ is zero.
+	\vfill
+	\item Find the matrix representation of the linear map $h \circ h.$
+	\vfill
+	\item Is $h \circ h$ an isomorphism? Justify your answer.
+	\vfill
+	\end{enumerate}
+\newpage
+\item (20 points) Let $B = \left \langle \bpm 1\\ 1 \epm, \bpm -1 \\1 \epm \right \rangle$ and let $D= \left \langle \bpm 2\\ 0 \epm, \bpm 1 \\2 \epm \right \rangle$ be two bases of $\mathbb{R}^2.$
+	\begin{enumerate}
+	\item Write the vector $\vec{v}=\bpm 2\\-8 \epm_{\mathcal{E}_2}$ with respect to basis $B.$
+	\vfill
+	\item Find $Rep_{B,D}(id),$ the change of basis matrix from basis $B$ to basis $D$. 
+	\vfill
+	\item Use your answer in part (b) to find $rep_D(\vec{v}).$
+	\vfill
+	\end{enumerate}
+\newpage 
+\item (15 points) Short Answer
+	\begin{enumerate}
+	\item Let $M$ be a $5 \times 7$ matrix with rank 3 that represents a linear transformation $h$ from vector space $V$ to vector space $W$. Fill in the blanks:\\
+	\begin{itemize}
+	\item The dimension of $V$ is \underline{\hspace{1in}}
+	\item The dimension of $W$ is \underline{\hspace{1in}}
+	\item The dimension of the range of $h$ is \underline{\hspace{1in}}
+	\item The dimension of the null space of $h$ is \underline{\hspace{1in}}\\
+	\end{itemize}
+	
+	\item Assume $h: \mathbb{R}^2 \to \mathbb{R}^2$ is a linear map such that $\bpm 1\\0 \epm \mapsto \bpm 2\\2\epm$ and  $\bpm 0\\1 \epm \mapsto \bpm -1\\0\epm.$ Find the image of  the vector $\bpm 3\\-1 \epm.$
+	\vfill
+	\item Assume $A$ is a singular $n \times n$ matrix that represents a linear map from $\mathbb{R}^n$ to  $\mathbb{R}^n.$ Can there exist a vector $\vec{w}$ in the codomain that fails to be the image of any vector in the domain? Explain your reasoning.
+	\vfill
+	\item Assume $h: V \to W$ is a one-to-one linear transformation from vector space $V$ to vector space $W$ and has matrix representation $H.$ Can you conclude that the columns of $H$ are linearly independent? Explain. 
+	\vfill
+	\end{enumerate}
+	
+\end{enumerate}
+\newpage
+\textbf{Extra Credit} (5 points) In problem 4, the matrix $H=\bpm 2&-1&1\\0&1&-1\\0&0&2 \epm$  was the representation of a linear transformation $h.$ Find the matrix representation of $h$ with respect to the basis $B=\left \langle \vec{e_2},  \vec{e_3},  \vec{e_1} \right \rangle$ (i.e. a re-ordering of the standard basis). 
+\end{document}
+
