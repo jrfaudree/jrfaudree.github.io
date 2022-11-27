@@ -1,0 +1,58 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Eigenvalues and Eigenvectors} \end{center}
+ \begin{enumerate}
+ \item \textbf{Definition 3.5 \S 5.2.3:} An \textbf{eigenvector} of an $n \times n$ matrix $A$ is a nonzero vector $\vec{v}$ such that $A \vec{v}=\lambda \vec{v}.$ A scalar $\lambda$ is called an \textbf{eigenvalue} of $A$ if there exists a nontrivial solution to the equation $A \vec{x}=\lambda \vec{x}.$ In this case, we say $\vec{x}$ is an eigenvector associated with eigenvalue $\lambda.$
+ 
+ \item Example 1: Let $A=\bpm 1&6\\5&2 \epm.$ 
+ 	\begin{enumerate}
+	\item Show that $\vec{v}=\bpm 3\\-5/2 \epm$ is an eigenvector but $\vec{w}=\bpm 3\\-5 \epm$ is not.
+	\vfill
+	\item Show that $7$ is an eigenvalue of $A.$
+	\vfill
+	\end{enumerate}
+\item  \textbf{Definition 3.1.2 \S5.2.3:} For $n \times n$ matrix $A.$ The set of all eigenvectors associated with eigenvalue $\lambda$ forms a subspace of $\mathbb{R}^n$ and is called the \textbf{eigenspace} associated with eigenvalue $\lambda.$\\
+\item Example 2: Let $A=\bpm -1&-2&5\\2&-5&5\\2&-2&2\epm,$ a matrix with eigenvalue $-3.$ Find a basis for the corresponding eigenspace.
+\vfill
+\newpage
+\item \textbf{Theorem:} If $A$ is triangular, then its eigenvalues are the entries on its main diagonal.
+\item Example: Construct a $3 \times 3$ matrix $A$ with eigenvalues $0, -1,$ and $5$ and find an eigenvector associated with each eigenvalue.
+\vfill
+\item \textbf{Theorem 3.18 \S 5.2.3:} Let $A$ be an $n \times n$ matrix with eigenvectors $\vec{v_1},\vec{v_2}, \cdots, \vec{v_k}$  associated with distinct eigenvalues $\lambda_1, \lambda_2\cdots,\lambda_k.$ Then the set  of eigenvectors $\{ \vec{v_1},\vec{v_2}, \cdots, \vec{v_k}\}$ is  linearly independent.
+
+\item Question: Does the previous theorem really need the eigenvalues to be distinct?\\
+
+\item Question: If $\vec{v}$ is an eigenvector of matrix $A$ associated with eigenvalue $\lambda,$ can you draw any conclusions about eigenvectors and/or eigenvalues for matrix $A^2$?
+\vspace{2in}
+\item Question: How would you go about finding \emph{all} eigenvalues associates with matrix $A.$?
+\vspace{1in}
+  \end{enumerate}
+  \end{document}
