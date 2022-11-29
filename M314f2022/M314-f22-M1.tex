@@ -1,0 +1,190 @@
+\documentclass[12pt]{article}
+\usepackage[top=1in, bottom=1in, left=.75in, right=.75in]{geometry}
+\usepackage{amsmath}
+\usepackage{fancyhdr}
+\usepackage{graphicx, xcolor}
+\usepackage{txfonts}
+\usepackage{multicol,coordsys,pgfplots,systeme}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+\usepackage{anyfontsize}
+% \usepackage{times}
+% \usepackage[lf]{MinionPro}
+\usepackage{tikz,pgfplots}
+%\def\degC{{}^\circ{\rm C}}
+\def\ra{\rightarrow}
+\usetikzlibrary{calc}
+\pgfplotsset{compat = newest}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}}}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+
+\parindent 0pt
+\parskip 4pt
+\pagestyle{fancy}
+\fancyfoot[C]{\emph{\thepage}}
+\fancyhead[L]{\ifnum \value{page} > 1\relax\emph{Math 314: Midterm 1}\fi}
+\fancyhead[R]{\ifnum \value{page} > 1\relax\emph{Fall 2022}\fi}
+\headheight 15pt
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\let\ds\displaystyle
+\def\continued{{\emph {Continued....}}}
+\def\continuing{{\emph {Problem \arabic{probcount} continued....}}\par\vskip 4pt}
+
+
+\newcounter{probcount}
+\newcounter{subprobcount}
+\newcommand{\thesubproblem}{\emph{\alph{subprobcount}.}}
+\def\problem#1{\setcounter{subprobcount}{0}%
+\addtocounter{probcount}{1}{\emph{\arabic{probcount}.\hskip 1em(#1)}}\par}
+\def\subproblem#1{\par\hangindent=1em\hangafter=0{%
+\addtocounter{subprobcount}{1}\thesubproblem\emph{#1}\hskip 1em}}
+\def\probskip{\vskip 10pt}
+\def\medprobskip{\vskip 2in}
+\def\subprobskip{\vskip 45pt}
+\def\bigprobskip{\vskip 4in}
+
+\begin{document}
+{\emph{\fontsize{26}{28}\selectfont Math 314\hfill
+{\fontsize{32}{36}\selectfont Midterm 1}
+\hfill Fall 2022}}
+\vskip 2cm
+\strut\vtop{\halign{\emph#\hskip 0.5em\hfil&#\hbox to 2in{\hrulefill}\cr
+\emph{\fontsize{18}{22}\selectfont Name:}&\cr
+\noalign{\vskip 10pt}
+%\emph{\fontsize{18}{22}\selectfont Student Id:}&\cr
+%\noalign{\vskip 10pt}
+%\emph{\fontsize{18}{22}\selectfont Calculator Model:}&\cr
+}}
+%\hfill
+%\vtop{\halign{\emph{\fontsize{18}{22}\selectfont #}\hfil& \emph{\fontsize{18}{22}\selectfont\hskip 0.5ex $\square$ #}\hfil\cr
+%Section: & 001 (Jill Faudree)\cr
+%\noalign{\vskip 4pt}
+%         & 002 (Ryan Bridges)\cr
+%\noalign{\vskip 4pt}
+%         & 005 (Leah Berman)\cr}}
+%
+\vfill
+{\fontsize{18}{22}\selectfont\emph{Rules:}}
+
+You have one hour to complete the exam. 
+
+Partial credit will be awarded, but you must show your work.
+
+You may have a single handwritten sheet of notes.
+
+\textbf{Except for problem 1,} you may use technology to find the reduced echelon form of a matrix. 
+
+
+%Place a box around your  \fbox{FINAL ANSWER} to each question where appropriate.
+
+%If you need extra space, you can use the back sides of the pages.
+%Please make it obvious  when you have done so.
+
+Turn off anything that might go beep during the exam.
+
+Good luck!
+\vfill
+\def\emptybox{\hbox to 2em{\vrule height 16pt depth 8pt width 0pt\hfil}}
+\def\tline{\noalign{\hrule}}
+\centerline{\vbox{\offinterlineskip
+{
+\bf\sf\fontsize{18pt}{22pt}\selectfont
+\hrule
+\halign{
+\vrule#&\strut\quad\hfil#\hfil\quad&\vrule#&\quad\hfil#\hfil\quad
+&\vrule#&\quad\hfil#\hfil\quad&\vrule#\cr
+height 3pt&\omit&&\omit&&\omit&\cr
+&Problem&&Possible&&Score&\cr\tline
+height 3pt&\omit&&\omit&&\omit&\cr
+&1&&15&&\emptybox&\cr\tline
+&2&&14&&\emptybox&\cr\tline
+&3&&18&&\emptybox&\cr\tline
+&4&&18&&\emptybox&\cr\tline
+&5&&10&&\emptybox&\cr\tline
+&6&&10&&\emptybox&\cr\tline
+&7&&15&&\emptybox&\cr\tline
+%&9&&15&&\emptybox&\cr\tline
+&Extra Credit&&5&&\emptybox&\cr\tline
+&Total&&100&&\emptybox&\cr
+}\hrule}}}
+
+\newpage
+\begin{enumerate}
+%%%RREF
+%%%S 1.3.1 and 1.1.1
+\item (15 points) Use Gauss-Jordan reduction to find the reduced echelon form of the matrix $A$ below. You must show your work and state the row operations you are performing.\\
+
+$A=\bpm 2&-2&2&8\\1&0&2&6\\0&2&0&1 \epm$
+
+\newpage
+%%subspaces and span
+%%%S 2.1.2
+\item (14 points) Let $\displaystyle T=\left\{ a_0+a_1x+a_2x^2+a_3x^3 \: : \: a_0+a_1=a_3 \text{ and } a_2=0 \right\}$ be a subset of, $\mathcal{P}_3,$ the vector space of all polynomials of degree 3 or less.\\
+
+Is $T$ a \emph{subspace} of $\mathcal{P}_3$? Justify your answer.\\
+
+Note that a complete answer is not simply a computation (or computations) but includes and explanation in words indicating how that computation is used to derive your conclusion.\\
+
+\newpage
+
+%%%%% basis column space
+%%%%S 2.3.3
+\item (18 points) Let $A= \bpm 1&1&0&2&1\\1&0&1&2&1\\0&2&-2&0&0\\1&3&-2&1&-1\\ \epm.$\\
+	\begin{enumerate}
+	\item Find a basis for the column space of $A$.
+	\vfill
+	\item What is the rank of the matrix $A.$
+	\vspace{.5in}
+	\item Give an example of a vector $\vec{v}$ that is not in the column space of $A$ and demonstrate that your example is correct.
+	\vspace{2in}
+	\end{enumerate}
+\newpage
+%%%%Solutions to systems of equations
+%%%% vector space 1.1.2, 1.1.3, 2,1,1
+\item (18 points) Consider the system of linear equations below.
+\begin{center} $\systeme{x+y+z+w=5,x-y+z-w=5,x-z+w=1}$ \end{center}
+
+	\begin{enumerate}
+	\item Solve the system of linear equations and express your answer in vector form.
+	\vfill
+	\item In your answer above, identify a particular solution and the solution set of the homogeneous system.
+	\vspace{1in}
+	\item Show that the solution set you found in part (a) is \emph{not} a vector space under the standard vector addition and scalar multiplication in  $\mathbb{R}^4.$
+	\vfill
+	\end{enumerate}
+\newpage
+%span -- just like Q4 re-do
+\item (10 points) Do the vectors $\displaystyle \left\{ \bpm 1&0\\0&1 \epm,  \bpm 0&1\\1&0 \epm, \bpm 1&1\\0&1 \epm, \bpm 0&0\\1&0 \epm\right\}$ span the space $\mathcal{M}_{2 \times 2}$? Justify your answer.
+\vfill
+%basis
+\item (10 points) The vectors $\displaystyle B= \langle 1, 1+x, 2x^2 \rangle$ form a basis for $\mathcal{P}_2$ the vector space of all polynomials of degree 2 or less. Write the representation of the vector $2-4x+5x^2$ in terms of the basis $B.$
+\vfill
+\newpage
+%%%linear independence span, theoretical
+%%%
+\item (15 points) Let $\displaystyle S=\{ \vec{s_1},  \vec{s_2},  \vec{s_3}, \cdots  \vec{s_{10}} \}$ be a subset of vectors from the vector space $V.$ Assume that the the linear equation 
+$$c_1\vec{s_1} +c_2\vec{s_2} +c_3\vec{s_3} +\cdots+c_{10}\vec{s_{10}} =\vec{0}$$
+
+has $c_1=2, \: c_2=5, \: c_3=-4, \: c_4=c_5= \cdots = c_{10}=0$ as a solution.\\
+	\begin{enumerate}
+	\item Can you conclude that $S$ is linearly dependent or linearly independent? Why or why not? Explain your reasoning.
+	\vfill
+	\item What can you conclude about $\displaystyle [S-\{ \vec{s_1} \}]$ and $\displaystyle [S]$? Are they equal? Is one strictly smaller than the other? Do you have enough information to draw a conclusion? Explain your reasoning.
+	\vfill
+	\item Is it possible to determine how many solutions to the linear equation exist? Explain your reasoning.
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\newpage
+\textbf{Extra Credit:} (5 points) Determine whether the vectors $f(x)=x^2, \: g(x)=2^x,$ and $h(x)=3^x$ are linearly independent in the vector space of functions from $\mathbb{R}$ to $\mathbb{R}.$ Justify your answer.
+
+\end{document}
+%%%%ENDDOCUMENT
+
+
