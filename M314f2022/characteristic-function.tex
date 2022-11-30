@@ -1,0 +1,70 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Characteristic Equation} \end{center}
+ \begin{enumerate}
+ \item \textbf{Example:} Find the eigenvalues associated with the matrix $A=\bpm 4&1 \\ -8 &-5 \epm$
+ \vfill
+ \item \textbf{Definition/Lemma 3.9 \S 5.2.3:} A scalar $\lambda$ is an eigenvalue of an $n \times n$ matrix $A$ if and only if $\lambda$ satisfies the \emph{characteristic equation} $det(A-\lambda I_n)=0.$ The expression $det(A-\lambda I_n)$ is called the \emph{characteristic polynomial} of $A.$
+ 
+\item \textbf{Example:} Find the characteristic polynomial and all eigenvalues associated with the matrix $B=\bpm -2&3&4\\0&5&1\\0&0&1\epm.$
+
+\vspace{1.5in} 
+
+\item \textbf{Example:} Construct a $4 \times 4$ matrix with eigenvalues $0, -1, 7,7.$
+\vspace{1.5in}
+\item \textbf{Example:} Are the previous examples singular or nonsingular matrices?
+\vspace{1in}
+
+ \item \textbf{Recall:} Interchanging rows of a matrix changes its determinant by \\
+ 
+ Replacing a row with itself plus a multiple of an another row changes the determinant \\
+ \newpage
+ \item \textbf{Observation:} It is possible to take any square matrix $A$, use \emph{only} the two row operations from item \#6, and find an upper-triangular row equivalent matrix $B$ such that $$det(A)=(-1)^r\det(B)=(-1)^r\cdot(\text{product of the main diagonal of }B),$$
+ where $r$ is the number of row exchanges.
+\item \textbf{Example:} Assume $B=\bpm -2&3&4\\0&5&1\\0&0&1\epm$ is obtained form $A$ by the following row operations:\\
+(i) exchange rows 1 and 3; (ii) add $2\cdot$(row 1) to row 3; (ii) add $-2 \cdot$ row 1 to row 2. Find $det(A).$
+
+\vspace{1in}
+
+
+\item \textbf{Theorem:} The square matrix $A$ is nonsingular if and only if 
+
+\vspace{.5in}
+
+\item \textbf{Definition 1.2 \S 5.2.1:} Let $A$ and $B$ be $n \times n$ matrices. We say $A$ \textbf{is similar to} $B$ if there exists an invertible matrix $P$ such that $P^{-1}AP=B.$
+
+\item \textbf{Example:} Show that $A=\bpm -13&21\\7&1\epm$ and $B=\bpm 8&0\\0&-20\epm$ are similar. (Hint: Use $P=\bpm 1&3\\1&-1\epm.$
+
+\vfill
+
+ 
+   \end{enumerate}
+  \end{document}
