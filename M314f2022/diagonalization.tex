@@ -1,0 +1,81 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Diagonalization} \end{center}
+ \begin{enumerate}
+ \item \textbf{Definition 1.2 \S 5.2.1:} Let $A$ and $B$ be $n \times n$ matrices. We say $A$ \textbf{is similar to} $B$ if there exists an invertible matrix $P$ such that $P^{-1}AP=B.$
+
+\item \textbf{Example:} Show that $A=\bpm -13&21\\7&1\epm$ and $B=\bpm 8&0\\0&-20\epm$ are similar. (Hint: Use $P=\bpm 1&3\\1&-1\epm.$)
+
+\vfill
+
+\item Think of some alternate ways to write the equation from Definition 1.2.\\
+\vspace{1in}
+
+\item  \textbf{Example:}  Show that $I_2=\bpm 1&0\\0&1 \epm$ is not similar to $R=\bpm 0&-1\\1&0 \epm.$
+\vfill
+ 
+ \item What would be easier to find by hand,  $A^{10}$ or $B^{10}$?
+ \vfill
+ \item Let $\vec{v_1}$ and $\vec{v_2}$ be the columns of $P$. Find $A\vec{v_1}$ and $A\vec{v_2}.$
+ \vfill
+ \item Give two distinct arguments to explain how you know $\{ \vec{v_1}, \vec{v_2}\}$ form a basis for $\mathbb{R}^2.$
+ \vfill
+ \item \textbf{Definition:} A square matrix is diagonalizable if $A$ is similar to a diagonal matrix.
+ \newpage
+ \item \textbf{Theorem:} An $n \times n$ matrix $A$ is diagonalizable if and only if $A$ has $n$ linearly independent eigenvectors.\\
+ 
+ Define $P$ to be the $n \times n$ matrix such that its columns consist of $n$ linearly independent eigenvectors of $A.$ Then $$A=PDP^{-1}$$ where $D$ is a diagonal matrix such that the entries on the main diagonal are the eigenvalues associated with the eigenvectors of the columns of $P.$\\
+ 
+ \item \textbf{Example from Worksheet on Monday 7 Nov \S 3.5.1 \& 3.5.2}: \\Define $h:\mathbb{R}^3 \to \mathbb{R}^3$ by $\bpm x\\y\\z \epm \mapsto \bpm y+z \\ x+z \\ x+y \epm.$
+ 
+ \begin{enumerate} 
+ \item Its matrix representation of $h$ with respect to the standard basis is: $\bpm 0&1&1\\1&0&1\\1&1&0\epm.$
+ 
+ \item For basis $B=\left\langle \vec{b_1}=\bpm 1\\-1\\0\epm, \vec{b_2}=\bpm1\\1\\-2 \epm, \vec{b_3}=\bpm 1\\1\\1\epm \right\rangle,$ the change of basis matrix from basis $B$ to the standard basis is $\bpm 1&1&1\\-1&1&1\\0&-2&1\epm$
+ 
+ \item The change of basis matrix from the standard basis to $B$ is $\bpm 1/2 & -1/2&0\\1/6&1/6&-1/3\\1/3&1/3&1/3\epm.$
+ 
+ \item The matrix representation of $h$ with respect to basis $B$ is $\bpm -1&0&0\\0&-1&0\\0&0&2\epm.$
+ 
+ \end{enumerate}
+ \item Observations?
+ \vfill
+ \newpage
+ \item Return to Example from \#10. \\Define $h:\mathbb{R}^3 \to \mathbb{R}^3$ by $\bpm x\\y\\z \epm \mapsto \bpm y+z \\ x+z \\ x+y \epm.$\\
+ \begin{itemize}
+ \item Find the matrix of the linear transformation, say $A.$ 
+ \item Find the characteristic polynomial of $A$ and use it to find any eigenvalues of $A$. 
+ \item For each eigenvalue, find a basis for the corresponding eigenspace. 
+ \item Show that $A$ is diagonalizable.
+ \end{itemize}
+
+   \end{enumerate}
+  \end{document}
