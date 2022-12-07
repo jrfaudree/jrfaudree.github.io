@@ -1,0 +1,68 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bbm}{\begin{bmatrix}}
+\newcommand{\ebm}{\end{bmatrix}}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Applications to Discrete Dynamical Systems} \end{center}
+ \begin{enumerate}
+ \item \textbf{Definition:} The vector $\vec{v}$ is an eigenvector of matrix $A$ with associated eigenvalue $\lambda$ means \\
+ 
+ \vspace{0.5in}
+ 
+ \item \textbf{Observation:} If  $\vec{v}$ is an eigenvector of matrix $A$ with associated eigenvalue $\lambda$ and $k$ is an positive integer, then $$A^k\vec{v}=$$\\
+ 
+ \item \textbf{Observation:} If $A$ is an $3 \times  3$ matrix with $3$ linearly  independent eigenvectors, $\vec{v_1}, \: \vec{v_2},\:\vec{v_3}$ associated with eigenvalues $\lambda_1, \:\lambda_2, \:\lambda_3,$ and $k$ is a positive integer, find an easy way to write $A^k \vec{x}$ for any $\vec{x} \in \mathbb{R}^3.$\\
+ 
+ \vspace{1.5in}
+
+ \item  Let $O_k$ and $R_k$ denote the owl and rat populations at month $k$ where $O_k$ counts the number of owls and $R_k$ is measured in thousands of rats. Suppose a model describing these populations is below: 
+ $$O_{k+1}=(0.5)O_{k}+(0.4)R_k \text{   and   } R_{k+1}=(-0.104)O_k+(1.1)R_k.$$
+ \begin{enumerate}
+ \item Assume a population begins with 10 owls and $10,000$ rats in month 0, determine how many owls and rats the model indicates in month 1.
+ 
+ \vfill
+ \newpage
+ \item In month 2? In month 3?
+ \vspace{1in}
+ \item What are the eigenvalues and associated eigenvectors associated with the matrix in part (a)?
+ \vspace{1.5in}
+ \item Write an arbitrary initial population vector, $\vec{x_0}$, with respect to the eigenvectors from part $c$ and use this to determine $\vec{x}_{k+1}$,the population vector in month $k+1.$
+ \vfill
+ \item What happens as $k \to \infty$?
+ \vfill
+ \end{enumerate}
+ \newpage
+ \item A different owl population is modeled by the discrete dynamical system $$\bpm j_{k+1}\\s_{k+1}\\a_{k+1} \epm = \bpm 0&0&0.33\\ 0.18&0&0\\0&0.71&0.94\epm \bpm j_{k}\\s_{k}\\a_{k}\epm$$ where $k$ is measured in years and $\vec{x_k}=\bpm j_{k}\\s_{k}\\a_{k}\epm$ represents the number of female juvenile, subadult and adult owls. 
+ \begin{enumerate}
+ \item Assume the matrix $ \bpm 0&0&0.33\\ 0.18&0&0\\0&0.71&0.94\epm $ has three distinct eigenvalues each with magnitude less than 1. What can you conclude about the long term trajectory of the owl population?
+ \vfill
+ \item On the other hand, the matrix $ \bpm 0&0&0.33\\ 0.3&0&0\\0&0.71&0.94\epm $ has three distinct eigenvalues one of which is $1.01$ with eigenvector $\bpm 10\\3\\31 \epm$. The other two eigenvalues still have magnitude less than 1. What can you conclude about the long term trajectory of the owl population?
+\vfill
+\end{enumerate}
+   \end{enumerate}
+  \end{document}
