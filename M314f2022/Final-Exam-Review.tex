@@ -1,0 +1,354 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm,systeme,xcolor}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+
+\pagestyle{fancy} 
+\lfoot{UAF Linear}
+\rfoot{Dimension }
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \large \sc{Midterm II Review}
+\end{center}
+
+\noindent Logistics:\\
+The final exam will be 2  hours. You may bring in a single sheet of hand written notes. You should bring some form of technology that will allow you to: put a matrix into reduced row echelon form, to multiply matrices, and to find determinants of matrices.\\
+
+There may be problems for which you would be required to demonstrate how a computation is performed by hand, though you would always be in the position of being able to check your answer using technology. (e.g. Show how to find the determinant of the matrix $A$ by hand.)
+
+%%%% MID I REV
+
+\begin{center} \textsc{Topics from Midterm I} \end{center}
+
+\noindent Chapter 1: Linear Systems\\
+
+\noindent Section 1.1.1 Gauss's Method\\
+
+\textbf{Terminology:}  linear combination, elementary row operations, Gauss's Method, echelon form\\
+
+\noindent Section 1.1.2 Describing the Solution Set\\
+
+\textbf{Terminology:} echelon form, leading 1's, parametrized, matrix echelon form, column vector, row vector, components, scalar multiplication\\
+
+\noindent Section 1.1.3 General = Particular + Homogeneous\\
+
+\textbf{Terminology:} homogeneous system, particular solution, homogeneous solution\\
+
+\textbf{Theorems/Lemmas} \\
+(3.1) Every solution set can be expressed as the sum of a particular solution and the solution set of a homogeneous system.\\
+(3.7) For a linear system and for any particular $p$, the solutions set equals $\{p+h \: | \: h  \text{satisfies the associated homogeneous system}\}$.\\
+(3.10) Solutions sets of linear systems are either empty, unique, or have infinitely many elements.\\
+
+\noindent Section 1.3.1 Gauss-Jordan Reduction\\
+
+\textbf{Terminology:} Gauss-Jordan Reduction, reduced row echelon form, row equivalent matrices, \\
+
+\textbf{Theorems/Lemmas} \\
+(1.5) Elementary row operations are reversible.\\
+
+\noindent Section 1.3.2 The Linear Combination Lemma\\
+
+\textbf{Theorems/Lemmas:} \\
+(2.3) Linear combinations of linear combinations are linear combinations.\\
+(2.4) Row equivalent matrices have rows that are linear combinations of each other. That is, if $A'=rref(A),$ then the rows of $A'$ are a linear combinations of the rows of $A.$\\
+(2.5) The nonzero rows of a matrix in reduced echelon form are not linear combinations of each other. Note that with the language of Section 2.2.1, we would restate this as: The nonzero rows of a matrix in reduced echelon form are linearly independent.\\
+(2.6) The reduced echelon form of a matrix is unique (unlike the echelon form of a matrix).\\
+
+
+\noindent Chapter 2: Vector Spaces\\
+
+\noindent Section 2.1.1 Definition and Examples\\
+
+\textbf{Terminology:} vector space, trivial vector space\\
+
+\textbf{Theorems/Lemmas:} \\
+(1.16) In any vector space $V,$ for any $\vec{v} \in V$ and $r \in \mathbb{R},$ the following are true: $0 \cdot \vec{v}=\vec{0}$ and $r \cdot \vec{0} = \vec{0}$ and $-1\cdot \vec{v} + \vec{v} = \vec{0}.$\\
+
+
+\noindent Section 2.1.2 Subspaces and Spanning Sets\\
+
+\textbf{Terminology:}  subspace, span\\
+
+\textbf{Theorems/Lemmas:} \\
+(2.9) Any set that is closed under $r_1\vec{v_1}+r_2\vec{v_2},$ for every $r_1,r_2 \in \mathbb{R}$ and every $\vec{v_1},\vec{v_2}.$\\
+(2.15) In a vector space, the span of any subset of vectors is a subspace.\\
+
+\noindent Section 2.2.1 Linear Independence\\
+
+\textbf{Terminology:} linear dependence, linear independence\\
+
+\textbf{Theorems/Lemmas:}  \\
+(1.2) Let $S$ be a subset of the vector space $V.$ The addition of vector $\vec{v}$ to $S$ doesn't change span$(S)$ occurs if and only if $\vec{v}$ is already in span$(S)$. (That is, $\vec{v}$ can be written as a linear combination of vectors in $S.$ That is, $S \cup \{\vec{v}\}$ is linearly dependent)\\
+(1.3) The deletion of the vector $\vec{v}$ from $S$ doesn't change span$(S)$ can occur if and only if $\vec{v}$ is already in span$(S)$.\\
+(1.5) A subset $S=\{\vec{s_1},\vec{s_2},\cdots,\vec{s_n}\}$ of a vector space is linearly  independent if and only if the only solution to the system $c_1\vec{s_1}+c_2\vec{s_2}+\cdots +c_n\vec{s_n}=\vec{0}$ is $c_1=c_2=\cdots=c_n=0.$\\
+(1.14) A set of vectors is linearly independent if and only if the removal of any vector from the set results in a smaller span.\\
+(1.15) Let $S$ be a set of vectors and let $\vec{v} \not \in S.$ The set $S \cup \vec{v}$ is linearly independent if and only if $\vec{v} \not \in [S].$\\
+(1.20) Any subset of a linearly independent set is also linearly independent. Any superset of a linearly dependent set is also linearly dependent.\\
+
+\noindent Section 2.3.1 Basis\\
+
+\textbf{Terminology:} basis,  representation of $\vec{v}$ with respect to a basis $B.$\\
+
+\textbf{Theorems/Lemmas:}\\
+(1.12) In any vector space $V$, a subset $B$ is a basis if and only if every vector of $V$ can be expressed as a linear combination of $B$ in exactly one way.\\
+
+\noindent Section 2.3.2 Dimension\\
+
+\textbf{Terminology:} finite-dimensional vector space, dimension\\
+
+\textbf{Theorems/Lemmas:}\\
+(2.3) Given two bases for the same vector space $V$, it is possible to exchange one vector from one basis with a vector from the other basis and still have a basis for $V.$\\
+(2.4) If $V$ is finite-dimensional, then all bases have the same number of vectors.\\\\\\
+(2.10) No linearly independent set from a finite dimensional vector space $V$ can have more vectors than $dim(V).$\\
+(2.12) Any linearly independent set can be expanded to a basis.\\
+(2.13) Any set that spans the vector space $V$ can be reduced to a basis.\\
+(2.14) If $dim(V)=n$ and $S$ is a subset of $V$ with $n$ vectors, then $S$ spans $V$ if and only if $S$ is linearly independent. (Restate in a practical manner, if  $dim(V)=n$ and $S$ is a subset of $V$ with $n$ vectors, then determining whether $S$ is a bases is reduced to showing only ONE of linear independence OR spanning.)\\
+(implied) Every set that spans the finite-dimensional vector space $V$ with dimension $n$ must have at least $n$ vectors.
+
+\noindent Section 2.3.3 Vector Spaces and Linear Spaces\\
+
+\textbf{Terminology}: column space, row space, column rank, row rank, rank of a matrix, transpose of a matrix\\
+
+\textbf{Theorems/Lemmas:}\\
+(3.4) The nonzero rows of a matrix in rref are linearly independent.\\
+(3.10) Row operations do not change the column rank.\\
+(3.11) Row rank equals column rank.\\
+NOTE: We are omitting the last two results from this midterm. We will revisit these post midterm 1.\\
+
+\newpage
+\begin{center} Sample Problems \end{center}
+
+\begin{enumerate}
+
+\item Determine if the vector $(1,2,3,-2)$ is in the span of the vectors $(1,0,1,0), (0,1,1,1),(0,0,1,2).$
+
+\item Solve each system below. Write your answer in parametrized form. Show your work.
+	\begin{enumerate}
+	\item $\systeme{2x+y-z=1,4x-y=3}$
+	\item $\systeme{x-z=1,y+2z-w=3,x+2y+3z-w=7}$
+	\item $\systeme{x-y+z=0,y+w=0,3x-2y+3z+w=0,-y-w=0}$
+	\end{enumerate}
+	
+\item For each system above, describe the solutions as a particular and homogeneous solution.
+
+\item For which values of $k$ are there no solutions, many solutions or a unique solution.\\
+
+\begin{tabular}{rl}
+$x-2y$&$=3$\\$2x+ky$&$=6$
+\end{tabular}
+
+\item Give examples of two 3 by 3 matrices in reduced echelon form that have their leading ones in the same columns but that are not row equivalent. Explain why your answer is correct.\\
+
+\item Determine whether or not the following are vector spaces.
+	\begin{enumerate}
+	\item $ \{ a_0+a_1x \: : \: a_0+2a_1=0 \} $ under the usual operations of polynomial addition and scalar multiplication
+	\item $ \{ \bpm a& b \\ c& d\\ \epm \: : \: a=b, c+d=1 \} $ under the usual operations of matrix addition and scalar multiplication
+	\end{enumerate}
+	
+\item Determine if the set $\{  \bpm 1\\1\\2\\0\epm,  \bpm 0\\1\\1\\0\epm,  \bpm 2\\0\\1\\1\epm,  \bpm 1\\0\\0\\1\epm,\} $ spans all of $\mathbb{R}^4.$
+
+\item Pick a random 4 by 5 matrix $A$. Find a basis for the row space of $A$. Find a basis for the column space of $A.$ Determine the rank of $A.$
+
+\item Demonstrate that the set $S=\{1, 1+x, x+x^2, 2+x^3, x+2x^3\}$, a subset the vector space $\mathcal{P}_3$, is linearly dependent but that is spans $\mathcal{P}_3$. Find a subset of $S$ that forms a basis of $\mathcal{P}_3,$ call is $B.$ Write the polynomial $1+x-x^2-x^3$ with respect to the basis $B.$
+
+\end{enumerate}
+
+\newpage
+
+%%%% MID II Rev
+
+\begin{center} \textsc{Topics from Midterm II} \end{center}
+
+%%%SECTION
+\noindent Section 3.1.1: Definition of Isomorphisms\\
+
+\textbf{Terminology:} isomorphism, image\\
+
+\textbf{Lemmas/Theorems:}  \\
+Lemma 1.10: An isomorphism maps the zero vector of the domain to the zero vector of the codomain.\\
+Lemma 1.11: This give alternate ways to demonstrate a map is linear.\\
+
+\textbf{Sample Problems:} \\
+Given a map, find the image of elements in the domain (1.13). \\
+Verify that a given map is (or is not) an isomorphism (1.16, 1.17).\\
+
+%%%SECTION
+\noindent Section 3.1.2: Dimension Characterizes Isomorphism\\
+
+%\textbf{Terminology:} \\
+
+\textbf{Lemmas/Theorems:} \\
+Theorem 2.3: Vector spaces are isomorphic if and only if they have the same dimension.\\
+
+\textbf{Sample Problems:} \\
+Observe that you can determine if two vector spaces are or are not isomorphic based on their dimension. (2.10)\\
+
+%%%SECTION
+\noindent Section 3.2.1: Definition of Homomorphism \\
+
+\textbf{Terminology:} homomorphism, zero homomorphism, linear extension of a map\\
+
+\textbf{Lemmas/Theorems:} \\
+Lemma 1.6: A linear map send the zero vector of the domain to the zero vector of the range.\\
+Theorem 1.9: A homomorphism is determined by the action on a basis. \\
+
+\textbf{Sample Problems:} \\
+Determine whether or not a given map is linear (1.18, 1.19)\\
+Verify the a particular map is a  homomorphism (1.22)\\
+
+%%%SECTION
+\noindent Section 3.2.2:  Range Space and Null Space\\
+
+\textbf{Terminology:} range space, rank of a homomorphism, null space, nullity of a homomorphism, image (again), inverse image\\
+
+\textbf{Lemmas/Theorems:} \\
+Lemma 2.1: Under a homomorphism, the image of a subspace of the domain is a subspace of the codomain. In particular, the range of the homomorphism is a subspace of the codomain.\\
+Lemma 2.10: For any homomorphism, the inverse image of a subspace of the range is a subspace of the domain. In particular, the inverse image of the zero vector in the range is a subspace (ie null space) of the domain.\\
+Theorem 2.14: For any linear map, the rank of the map plus the nullity of the map must equal the dimension of the domain.\\
+Corollary 2.17: The rank of a linear map is less than or equal to the dimension of the domain and equality holds if and only if the nullity is zero.\\
+Lemma 2.18: Under a linear map, the image of a set of linearly dependent vectors must be linearly dependent.\\
+Theorem 2.20: This is a ``The following are equivalent..." list starting with the statement ``$h: V \to W$ is one to one" where $dim(V)=n.$\\
+
+
+\textbf{Sample Problems:} \\
+Determine whether or not a vector is in the range or null space of a linear map. (2.21)\\
+Determine the range space or null space of a linear map (and thus the rank and nullity of the map). (2.23, 2.24, 2.25)\\
+Find the inverse image of a vector (2.30)\\
+
+%%%SECTION
+\noindent Section 3.3.1: Representing Linear Maps with Matrices\\
+
+\textbf{Terminology:} the matrix representation of a linear map with respect to bases for domain and codomain ($Rep_{B,D}(h)$), the matrix-vector product (which we now interpret as matrix multiplication...) \\
+
+%\textbf{Lemmas/Theorems:} \\
+
+\textbf{Sample Problems:} \\
+How to use the matrix representation to find the image of a vector. (1.13)\\
+How to use the image of basis elements to find the image of a vector (1.17)\\
+Find the matrix representation of a linear map with respect to given bases (1.19, 1.21, 1,27*) . \\
+*Note that because of sections 3.5.1 and 3.5.2, we now have a different way of thinking about 1.27.\\
+
+%%%SECTION
+\noindent Section 3.3.2: Any Matrix Can Represent a Linear Map \\
+
+\textbf{Terminology:} a nonsingular linear map\\
+
+\textbf{Lemmas/Theorems:} \\
+Theorem 2.2: Any matrix can be interpreted as a representation of a linear map. The representation is not unique as it depends on the bases.\\
+Quick Reminder: If $H$ is an $m \times n$ matrix that represents a linear map from $V$ to $W$, then $dim(W)=m$ and $dim(V)=n.$\\
+Theorem 2.4: The rank of a matrix equal the rank of any linear map it represents.\\
+Corollary 2.6: Let $h$ be a linear map represented by matrix $H$. The map $h$ is onto if and only if rank of $H$ equal the number of rows of $H.$ The map $h$ is one to one if and only if rank of $H$ equal the number of columns of $H.$ \\
+
+\textbf{Sample Problems:} \\
+Determine if a map is singular or nonsingular from its matrix representation (2.13)\\
+Determine the image of a vector given a matrix representation and corresponding bases. (2.14, 2.15, 2.16)\\
+
+%%%SECTION
+\noindent Section 3.4.1: Sums and Scalar Products of Matrices \\
+
+\textbf{Terminology:} sum of two matrices, scalar multiple of two matrices \\
+
+\textbf{Lemmas/Theorems:} \\
+Theorem 1.4: This states the expected relationship between matrix addition/scalar multiplication of matrices to that of linear maps.\\
+
+\textbf{Sample Problems:} \\
+Be able to perform matrix addition and scalar multiplication of matrices.\\
+
+%%%SECTION
+\noindent Section 3.4.2: Matrix Multiplication\\
+
+\textbf{Terminology:} matrix multiplication \\
+
+\textbf{Lemmas/Theorems:} \\
+Theorem 2.7: A composition of linear maps is represented by matrix multiplication of their respective representations.\\
+Theorem 2.12: Matrix multiplication (if defined) is associative and has the expected distributive laws.\\
+
+\textbf{Sample Problems:} \\
+Be able to perform matrix multiplication by hand. (2.14)\\
+Be able to find the matrix of a composition of linear functions using matrix representations. (2.19)\\
+
+%%%SECTION
+\noindent Section 3.4.3: Mechanics of Matrix Multiplication\\
+
+\textbf{Terminology:} main diagonal, identity matrix, diagonal matrix, permutation matrix, elementary reduction matrices \\
+
+\textbf{Lemmas/Theorems:} \\
+Corollary 3.23: Elementary row and column operations can be performed with a sequence of products of elementary reduction matrices\\
+
+\textbf{Sample Problems:} \\
+Find the elementary reduction matrix such that appropriate multiplication performs a specific row or column operation. (3.27)\\
+
+
+%%%SECTION
+\noindent Section 3.4.4: Inverses \\
+
+\textbf{Terminology:} invertible matrix, \\
+
+\textbf{Lemmas/Theorems:} \\
+Theorem 4.3: A matrix is invertible if and only if it is nonsingular.\\
+Lemma 4.7: A matrix is invertible if and only if it can be written as a product of elementary reduction matrices.\\
+
+\textbf{Sample Problems:} \\
+Be able to find an inverse of a matrix \emph{using only the reduced row echelon operator} and be able to determine that no inverse exists (4.15).\\
+Be able to use matrix algebra (and inverses) to solve matrix problems. (4.18)\\
+
+%%%SECTION
+\noindent Section 3.5.1 \& 3.5.2: Changing Representations of Vectors and Linear Maps\\
+
+\textbf{Terminology:} change of basis matrix ($Rep_{B,D}(id)$), matrix representation of a linear map with respect to given bases (again) $Rep_{B,D}(id)$\\
+
+\textbf{Lemmas/Theorems:} \\
+Lemma 1.5: A matrix is a change of basis matrix if and only if it is nonsingular.\\
+
+\textbf{Sample Problems:} \\
+Find the change of basis matrix ($Rep_{B,D}(id)$) given $B$ and $D$. (S 3.5.1 \#1.9)\\
+Be able to use a change of basis matrix (S 3.5.1 \#1.12)\\
+Be able to change the matrix representation of a linear map from one set of bases to another (S 3.5.2 \#2.14, 2.17)
+
+\begin{center} \textsc{Topics after Midterm II} \end{center}
+
+\noindent Sections 5.2.1, 5.2.2, 5.2.3\\
+
+\textbf{Terminology:} eigenvectors, eigenvalues, eigenspace, characteristic equation, similar matrices, diagonalization\\
+
+\textbf{Lemmas/Theorems:}\\
+\textbf{Theorem:} If $A$ is triangular, then its eigenvalues are the entries on its main diagonal.\\
+textbf{Theorem 3.18 \S 5.2.3:} Let $A$ be an $n \times n$ matrix with eigenvectors $\vec{v_1},\vec{v_2}, \cdots, \vec{v_k}$  associated with distinct eigenvalues $\lambda_1, \lambda_2\cdots,\lambda_k.$ Then the set  of eigenvectors $\{ \vec{v_1},\vec{v_2}, \cdots, \vec{v_k}\}$ is  linearly independent.\\
+\textbf{Theorem:} The square matrix $A$ is nonsingular if and only if $0$ is not an eigenvalue of $A$.\\
+\textbf{Theorem:} An $n \times n$ matrix $A$ is diagonalizable if and only if $A$ has $n$ linearly independent eigenvectors.\\
+ 
+ Define $P$ to be the $n \times n$ matrix such that its columns consist of $n$ linearly independent eigenvectors of $A.$ Then $$A=PDP^{-1}$$ where $D$ is a diagonal matrix such that the entries on the main diagonal are the eigenvalues associated with the eigenvectors of the columns of $P.$\\
+
+\textbf{Sample Problems:}\\
+\begin{itemize}
+\item Determine if $5$ is an eigenvalue of the matrix $\bpm 6&-3&1\\ 3&0&5 \\ 2&2&6 \epm$.
+\item Determine if $\bpm 1\\4 \epm$ is an eigenvector of $\bpm -3&1\\-3&8\epm$
+\item Determine the eigenvalues of the matrix $\bpm 4&0&0\\-2&1&0\\5&3&4 \epm$ and find a basis for the eigenspaces associated with each eigenvalues.
+\item Find the characteristic polynomial and the eigenvalues of the matrix $\bpm 7&-2\\2&3\epm.$
+\item Determine if the matrix $\bpm 5&0&0&0\\0&5&0&0\\1&4&-3&0\\-1&-2&0&-3\epm$ is diagonalizable. If it is, diagonalize it.
+\end{itemize}
+\newpage
+Let $A$ be an $n \times n$ matrix.\\
+
+$A$ is nonsingular. \hfill $A$ is singular.
+
+\end{document}
