@@ -1,0 +1,72 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+
+
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{3-1 Def. of Derivative}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 3-1: Defining the Derivative}\\
+\end{center}
+\begin{enumerate}
+\item Definitions of the Derivative \\
+Version 1 \hspace{3in}Version 2\\
+
+\vspace{0.7in}
+
+\item In the problems below, let $f(x)=\frac{1}{x}.$
+\begin{enumerate}
+	\item Using a \emph{rough} sketch of $f(x)$ make a rough estimate of the slope of the tangent to $f(x)$ when $x=-2.$
+	\vfill
+	\item Use version 1 of the definition to find $m_{\text{tan}}$
+	\vspace{2in}
+	\item Use version 2 of the definition to find $m_{\text{tan}}$
+	\vspace{2in}
+	\item Write the equation of the line tangent to $f(x)$ when $x=-2$. Plausible?
+	\vspace{.5in}
+\end{enumerate}
+\newpage
+\item Graph the function $G(t) =\begin{cases} -3 & x \leq 1 \\ 2x-5 & 1 < x\end{cases}.$
+\begin{enumerate}
+	\item Use the graph to determine $G'(-1)$ and $G'(4)$
+	\vfill
+	\item Explain -- using the definition -- why $G'(1)$ fails to exist.
+	\vfill
+\end{enumerate}
+\item A rock is dropped from a height of 100 feet. Its height above ground at time $t$ seconds later is given by $s(t)= -16t^2+100.$ 
+	\begin{enumerate}
+	\item Find and interpret $s(0)$ and $s(1).$
+	\vfill
+	\item Given $s'(1)=-32,$ determine the units of $s'(1)$ and interpret it in the context of the problem.
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
