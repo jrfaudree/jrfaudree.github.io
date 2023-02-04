@@ -1,0 +1,79 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{3-3 Derivative Rules (day 2)}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 3-3: Derivative Rules (day 2)}\\
+\end{center}
+\begin{enumerate}
+\item Review: Write the Product Rule and the Quotient Rule for differentiation.
+\vspace{1in}
+\item Find the derivative of each of the following. Use whatever rule you choose. Simplify if you have time.
+	\begin{enumerate}
+	\item $v(\theta)=\sqrt{\theta}\cos(\theta)$
+	\vfill
+	\item $H(x)=\frac{1}{3x}(8+x^2)$
+	\vfill
+	\item $G(x)=\frac{x^2}{8+ x^2}$
+	\vfill
+	\item $K(x)=\frac{8+ x^2}{x^2}$
+	\vfill
+	\item $f(x)=5e^2+4{x}^{3/4}+5x\sin(x)$\\
+	\vfill
+	\end{enumerate}
+\newpage
+\item Determine the $x$-value (or values) where the graph $f(x)=x^3$ has a slope of 2. 
+\vfill
+
+\item An ant walking along a sidewalk has traveled $s(t)=t^4-2t^2$ inches in $t$ minutes.  Find the velocity and acceleration of the ant (with units).
+
+\vfill
+
+\item The concentration of an antibiotic in the bloodstream $t$ hours after being injected is given by $\displaystyle{C(t)=\frac{2t^2+t}{t^3+50}}$ where $C$ is measured in milligrams per liter of blood.	
+	\begin{enumerate} 
+	\item It is a fact that $C(0)=0$ and $C(10)=0.20.$ Explain what these numbers mean in the context of the problem. \\
+	\vspace{.5in}
+	
+	\item It is a fact that $C'(10)=-0.018.$ Interpret this fact in the context of the problem. Use language a Precalculus student could understand. \\
+	\vspace{.5in}
+	
+	\item Use the fact from parts (a) and (c) to estimate $C(11).$
+	\vspace{.5in}
+	\end{enumerate}
+
+\end{enumerate}
+\end{document}
+

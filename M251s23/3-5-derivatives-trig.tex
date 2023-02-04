@@ -1,0 +1,69 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$} }}
+
+%axis equal 
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{3-5 Trig Derivatives}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 3-5: Derivatives of Trigonometric Functions}\\
+\end{center}
+\begin{enumerate}
+
+\item Write all the Pythagorean Trigonometric Identities\\
+\vfill
+
+\item Rewrite each trigonometric function below in terms of sines and cosines, then use known derivative rules (product, quotient, sine, cosine, etc.) to find their derivatives. \\
+	\begin{enumerate}
+	\item $f(x)=\tan(x)$
+	\vfill
+	\item $f(x)=\cot(x)$
+	\vfill
+	\item $f(x)=\sec(x)$
+	\vfill
+\newpage
+	\item $f(x)=\csc(x)$
+	\vspace{1in}
+	\end{enumerate}
+\item SUMMARY RULES:\\
+\vspace{1.5in}
+\item A mass on a spring vibrates horizontally on a smooth level surface. Its equation of motion is $x(t)=8 \sin(t),$  where $t$ is in seconds and $x$ is in centimeters.\\
+	\begin{enumerate}
+	\item Find the velocity and acceleration at time $t.$
+	\vspace{1.5in}
+	\item Find the position, velocity, and acceleration of the mass at time $t=2\pi / 3.$ In what direction is it moving at this time? Is it speeding up or slowing down?
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+

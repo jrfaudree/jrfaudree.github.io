@@ -1,0 +1,83 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{3-4 Derivatives as Rates of Change (day 2)}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 3-4: Derivatives as Rates of Change}\\
+\end{center}
+\begin{enumerate}
+\item Suppose $p(t)$ gives the number of bacteria in hundreds after $t$ hours in some lab experiment. 
+	\begin{enumerate}
+	\item  Interpret $p(10)=1000$ and $p'(10)=20.$
+	\vfill
+	\item Estimate the number of bacteria when $t=11.$
+	\vfill
+	\end{enumerate}
+\item Suppose $s(t)$ gives the position of an object where $s$ is measured in feet and $t$ is measured in seconds.\\
+	\begin{enumerate}
+	\item  Determine the units of $s'(t)$, $|s'(t)|$, and $s''(t)$ and interpret them in the context of the problem.
+	\vfill
+	\item Can $s'(t)$ be negative? What would that mean?
+	\vfill
+	\item If $s'(5)=20$ and $s''(5)=2$, estimate $s'(6).$ Is the object speeding up or slowing down?
+	\vfill
+	\item If $s'(5)=20$ and $s''(5)=-2$, estimate $s'(6).$ Is the object speeding up or slowing down?
+	\vfill
+	\item If $s'(5)=-20$ and $s''(5)=-2$, estimate $s'(6).$ Is the object speeding up or slowing down?
+	\vfill
+	\end{enumerate}
+\newpage
+\item A potato is launched vertically upward from a platform 20 feet off the ground. The distance in feet that the potato travels from the ground after $t$ seconds is given by $s(t)=-16t^2+64t+20.$
+	\begin{enumerate}
+	\item Find the initial velocity of the potato.
+	\vfill
+	\item Find the velocity and the acceleration of the potato when $t=1.$ 	\vfill
+	\item When $t=1,$ is the potato speeding up or slowing down? Why?
+	\vfill
+	\item What is the velocity of the potato when it reaches its maximum height and why?
+	\vfill
+	\item What is the maximum height of the potato?
+	\vfill
+	\item Assume the potato lands on the ground (not the platform). How long is the potato in the air?
+	\vfill
+	\item What is the velocity of the potato when it hits the ground?
+	\vfill
+	\item You should have observed in part (b) that the acceleration is constant. What does this number represent? 
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+

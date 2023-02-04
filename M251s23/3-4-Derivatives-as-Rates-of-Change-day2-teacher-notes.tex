@@ -1,0 +1,47 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{3-4 Derivatives as Rates of Change  Teacher Notes}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Section 3-4: Derivatives as Rates of Change (Teacher Notes)}\\
+\end{center}
+\begin{enumerate}
+\item This problem is a review of the discussion from the previous sheet that actually introduced this topic.
+\item This problem helps students understand the difference between speed and velocity and the relationship between velocity and acceleration.
+\item Ideally students work this problem in groups after clarifying to the students the meaning of \emph{initial} velocity. If time permits, one can talk about the nature of the modelling equation. Where is the initial position? Initial velocity? Will this always be so? What does the graph look like? Does this fit with our calculations?
+\end{enumerate}
+\end{document}
+
