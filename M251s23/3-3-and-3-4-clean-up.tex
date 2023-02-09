@@ -1,0 +1,51 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+
+
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{More 3.3 and 3.4 Ideas}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Some Additional 3.3 and 3.4 Ideas}\\
+\end{center}
+\begin{enumerate}
+\item Find the derivative of $f(x)=\frac{\sin(x)\cos(x)}{x^3+x}$
+\vfill
+\item Determine where the graph $f(x)=\frac{5x^3}{x^2+2}$ has a horizontal tangent.
+\vfill
+\item Come up with an example that demonstrates why $\frac{d}{dx}\left[ f(x) g(x) \right ] \not= \frac{d}{dx}\left[ f(x)\right] \frac{d}{dx}\left[g(x) \right].$
+\vfill
+
+\end{enumerate}
+\end{document}
+
