@@ -1,0 +1,118 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$} }}
+
+%axis equal 
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{Review Midterm I}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Review for Midterm I}\\
+\end{center}
+\noindent\textbf{Logistics}\\
+
+You will have 90 minutes to take the midterm. You can see what your midterm will look like by going to the public webpage and looking at Midterm I from previous years. Note that your midterm will not be longer then those of previous years\\
+
+\url{https://uaf-math251.github.io/exams.html}\\
+
+You may bring a single 3 x 5 notecard, hand-written, front and back. You may not use a calculator. (There are not problems that require the use of one.)\\
+
+\textbf{For Dr. McIntyre's Section:} Our midterm will start promptly at 9:45 am and will end at 11:15 am.  Some students will finish early. To ensure that later students don't get an unfair advantage, \emph{all students are required to stay in class until 11:15}. If you know you are someone who finishes early, you should bring something to work on \emph{that does not require typing on your phone, laptop or tablet.}
+
+\textbf{For Dr. Faudree's Section:} Our midterm will start promptly at 11:30am.  Once you have finished your midterm, you may leave quietly.\\
+
+\noindent\textbf{Taking a Math Test}
+
+\begin{itemize}
+\item The only way to earn partial credit for incorrect answers is by writing explanatory work.
+\item Explanatory work needs to be written in a way that a reader can follow it.
+\item Write things that are incorrect will generally result in a loss of points. So if something shouldn't be graded, cross it out.
+\end{itemize}
+
+
+\noindent\textbf{Topics}\\
+
+\noindent \fbox{Section 2.1}\\
+Secant lines and tangent lines. Average velocity and instantaneous velocity. Average rate of change and instantaneous rate of change.\\
+
+\noindent Examples: \\
+(a) Sketch the graph $y=x^3+1.$ Find the secant line between the points on the graph where $x=1$ and $x=3.$ Sketch the secant line on the graph. Find an equation of the tangent line to the graph at $x=1$ and sketch it on the graph. (NOTE: We get to answer the second part of this question using our knowledge of the derivative!) \\
+(b) A salmon is swimming up stream and the position of the salmon is given by the function $d(t)=\frac{1}{2}t^2-t$ where $t$ is measured in hours and $d$ is measured in feet. Find the average velocity of the salmon over the interval from $t=2$ to $t=4.$ Find the instantaneous velocity of the salmon at $t=3.$ Include units. Explain in simple terms, in the context of the problem, what these calculations mean.\\
+
+\noindent \fbox{Section 2.2}\\
+Be able to evaluate one-sided and two-sided limits from a graph. Vertical asymptotes and limits.\\
+
+\noindent Examples: \\
+(a) Sketch a graph with \emph{all} of the following properties: \\
+\begin{itemize}
+\item $f(x)$ is defined for all real numbers. (ie its domain is $(-\infty,\infty).$
+\item $\lim_{x \to 1^-} f(x) = 0,$ $\lim_{x \to 1^+} f(x) =4,$ $f(1) =4$
+\item $\lim_{x \to 3} f(x) =4,$ $f(4)=-1.$
+\item $\lim_{x \to -1^-} f(x) =\infty$
+\end{itemize}
+(b) Determine where the graph of $f(x)=\frac{x}{(x+2)^2}$ has a vertical asymptote and use limits to justify your answer is correct. \\
+
+\noindent \fbox{Section 2.3}\\
+Evaluating limits algebraically. You need to remember the strategies (factor, common denominator, and rationalizing). But, don't forget to always try simple first: plug in. \\
+
+\noindent Examples: Evaluate $\d \lim_{x \to 9} \frac{3-\sqrt{x}}{9-x}$ and $\d \lim_{x \to 1/2^+} \frac{4x^2-18x}{2x-1}$\\
+
+\noindent \fbox{Section 2.4}\\
+Continuity. From a graph, determine where a graph is or is not continuous. From an algebraic description of a function, determine where a function is or is not continuous. Be able to explain why a function is not continuous at a point. Use the Intermediate Value Theorem.\\
+
+\noindent Examples: 
+(a) Look at your graph from Section 2.2. Where does it fail to be continuous and why? \\
+(b) Determine where the functions $f(x)= \frac{3-\sqrt{x}}{9-x}$ and $g(x)=  \frac{4x^2-18x}{2x-1}$ fail to be continuous and show that your answer is correct algebraically.\\
+(c) Use the Intermediate Value Theorem to show that the equation $2e^x-3x-5=0$ has a solution.\\
+
+\noindent \fbox{Section 3.1}\\
+The relationship between secant lines and the derivative.\\
+
+\noindent Example: Explain what the expression $f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}$ means in terms of secant lines, tangent lines and the derivative. Draw a picture to illustrate you idea.\\
+
+\noindent \fbox{Section 3.2}\\
+The derivative as a function. The formal definition of the derivative. The relationship between the graph of $f(x)$ and the graph of $f'(x).$\\
+
+\noindent Example: Sketch the derivative of your graph from the Section 2.2 example. Use the definition of the derivative to find $f'(x)$ for $f(x)=1/x^2.$\\
+
+\noindent \fbox{Section 3.3}\\
+Derivative rules: power, constant, sum/difference, product, quotient, and the derivatives of the sine and cosine functions.\\
+
+\noindent Example: Find the derivative of $y=2x^{0.05}-\frac{x}{10}+\frac{\cos(x)}{5}$, $s=t\cos(t),$ and $f(x)=\frac{x^3}{1-x}+ \sin(x)$\\
+
+\noindent \fbox{Section 3.4}\\
+The derivative as a rate of change. Interpretations of the derivative. Velocity and acceleration.\\
+
+\noindent Example: Assume the distance traveled by a snow machine on a straight trail is given by $s(t)$ where $t$ is in hours starting at 12 noon and $s$ is in miles. Interpret $s'(4)=10.$ Interpret $s(4)-s(0).$ Interpret $(s(4)-s(1))/(4-1).$ Using the fact that that $s''(4)=-1.2,$ estimate $s'(4.5).$
+
+\end{document}
+
