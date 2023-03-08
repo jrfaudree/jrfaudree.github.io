@@ -1,0 +1,88 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace, adjustbox}
+\usepackage{array%,tikz, pgfplots
+}
+
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+%
+\pagestyle{fancy} 
+\lfoot{UAF Calculus I}
+\rfoot{4-5}
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+ {\large{ \sc{Section 4.5: Derivatives and the Shape of the Graph (day 2)}}}
+\end{center}
+ \begin{enumerate}
+ \item The Second Derivative Test
+ \vspace{2in}
+\item Use the Second Derivative Test to find the local extrema for $f(x)=-3x^5+5x^3.$
+\vspace{1in}
+ \item For the function $f(x)=\sqrt[3]{x}(8-x)$, determine (a) intervals where $f$ is increasing/decreasing, (b) the locations of any local extrema, (c) intervals where $f$ is concave up / concave down, and (d) inflection points. Then use technology to confirm your answers. \\NOTE: $f'(x)=\displaystyle{\frac{-4(x-2)}{3x^{2/3}}}$ and $f''(x)=\displaystyle{\frac{-4(x+4)}{9x^{5/3}}}$
+ \newpage
+ \item  Below is the graph of the \emph{derivative} of $f$, \large{$f'(x)$}. Use this graph to answer the questions.
+ 
+ \begin{multicols}{2}
+\begin{tikzpicture}
+\begin{axis}[scale=1, thick, my style, xtick={-4,-2,...,4}, ytick={-4,-2,...,4},
+xmin=-4.5, xmax=4.5, ymin=-4.5, ymax=4.5, minor y tick num=1,
+        minor x tick num=1, mark size=3.0pt, grid=both, grid style={ thin, black!60, dashed}, axis equal image]
+%%Curve
+\addplot[ultra thick, smooth,<->] coordinates {(-4,4) (-3,0) (-2,-2) (-1,0) (0,1) (2,0) (3,1) (4,4)};
+\end{axis}
+\end{tikzpicture}
+\quad
+
+\vspace{.3in}
+\quad
+
+\columnbreak
+
+\begin{enumerate}
+\item On what intervals is $f(x)$ increasing? decreasing?
+\vfill
+\item Determine the location of local extrema of $f$.
+\vfill
+\item On what intervals is $f(x)$ concave up? concave down?
+\vfill
+\item Determine the location of any inflection points of $f$.
+\vfill
+\end{enumerate}
+\end{multicols}
+\vfill
+\item Sketch a graph that satisfies \emph{all} of the properties below.
+\begin{enumerate}
+\item $f(2)=f(4)=0$
+\item $f'(x) > 0$ if $x <3$
+\item $f'(3)$ does not exist
+\item $f'(x) < 0$ if $x > 3$
+\item $f''(x) > 0$ for $x \not=3.$
+\end{enumerate}
+\vspace{2.5in}
+ \end{enumerate}
+\end{document}
