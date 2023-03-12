@@ -1,0 +1,85 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+\usepackage{pdfsync}
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace, adjustbox}
+\usepackage{array%,tikz, pgfplots
+}
+
+\usepackage{tikz, pgfplots}
+\usetikzlibrary{calc}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$}, axis equal }}
+%
+\pagestyle{fancy} 
+\lfoot{UAF Calculus I}
+\rfoot{4-6}
+
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\bi}{\begin{itemize}}
+\newcommand{\ei}{\end{itemize}}
+
+\begin{document}
+\setlength{\parindent}{0cm}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\renewcommand{\d}{\displaystyle}
+\vspace*{-0.7in}
+\begin{center}
+ {\large{ \sc{Section 4.6: Limits at Infinity and Asymptotes }}}
+ (and sophisticated graphing)
+\end{center}
+ \begin{enumerate}
+  \item Limits at Infinity: In plain English, what should the symbols below mean?\\
+ 
+ $\displaystyle{\lim_{x \to \infty} f(x) = L }$ \\
+ 
+ $\displaystyle{\lim_{x \to -\infty} f(x) = L }$\\
+ 
+ \item Three Principles ($a$ is a constant) and a Strategy
+ \begin{itemize}
+ 	\item If $a$ is a constant, then $\displaystyle{\lim_{x \to \pm\infty} ax=}$
+ 	\item $\displaystyle{\lim_{x \to \pm\infty} \frac{1}{x}=}$
+	\item If $\displaystyle{\lim_{x \to \pm\infty} f(x)=a}$ and $\displaystyle{\lim_{x \to \pm\infty} {g(x)}= \pm \infty}$, then  $\displaystyle{\lim_{x \to \pm\infty} \frac{f(x)}{g(x)}=}$
+	\item Strategy: Divide numerator and denominator by the highest power of $x$ in the denominator.
+ \end{itemize}
+ \item Use the Principles to evaluate the limits below. Then, use your calculator to confirm your answer is correct.
+ 	\begin{enumerate}
+	\item $\displaystyle{\lim_{x \to \infty} \frac{2x^2-x}{3x-5x^2}}$
+	\vfill	
+	\item $\displaystyle{\lim_{x \to \infty} \frac{2x^3-x}{3x-5x^2}}$
+	\vfill
+	\item $\displaystyle{\lim_{x \to \infty} \frac{3x+ \sin(x)}{x}}$
+	\vfill
+	\item $\displaystyle{\lim_{x \to -\infty} \frac{2x+1}{\sqrt{x^2+1}}}$ (Pay attention to the sign here!)
+	\vfill
+	
+		\end{enumerate}
+ \newpage
+ \item Fill in the blanks.
+ \begin{itemize}
+ 	\item If $\displaystyle \lim_{x \to \infty} f(x)=L$, then \underline{\hspace{1.5in}} is an asymptote of the graph of $f(x).$
+	\item If $\displaystyle \lim_{x \to -\infty} f(x)=L$, then \underline{\hspace{1.5in}} is an asymptote of the graph of $f(x).$
+\end{itemize}
+\item Sketch a graph of a function $g(x)$ that satisfies all of the conditions below:
+\begin{itemize}
+\item it's continuous on $(-\infty,\infty)$
+\item it has an absolute maximum of 3 at $x=0$
+\item $\displaystyle \lim_{x \to \infty} g(x)=-5$ 
+\item $\displaystyle \lim_{x \to -\infty} g(x)=0.$
+\end{itemize}
+
+ \item Given $f(x)=\frac{x^2}{x^2+1},$ $f'(x)=\frac{2x}{(x^2+1)^2},$ $f''(x)= \frac{-2(3x^2-1)}{(x^2+1)^3}.$  Identify important features of $f(x)$ like: domain, asymptotes, local extrema, inflection points, and make a rough sketch.
+ \vfill
+ \end{enumerate}
+\end{document}
