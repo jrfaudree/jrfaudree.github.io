@@ -1,0 +1,83 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom,tabularx} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+
+\usepackage[parfill]{parskip}
+\usetikzlibrary{arrows}
+
+\usetikzlibrary{calc}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=blue,only marks,mark=*}} \pgfplotsset{holdot/.style={color=blue,fill=white,only marks,mark=*}}
+
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\ans}[1][2]{ \ \rule{#1 in}{.5 pt} \ }
+
+
+\pagestyle{fancy} 
+%\lfoot{Uses a calculator}
+\rfoot{4-8}
+
+\begin{document}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \Large\sc{Section 4.8 L'H\^{o}pital's Rule }\\
+\end{center}
+\begin{enumerate}
+\item  L'H\^{o}pital's Rule says: 
+\vspace{2in}
+\item Example $0/0.$
+	\begin{enumerate}
+	\item $\displaystyle{\lim_{x\to 2}\: \frac{x^2-4}{x^2-2x}}$\\
+	\vfill
+	\item $\displaystyle{\lim_{x \to 0} \frac{\sin(4x)}{3e^{3x}-3}}$
+		\vfill
+	\end{enumerate}
+\item Example $\infty/\infty.$
+	\begin{enumerate}
+	\item $\displaystyle{\lim_{x\to \infty}\: \frac{\ln(x)}{\sqrt{x}}}$\\
+		\vfill
+	\item $\displaystyle{\lim_{x \to \infty} \frac{2e^x+1}{1-3e^x}}$\\
+	\vfill
+	\end{enumerate}
+\newpage
+\item Example $0 \cdot \infty.$
+	\begin{enumerate}
+	\item $\displaystyle{\lim_{x\to \infty}\: x \sin(\frac{\pi}{x})}$\\
+	\vfill
+	\item $\displaystyle \lim_{x \to 0^+} x \ln (x)$
+	\vfill
+	\end{enumerate}
+\item Example $1^\infty$ or $0^0$ or $\infty^0$
+	\begin{enumerate}
+	\item  $\displaystyle{\lim_{x\to 0^+} \left(1+x \right)^{1/x}}$\\
+	\vfill
+	\item $\displaystyle \lim_{x \to 0^+} x^{\sin(x)}$
+	\vfill
+	\end{enumerate}
+	
+\end{enumerate}
+\end{document}
