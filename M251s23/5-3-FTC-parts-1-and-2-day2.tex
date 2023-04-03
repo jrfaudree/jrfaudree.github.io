@@ -1,0 +1,104 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom,tabularx} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate, adjustbox}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+
+\usepackage[parfill]{parskip}
+\usetikzlibrary{arrows}
+
+\usetikzlibrary{calc}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=blue,only marks,mark=*}} \pgfplotsset{holdot/.style={color=blue,fill=white,only marks,mark=*}}
+
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\def\ds{\displaystyle}
+
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\ans}[1][2]{ \ \rule{#1 in}{.5 pt} \ }
+
+
+\pagestyle{fancy} 
+\rfoot{5-3}
+
+\begin{document}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \Large\sc{Section 5.3: The Fundamental Theorem of Calculus (day 2)}
+  \end{center}
+\begin{enumerate}
+\item The Fundamental Theorem of Calculus (part 1):
+\vfill
+\item Find the derivative of each function below.
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\d g(x)=\int_{-1}^x t^2e^t\: dt$
+	\item $\d h(x)=\int_0^{x^2+1} \sin(t) \: dt$
+	\end{enumerate}
+	\end{multicols}
+\vfill
+
+\item Let $f(x)=4x.$ Find two different antiderivatives of $f(x)$. Call them $F_1(x)$ and $F_2(x).$
+\vfill
+\item Let $G(x)= \int_1^x 4t \: dt.$ 
+	\begin{enumerate}
+	\item What do $G(x)$, $F_1(x)$ and $F_2(x)$ all have in common?
+	\vfill
+	\item Find $G(1)$, $F_1(1)$ and $F_2(1).$ You will have to find $G(3)$ by geometry.
+	\vfill
+	\item Find $G(3)$, $F_1(3)$ and $F_2(3).$ You will have to find $G(3)$ by geometry.
+	\vfill
+	\item Using your answers above, find $G(3)-G(1)$ and explain what it means geometrically about the curve $y=4x.$\\
+	\item Find $F_1(3)-F_1(1)$ and $F_2(3)-F_2(1)$.
+	\vfill
+	\item What do parts (d) and (e) indicate about how you can calculate the (signed) area under a curve $f(x)$ on an interval $[a,b]$?
+	\vfill
+	\end{enumerate}
+\newpage
+\item The Fundamental Theorem of Calculus (part 2):
+\vfill
+\item Evaluate the integrals.
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\d \int_0^{\pi} \sin (x) \: dx$
+	\item $\d \int_{-1}^3 x+e^x \: dx$
+	\end{enumerate}
+	\end{multicols}
+\vfill
+\item Find the average value of $f(x)=x^2$ over the interval $[0,3].$
+\vfill
+\item Assume the velocity of an object thrown directly up into the air is given by $v(t)= 20-9.8t$ where $v$ is measured in meters per second and $t$ is measured in seconds. 
+	\begin{enumerate}
+	\item Evaluate $\int_0^1 v(t) \: dt$
+	\vfill
+	\item Evaluate $\int v(t) \: dt$
+	\vfill
+	\item Explain why you do not have enough information to find the height of the object exactly?
+	\vfill
+	\item Explain, in the context of the problems what part (a) and part (b) represent.
+	\vfill
+	\end{enumerate}
+
+\end{enumerate}
+\end{document}
