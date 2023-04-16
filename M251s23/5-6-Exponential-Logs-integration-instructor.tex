@@ -1,0 +1,81 @@
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom,tabularx} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate, adjustbox}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+
+\usepackage[parfill]{parskip}
+\usetikzlibrary{arrows}
+
+\usetikzlibrary{calc}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=blue,only marks,mark=*}} \pgfplotsset{holdot/.style={color=blue,fill=white,only marks,mark=*}}
+
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\def\ds{\displaystyle}
+
+\renewcommand{\d}{\displaystyle}
+
+\newcommand{\ans}[1][2]{ \ \rule{#1 in}{.5 pt} \ }
+
+
+\pagestyle{fancy} 
+\rfoot{5-3}
+
+\begin{document}
+
+\vspace*{-0.7in}
+
+\begin{center}
+  \Large\sc{Section 5.6: Integrals Involving Exponentials and Logarithmic Functions}\\
+  instructor notes
+  \end{center}
+  
+  This will take at least one day and perhaps longer depending on how much is done by the instructor and how much in groups.
+  
+  Things to emphasize
+  
+  \begin{itemize}
+  \item \# 1: Get students to remember three principles:
+  	\begin{itemize}
+	\item When doing $u$-substitution, you replace all the $x$'s with $u$'s, including replacing the $dx.$
+	\item In the previous section, we always picked $u$ to be something raised to a power.
+	\item Have them build a problem for which $u$-substitution will obviously work and one in which it will not.\\
+	e.g. $\int (x^4+1)(x^5+5x)^8 \:dx$ versus $\int (x^5+5x)^8 \:dx$ (The second is do-able, but would require us to expand the expression....)
+	
+	The goal is for them to see the built-in $du$.
+	\end{itemize}
+
+	
+\item \#2 Have students complete (a)-(c) independently. Then have them figure out or tell them $d$ and $e$. Tell them that they will not have to memorize the formulas in $b$, $d$ and $e$ but should know that they exist and how to use them.\\
+
+You will have to help them understand why $c$ has absolute value bars.
+
+\item \# 3 I would work this on the board very methodically explicitly writing down how $u$ is being selected: exponent of $e$, the denominator, inside $\ln$ or something for which $du$ is present. \\
+
+For 3d, we are reminding them once more about how to manage a definite integral and substitution simultaneously.
+
+\item \#4 Complete this in groups at the board.
+
+	
+	
+  \end{itemize}
+\end{document}
