@@ -1,0 +1,183 @@
+
+\documentclass[11pt,fleqn]{article} 
+\usepackage[margin=0.8in, head=0.8in]{geometry} 
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{fancyhdr} 
+\usepackage{palatino, url, multicol}
+\usepackage{graphicx, pgfplots} 
+\usepackage[all]{xy}
+\usepackage{polynom} 
+%\usepackage{pdfsync} %% I don't know why this messes up tabular column widths
+\usepackage{enumerate}
+\usepackage{framed}
+\usepackage{setspace}
+\usepackage{array,tikz}
+
+\pgfplotsset{compat=1.6}
+
+\pgfplotsset{soldot/.style={color=black,only marks,mark=*}} \pgfplotsset{holdot/.style={color=black,fill=white,only marks,mark=*}}
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$x$}, ylabel={$y$} }}
+
+%axis equal 
+\pagestyle{fancy} 
+\lfoot{}
+\rfoot{Review for Final}
+
+\begin{document}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\blank}[1]{\rule{#1}{0.75pt}}
+\newcommand{\bc}{\begin{center}}
+\newcommand{\ec}{\end{center}}
+\renewcommand{\d}{\displaystyle}
+
+\vspace*{-0.7in}
+
+%%%%%%%%%intro page
+\begin{center}
+  \large
+  \sc{Review for Final Exam}\\
+\end{center}
+\noindent\textbf{Logistics}\\
+
+\noindent\textbf{Topics}\\
+
+\noindent \fbox{Section 2.1}\\
+Secant lines and tangent lines. Average velocity and instantaneous velocity. Average rate of change and instantaneous rate of change.\\
+
+Example: Sketch the graph $y=x^3+1.$ Find the secant line between the points on the graph where $x=1$ and $x=3.$ Sketch  the secant line on the graph. Find an equation of the tangent line to the graph at $x=1$ and sketch it on the graph. (NOTE: We get to answer the second part of this question using our knowledge of the derivative!) \\
+
+\noindent \fbox{Section 2.2}\\
+One-sided and two-sided limits from a graph. Vertical asymptotes and limits.\\
+
+Example: Sketch a graph with \emph{all} of the following properties: \\
+\begin{itemize}
+\item $f(x)$ is defined for all real numbers. (ie its domain is $(-\infty,\infty).$
+\item $\lim_{x \to 1^-} f(x) = 0,$ $\lim_{x \to 1^+} f(x) =4,$ $f(1) =4$
+\item $\lim_{x \to 3} f(x) =4,$ $f(4)=-1.$
+\item $\lim_{x \to -1^-} f(x) =\infty$
+\end{itemize}
+
+
+\noindent \fbox{Section 2.3}\\
+Evaluating limits algebraically.\\
+
+Example: Evaluate $\lim_{x \to 9} \frac{3-\sqrt{x}}{9-x}$ and $\lim_{x \to 1/2^+} \frac{4x^2-18x}{2x-1}$\\
+
+\noindent \fbox{Section 2.4}\\
+Continuity. From a graph, determine where a graph is or is not continuous. From an algebraic description of a function, determine where a function is or is not continuous. Be able to explain why a function is not continuous at a point. The Intermediate Value Theorem.\\
+
+Example: Look at your graph from Section 2.2. Where does it fail to be continuous and why? Where are the functions $f(x)= \frac{3-\sqrt{x}}{9-x}$ and $g(x)=  \frac{4x^2-18x}{2x-1}$ continuous?
+
+
+\noindent \fbox{Section 3.1}\\
+The relationship between secant lines and the derivative.\\
+
+Example: Explain what the expression $f'(a) = \lim_{x \to a} \frac{f(x)-f(a)}{x-a}$ means in terms of secant lines, tangent lines and the derivative. Draw a picture to illustrate you idea.\\
+
+\noindent \fbox{Section 3.2}\\
+The derivative as a function. The formal definition of the derivative. The relationship between the graph of $f(x)$ and the graph of $f'(x).$\\
+
+Example: Sketch the derivative of your graph from the Section 2.2 example. Use the definition of the derivative to find $f'(x)$ for $f(x)=1/x^2.$\\
+
+
+\noindent \fbox{Section 3.3}\\
+Derivative rules: power, constant, sum/difference, product, quotient.\\
+
+Example: Find the derivative of $y=2x^{0.05}-\frac{x}{10}$ and $f(x)=\frac{x^3}{1-x}$\\
+
+\noindent \fbox{Section 3.4}\\
+The derivative as a rate of change. Interpretations of the derivative. Velocity and acceleration.\\
+
+Example: Assume the distance traveled by a snow machine on a straight trail is given by $s(t)$ where $t$ is in hours starting at 12 noon and $s$ is in miles. Interpret $s'(4)=10.$ Interpret $s(4)-s(0).$ Interpret $(s(4)-s(1))/(4-1).$ Using the fact that that $s''(4)=-1.2,$ estimate $s'(4.5).$\\
+
+\noindent \fbox{Sections 3.5-3.9}\\
+Techniques and rule for taking derivative
+
+\noindent \fbox{Section 4.1}\\
+Related Rate Problems. All of these problems are word problems asking for a rate of change of some quantity with respect to time. 
+
+Example:  An airplane is flying overhead at a constant elevation of 4000 feet as it passes directly over a man standing on the ground. If the plane is flying at a speed of 600 feet per second, how fast is the plane moving away from the man 5 seconds after it passes over his head? Assume the plane is flying in a straight line.\\
+
+\noindent \fbox{Section 4.2}\\
+Linear Approximations and Differentials. These problems ask you to find the linear approximation or differential of a function for particular values and then use these things (the linear approximation or differential) to estimate other things.
+
+Example:  Find the linear approximation of $f(x)=5 \sin (x)$ when $a=0$ and use it to estimate $5 \sin (-0.1)$
+
+Example:  Find the differential of $f(x)=4 \sqrt{x}$ when $x=9$ and use it to estimate  how much $f$ will change if $x$ changes from $9$ to $9.01$\\
+
+
+\noindent \fbox{Section 4.3}\\
+Maxima and minima. Absolute and local. Critical points. These problems are of two types: Finding ABSOLUTE extrema on closed-bounded intervals and finding local extrema in general.
+
+Example: Find the absolute maximum and the absolute minimum of $f(x)=x^2-3x^{2/3}$ on $[0,8].$
+
+Example: Identify any local extrema of $y=x^2- \frac{1}{x^2}.$\\
+
+\noindent \fbox{Section 4.5}\\
+Derivatives and the Shape of a Graph. These problems ask you to use $f'$ and $f''$ to determine when the original function, $f$, is increasing or decreasing, concave up or concave down, has extrema, has inflection points, and to draw sophisticated graphs.
+
+Example: Draw some not-too-complicated graph. Now assume it is $f'$. What can you say about the graph of $f$?
+
+Example: If $f' >0$ for $x>0$, $f' <0$ for $x<0$, $f'' > 0$ for $-2 \leq x \leq 2$ and $f'' < 0$ for $x<-2$ and for $x>2,$ sketch $f.$
+
+\noindent \fbox{Section 4.6}\\
+Limits at Infinity and Asymptotes. The problems either ask yo to evaluate a limit as $x \to \pm \infty$ or ask to find and justify the existence of a  horizontal asymptote.
+
+Example: Determine if the graph of $f(x)=\frac{3x^3-e^x}{2x^3}$ has a horizontal asymptote. Justify your answer.\\
+
+\noindent \fbox{Section 4.7}\\
+Optimization Problems. These are word problems where you are asked to maximize or minimize some quantity. Crucial steps here include\\
+ (a) identify the quantity to be maximized/minimized, \\
+ (b) write the quantity from part (a) as a function of one variable,\\
+ (c) identify the domain of the function from part (b), \\
+ (d) take derivative and find critical points for function from part (b), \\
+ (e) check/justify that your cp actually corresponds to a max/min,\\
+ (f) answer the question.
+ 
+ Example: Go work problems from old midterms.\\ 
+
+\noindent \fbox{Section 4.8}\\
+L'Hopital's Rule. Be able to use L'Hopital's Rule to evaluate limits of a variety of indeterminate forms.\\
+
+Example: Evaluate $\lim_{x \to 0^+} x \ln(x^4)$\\
+
+\noindent \fbox{Section 4.10}\\
+Antiderivatives and Initial Value Problems \\
+
+Example: Evaluate $\int (\frac{3}{sqrt{x}}-\csc^2(x)) \: dx$\\
+
+Example: If an object as acceleration $a(t) = x + \sin(x),$ find its velocity equation assuming $v(0)=10.$\\
+
+
+\noindent \fbox{Section 5.1}\\
+Approximating areas. Use rectangles with left- or right-hand endpoints to estimate the area under a curve.\\ 
+
+Example: Use $L_8$ (ie eight rectangles with left-hand endpoints) to estimate the area under $y=\sqrt{x}$ on the interval $[0,4].$ No need to get a decimal approximation. (!!)\\
+
+
+\noindent \fbox{Section 5.2}\\
+The Definite Integral as Signed Area under a Curve.\\
+
+Example: Sketch the graph of $y=10 - 5x.$ Use this graph to evaluate $\int_{1}^6 (10-5x) \:dx$.\\
+
+\noindent \fbox{Section 5.3}\\
+The Fundamental Theorem of Calculus, parts I and II.\\
+
+Example: Find the derivative of the function $F(x)=\int_1^{\cos(x)} (1-t^2) \; dt$\\
+
+Example: Evaluate $\int_1^5 \frac{x}{1+x^4} \; dx$\\
+
+\noindent \fbox{Section 5.4}\\
+The Net Change Theorem\\
+
+Example: If $v(t)$ is the velocity of a car along a straight road in miles per hour, interpret the meaning of $\int_1^5 v(t) \; dt = -20.$ Assume 1 and 5 are measured in hours. \\
+
+\noindent \fbox{Section 5.5}\\
+The method of substitution. (See the second example from Section 5.3 above.)\\
+
+\noindent \fbox{Sections 5.6-5.7}\\
+More integration formulas including those of exponential functions, logarithms, and inverse trigonometric functions.
+
+\end{document}
+
