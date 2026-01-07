@@ -1,1 +1,123 @@
+\documentclass[12pt]{article}
 
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Spring 2026 Syllabus}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{center} {\huge{Homework Guidelines}} \end{center}
+
+\section{Philosophy}
+
+\textbf{This is where the majority of your learning will occur.}
+
+Working through the homework thoughtfully is one of the best ways to learn math. It's like practicing a sport or musical instrument -- you wouldn't expect to perform well in a game or concert without putting in the hours of practice beforehand. The same applies to exams in a math class: they tend to go better when you've engaged deeply with the homework leading up to them.
+
+\textbf{If you don't have questions, you're not doing it right!}
+
+I would expect \emph{every} student to have questions on \emph{every} assignment such as:	\begin{itemize}
+	\item I understand what steps to do but I don't understand why I am doing them.
+	\item I got the same answer but I did it a totally different way. Is my way ok or was it a fluke?
+	\item Once I saw what I was supposed to do, I could do it. What part of the problem should have indicated to me what I was supposed to do?
+	\item How did you do that step and why?
+	\end{itemize}
+
+\section{A Healthy Algorithm for Learning}
+
+\textbf{A handful of simple actions can make homework more productive.}
+
+\begin{enumerate}
+\item[0.] Dedicate three 1-hour blocks between class meetings to work on assigned homework.
+\item[1.] Start the assignment asap and finish it before the deadline.
+\item[2.] For each part of each problem,
+	\begin{enumerate}
+	\item[a.] Attempt it first by yourself. You must write something.
+	\item[b.] Use the solutions/teacher/tutor/friend/AI to ensure your answer \emph{and your work} is correct. 
+	\item[c.] Write down your questions and ask them.
+	\item[d.] \textbf{After completing each problem, indicate your level of mastery.}
+	\end{enumerate}
+\end{enumerate}
+
+For 2d, I have seen students use symbols like {\Large{\textbf{\checkmark,$\thicksim$, X }}} to indicate ``mastery", "a bit wobbly", and ``really don't understand".
+\section{Minimum Standards}
+
+\textbf{You will not earn full-credit on the homework unless you meet the expectations below.}
+
+\begin{enumerate}
+\item All parts of all problems should be numbered/labeled and written in order.
+\item You should start at the top of the page and work your way down.
+\item There must be work to support your answer and your answer should be easy to find.
+\item There must be space between each part of each problem and between problems.
+
+\vspace{.08in}
+
+\begin{quote} 
+Standards 1-4 imply your homework should look like:\\
+
+\vspace{.08in}
+
+\begin{tabular}{ll}
+1. & work goes here followed by \fbox{answer.}\\
+&\\
+&\\
+&\\
+2.a. & work goes here followed by \fbox{answer.}\\
+&\\
+&\\
+&\\2.b. & work goes here and it's a lot.\\
+& so more work is here and it's also a lot\\
+& finally I can state my \fbox{answer.}\\
+\end{tabular}
+\end{quote}
+\vspace{1in}
+\item Your work should be \textbf{correct} or \textbf{corrected}. 
+\item Your work should be your own. Copying solutions is unacceptable.
+\item Your name should be at the top of the front page and both your writing and your scan must be legible.
+\end{enumerate}
+
+\end{document}  
