@@ -1,0 +1,263 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Spring 2026 Syllabus}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+
+\begin{document}
+
+\begin{tabular}{p{0.2\linewidth}  p{0.8\linewidth}}
+\textbf{Instructor:}& Jill Faudree\\
+\textbf{Contact Details:}&Chapman 306B, jrfaudree@alaska.edu, 474-7385\\
+\textbf{Office Hours*:}& MW after class (1:00-2:00pm) and by appointment. Also, you are welcome to drop by.\\
+\textbf{Textbook:} &\emph{Book of Proof} by Richard Hammack, 3rd Edition\\
+ &(ISBN: 978-0-9894721-2-8 (paperback))\\
+ & \textbf{OR}\\
+ & the free online version \\
+ &\url{https://richardhammack.github.io/BookOfProof/}\\
+\textbf{Lecture Hours:}& MWF 11:45am-12:45pm Chap 204\\
+\textbf{Course Web Page:}& \url{https://jrfaudree.github.io/M265S26home.html}\\
+\textbf{Course Grades:}& on Canvas\\
+\textbf{Midterm Dates*:}& Fri Feb 6, Fri Mar 6, Fri Apr 3, Fri Apr 24\\
+\textbf{Final Exam:}& Wednesday, April 29, 10:15am-12:15pm\\
+\textbf{Prerequisites:} &MATH 252 Calculus II with a grade of C- or better \textbf{OR} concurrent enrollment in MATH 252 Calculus II\\
+\end{tabular}
+
+*Note that official Office Hours and Midterm Dates may change over the semester. Any changes will be announced in class and on the course webpage.\\
+
+\heading{Course Overview and Learning Outcomes}
+
+This course is an introduction to formal, rigorous mathematical proof. It is intended to give you an understanding of the logical framework and common techniques used to build proofs and to teach you how to construct and write your own. 
+
+A mathematical proof may have many forms but essentially all are governed by some established principles. There are explicit assumptions which are used to demonstrate that a stated conclusion is guaranteed. The demonstration of this guarantee uses accepted and explicitly stated rules of logical reasoning. 
+
+For many consumers of mathematics, the primary role of mathematics is as a tool for solving some other problem (from Physics, Economics, etc.). From this point of view, it is sufficienct if the mathematical process consistently appears to give a solution supported by observation or data. However, mathematics from the mathematicians' view generally requires proof. Indeed for most mathematicians proof is the defining property of the subject. No conjecture becomes a theorem -- however much empirical evidence supports it --  without proof.
+
+In summary, this is the course that gives the insider's view of the subject.\\
+
+
+\heading{Course Mechanics}
+
+\textbf{Class meetings} will be run as an interactive lecture.  Everyday you will do work in class, sometimes individually and sometimes in groups at the board. You should always bring paper and pencil to class.
+
+\textbf{Class attendance and participation} is mandatory. 
+
+Being present in class and being active in class are so important to student success that \textbf{class participation} is a portion of your grade. Acceptable class participation includes asking questions, attempting to answer questions, contributing to group work, and allowing others to contribute. You will get an easy A on this portion of your grade as a reward for being present, active, and engaged in the class meetings and for being respectful to the other members of the class.
+
+\textbf{If you miss class for an excused reason}, you can make-up participation points for that day in consultation with the instructor.
+
+\textbf{Homework} will be assigned weekly and turned in via an upload link in Canvas. The entire homework assignment will be checked to make sure you have completed, checked, and corrected all parts of all problems. Selected problems will be graded with detailed comments. 
+
+A selection of homework problems will be written using the mathematical typesetting tool called {\LaTeX}. 
+
+There are many benefits to learning to use \LaTeX. It's easier to revise and edit your work. It encourages writing actual sentences since most people can type words faster than they can hand-write them. It will help you focus on the quality of your writing. 
+
+On the course webpage, you will find a link to resources for getting started with \LaTeX. 
+
+\textbf{Collaboration} with classmates to solve homework problems is encouraged. Talking with others about math is a great way to solidify knowledge and clarify points of confusion. \textbf{But each student should write up their solutions independently.} The line between collaboration and plagiarism and/or cheating is crossed if one student gives another student a complete solution (on paper or electronically). If you receive significant help solving a problem, it is customary to make a note in your homework to give the person who helped you credit. 
+
+See the Homework Guidelines for more detail on write-up expectations and best practices.
+
+There will be four \textbf{midterms} during the semester and a comprehensive \textbf{final exam}. 
+
+\textbf{Make-up Midterms} will be given only for excused absences. 
+
+\textbf{Grades} will be calculated according to the rubric on the left. Letter grades will be assigned according to the scale on the right.
+This scale is a guarantee; the instructors reserve the right to lower the thresholds.
+
+\begin{multicols}{2}
+\begin{tabular}{|l|c|}
+  \hline
+  homework & 15\%\\
+  participation& 4\%\\
+  midterms& $4 \times 14\%=56\%$ \\
+  final exam & 25\% \\
+  \hline
+\end{tabular}
+
+ 
+
+\def\sts{\hskip 0.5em}
+\strut\hbox to\hsize{\vbox{\halign{#\hfil\sts&#\hfil\ts&#\hfil\sts&#
+\hfil\ts&#\hfil\sts&#\hfil   \cr
+A+ & 97--100\% & C+ & 77--79\% & F  & $<$ 60\%\cr
+
+A & 93--96\% &  C & 73--76\%&&\cr
+A- & 90--92\% & C- & 70--72\%&&\cr
+B+ & 87--89\% & D+ & 67--69\%&&\cr
+B &  83--86\% & D & 63--66\%&&\cr
+B- & 80-82\% & D- & 60--62\%&&\cr
+}}\hfil}
+\end{multicols}
+
+
+ 
+
+\heading{Tutoring and Resources}
+\vskip -30pt\strut
+\begin{clist}
+    \item The Math and Stat Lab is located in the 
+      student success center on the 6th floor of the Rasmuson Library and
+      offers drop-in tutoring.
+
+	See 	\href{http://www.uaf.edu/dms/mathlab/}{\texttt{www.uaf.edu/dms/mathlab/}} for schedules and availability.
+	\item Free
+one-on-one (or small group) tutoring is also available. You must schedule an
+appointment; see \href{http://www.uaf.edu/dms/mathlab/}{\texttt{www.uaf.edu/dms/mathlab/}}.
+\item The Student Success Center has {\it Academic Coaches}, which are undergraduate students who can help you  improve your study strategies, identify resources and set goals, offer assistance with personalized study plans, time management,  navigating UAF technology, test and note-taking strategies, and much more. You can talk to Academic Coaches by dropping into their area in the Student Success Center on the 6th floor of the Rasmuson Library.
+	\item Student Support Services (\href{https://uaf.edu/sss/}{\texttt{uaf.edu/sss/}}) offers free tutoring in many subjects to students who qualify for their program.
+	\item ASUAF (\href{https://uaf.edu/asuaf/}{\texttt{uaf.edu/asuaf/}}) offers private tutoring for a small fee, based on student income.\\
+\end{clist}
+
+ 
+\heading{Rules and Policies}
+
+\subheading{AI usage}
+During proctored, paper miniquizzes and exams, you will not have access to electronic tools of any type, and you may not use books or notes, except as announced.  These assessments represent around 70\% of your grade. 
+
+Feel free to use a calculator or outside resources while completing your homework.  It is also reasonable to explore new AI tools like ChatGPT. However, since miniquizzes and exams represent the vast majority of your grade, as you do the homework, you must focus on your own thinking and level of understanding. Copying solutions without understanding will have no benefit to your own learning of the material which is the goal of the homework. It is also not a good long-term strategy for passing the course. 
+  
+Your final project must be completed using only your own words and ideas. You may not use Generative AI to produce your final project. You are welcome and encouraged to talk to your classmates about your final project, but it must be completed individually.
+
+\subheading{Incomplete Grade} 
+An incomplete is a temporary grade used to indicate that the student has satisfactorily completed (C (2.0) or better) the majority of work in a course (usually all but the last 3 weeks) but for personal reasons beyond the student's control, such as sickness, has not been able to complete the course during the regular semester. See the catalog \url{https://catalog.uaf.edu/academics-regulations/grades/} for more details.
+
+\subheading{Late Withdrawals} 
+A withdrawal after the deadline from a DMS course will normally be granted only in cases where the student is performing satisfactorily (i.e., C or better) in a course, but has exceptional reasons, beyond his/her control, for being unable to complete the course. To apply for a late withdrawal, please talk to your instructor and your advisor..
+
+\subheading{Academic Dishonesty}
+Academic dishonesty, including cheating and plagiarism, will not
+be tolerated.  It is a violation of the Student Code of Conduct
+and will be punished according to UAF procedures.
+
+\subheading{Student protections and services statement}
+Every qualified student is welcome in my classroom.  As needed, I am happy to work with you, Disability Services, Veterans' Services, Rural Student Services, etc.~to find reasonable accommodations.  Students at this University are protected against sexual harassment and discrimination (Title IX), and minors have additional protections.  As required, if I notice or am informed of certain types of misconduct, then I am required to report it to the appropriate authorities.  For more information on your rights as a student and the resources available to you to resolve problems, please go the following site: \href{https://www.uaf.edu/handbook/}{\texttt{www.uaf.edu/handbook/}}.
+
+
+\strut
+
+\vspace{-12pt}
+
+\subheading{General education statement}
+This course is listed as a General Education Math Course.  As such this course is expected to \textsl{contribute to meeting the following} four general learning outcomes:
+
+\begin{enumerate}
+\item Build knowledge of human institutions, sociocultural processes, and the physical and natural works through the study of mathematics.  Competence will be demonstrated for the foundational information in each subject area, its context and significance, and the methods used in advancing each.
+
+\item Develop intellectual and practical skills across the curriculum, including inquiry and analysis, critical and creative thinking, problem solving, written and oral communication, information literacy, technological competence, and collaborative learning. Proficiency will be demonstrated across the curriculum through critical analysis of proffered information, well-reasoned solutions to problems or inferences drawn from evidence, effective written and oral communication, and satisfactory outcomes of group projects.
+
+\item Acquire tools for effective civic engagement in local through global contexts, including ethical reasoning, intercultural competence, and knowledge of Alaska and Alaska issues.  Facility will be demonstrated through analyses of issues including dimensions of ethics, human and cultural diversity, conflicts and interdependencies, globalization, and sustainability.   
+
+\item Integrate and apply learning, including synthesis and advanced accomplishment across general and specialized studies, adapting them to new settings, questions and responsibilities, and forming a foundation for lifelong learning. Preparation will be demonstrated though production of a a creative or scholarly product that requires broad knowledge, appropriate technical proficiency, information collection, synthesis, interpretation, presentation and reflection.
+\end{enumerate}
+
+
+\begin{center}
+\heading{Official UAF Syllabus Addendum}
+\end{center}
+
+
+\noindent{\bf Student protections statement:} The university respects and upholds the principles of due process and a fair and equitable process as specified in the Board of Regents' Policy 09.02 Student Rights and Responsibilities. For more information regarding the rights and responsibilities of students, refer to the Office of Rights, Compliance and Accountability website. You are encouraged to read the Board of Regents' policy carefully to fully understand your responsibilities to our community.
+
+We strive to create a safe and respectful environment for all members of our community. If you have questions about expectations of you as a student or believe your rights are being violated, we encourage you to reach out to the  Office of Rights, Compliance and Accountability for help. UAF reserves the right to suspend, expel or take other necessary and appropriate action in cases where a student is unable or unwilling to uphold community standards and campus safety.
+
+For more information on your rights as a student and the resources available to you to resolve problems, please go to the following site:\\ \url{https://catalog.uaf.edu/academics-regulations/students-rights-responsibilities/}
+
+\noindent{\bf Disability services statement:} I will work with the Office of Disability Services to provide reasonable accommodation to students with disabilities.
+
+\noindent{\bf ASUAF advocacy statement:} The Associated Students of the University of Alaska Fairbanks, the student government of UAF, offers advocacy services to students who feel they are facing issues with staff, faculty, and/or other students specifically if these issues are hindering the ability of the student to succeed in their academics or go about their lives at the university. Students who wish to utilize these services can contact the Student Advocacy Director by visiting the ASUAF office or emailing asuaf.office@alaska.edu. 
+
+
+
+\noindent{\bf Student Academic Support:}
+\begin{itemize}
+\setlength\itemsep{0em}
+        \item Communication Center (907-474-7007, \mailto{uaf-commcenter@alaska.edu}, Student Success Center, 6th Floor Room 677 Rasmuson Library)
+        \item Writing Center (907-474-5314, \mailto{uaf-writing-center@alaska.edu}, Student Success Center, 6th Floor Room 677 Rasmuson Library)
+\item UAF Math Services (907-474-7332, \mailto{uaf-traccloud@alaska.edu})
+
+
+\begin{itemize}
+\item Drop-in tutoring, Student Success Center, 6th Floor Room 672 Rasmuson Library
+
+\item 1:1 tutoring (by appointment only), 6th Floor Room 677 Rasmuson Library
+
+\item Online tutoring (by appointment only) available
+
+https://www.uaf.edu/dms/mathlab/, available at the Student Success Center
+\end{itemize}
+
+\item Developmental Math Lab, Gruening 406
+\item The Debbie Moses Learning Center at CTC (907-455-2860, 604 Barnette St, Room 120,\\ \url{https://www.ctc.uaf.edu/student-services/student-success-center/})
+\item For more information and resources, please see the Academic Advising Resource List (\url{https://www.uaf.edu/advising/students/index.php})
+\end{itemize}
+
+\noindent{\bf Student Resources:}
+\begin{itemize}
+\setlength\itemsep{0em}
+\item Disability Services (907-474-5655, \mailto{uaf-disability-services@alaska.edu}, 110 Eielson Building)
+\item Student Health \& Counseling [free counseling sessions available] (907-474-7043, \url{https://www.uaf.edu/chc/appointments.php}, Whitaker Building, Room 206, Health, Safety \& Security Bldg --- same building as Fire and Police)
+\item Office of Rights, Compliance and Accountability (907-474-7300, \mailto{uaf-orca@alaska.edu}, 3rd Floor, Constitution Hall)
+\item Associated Students of the University of Alaska Fairbanks (ASUAF) or ASUAF Student Government (907-474-7355, \mailto{asuaf.office@alaska.edu}{asuaf.office@alaska.edu}, Wood Center 119)
+\end{itemize}
+
+\noindent{\bf Nondiscrimination statement:}
+Nondiscrimination statement: The University of Alaska is an equal opportunity/equal access employer, educational institution and provider. The University of Alaska does not discriminate on the basis of race, religion, color, national origin, citizenship, age, sex, physical or mental disability, status as a protected veteran, marital status, changes in marital status, pregnancy, childbirth or related medical conditions, parenthood, sexual orientation, gender identity, political affiliation or belief, genetic information, or other legally protected status. The University's commitment to nondiscrimination, including against sex discrimination, applies to students, employees, and applicants for admission and employment. Contact information, applicable laws, and complaint procedures are included on UA's statement of nondiscrimination available at \url{www.alaska.edu/nondiscrimination}.
+
+\begin{tabular}{l}
+UAF Office of Rights, Compliance and Accountability\\
+1692 Tok Lane\\
+3rd floor, Constitution Hall, Fairbanks, AK 99775\\
+907-474-7300\\
+\url{uaf-orca@alaska.edu}
+\end{tabular}
+
+ \scriptsize syllabus version: \today \normalsize
+ 
+ \end{document}
