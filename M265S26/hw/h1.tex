@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\sse}{\subseteq}
+
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Spring 2026 Syllabus}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\quad \\
+
+\begin{center} {\huge{Homework 1}} \end{center}
+
+\hrulefill
+
+Section 1.1 Introduction to Sets \# E, F, 2, 3, 4, 9, 12, 14, 16, 18, 28, 32, 33, 38, 40, 46, 50, G
+
+\begin{enumerate}
+\item[E.] Write each statement in English entirely in symbols.
+	\begin{enumerate}
+	\item[a.] The set $S$ is the set of all nonnegative, even integers.
+	\item[b.] The set of polynomials of degree 2 with real coefficients.
+	\item[c.] The set of real-valued functions of a real variable that contain the point $(3, \pi).$
+	\item[d.] The set of integers is a subset of the set of rational numbers.
+	\end{enumerate}
+\item[F.] Write each mathematical statement as a sentence in English. 
+	\begin{enumerate}
+	\item[a.] $A=\{ \emptyset \}$
+	\item[b.] $\Z \sse \N$
+	\end{enumerate}
+\item[G.] Construct a set $A$ such that $\{1,2\}$ is \emph{both} an element of $A$ and a subset of $A.$
+
+\vspace{.3in}
+
+(This section has 18 problems. Each part of each problems is worth 1 points for a total of 22 points.)\\
+
+\vspace{.3in}
+
+\hspace*{-.3in}\hrulefill
+
+\hspace*{-.3in}Section 1.2 The Cartesian Product \# 2, 8, 10, 12, 14, 18, C\\
+
+\hspace*{-.3in} C. Determine the cardinality or each set below.
+	\begin{enumerate}
+	\item[a.] $ \{0,1,2,3\} \times \{a,\: b,\: \{c,d\},\: e, \emptyset \} $
+	\item[b.] $ ( \: \{1,2,3,4 \} \times \{1,2,3\} \: ) \times \{1,2 \}$
+	\end{enumerate}
+
+\vspace{.3in}
+
+(This section has 7 problems. Each part of each problems is worth 1 points for a total of 15 points.)\\
+
+\end{enumerate}
+
+\end{document}  
