@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+
+
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 1: \S 1.1, 1.2}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{center} Introduction to Sets \& Cartesian Products \end{center}
+\begin{enumerate}
+\item A \textbf{set} is\\
+
+\vspace{1in}
+
+\item Some examples and typical notation\\
+
+\vspace{2in}
+
+\item The \textbf{Cartesian Product} of two sets $A$ and $B$ is\\
+
+\vspace{1in}
+
+\item Some examples and typical notation\\
+
+\newpage
+\item List the \textbf{elements} in each set below and determine its \emph{cardinality}.
+	\begin{enumerate}
+	\item $A=\{ 1, 2, \{a,b,c\}, \emptyset \}$
+	\vfill
+	\item $A=\{ x \in R \: : \: x^3-x^2=6x\}$
+	\vfill
+	\item $A=\{ x \in Z \: : \: x^3-x^2=6x\}$
+	\vfill
+	\end{enumerate}
+\item Write each set in \textbf{set-builder} notation.
+	\begin{enumerate}
+	\item The half-open interval of the real line: $[2,8).$
+	\vfill
+	\item $\{-6, -3, 0, 3, 6, 9,12, \dots\}$ (Assume the pattern continues.)
+	\vfill
+	\item The set of points in the $xy$-plane that lie on the graph $y=x^2 +1.$
+	\vfill
+	\end{enumerate}
+\item Sketch $[0,1]^3$
+\vfill
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

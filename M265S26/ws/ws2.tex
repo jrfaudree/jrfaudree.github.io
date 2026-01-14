@@ -1,0 +1,180 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 2: \S 1.3-1.6}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{center} Subsets, Power Set, Set Operations \end{center}
+\begin{enumerate}
+\item Definitions
+	\be
+	\item The set $B$ is a \emph{subset} of the set $A$ if
+	\vfill
+	\item The \emph{power set} of a set $A$ is
+	\vfill
+	\item The \emph{union} of sets $A$ and $B$ is
+	\vfill
+	\item The \emph{intersection} of sets $A$ and $B$ is
+	\vfill
+	\item The \emph{difference} of sets $A$ and $B$
+	\vfill
+	\item The \emph{complement} of the set $A$ is
+	\vfill
+	\ee
+\newpage
+\item Let $C=\{1,2,3\}$ 
+	\be
+	\item List all the elements of the set $C.$
+	\vfill
+	\item List all the subsets of the set $C.$
+	\vspace{1.3in}
+	\item Find $\mcp(C).$ (You have permission to answer this by small changes to your answer in (b).)
+	\item Find $\mcp{(\emptyset)}.$
+	\vfill
+	\ee
+\item Determine whether each statement below is true or false and be prepared to give a reason for your answer.
+	\be
+	\item $a \in \{a,b,c,d,\{a\},\{a,e\}\}$\\
+	
+	
+	\item $a \se \{a,b,c,d,\{a\},\{a,e\}\}$\\
+	
+
+	\item $\{a\} \in \{a,b,c,d,\{a\},\{a,e\}\}$\\
+	
+
+	\item $\{a\} \se \{a,b,c,d,\{a\},\{a,e\}\}$\\
+	
+	\item $\{\{a\} \}\se \{a,b,c,d,\{a\},\{a,e\}\}$\\
+	
+
+	\item $\emptyset \subseteq \{a,b,c,d,\{a\},\{a,e\}\}$\\
+	
+ 	
+	\item $\emptyset \in\{a,b,c,d,\{a\},\{a,e\}\}$\\
+	
+
+	\item $\{a,e\} \se \{a,b,c,d,\{a\},\{a,e\}\}$\\
+	
+
+	\item $\{ \{a,e\}\} \se \{a,b,c,d,\{a\},\{a,e\}\}$\\
+	
+
+	\item $e \in \{a,b,c,d,\{a\},\{a,e\}\}$\\
+	
+
+	\item $\{e\} \se  \{a,b,c,d,\{a\},\{a,e\}\}$\\
+	
+
+	\ee
+\newpage
+\item Let $A=\{(x,y) \in \R^2 \: : \: x^2+y^2 \leq 1\}$ and let $B=\{(x,y) \in \R^2 \: : \: x \leq y\}.$ Suppose the universal set $U$ is $\R \times \R.$ Sketch each of the following on separate axes.
+\begin{multicols}{2}
+	\be[itemsep=3cm]
+	\item $A$ 
+	\vfill
+	\item $B$
+	\vfill
+	\item $A \cup B$
+	\vfill
+	\item  $A \cap B$
+	\vfill
+	\item  $A - B$
+	\vfill
+	\item  $B - A$
+	\vfill
+	\item $\ol{A}$
+	\vfill
+	\item $A-\ol{B}$
+	\vfill
+	\item $\ol{A-B}$
+	\vfill
+	\item $\ol{A \cup B}$
+	\vfill
+	\ee
+\end{multicols}	
+
+\vfill
+
+\item How many subsets does $D=\{1,2,3,4,5\}$ have? Justify your answer.	
+\vfill
+\item Determine $|\mcp{(A)}|$ where $A$ is a set with $n$ elements.
+	\vfill
+	
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
