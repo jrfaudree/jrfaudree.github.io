@@ -1,0 +1,151 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 3: \S 1.7-1.8}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{center} Venn Diagrams and Indexed Sets \end{center}
+\begin{enumerate}
+\item Venn Diagrams
+\vfill
+\item Indexed Sets
+	\begin{enumerate}
+	\item Finite Examples and Definitions
+	\vfill
+\newpage
+	\item Infinite and More General Examples and Definitions
+	\vfill
+	\ee
+
+
+\newpage
+\item Draw a Venn Diagram for each set and then answer the questions.
+	\begin{multicols}{2}
+	\be[itemsep=3cm]
+	\item $A \cap B$
+	\vfill
+	\item $\ol{A \cap B}$
+	\vfill
+	\item $\ol{A}$
+	\vfill
+	\item $\ol{B}$
+	\vfill
+	\item $\ol{A} \cup \ol{B}$
+	\vfill
+	\item Use the work above to make a conjecture.
+	\vfill
+	\item Make a conjecture about $A \cup B$ and check it with a Venn Diagram.
+	\vfill
+	\ee
+	\end{multicols}
+\vfill
+\item  Suppose $A_n = \{n, n+1,n+2,\dots,2n\}$ for $n \in \N.$
+	\be
+	\item Determine the sets $A_1,$ $A_2,$ and $A_3$ by writing out their elements.
+	\vfill
+	\item $\ds \bigcup_{n \in \N} A_n \: = $
+	\vfill
+	\item $\ds \bigcap_{n \in \N} A_n \: = $
+	\vfill
+	\ee
+\newpage
+\item  Suppose $B_\alpha = [1,3-\alpha] \subseteq \R$ for $\alpha \in [0,1).$
+	\be
+	\item Determine the set $B_\alpha$ for four different values of $\alpha$.
+	\vfill
+	\item $\ds \bigcup_{\alpha \in [0,1]} A_\alpha \: = $
+	\vfill
+	\item $\ds \bigcap_{\alpha \in [0,1]} A_\alpha \: = $
+	\vfill
+	\ee
+\item For each $i \in I,$ $A_i$ is a set. Suppose $J \subseteq I.$
+	\begin{enumerate}
+	\item Draw a Venn diagram of sets $I$ and $J.$
+	\vfill
+	\item Is it possible to determine the relationship between:
+		\be
+		\item $\ds \bigcup_{i \in I} A_i $ and $\ds \bigcup_{j \in J} A_j$? Explain.
+		\vfill 
+		\item $\ds \bigcap_{i \in I} A_i $ and $\ds \bigcap_{j \in J} A_j$? Explain.
+		\vfill
+		\ee
+	\ee
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
