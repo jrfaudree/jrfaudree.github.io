@@ -1,0 +1,155 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Homework},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\ds}{\displaystyle}
+
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{HW 3}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\quad \\
+
+\begin{center} {\huge{Homework 3}} \end{center}
+
+\hrulefill
+
+Section 1.7 Venn Diagrams: \#4, A, 12 \\
+For 12, try to make it simple!
+
+\be
+\item[A.]
+	\be
+	\item[a.] Draw a Venn diagram for the set $(A-B) \cup C$
+	\item[b.] Draw a Venn diagram for the set $A-(B \cup C)$
+	\item[c.] Explain what the Venn diagrams in \#4 (above) and parts (a) and (b) indicate.
+	\ee
+\ee
+
+\hrulefill
+
+Section 1.8 \#1, 4, ,6, 8, 9, 10, A, B
+
+\be
+\item[A.] Let $A_n= \left( \frac{-1}{n}, \frac{1}{n} \right) \sse \R$ for $n \in \N.$ (For clarity, $A_n$ is an \textbf{interval} on the real line, not a point in the $xy$-plane.) Determine $\ds \bigcup_n^\infty A_n $ and $\ds \bigcap_n^\infty A_n $
+
+\item[B.] Let $A_\alpha= \R - \alpha$ for $\alpha \in [0,1].$ Determine $\ds \bigcup_n^\infty A_n $ and $\ds \bigcap_n^\infty A_n $ 
+
+\ee
+
+\hrulefill
+
+Section 2.2 And, Or, or Not
+
+Translate each sentence to logical symbols by reducing chunks of the language to symbolic statements (like $P$, $Q$, $R$) and using $\vee,$ $\wedge$ or $\sim.$ An example is below.
+
+\begin{quote} \textbf{Sentence:} The integer $n$ is divisible by the first three primes.\\
+\textbf{Answer:} Let $P(n)= n$ is divisible by 2, $Q(n)= n$ is divisible by 3, and $R(n)= n$ is divisible by 5. Now, the statement becomes $P(n) \wedge Q(n) \wedge R(n).$
+\end{quote} 
+	\be
+	\item The function $f(x)$ is continuous but not differentiable.
+	\item At least one of $x$ or $y$ is equal to zero.
+	\item Each of the functions $f(x), g(x)$ and $h(x)$ contains the point $(1,2).$
+	\ee
+
+\hrulefill
+
+Section 2.3 Conditional Statements \#1-7, A, B, C, D
+
+The directions for problems 1-7 apply for problems A, B, C, D
+
+\be
+\item[A.] For the integer to be even, it is sufficient that the integer is greater than 5.
+\item[B.] For the bird to be black, it is necessary that the bird is a raven.
+\item[C.] Whenever a series converges, the ratio test will give a value greater than 1. 
+\item[D.] Luna will eat a treat only if today is Tuesday.
+\ee
+
+\hrulefill
+
+Section 2.4 Biconditional Statements \#3,4
+
+\hrulefill
+
+Section 2.5 Truth Tables for Statements \#1,2,3,4,7,10,11
+
+\hrulefill
+
+Section 2.6 Logical Equivalence \# 5,7, 10*, 11*, 12*
+
+* Note: The directions use the word "Decide..." The expectation is that you determine whether or not the statements are logically equivalent \emph{and} rigorously justify your conclusion.
+
+
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
