@@ -1,0 +1,197 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Notes for Worksheet 5: \S 2.4-2.6}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\be
+\item The Biconditional\\
+
+Suppose $P$ and $Q$ are statements. Then the statement $P$ if and only if $Q$ (symbolically $P \Leftrightarrow Q$ should be true if
+\begin{itemize}
+\item (in words) $P$ and $Q$ have the same truth value -- so both true or both false.
+\item (truth table)
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	$P$ & $Q$ & $P \Leftrightarrow Q$ \\
+	\hline
+	T & T & T  \\
+	T & F & F \\
+	F & T & F  \\
+	F & F & T \\
+	\hline
+	\end{tabular}
+\end{center}
+\end{itemize}
+\item Examples: \\
+\begin{enumerate}
+\item R: $ab=0$ if and only if $a=0$ or $b=0$ (true for real numbers)
+\item S: $f$ is differentiable if and only if $f$ is continuous (false, in general)
+\end{enumerate}
+\item Logical Equivalence
+
+Two (compound) statements are (logically) equivalent if they have the same truth value for all possible truth values of the ``input" statements. 
+
+\item Claim: $\sim ( P \vee Q)$ is equivalent to $\sim P \wedge \sim Q$\\
+
+\textbf{Proof:} Construct a truth table.
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+	\hline
+	1&2&3&4&5&6&7\\
+	$P$ & $Q$ & $P \vee Q$ & $\sim ( P \vee Q)$ & $\sim P$ & $\sim Q$ & $\sim P \wedge \sim Q$\ \\
+	\hline
+	T & T & T &F&F& F&F\\
+	T & F & T&F&F&T&F \\
+	F & T & T &F &T&F&F\\
+	F & F & F&T &T&T&T\\
+	\hline
+	\end{tabular}
+\end{center}
+ Since 4 and 7 have the same truth values, $\sim ( P \vee Q)$ is equivalent to $\sim P \wedge \sim Q.$\\
+ 
+ \textbf{Think about what this means in words}: The truth value of the three statements below are the same.\\
+
+\begin{quote}
+(1) It is not the case that $x \geq 2$ or that $x \leq 5.$\\
+
+(2) $x \not\geq 2$ and $x \not\leq 5.$\\
+
+(3) $x < 2$ and $x > 5.$\\
+
+\end{quote}
+
+\item Claim: $P \vee (Q \wedge R)$ is \emph{not} equivalent to $(P\vee Q) \wedge R$
+
+Option 1: Make a truth table and show that the columns are different in some particular row.\\
+
+Option 2: Find (via intuition or a truth table) some particular truth values for which the expressions are different. 
+
+\textbf{Proof:} Suppose $P$ is true but $Q$ and $R$ are both false. Then the statement $P \vee (Q \wedge R)$ is true because $P$ is true. But the statement $(P\vee Q) \wedge R$ is false because $R$ is false. Since the expressions do not have the same truth values, they cannot be logically equivalent.
+
+ \ee
+ \end{document} 
+ \item Claim: $P \Rightarrow Q$ is equivalent to $\sim P \vee Q$
+ 
+
+\textbf{Proof:} Construct a truth table.
+
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	1&2&3&4&5\\
+	$P$ & $Q$ & $P \Rightarrow Q$ &  $\sim P$ &  $\sim P \vee  Q$\ \\
+	\hline
+	T & T & T &F& T\\
+	T & F & F&F& F\\
+	F & T & T &T& T\\
+	F & F & T&T&T\\
+	\hline
+	\end{tabular}
+\end{center}	
+
+ Since 3 and 5 have the same truth values, $P \Rightarrow Q$ is equivalent to $\sim P \vee Q$\\
+ 
+ \textbf{Think about what this means in words}: The truth value of the two sentences below are the same.\\
+
+\begin{quote}
+If $f'(a)=0$, then $f(a)$ is a maximum.\\
+
+$f'(a) \not = 0$ or $f(a)$ is a maximum.\\
+
+\end{quote}
+ 
+ \item Claim: $\sim(P \Rightarrow Q)$ is equivalent to $P \wedge \sim Q$
+ 
+ Option 1: A truth table.\\
+ 
+ Option 2: An direct argument structured by starting with one and, using and stating established rules, manipulate it to become the other.
+ 
+ \textbf{Proof:}
+ 
+ \begin{tabular}{rlr}
+ $\sim(P \Rightarrow Q)$ & $=\sim( \sim P \vee Q)$ & by previous problem (\# 6 above)\\
+ & $= \sim(\sim P) \wedge \sim Q$ & by DeMorgan's Laws (see \#5 above)\\
+ & $= P \wedge \sim Q$ & by the definition of negation\\
+ \end{tabular}
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

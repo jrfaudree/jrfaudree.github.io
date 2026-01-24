@@ -1,0 +1,276 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 4: \S 2.1-2.3}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\be
+\item Suppose $P$ and $Q$ are true and $R$ and $S$ are false. Determine the truth value of each logical statement below. Think about how you can write down your reasoning or your work.
+	\be
+	\item $(P \vee Q) \wedge (R \vee S)$\\
+	
+	$=(T \vee T) \wedge (F \vee F)\\ = T \wedge F\\=F$
+	\vfill
+	\item $(P \vee R) \Rightarrow (Q \wedge S)$\\
+	
+	$=(T \vee F)\Rightarrow (T \wedge F)\\=T \Rightarrow F\\ = F$
+	\vfill
+	\item $((P \wedge \sim P) \Rightarrow S) \Rightarrow Q$\\
+	
+	$=((T \wedge F) \Rightarrow F) \Rightarrow T \\= (F \Rightarrow F) \Rightarrow T \\= T \Rightarrow T \\= T$
+	\vfill
+	\ee
+\item For each sentence below, write its logical structure in symbols. Make sure to clarify which words are associated with which letters. Hint: All but (b) and (c) are conditional statements.
+	\be
+	\item Differentiability is sufficient for continuity. \\
+	
+	Differentiability implies continuity or 
+	
+	\fbox{$P \Rightarrow Q$ where $P$ is differentiability and $Q$ is continuity.}\\
+	
+	\textbf{Sufficient conditions are hypotheses.}
+	
+	\vfill
+	\item At least one of $a$ or $b$ is an integer.\\
+	
+	$a \in \Z$ or $b \in \Z$\\
+	
+	\fbox{$P \vee Q$ where $P$ is $a \in \Z$ and $Q$ is $b \in \Z$}\\
+	
+	\vfill
+	\item Both $A$ and $B$ are subsets of $C.$
+	
+	$P \wedge Q$ where $P$ is $A \sse C$ and $Q$ is $B \sse C.$\\
+	\vfill
+	\item The grass is green whenever the sky is blue.\\
+	
+	Equivalently: If the sky is blue, then the grass is green. \\
+	
+	\fbox{$P \Rightarrow Q$ where $P$ is the sky is blue and $Q$ is grass is green.}\\
+
+	\vfill
+	\item My car turns on only if it's a leap year.\\
+	
+	Equivalently: If my car turns on, then it's a leap year.\\
+	$P \Rightarrow Q$
+	\vfill
+	\item It is a Monday provided the door is open.\\
+	
+	Equivalently: If the door is open, then it is a Monday. 
+	$P \Rightarrow Q$
+	\vfill
+	\item Warm bread is necessary for cold water.\\
+	
+	Equivalently: If the water is cold then the bread is warm.\\
+	$P \Rightarrow Q$
+	\vfill
+	\ee 
+\ee
+
+\newpage
+\begin{center} Jill's Notes \end{center}
+The purpose of Chapter 2 is to rigorously define and understand the underlying logical structure of sentences and arguments written in words. We want to be able to:
+\begin{itemize}
+\item Go back and forth between English and logical symbols
+\item How to determine the truth value of very complicated statements
+\item How to determine whether an argument is logically sound and, if not, identify the error.
+\end{itemize}
+
+\be
+\item (2.1) A \textbf{statement} is an assertion (sentence, mathematical expression) that is true or false, typically denoted with capital letters, $P$, $Q$, $R$, etc.\\
+Some examples and non-examples below. 
+	\be
+	\item $2 \geq 1$ \textcolor{red}{A statement that is true.}
+	
+	\item $f(x) = 1/x$ is continuous on $(-\infty, \infty)$ \textcolor{red}{A statement that is false.}
+	
+	\item $ax^2+bx +c$ \textcolor{red}{Not a statement.}
+	
+	\item If $f(x)$ is differentiable, then $f(x)$ is continuous. \textcolor{red}{A statement that is true.}
+	
+	\item $\Z \sse \N.$ \textcolor{red}{A statement that is false.}
+
+	\ee
+\item (2.2 and 2.3) New Statements from Old
+	\begin{itemize}
+	\item Consider some ways to combine statements into more complicated statements.
+	\item Determine truth value of the combined statement based on the truth values of its (simpler, not compound) statements.
+	\item How to use a truth table to define/communicate truth values.
+	\end{itemize}
+\item Some examples to think about intuitively. The goal here is to see that the definitions we are about to state are intuitive.
+	\be
+	\item \textbf{OR}: \\
+	P or Q \\
+	$P \vee Q$\\
+	Examples (\textcolor{red}{Should $R, S, T, U$ be true or false?})\\
+	 R: $\Z \sse \N$ or $\N \sse \Z.$ (true) \\
+	 S: $2$ is odd or $2$ is negative. (false)\\
+	 T: $2 \in \N$ or $2 \in \R$. (true) \\
+	 U: Today I will ski or go to the gym.\\
+	 You are intuiting a definition. 
+	\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	$P$ & $Q$ & $P \vee Q$ \\
+	\hline
+	T & T & T  \\
+	T & F & T \\
+	F & T & T  \\
+	F & F & F \\
+	\hline
+	\end{tabular}
+	
+	\end{center}
+	
+	\vfill
+	
+	\item \textbf{AND}: P and Q , $P \wedge Q$\\
+	Examples (\textcolor{red}{Should $R, S, T, U$ be true or false?})\\
+	 R: $\Z \sse \N$ and $\N \sse \Z.$ (false) \\
+	 S: $2$ is odd and $2$ is negative. (false)\\
+	 T: $2 \in \N$ and $2 \in \R$. (true) \\
+	 U: Today I will ski and go to the gym.\\
+	 You are intuiting a definition. 
+	\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	$P$ & $Q$ & $P \wedge Q$ \\
+	\hline
+	T & T & T  \\
+	T & F & F \\
+	F & T & F \\
+	F & F & F \\
+	\hline
+	\end{tabular}
+	
+	\end{center}
+	
+	\vfill
+
+	\item \textbf{NOT}: not P , $\sim P $\\
+	Examples (\textcolor{red}{Should $R, S, T, U$ be true or false?})\\
+	 R: $\sim(\N \sse \Z)$ which could also be $ \N \not\sse \Z$  (false) \\
+	 S: $\sim$($2$ is odd) which could be written $2$ is even (true)\\
+	 U: ''It is not the case that today I will ski." or, less awkwardly, ``I will not ski today."\\
+	 You are intuiting a definition. 
+	\begin{center}
+	\begin{tabular}{|c|c|}
+	\hline
+	$P$ & $\sim P$ \\
+	\hline
+	T & F  \\
+	F & T  \\
+	\hline
+	\end{tabular}
+	
+	\end{center}
+	Observe this means that if statement $P$ is not true, it must be false; and if $P$ is not false, it must be true.\\
+	\vfill
+
+	\item \textbf{Conditional}: \\
+	 If P, then Q \\
+	 $P \Rightarrow Q$\\
+	Examples (\textcolor{red}{Should $R, S, T$ be true or false?})\\
+	 R: If $x \leq 5,$ then $x \leq 10.$ (true)\\
+	 S: If $x \in \R,$ then $x \leq x^2.$ (false, take $x= 0.5$)\\
+	 U: If I walk, then I'll be late.\\
+	 U': If I have wings, then I'll fly. (vacuously true)\\ 
+	 T: If $ \pi \in \Z$, then $2 \pi$ is even. (vacuously true)\\
+	 You are intuiting a definition. 
+	\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	$P$ & $Q$ & $P \Rightarrow Q$ \\
+	\hline
+	T & T & T  \\
+	T & F & F \\
+	F & T & T  \\
+	F & F & T \\
+	\hline
+	\end{tabular}
+	
+	\end{center}
+	
+	\vfill
+ 
+	\ee
+
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
