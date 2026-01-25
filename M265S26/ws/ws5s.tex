@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 5: \S 2.4-2.6}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+Jill's Solutions
+\be
+\item Review:
+	\be
+	\item Fill out the truth table for the biconditional statement.
+	\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline
+	$P$ & $Q$ & $P \Leftrightarrow Q$ \\
+	\hline
+	T & T &  T \\
+	T & F &  F\\
+	F & T & F  \\
+	F & F & T \\
+	\hline
+	\end{tabular}
+	\end{center}
+	
+	\item For \emph{objects} $A$ and $B$, how could you show that the statement below was \emph{false}.
+	\begin{quote} $AB=0$ if and only if $A=0$ or $B=0.$ \end{quote}
+	\vfill
+	\textbf{ans} Find two objects $A$ and $B$ such that $AB=0$ and $A \not 0$ and $B \not 0$. Thus, $P: AB=0$ is true and $Q: A=0 \vee B=0$ is false.\\
+	
+	FYI: The biconditional statement is true for real numbers but false, in general, for matrices, modular arithmetic, and many other mathematical objects.
+	
+	\item Fill out DeMorgan's Laws\\
+	\begin{quote} 
+	$\sim (P \vee Q)$ is equivalent to $\sim P \: \wedge \: \sim Q$ \\
+	
+	\vspace{.2in}
+	
+	$\sim (P \wedge Q)$ is equivalent to $\sim P \: \vee \: \sim Q$ \\
+	\end{quote}
+	
+	\ee
+ \item Use a truth table to demonstrate that \fbox{$P \Rightarrow Q$} is equivalent to \fbox{$\sim P \vee Q$}.
+\vfill
+\begin{center}
+	\begin{tabular}{|c|c|c|c|c|}
+	\hline
+	1&2&3&4&5\\
+	$P$ & $Q$ & $P \Rightarrow Q$ &  $\sim P$ &  $\sim P \vee  Q$\ \\
+	\hline
+	T & T & T &F& T\\
+	T & F & F&F& F\\
+	F & T & T &T& T\\
+	F & F & T&T&T\\
+	\hline
+	\end{tabular}
+\end{center}	
+We see that \fbox{$P \Rightarrow Q$} is equivalent to \fbox{$\sim P \vee Q$} because columns 3 and 5 are the same.\\
+\item Use the equivalence above to rewrite the conditional statement in an equivalent form.
+
+\begin{quote}
+If $f'(a)=0$, then $f(a)$ is a maximum.\\
+
+$f'(a) \not = 0$ or $f(a)$ is a maximum.\\
+
+\end{quote}
+
+ \vfill
+ \item Prove that  \fbox{$\sim(P \Rightarrow Q)$} is equivalent to \fbox{$P \wedge \sim Q$} by constructing a string of logical equivalences that start with $\sim(P \Rightarrow Q)$ and end with $P \wedge \sim Q.$ Each step must be justified by a specific, already established and referenced, logical equivalence.\\
+ 
+
+ 
+ \textbf{Proof:} \\
+ 
+ \begin{tabular}{rlr}
+ $\sim(P \Rightarrow Q)$ & $=\quad \sim( \sim P \vee Q)$ & by previous problem (\# 2 above)\\
+ & $=\quad \sim(\sim P) \wedge \sim Q$ & by DeMorgan's Laws (see \#1c above)\\
+ & $=\quad P \wedge \sim Q$ & by the definition of negation\\
+ \end{tabular}
+
+\vfill
+
+\item Think up your own favorite conditional statement that you know is \textbf{false.} Call this statement $R. $ (So, $R: P \Rightarrow Q.$ )
+	\begin{enumerate}
+	\item Write $R$ as a sentence.\\
+	
+	\textbf{ans:} If $x^2 \geq 0$, then $x \geq 0.$
+	\vfill
+	\item Write \fbox{$\sim R$} as a sentence using both logical structures: \fbox{$\sim(P \Rightarrow Q)$} and \fbox{$P \wedge \sim Q$}.\\
+	
+	\textbf{ans:} \\
+	
+	$\sim (P \Rightarrow Q) :$ It is not the case that if $x^2 \geq 0$, then $x \geq 0.$\\
+	
+	$P \wedge \sim Q:$ It is possible for $x^2 \geq 0$ and $x < 0.$
+	
+	\vfill
+	\end{enumerate}
+ 
+
+\item What ideas/concepts/skills do you think this worksheet was supposed to teach you?\\
+\begin{itemize}
+\item There are two ways to show two statements are logically equivalent: (1) a truth table or (2) an argument. If you use option (2) you need to use a rigid and carefully justified argument.
+\item The facts: \fbox{$P \Rightarrow Q=\sim P \vee Q$} and \fbox{$\sim(P \Rightarrow Q)=P \wedge \sim Q$} are facts you should know because they get used a lot. One of the reasons is because it is sometimes easier to see (prove) a statement in its alternative form.
+\end{itemize}
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
