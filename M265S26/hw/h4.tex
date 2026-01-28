@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Homework},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\ds}{\displaystyle}
+
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{HW 4}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\quad \\
+
+\begin{center} {\huge{Homework 4}} \end{center}
+
+\hrulefill
+
+Section 2.7 Quantifiers: \#1-10\\
+
+\hrulefill
+
+Section 2.9 \# 1-7, 9,10\\
+
+\hrulefill
+
+Section 2.10 \# 1-6, 8-10\\
+
+\hrulefill
+
+Section 2.11 \# A, B, C, D\\
+
+\textbf{Directions:} For several problems you are asked to \emph{write an argument in English.} In all cases, you are expected to use only complete sentences. You should use correct grammar and punctuation. Moreover, every sentence must begin with an English word and cannot begin with a symbol. So, a sentence that begins, ``There exists ..." is OK. A sentence that begins ``$\exists$..." is not. A sentence that begins "Observe the function $f(x) >0,$..." is OK. A sentence that begins ``$f(x) >0$..." is not.
+
+\be
+\item[A.] Use a truth table to show that the argument below is valid.
+
+\begin{tabular}{l}
+$P \Rightarrow Q$\\
+$Q \Rightarrow R$\\
+\hline
+$P \Rightarrow R$\\
+\end{tabular} 
+\item[B.]
+	\be
+	\item[i.] Show that the argument below is an invalid argument by finding truth values for $P$ and $Q$ that demonstrate this.\\
+	
+	\begin{tabular}{l} $P \vee Q$\\ $P$ \\ \hline $\sim Q$ \end{tabular} \\
+	\item[ii.] Write an argument in English with the logical structure in part (i.) and then show that the conclusion is false. \\
+	Example English Argument (that you cannot use): Every student in Introduction to Proofs has also passed Calculus 2 or Linear Algebra. Jane Doe passed Calculus 2. Thus, Jane Doe did not pass Linear Algebra. 
+	\ee
+\item[C.] 
+	\be
+	\item[i.] Construct an \textbf{open, conditional statement}, $P(x) \Rightarrow Q(x)$, that you know to be true. This statement should be written as a sentence in English, but its content should be mathematical. \\
+	Example (that you cannot use): If $f(x)$ is differentiable on $\R$, then $f(x)$ is continuous on $\R.$\\
+	\item[ii.] Using your statement from part (i.), make an argument in English using Modus Ponens.\\
+	Example: If $f(x)$ is differentiable on $\R$, then $f(x)$ is continuous on $\R.$ We know the function $f(x)=x^2$ is differentiable on $\R$ since its derivative is $f'(x)=2x$ is defined on all of $\R.$ Thus, we an conclude that the function $f(x)=x^2$ is continuous on $\R.$\\
+	\item[iii.] Using your statement from part (i.), make an argument in English using Modus Tollens. \\
+	Example: If $f(x)$ is differentiable on $\R$, then $f(x)$ is continuous on $\R.$ We know the function $h(x)=\lfloor x \rfloor$ fails to be continuous at every integer. (FYI $h(x)$ is called the \emph{floor} function or the ``always round down" function. Its graph looks like a ``stair steps.") Thus, we can conclude that $h(x)$ is not differentiable on $\R.$
+	\ee
+\item[D.] Make an argument in English that the number 20 is composite using the logical structure of Elimination and exactly two facts.\\
+Fact 1: Every integer larger than 1 is either prime or composite.\\
+Fact 2: An integer larger than 1 is prime if its only divisors are 1 and itself.\\
+Observe that the definition of \emph{composite} is not given.\\
+
+\ee
+
+
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
