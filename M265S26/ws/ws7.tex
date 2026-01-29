@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 7: \S 2.9-2.10}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\be
+\item Review
+	\be
+	\item $\sim \big( \forall n \in \N, \: 2n^2-n \geq 1 \big)$
+	\vfill
+	\item $\sim \big( \exists n \in \N, \: 2n^2-n > 10 \big)$
+	\vfill	
+	\ee
+\item From the previous sheet:
+	\be[leftmargin=0.5cm]
+	\item[d.] There are squares with integer values for the sides and the diagonals.
+	
+	$$ \exists \text{ squares with side } s \text{ and  diagonal } d, \big( s \in \Z \land d \in \Z \big)$$
+	We concluded it was false. What do we need to show?\\
+	\vfill
+	\vfill
+	\item[e.] Every integer that is not positive must be negative.
+	$$ \forall n \in \N, \: \sim \big( n>0)\: \Rightarrow \: (n<0)$$
+	We concluded it was false. What do we need to show?\\
+	\vfill
+	\item[g.] For every quadratic polynomial $p(x)$, there is some real number $a$, where $a$ is a root of $p(x).$
+	$$ \forall p(x) \in \mathbb{P}_2(x),\: \exists a \in \R,\: p(a)=0, \quad \text{ where } \mathbb{P}_2(x) \text{ is the set of degree 2 polynomials} $$
+	We concluded it was false. What do we need to show?\\
+	\vfill
+	\ee
+\newpage
+\item Logical Inference: \\
+\vfill
+\item Modus Ponens\\
+\vfill
+\item The most common fallacy (invalid argument): 
+\vfill
+\newpage
+\item For each argument below, (a) determine whether it is valid or invalid, (b) write an argument in English that models the logical structure of the argument.
+	\be
+	\item \begin{tabular}{l} $ P \: \Rightarrow \: Q$ \\ $\sim P$ \\ \hline $\sim Q$ \end{tabular}
+	
+	\vfill
+	\item \begin{tabular}{l} $ P \: \Rightarrow \: Q$ \\ $\sim Q$ \\ \hline $\sim P$ \end{tabular}
+	
+	\vfill
+	\item \begin{tabular}{l} $ P \: \vee \: Q$ \\ $\sim P$ \\ \hline $ Q$ \end{tabular}
+	\vfill
+	\ee
+\newpage
+\item Show that \fbox{$ P\: \Rightarrow \: Q$} is logically equivalent to \fbox{$\sim Q\: \Rightarrow \:\sim P.$} (Note: $\sim Q \Rightarrow \sim P$ is called the \textbf{contrapositive} of $ P \Rightarrow Q.$)
+\vfill
+\item Rewrite each theorem below with its equivalent contrapositive statement. Note that the ``Let..."  sentence does not change.
+	\be
+	\item If two sides of a triangle are congruent (aka of equal length), then the two angles opposite those sides are congruent (aka are equal in measure).
+	\vfill
+	\item Let $f(x)$ be defined on the interval $[a,b].$ If $f(x)$ is continuous on $[a,b]$, then for every $y$-value, $y_0,$ strictly between $f(a)$ and $f(b)$ there exists an $x$-value, $x_0,$ in $(a,b)$ such that $f(x_0)=y_0.$\\
+	\vfill
+	\ee
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
