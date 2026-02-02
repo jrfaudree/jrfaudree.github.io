@@ -1,0 +1,140 @@
+% Header and Set up
+\documentclass[11pt]{report}
+
+% List of packages
+\usepackage{geometry,
+amsmath,
+amssymb,
+amsthm,
+xcolor,
+setspace}
+
+% Set page formatting
+\geometry{margin=1.in}
+\doublespacing
+
+% newcommands
+\newcommand{\ans}{\textit{Answer:}}
+
+%Document Starts
+\begin{document}
+
+%Your Name
+\hfill Your Name Here
+
+%Today's Date
+\hfill \today
+
+% Homework Information
+% Centered
+\begin{center}
+Math 265\\
+ Homework \#500\\
+ due 1/11/2026
+\end{center}
+
+% Problems Start
+\begin{description}
+% First Problem Statement
+\item{\fbox{\textbf{\S 4.1, \#3:}}\:} Evaluate $\int_1^2 \frac 1 {x^2} \, dx.$
+
+% Solution to First Problem Statement
+\ans
+
+$$\int_1^2 \frac 1 {x^2} \, dx=\int_1^2 x^{-2} \, dx=-x^{-1} \Big |_1^2=-\frac 12+1=\frac 12$$
+
+% Space between problems
+\vspace{1in}
+
+% Second Problem Statement
+\item{\fbox{\textbf{\S 4.2, \#17}}\: } Prove $\sqrt 2$ is irrational.
+
+% Proof for Second Problem
+\begin{proof}
+Suppose, to the contrary, that $\sqrt 2$ is rational. Then
+$$\sqrt 2=\frac ab$$
+where $a,b\in \mathbb Z$, $b\not = 0$ with $a,b$ having no common factors. Squaring yields
+$$2=\frac {a^2}{b^2},$$
+so
+$$2b^2=a^2.$$
+This shows 2 divides $a^2$, and so since 2 is prime by a lemma proved in class, we see 2 divides $a$. Letting $a=2c$ for some $c\in \mathbb Z$, this implies
+$$2b^2=4c^2,$$ so
+$$b^2=2c^2.$$
+Now the same argument as above, but with $b,a$ replaced by $c,b$, shows 2 divides $b$. Therefore 2 divides both $a$ and $b$. But this contradicts that $a,b$ had no common factors.
+\end{proof}
+
+% Space between problems
+\vspace{1in}
+
+
+
+% Third Problem
+\item[{\fbox{\textbf{\S 4.2, \#18}}\: }] Find the product of $x$ and $y$ supposing that both are odd. \\
+\textcolor{red}{This shows you an aligned string of equations.}
+
+
+%note that "align" automatically puts you in math mode -- no need for $$... $$
+\begin{align*}
+xy&=(2a+1)(2b+1)\\
+&=(2a)(2b)+(2a)(1)+1(2b)+1(1)\\
+&=4ab+2a+2b+1\\
+&=2(2ab+a+b)+1\\
+&=2k+1,
+\end{align*}
+
+\textcolor{red}{This shows you an aligned string of equations with justifications.}
+
+
+%note that "align" automatically puts you in math mode -- no need for $$... $$
+\begin{align*}
+xy&=(2a+1)(2b+1) && \text{$a$, $b$ integers, (by definition of odd)}\\
+&=(2a)(2b)+(2a)(1)+1(2b)+1(1)&& \text{(expanding binomial multiplication)}\\
+&=4ab+2a+2b+1&& \text{(simplifying)}\\
+&=2(2ab+a+b)+1&& \text{(factoring out a 2)}\\
+&=2k+1,&& \text{($k=2ab+a+b$)}\\
+\end{align*}
+
+% Space between problems
+\vspace{1in}
+
+% Fourth Problem
+\item[{\fbox{\textbf{\S 4.2, \#19}}\: }] Make a table of useful \LaTeX symbols.
+
+% An example table
+\begin{tabular}{ | c || c | c |c|}
+\hline
+words& what you type into \LaTeX & what appears in the PDF & example\\
+\hline \hline
+is an element of & \textbackslash in & $\in$ & $x \in \mathbb{R}$ \\
+\hline
+is not an element of & \textbackslash not \textbackslash in & $\not\in$ & $x \not\in \mathbb{R}$ \\
+\hline
+is a subset of & \textbackslash subseteq & $\subseteq$ & $\mathbb{Q} \in \mathbb{R}$ \\
+\hline
+for all & \textbackslash forall & $\forall$ & $\forall x \in \mathbb{R}$\\
+\hline
+there exists & \textbackslash exists &$\exists$&\\
+\hline
+logical and& \textbackslash land &$\land$&\\
+\hline
+logical or& \textbackslash lor &$\lor$&\\
+\hline
+logical negation & \textbackslash sim &$\sim$&\\
+\hline
+subscript& A\_2 &$A_2$&\\
+\hline
+superscript& x\^{}2&$x^2$&\\
+\hline
+number sign & \textbackslash\# &$\#$&\\
+\hline
+ampersand& \textbackslash\& &$\&$&\\
+\hline
+new line & \textbackslash cr \: or \: \textbackslash\textbackslash&&\\
+\hline
+backslash & \textbackslash textbackslash &\textbackslash&\\
+\hline
+\end{tabular}
+
+\end{description}
+
+\end{document}
