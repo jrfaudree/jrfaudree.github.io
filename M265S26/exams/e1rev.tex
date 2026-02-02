@@ -1,1 +1,144 @@
+\documentclass[12pt]{article}
 
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Exam 1 Review}}
+\rhead{\large\sf\textbf{Spring 2026}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+\begin{document}
+\thispagestyle{fancy}
+
+Exam 1 will be on Friday 6 February during our regular class time. So you will have one hour to complete the exam. Notes, books and other aids are not allowed.\\
+
+\begin{center} Chapter 1: Sets\end{center}
+Section 1
+\begin{itemize}
+\item Terms to know: element of a set, cardinality of a set, set builder notation, natural numbers, integers, rational numbers, real numbers, interval notation
+\item Symbols to know $\NN,\: \ZZ,\: \QQ, \RR, \in$ and basic set notation
+\item You should know how to go back and forth between different kinds of set notation.
+\end{itemize}
+Section 2
+\begin{itemize}
+\item terms to know: ordered pair, Cartesian product, ordered $n$-tuple
+\item symbols to know: $A \times B$
+\item You should know how to count the number of elements in $A \times B$ provided $A$ and $B$ are finite.
+\item Know how to sketch $A \times B \subseteq \RR \times \RR$
+\end{itemize}
+Sections 3 and 4
+\begin{itemize}
+\item terms to know: subset, the power set of a set
+\item symbols to know: $\subseteq$, $\mathcal{P}(A)$
+\item Know how to distinguish between $A \in B$ or $A \subseteq B.$
+\item Know how to determine the cardinality of the power set of a finite set.
+\end{itemize}
+Sections 5 and 6
+\begin{itemize}
+\item Know how to find the union, intersection, and difference of two sets.
+\item symbols to know: $\cup, \: \cap, \: -$ and $\overline{A}$.
+\item Know how to find the complement of a set.
+\end{itemize}
+Section 7
+\begin{itemize}
+\item Know now to draw and to read a Venn diagram.
+\end{itemize}
+Section 8
+\begin{itemize}
+\item terms to know: indexed sets
+\item notation to know: $\displaystyle{\bigcup_{i \in I} A_i}$, $\displaystyle\bigcap_{i \in I} A_i$
+\end{itemize}
+
+\begin{center} Chapter 2: Logic \end{center}
+
+\begin{itemize}
+\item terms to know: statement, the mathematical meaning of \emph{and, or} and \emph{not}, truth table, conditional statement, biconditional, quantifiers
+\item symbols to know: $\vee,\: \wedge,\: \sim,\: \Leftarrow, \: \Leftrightarrow, \: \forall, \: \exists$
+\item You need to be familiar with \emph{alternate} formulations of these logical statements in English. (See especially the bottom of page 44.) You should be able to go back and forth between a compound statement in English and one in symbolic logic.
+\item Know how to decide if a statement with \emph{and}, \emph{or} or \emph{not} is true or false.
+\item Know how to decide if a conditional, biconditional, or quantified statement is true or false.
+\item Know how to determine if two statements are logically equivalent or not.
+\item Know DeMorgan's Laws (page 51).
+\item Know how to determine if an argument is or is not valid.
+\end{itemize}
+\end{document}
+
+\begin{center} Definitions \end{center}
+
+For all of the terms below, you must be able to formally state the definition from your textbook. 
+\be
+\item odd, even, same parity, opposite parity
+\item divides, multiple, divisor
+\item prime
+\item greatest common divisor, least common multiple
+\item congruent modulo $n$
+\item rational number, irrational number
+\ee
+
+\begin{center} Proof Techniques \end{center}
+\be
+\item direct proof
+\item using cases
+\item by contrapositive
+\item by contradiction
+\ee
+
+\begin{center} Things to Keep in Mind \end{center}
+\be
+\item If a proof technique is not prescribed, you MUST state the method you are using.
+\item You should put in the ``boiler-plate'' language even if you cannot figure out the whole proof.
+\item You should expect to \emph{use} all of the hypotheses.
+\item I will \emph{not} ask you to prove something that is false.
+\ee
+\end{document}
