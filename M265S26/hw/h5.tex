@@ -1,0 +1,155 @@
+\documentclass[11pt]{report}
+
+%packages
+\usepackage{geometry,amsmath,amssymb,amsthm}
+
+%This is to give color.
+\usepackage{xcolor}
+
+\geometry{margin=1.in}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+%%%%%%%
+% Document Begins
+%%%%%%%%
+\begin{document}
+\hfill Math 265
+
+%%% Your Name goes HERE
+\hfill \textbf{YOUR NAME}
+
+\hfill \today
+
+\begin{center}
+\Large{\textbf{Homework \# 5}} \\
+Due: Wednesday 02/11/2026\\
+See \emph{Help} section at the end\\
+\end{center}
+\begin{enumerate}
+%% Problem 1
+\item[{\fbox{\textbf{Problem 1: }}}] Using symbolic logic, write the logical structure of the sentence below.\\
+
+\begin{quote} For every real number $x$, if $x>1,$ then $x^2 > x.$ \end{quote}
+
+% Your answer to Problem 1
+\textbf{Answer:} YOUR ANSWER GOES HERE.
+
+% Space between problems
+\vspace{1in}
+
+
+% Problem 2
+\item[\fbox{\textbf{Problem 2: }}] For each problem below, write the English words using symbols in \LaTeX.
+	%subproblems. Note that these are indented for easy identification
+	\begin{enumerate}
+	\item[(a)] The set $A$ is a subset of the set $B.$\\
+	% Your answer to Problem 2a
+	\textbf{Answer:} YOUR ANSWER GOES HERE.
+	% Space between problems
+	\vspace{1in}
+	\item[(b)]  $x$ is not an element of the set $B.$\\
+	% Your answer to Problem 2b
+	\textbf{Answer:} YOUR ANSWER GOES HERE.
+	% Space between problems
+	\vspace{1in}
+	\end{enumerate}
+	
+% Problem 3
+\item[\fbox{\textbf{Problem 3: }}] Let $A=\{a,b,c,d\}$ and $B=\{a,b\}$.
+	\begin{enumerate}
+	\item[(a)] Find $A \cap B.$ (Your answer is a \emph{set}, thus it must be in curly brackets: $\{$ and $\}$.\\
+	% Your answer to Problem 3a
+	\textbf{Answer:} YOUR ANSWER GOES HERE.
+	% Space between problems
+	\vspace{1in}
+	\item[(a)] Find $\mathcal{P}(B),$ the power set of $B.$\\
+	% Your answer to Problem 3b
+	\textbf{Answer:} YOUR ANSWER GOES HERE.
+	% Space between problems
+	\vspace{1in}
+	\end{enumerate}
+% Problem 4
+\item[\fbox{\textbf{Problem 4: }}] Write the Pythagorean Theorem as a \emph{displayed} equation. (This means you will write it using \emph{double} dollar signs.)\\
+% Your answer to Problem 3b
+\textbf{Answer:} YOUR ANSWER GOES HERE.
+% Space between problems
+\vspace{1in}
+% Problem 5
+\item[\fbox{\textbf{Problem 5: }}] Simplify the expression $\frac{x^3-2x}{5x-5\sqrt{2}}$ as you would for a student learning Algebra. So you will use a string of \emph{aligned equations with justifications}. The basic structure is provided. \\
+\textbf{Answer:} YOUR ANSWER GOES IN THE ALIGNED EQUATIONS BELOW.
+%note that "align" automatically puts you in math mode -- no need for $$... $$
+% the symbol "&" is used to separate columns
+\begin{align*}
+\frac{x^3-2x}{5x-5\sqrt{2}}&=\frac{x(x^2-2)}{5(x-\sqrt{2})} && \text{factor out common terms}\\
+&=XXXX&& \text{YYYY}\\
+&=XXXX&& \text{YYYY}\\
+\end{align*}
+
+\end{enumerate}
+\newpage
+\begin{center}{\Large{\textbf{Help Section\\ 
+Either delete this section or comment it out (with $\%$) when you submit your final draft}}}\end{center}
+
+
+\begin{tabular}{ | c || c | c |c|}
+\multicolumn{4}{c}{Table of \LaTeX Symbols}\\
+\multicolumn{4}{c}{\quad}\\
+\hline
+words& what you type into \LaTeX & what appears in the PDF & example\\
+\hline \hline
+is an element of & \textbackslash in & $\in$ & $x \in \mathbb{R}$ \\
+\hline
+is not an element of & \textbackslash not \textbackslash in & $\not\in$ & $x \not\in \mathbb{R}$ \\
+\hline
+is a subset of & \textbackslash subseteq & $\subseteq$ & $\mathbb{Q} \in \mathbb{R}$ \\
+\hline
+curly brackets & \textbackslash \{ or \textbackslash \} & $\{$ or $\}$&\\
+\hline
+power set & \textbackslash mathcal\{ P  \}(A) & $\mathcal{P}(A)$&\\
+\hline
+intersection & \textbackslash cap & $\cap$&\\
+\hline
+union & \textbackslash cup & $\cup$&\\
+\hline
+implies & \textbackslash Rightarrow & $\Rightarrow$ & $P \Rightarrow Q$\\
+\hline
+for all & \textbackslash forall & $\forall$ & $\forall x \in \mathbb{R}$\\
+\hline
+there exists & \textbackslash exists &$\exists$&\\
+\hline
+logical and& \textbackslash land &$\land$&\\
+\hline
+logical or& \textbackslash lor &$\lor$&\\
+\hline
+logical negation & \textbackslash sim &$\sim$&\\
+\hline
+subscript& A\_2 &$A_2$&\\
+\hline
+superscript& x\^{}2&$x^2$&\\
+\hline
+dollar sign & \textbackslash\$ &$\$$&\\
+\hline
+number sign & \textbackslash\# &$\#$&\\
+\hline
+ampersand& \textbackslash\& &$\&$&\\
+\hline
+new line & \textbackslash cr \: or \: \textbackslash\textbackslash&&\\
+\hline
+backslash & \textbackslash textbackslash &\textbackslash&\\
+\hline
+square root of 2 & \textbackslash sqrt\{2\} &$\sqrt{2}$&\\
+\hline
+fraction & \textbackslash frac\{A\}\{b\} &$\frac{A}{b}$&\\
+\hline
+real numbers & \textbackslash mathbb\{R\} &$\mathbb{R}$&\\
+\hline
+emptyset & \textbackslash emptyset & $\emptyset$&\\
+\hline
+\end{tabular}
+
+\end{document}
