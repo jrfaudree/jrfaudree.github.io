@@ -1,0 +1,137 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet : Ch 4}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\be
+\item Definitions and Facts
+	\begin{enumerate}
+	\item An integer $n$ is \emph{even} if \\ \vfill
+	\item An integer $n$ is \emph{odd} if\\ \vfill
+	\item Let $a,b \in \Z.$ We say $a$ \emph{divides} $b$ if \\ \vfill
+	Alternate wording: \\ \vfill
+	\quad \\
+	\item A number $n \in \N$ is \emph{prime} if \\ \vfill
+	A number $n \in \N$ is \emph{composite} if \\ \vfill
+	\item Let $a,b \in \Z.$ The \emph{greatest common division of $a$ and $b$} ( denoted $\gcd(a,b)$) is\\ \vfill
+	\item $a,b \in \Z -\{0\}.$ The \emph{least common multiple of $a$ and $b$} (denoted $\lcm(a,b)$) is \\ \vfill
+	\item \emph{Fact 4.1:} If $a,b, \in \Z,$ then $a+b$, $a-b$, and $ab$ are also in $\Z.$ \\ \vfill
+	Alternate wording: \\ \vfill
+	\quad \\
+	\item \emph{The Division Algorithm} For every $a \in \Z$ and $ b \in \N -\{0\},$ there exists unique integers $q$ and $r$ such that  \vfill
+	
+	
+	\vfill 
+	\end{enumerate}
+\item Outline for a \emph{Direct Proof}\\
+
+\fbox{
+\begin{tabular}{l}
+\emph{Proposition:} If $P$, then $Q.$ \\
+\emph{Proof:} (direct) Suppose $P$ (is true). \\
+\quad\\
+$\vdots$\\
+\quad \\
+Thus, $Q$ (is true). \hspace{3cm}$\square$\\
+\end{tabular}
+}
+\newpage
+\item Prove that for every integer $m$, if $n$ is even, then $3n^2 -5mn-8$ is also even.
+
+\vfill
+
+%\item Prove that for all $a,b,c \in \Z,$ $\lcm(ca,cb)=c\cdot \lcm(a,b).$
+\item Let $x,y \in \R^+.$ Prove that if $x \leq y,$ then $\sqrt{x} \leq \sqrt{y}.$
+\vfill
+\item Rigid and Unforgiving Rules
+	\begin{enumerate}
+	\item All parts of all proofs are complete sentences which begin with a word in English and end with a period. No sentence fragments.
+	\item The following symbols never appear: $\forall,$ $\exists$, $\Rightarrow$, $\lor$, $\land$. 
+	\item \emph{All} strings of equalities are aligned vertically, with justification.
+	\end{enumerate}
+\newpage
+\item Let $a,b \in \Z.$ Prove that if $a \big\vert b,$ then $a^2 \big\vert b^2.$
+\vfill
+\item Let $x,y \in \R^+.$ Prove that $\sqrt{xy} \leq \frac{x+y}{2}.$ (Hint at the bottom of the paper.)
+\vfill
+{\scriptsize{Start with what you know about $(x-y)^2.$}}
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
