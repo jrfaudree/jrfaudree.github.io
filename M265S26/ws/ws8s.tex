@@ -1,0 +1,194 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,amsthm,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet : Ch 4}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+Solutions
+\be
+\item Definitions and Facts
+	\begin{enumerate}
+	\item An integer $n$ is \emph{even} if $\exists k \in \Z$, $n=2k.$ \\ \vfill
+	\item An integer $n$  is \emph{odd} if $\exists k \in \Z$, $n=2k+1.$\\ \vfill
+	\item Let $a,b \in \Z.$ We say $a$ \emph{divides} $b$ if $\exists k \in \Z$, $ak=b.$ \\ \vfill
+	Alternate wording: $a$ \emph{is a divisor of} $b$ OR $b$ is \emph{a multiple of} $a$ \\ \vfill
+	
+	\item A number $n \in \N$ is \emph{prime} if  it has exactly two distinct divisors.\\ \vfill
+	A number $n \in \N$ is \emph{composite} if it has more than two distinct divisors. \\ \vfill
+	\item Let $a,b \in \Z.$ The \emph{greatest common division of $a$ and $b$} ( denoted $\gcd(a,b)$) is the largest integer $n$ such that $n|a$ and $n|b.$\\ \vfill
+	\item $a,b \in \Z -\{0\}.$ The \emph{least common multiple of $a$ and $b$} (denoted $\lcm(a,b)$) is the smallest positive integer $n$ such that $a|n$ and $b|n$\\ \vfill
+	\item \emph{Fact 4.1:} If $a,b, \in \Z,$ then $a+b$, $a-b$, and $ab$ are also in $\Z.$ \\ \vfill
+	Alternate wording: The integers are closed under addition and multiplication. \\ \vfill
+	\quad \\
+	\item \emph{The Division Algorithm} For every $a \in \Z$ and $ b \in \N -\{0\},$ there exists unique integers $q$ and $r$ such that
+	$$ a=qb+r, \quad \text{where} \quad 0 \leq r < b.$$  \vfill
+	
+	
+	\vfill 
+	\end{enumerate}
+\item Outline for a \emph{Direct Proof}\\
+
+\fbox{
+\begin{tabular}{l}
+\emph{Proposition:} If $P$, then $Q.$ \\
+\emph{Proof:} (direct) Suppose $P$ (is true). \\
+\quad\\
+$\vdots$\\
+\quad \\
+Thus, $Q$ (is true). \hspace{3cm}$\square$\\
+\end{tabular}
+}
+\newpage
+\item Prove that for every integer $m$, if $n$ is even, then $3n^2 -5mn-8$ is also even.
+
+\begin{proof} (direct) Let $m\in \Z$ and suppose $n$ is even. Then, by the definition of even, there exists an integer $k$ such that $n=2k.$  Let $\ell =  3k^2-5km-4.$\\
+Now, 
+\begin{align*}
+3n^2-5mn-8 & = 3(2k)^2-5(2k)m-8 && \text{by substituting $n=2k$}\\
+ &= 6k^2-10km-8 && \text{by rules of multiplication}\\
+ &=2(3k^2-5km-4) && \text{by factoring out a 2}\\
+ &=2\ell&&  \text{by substituting $\ell =  3k^2-5km-4.$}\\
+\end{align*}
+ By Fact 4.1, since $k$ and $m$ are integers, we know $ 3k^2-5km-4$ is also an integer.  
+ Thus, $3n^2-5mn-8=2 \ell,$ where $\ell \in \Z.$ Thus, $3n^2-5mn-8$ is even by definition.
+\end{proof}
+
+\vfill
+
+%\item Prove that for all $a,b,c \in \Z,$ $\lcm(ca,cb)=c\cdot \lcm(a,b).$
+\item Let $x,y \in \R^+.$ Prove that if $x \leq y,$ then $\sqrt{x} \leq \sqrt{y}.$
+
+Q: Do you think all of the hypotheses are needed?
+
+\begin{proof} (direct) Let $x, y \in \R^+$ such that $x \leq y.$ By subtracting $x$ from both sides, we obtain $0\leq y-x.$ Since $x$ and $y$ are both positive, we know that $\sqrt{x}$ and $\sqrt{y}$ are defined. Thus, we can factor $y-x$ as a difference of squares to get $y-x= (\sqrt{y}+\sqrt{x})(\sqrt{y}-\sqrt{x}).$ 
+
+Using $0\leq y-x$ and $y-x= (\sqrt{y}+\sqrt{x})(\sqrt{y}-\sqrt{x}),$ we conclude $0 \leq (\sqrt{y}+\sqrt{x})(\sqrt{y}-\sqrt{x}).$ 
+
+Since $\sqrt{y}+\sqrt{x}>0,$ we can divide $0 \leq (\sqrt{y}+\sqrt{x})(\sqrt{y}-\sqrt{x})$ by $\sqrt{y}+\sqrt{x}$ to obtain $0 \leq \sqrt{y}-\sqrt{x}.$ By adding $\sqrt{2}$ to both sides of the previous inequality, we obtain $\sqrt{x} \leq \sqrt{y},$ which is what we wanted to prove.  
+\end{proof}
+\vfill
+
+Q: Did we use all the hypotheses?
+
+\vfill
+\item Rigid and Unforgiving Rules
+	\begin{enumerate}
+	\item All parts of all proofs are complete sentences which begin with a word in English and end with a period. No sentence fragments.
+	\item The following symbols never appear: $\forall,$ $\exists$, $\Rightarrow$, $\lor$, $\land$. 
+	\item \emph{All} strings of equalities are aligned vertically, with justification.
+	\item Don't use a fact if you haven't proved it.
+	\end{enumerate}
+	
+\newpage
+\item Let $a,b \in \Z.$ Prove that if $a \big\vert b,$ then $a^2 \big\vert b^2.$
+
+\begin{proof} (direct) Let $a,b \in \Z$ such that $a \big\vert b.$ Then, by the definition of \emph{divides}, there is an integer $k$ such that $ak=b.$ Let  $\ell=k^2.$ Squaring both sides of the previous equation, we obtain  
+
+\begin{align*}
+b^2&=(ak)^2 && \\
+&=a^2(k^2) && \text{ factoring out $a^2$}\\
+&=a^2\ell&&\text{by substituting$\ell=k^2$.} \\
+\end{align*}
+
+Since $b^2 = a^2\ell$ for $\ell \in \Z,$ $a^2 \big\vert b^2$ by the definition of \emph{divides}.
+
+\end{proof} 
+\vfill
+\item Let $x,y \in \R^+.$ Prove that $2\sqrt{xy} \leq{x+y}.$ 
+
+\begin{proof} (direct)  Let $x,y \in \R^+.$ Since $x$ and $y$ are real numbers, we know
+
+$$0 \leq (x-y)^2=x^2-2xy+y^2.$$
+
+If we add $4xy$ to both ends of the inequality above, we obtain
+
+$$4xy \leq x^2+2xy+y^2.$$
+
+Factoring the right-hand side yields
+
+$$4xy \leq (x+y)^2.$$
+
+Since $x$ and $y$ are both positive real numbers, we know that both $4xy$ and $(x+y)^2$ are positive. Thus, we can apply the result from \#4 above and use the fact that $4xy \leq (x+y)^2$ to conclude that $2 \sqrt{xy} \leq x+y,$ which is what we wanted to show.
+
+\end{proof}
+\vfill
+{\scriptsize{Start with what you know about $(x-y)^2.$}}
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
