@@ -1,0 +1,254 @@
+\documentclass[11pt]{article}
+\setlength{\topmargin}{-0.8in} % usually -0.25in
+\addtolength{\textheight}{1.4in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in} %\setlength{\parindent}{0pt}
+
+\usepackage[T1]{fontenc} % Recommended for better encoding
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+% macros
+\usepackage{amsmath,
+amssymb,
+mathrsfs,
+amsthm,
+fancyhdr,
+tikz,
+multicol,
+enumitem
+}
+
+\newcommand{\be}{\begin{enumerate}}
+ \newcommand{\ee}{\end{enumerate}}
+
+
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\N}{{\mathbb{N}}}
+
+
+
+\lhead{{Math 265 Proofs}}
+\chead{\large \ Midterm I} 
+\rhead{Spring 2026}
+\cfoot{}
+\pagestyle{fancy}
+\begin{document}
+\thispagestyle{fancy}
+
+
+\medskip
+\large
+\vspace{.1in}
+\begin{tabular}{l@{\hspace{.4in}}l}
+Your Name & \\
+\framebox(200,30){} &  \\
+\end{tabular}
+
+%\bigskip
+
+\vfill
+{
+\renewcommand{\baselinestretch}{1.8}
+\setlength{\tabcolsep}{.2in}
+\normalsize
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Problem&Total Points&\parbox{.8in}{\hfil Score\hfil}\\
+\hline
+1&8&\\
+\hline
+2&10&\\
+\hline
+3&10&\\
+\hline
+4&10&\\
+\hline
+5&12&\\
+\hline
+6&12&\\
+\hline
+7&15&\\
+\hline
+8&8&\\
+\hline
+9&15&\\
+\hline
+\hline
+%\hline
+Total&100&\\
+\hline
+%Current Course Grade&\multicolumn{2}{c|  }{}\\
+%\hline
+
+\end{tabular}
+
+\end{center}
+}
+\vfill
+\begin{itemize}
+\item 
+You have 1 hour.
+
+\item If you have a cell phone with you, it should be turned off and put away. (Not in your pocket)
+
+\item You may not use a calculator, book, notes or aids other than a single 3 by 5 notecard.
+
+\item In order to earn partial credit, you must show your work.
+
+\end{itemize}
+\newpage
+\begin{enumerate}
+%Set builder notation
+\item (8 pts) Write the set using \textbf{set builder} notation.
+		\be
+		\item $\{ \dots, -10, -6, -2, 2,6,10, 14, 18, \dots \}$ (Assume the pattern continues.)
+		\vfill
+		\item The set of real numbers whose squares are integers.
+		\vfill
+		\ee
+% element subset distinction
+\item (10 pts) Consider the set $A=\big\{ 1, \, 2, \, 3, \, \{2\}, \, \{2,3\},\,  \{ 1, \{1\}\}\,  \big\}$
+	\be
+	\item The cardinality of $A$ is \underline{\hspace{1in}}\\
+	
+	
+	\item Determine if the statements below are true or false.
+		
+		\begin{multicols}{2}
+		\be[leftmargin=0cm]
+		\item $\emptyset \in A$\\
+		\vspace{.2in}
+		
+		\item $\emptyset \subseteq A$\\
+		\vspace{.2in}
+
+		\item $1 \in A$\\
+		\vspace{.2in}
+
+		
+		\item $1 \subseteq A$\\
+		\vspace{.2in}
+
+		
+		\item $\{1\} \in A$\\
+		\vspace{.2in}
+		
+		\item $\{1\} \subseteq A$\\
+		\vspace{.2in}
+		
+		\item $\{1,\{1\}\} \subseteq A$\\
+		\vspace{.2in}
+		
+		\item $\{2,\{2\}\} \subseteq A$\\
+		\vspace{.2in}
+
+		
+		\ee
+		\end{multicols}
+	\ee
+
+%power set and cartesian product
+\item (10 pts) Consider the set $B=\{ n^2 \, : \,  n \in \Z \text{ and } |n| \leq 3 \}$
+	\begin{enumerate}
+	\item Rewrite the set $B$ by listing its elements between braces.\\ 	\vfill
+	\item  $\big\vert\mathcal{P}(B)\big\vert = $ \underline{\hspace{1in}} (where $\mathcal{P}(B)$ is the power set of $B.$)
+	\item Show that the following statement is true: $$\exists X_1\in \mathcal{P}(B), \exists X_2 \in \mathcal{P}(B), \,0 < |X_1| < |X_2| \text{ and } X_1 \cap X_2 = \emptyset.$$
+	\vfill
+	\item $\big\vert B \times B \big\vert=$ \underline{\hspace{1in}}	
+	\item Let $D=\{ (a,b) \in B \times B \, : \, a+b=1\}.$ Rewrite the set $D$ by listing its elements between braces.
+	\vfill
+	\ee
+\newpage
+%union and complement
+\item (10 pts) Let $A=\{ (x,y) \in \R \times \R \, : \, y \leq 1\}$, $B =\{ (x,y) \in \R \times \R \, : \, y \geq x^2\}$, and the universal set, $U=\R \times \R,$ the entire $xy$-plane. Sketch each set below. Clearly label your pictures.
+	\begin{multicols}{2}
+	\be
+	\item $A \cap B$
+	\item $ \overline{A} \cup B$
+	\ee
+	\end{multicols}
+	\vfill
+	\vfill
+\item (12 pts) For any number $n,$ let $A_n = [0,\frac{n}{n+1}].$ Determine the following subsets of the real line.
+	\begin{multicols}{2}
+	\be
+	\item $A_1=$ \underline{\hspace{1in}}\\
+	
+	\item $A_2=$ \underline{\hspace{1in}}\\
+	
+	\item $A_3=$ \underline{\hspace{1in}}\\
+	
+	\item $\displaystyle\bigcap_{n \in \N} A_n=$ \underline{\hspace{1in}}\\
+	\vspace{.2in}
+	\item $\displaystyle\bigcup_{n \in \N}  A_n=$ \underline{\hspace{1in}}\\
+	\vspace{.2in}
+	\ee
+	\end{multicols}
+
+%% Write If-Thens
+\item (12 pts) Rewrite each sentence below in the form ``If $P$, then $Q.$"
+	\be
+	\item In order for Rachel to wear black, it is necessary that it is a Tuesday.\\
+	\vspace{.5in}
+	
+	\item The presence of a full moon is sufficient for the flower to bloom.\\
+	\vspace{.5in}
+	\item The card is an ace only if the table is flat.\\
+	\vspace{.5in}
+	\item The blueberries are ripe or the cranberries are ripe.\\
+	\vspace{.5in}
+	\ee
+\newpage
+%% english to logic, negations, back to english
+\item (15 pts)  For parts (a) and (b): (i) rewrite the given statement symbolically and, then,  (ii) negate it. 
+	\be
+	\item For every subset $X$ of $\N$ there is always another subset $Y$ of $\N$ such that $X\not = Y$ and $ X \subseteq Y.$\\
+		\be[leftmargin=0cm]
+		\item symbolic form: \\
+		\vspace{.5in}
+		
+		\item negation: \\
+		\vspace{.5in}
+		\ee
+	
+	\item For every $\epsilon > 0$, there is a $\delta >0$ such that if $|x-a| < \delta$ and $x \not = a,$ then $|f(x)-L| < \epsilon.$ (Note: The function $f(x)$ is fixed and $a$ and $L$ represent fixed constants.)
+		\be[leftmargin=0cm]
+		\item symbolic form: \\
+		\vspace{.5in}
+		
+		\item negation: \\
+		\vspace{.5in}
+		\ee
+
+	\item Determine if the statement in part (a) is true or false. Justify your answer.\\
+	\vfill
+	\ee
+\item(8 pts) Show that the statements \fbox{$(P \Rightarrow Q) \Rightarrow R$} and \fbox{$(P \land Q) \lor R$} are \textbf{not} logically equivalent.
+\vfill
+\newpage
+%% Truth table + valid argument
+\item (15 pts) \textbf{Use a truth table} to determine whether the argument below is valid or invalid. \textbf{Your answer must include:}
+\be
+\item[(a)] A complete truth table with clearly labeled columns.
+\item[(b)] An explanation of how the truth table demonstrates whether the argument is valid or invalid
+\ee
+
+\textbf{Note:} Organize your work clearly. Points will be deducted for poor organization.\\
+
+\begin{tabular}{c}
+$P \: \Rightarrow \: R$ \\
+$Q \: \Rightarrow \: R $ \\
+\hline
+$\therefore \: P \lor Q \Rightarrow \: R$ \\
+\end{tabular}
+\newpage
+
+\end{enumerate}
+\end{document}
