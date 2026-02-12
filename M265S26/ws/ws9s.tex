@@ -1,0 +1,168 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 9: Ch 4 (2)}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\be
+\item For every $a,b,c \in \N,$ $\lcm(ca,cb) = c \cdot \lcm(a,b).$
+
+\begin{proof} Let $a,b,c \in \N,$ $m=\lcm(ca,cb)$, and $n=c \cdot \lcm(a,b).$ To show that $m=n,$ we will show that $m\leq n$ and $n\leq m.$\\
+
+
+Since $m=\lcm(ca,cb)$, by the definition of least common multiple, we know there exist integers $k_1$ and $k_2$ such that 
+$$cak_1=m =cbk_2 .$$
+
+Since $c \not = 0,$ we can divide each equation above to obtain 
+
+$$ak_1=\frac{m}{c} = bk_2 ,$$
+
+where we know $k_1,$ $k_2,$ and $\frac{m}{c}$ are all integers. Thus, we have shown that $\frac{m}{c}$ is a common multiple of $a$ and $b.$ By the definition of least common multiple, we know $\lcm(a,b) \leq \frac{m}{c}.$ Multiplying the previous inequality by $c$ gives 
+
+$$n=c \cdot \lcm(a,b) \leq c \cdot \frac{m}{c} =m,$$
+and we conclude that $n\leq m.$\\
+
+To show the reverse inequality, we apply the definition of least common multiple to $\lcm(a,b)$ to conclude that there exist integers $k_1$ and $k_2$ such that 
+$$ak_1=\lcm(a,b)=bk_2 .$$ 
+
+Multiplying both equations by $c,$ we obtain
+
+$$cak_1=c\cdot\lcm(a,b) = cbk_2 .$$ 
+
+Thus, we have shown that $c\cdot\lcm(a,b)$ is a common multiple of both $ca$ and $cb.$ Thus, $$m=\lcm(ca, cb) \leq c\cdot\lcm(a,b) = n.$$
+
+\end{proof}
+
+\item Every multiple of 4 can be written in the form $1+(-1)^n(2n-1)$ for some $n \in \N.$
+
+\begin{proof} Let $m=4a$ where $a \in \Z.$ We will proceed by cases based on the value of $a.$\\
+
+\textbf{Case 1:} Suppose $a=0.$\\
+
+Choose $n=1.$ Observe $1 \in \N.$ Now, $1+(-1)^n(2n-1)=1-1=0=4\cdot 0,$ which is what we needed to show.
+
+\textbf{Case 2:} Suppose $a>0.$\\
+
+Choose $n=2a.$ Observe that since $a \in \N,$ we know $n=2a \in \N.$ Now, $1-(-1)^n(2n-1)=1+(4a-1)=4a,$ which is what we needed to show.\\
+
+
+\textbf{Case 3:} Suppose $a<0.$\\
+                
+Choose $n=-2a+1.$ Observe that since $a$ is a negative integer, $2a+1 \in \N.$ Now, $1-(-1)^n(2n-1)=1-(2(-2a+1)-1)=1-(-4a+2-1)=4a,$ which is what we needed to show.
+
+\end{proof}
+\vfill
+\item For every integer $n$, $n^2+3n+3$ is odd.
+
+\begin{proof} We will proceed by cases depending on the parity of $n.$\\
+
+\textbf{Case 1:} Suppose $n$ is even.\\
+           
+By definition of even, there is an integer $k$ such that $n=2k.$ Thus,
+
+$$n^2+3n+3=(2k)^2+3(2k)+3=2(2k^2+3k+1)+1.$$
+Since $k$ is an integer, Fact 4.1 implies that $\ell =2k^2+3k+1$ is also an integer. Thus, we have shown that when $n$ is even,  $n^2+3n+3=2\ell+1,$ where $\ell \in \Z.$ Thus, $n^2+3n+3$ is even by definition in this case.
+
+
+\textbf{Case 2:} Suppose $n$ is odd.\\
+
+By definition of odd, there is an integer $k$ such that $n=2k+1.$ Thus,
+
+$$n^2+3n+3=(2k+1)^2+3(2k+1)+3=2(2k^2+5k+3)+1.$$
+Since $k$ is an integer, Fact 4.1 implies that $\ell = 2k^2+5k+3$ is also an integer. Thus, we have shown that when $n$ is odd, $n^2+3n+3=2\ell+1,$ where $\ell \in \Z.$ Thus, $3n^2+4n+6$ is even by definition in this case.
+
+\end{proof} 
+\newpage
+\item Let $a,b \in \N.$ If $\gcd(a,b) >1,$ then $b \big\vert a$ or $b$ is not prime.
+
+\begin{proof} Let $a,b \in \N$ such that $\gcd(a,b) >1.$ We will proceed by cases based on whether or not $b$ is prime.
+
+\textbf{Case 1:} $b$ is not prime.
+
+Then the result follows immediately.
+
+\textbf{Case 2:} $b$ is prime.
+
+Since $b$ is prime, its only divisors are 1 and $b$. Thus, $\gcd(a,b) \in \{1,b\}.$ But $\gcd(a,b) >1.$ Thus, $\gcd(a,b) \not =1$ and therefore $\gcd(a,b)  =b.$ Since $ \gcd(a,b) \big \vert a$ and $\gcd(a,b)=b,$ it follows that $b \big\vert a.$
+\end{proof}
+
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
