@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 11: Ch 6}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\be
+\item Tautologies and Contradictions\\
+
+Always true: $P \lor \sim P$, $P \Rightarrow P$\\
+
+Always false: $P \land \sim P$, $(P \Leftrightarrow Q ) \land (P \land \sim Q)$ \\
+
+\item Proof by Contradiction\\
+\fbox{
+\begin{tabular}{l}
+\textbf{Proposition:} $P$ is true.\\
+\textbf{Proof:} (by contradiction) Suppose $\sim P.$ \\
+\quad\\
+$\vdots$\\
+\quad \\
+Thus, $C \land \sim C$. \hfill $\square$\\
+\end{tabular}
+}
+\hfill
+\fbox{
+\begin{tabular}{l}
+\textbf{Proposition:} If  $P$, then $Q$.\\
+\textbf{Proof:} (by contradiction) \\
+Suppose $P$ and $\sim Q.$
+\quad\\
+$\vdots$\\
+\quad \\
+Thus, $C \land \sim C$. \hfill $\square$\\
+\end{tabular}
+}
+\item Is this a valid argument? \\
+When $P=\text{true},$ $\sim P \Rightarrow (C \land \sim C)$ is true. When $P=\text{false},$ $\sim P \Rightarrow (C \land \sim C)$ is false. So, yes, it is a valid argument. \\
+
+\item Prove that $\sqrt{2}$ is irrational.
+\begin{proof} (by contradiction) Suppose $\sqrt{2}$ is rational. By the definition of rational, this implies that there exist integers $a$ and $b$ such that $\sqrt{2}=\frac{a}{b}.$ We choose a representation, $\frac{a}{b},$ that is in \textit{lowest terms.} 
+
+By squaring both sides of  $\sqrt{2}=\frac{a}{b},$ we obtain $2=\frac{a^2}{b^2},$ or, equivalently $2b^2=a^2.$
+
+The last equality implies that $a^2$ is even. Since the square of odd numbers is odd, it follows that $a$ is even. Thus, there is an integer $k$ such that $a=2k.$ Returning to the expression $2b^2=a^2$ and replacing $a$ with $2k,$ we obtain $2b^2=4k^2.$ Dividing the previous equality by 2 gives the equation $b^2=2k^2$ which implies that $b^2$ is even. Thus, we conclude that $b$ is even. Thus, $\frac{a}{b}$ is a ratio of even numbers and not in lowest terms. 
+
+Now we have the contradiction that the expression $\frac{a}{b}$ is in lowest terms  and not in lowest terms. So $\sqrt{2}$ is not rational. Thus, we conclude $\sqrt{2}$ is irrational.
+\end{proof}
+
+\vfill
+\newpage
+\item Use proof by contradiction.
+	\begin{enumerate}
+	\item Prove if $a,b \in \Z,$ then $a^2-4b-3 \not = 0.$
+	
+	\begin{proof} (by contradiction) Suppose $a,b \in \Z$ and $a^2-4b-3 = 0.$ Thus, $a^2=4b+3.$ The last equality implies that $a^2$ is odd and therefore $a$ is odd. Thus, there exists an integer $k$ such that $a=2k+1.$ 
+	
+	Now, substituting $a=2k+1$ into $a^2=4b+3,$ we obtain $4k^2+4k+1=4b+3.$  Let $n = 4k^2+4k+1=4b+3.$ Observe that $4k^2+4k+1 \equiv 1 \: ( \text{mod} 4 )$ but $ 4b+3 \equiv 3 \: ( \text{mod} 4 ).$ Thus, we have the contradiction that, when divided by 4, the integer $n$ has a remainder of 1 and a remainder of 3. 
+	
+	Thus, it is not possible for two integers to satisfy the expression $a^2-4b-3 = 0.$ Thus,  if $a,b \in \Z,$ then $a^2-4b-3 \not = 0.$ \end{proof}
+	\vfill
+	\item Prove that for every $x \in [\frac{\pi}{2}, \pi],$ $\sin(x) - \cos(x) \geq 1.$
+	
+	\begin{proof} (by contradiction) Suppose that there exists an $x \in [\frac{\pi}{2}, \pi]$ such that $\sin(x) - \cos(x) < 1.$
+	
+	In the interval $ [\frac{\pi}{2}, \pi],$ we know $\sin(x) \geq 0$ and $\cos(x) \leq 0.$ Thus, we know that $\sin(x) - \cos(x)\geq 0.$ Since $0 \leq \sin(x) - \cos(x) < 1,$ we also know that $0 \leq( \sin(x) - \cos(x))^2 < 1.$
+	
+	On the other hand, we know that $\sin^2(x) + \cos^2(x) =1$ from trigonometry and $-2\sin(x)\cos(x) \geq 0$ because $\sin(x) \geq 0$ and $\cos(x) \leq 0.$ Now, we observe that 
+	$$( \sin(x) - \cos(x))^2 = \sin^2(x) + \cos^2(x)-2\sin(x)\cos(x)\geq 1.$$
+	
+	This lead to the contradiction that $( \sin(x) - \cos(x))^2$ is both strictly less than 1 and greater than or equal to 1.  Thus, it is not possible for there to be an $x$-value in $[\frac{\pi}{2}, \pi]$ such that $\sin(x) - \cos(x) < 1.$ Thus, for every $x \in [\frac{\pi}{2}, \pi],$ $\sin(x) - \cos(x) \geq 1.$
+
+
+	
+	\end{proof}
+	\vfill
+	\end{enumerate}
+
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

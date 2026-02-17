@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 11: Ch 6}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\be
+\item Tautologies and Contradictions
+\vspace{1in}
+
+\item Proof by Contradiction\\
+\fbox{
+\begin{tabular}{l}
+\textbf{Proposition:} $P$ is true.\\
+\textbf{Proof:} \quad\\
+\quad\\
+$\vdots$\\
+\quad \\
+\quad \hspace{1.5in} $\square$\\
+\end{tabular}
+}
+\hfill
+\fbox{
+\begin{tabular}{l}
+\textbf{Proposition:} If  $P$, then $Q$.\\
+\textbf{Proof:} \quad\\
+\quad\\
+$\vdots$\\
+\quad \\
+\quad \hspace{1.5in} $\square$\\
+\end{tabular}
+}
+\item Is this a valid argument?\\
+
+\vfill
+\item Prove that $\sqrt{2}$ is irrational.
+
+\vfill
+\newpage
+\item Use proof by contradiction.
+	\begin{enumerate}
+	\item Prove if $a,b \in \Z,$ then $a^2-4b-3 \not = 0.$
+	\vfill
+	\item Prove that for every $x \in [\frac{\pi}{2}, \pi],$ $\sin(x) - \cos(x) \geq 1.$\\
+	
+	You are allowed to use what you know about the values of $\sin(x)$ and $\cos(x)$ in this interval.
+	\vfill
+	\end{enumerate}
+
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
