@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 12: Ch 6}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\be
+\item Prove there are an infinite number of primes.
+\vfill
+\item Prove that any two rational numbers $x$ and $y$ can be written in the form $x=\frac{a}{n}$ and $y=\frac{b}{n}$ such that $\gcd(a,b,n)=1$ but that it is not possible to conclude that $\gcd(a,n)=1$ or $\gcd(b,n)=1.$
+\vfill
+\item Statements about even and odd numbers could be rewritten in the language of integers modulo 2. For example, the statement:\\
+\fbox{If $n$ is odd, then $n^2$ is odd} could be rewritten as
+\fbox{If $n \equiv 1 \: (\text{mod } 2)$, then $n^2 \equiv 1 \: (\text{mod } 2).$} 
+
+Make \textbf{conjectures} about what happens when you consider the squares of integers modulo 3 and then prove that you are correct.
+\vfill
+\newpage
+\item Make a conjecture about when the sum of two integers can be congruent to $0$ modulo 3 and prove that you are correct. Your proposition will look something like the one below:
+
+\textbf{Proposition:} Let $a,b \in \Z$ such that $a+b \equiv 0 \: (\text{mod } 3),$ then [ \textit{something here about the nature of $a$ and $b$ modulo 3}].
+\vspace{2in}
+\item Describe the set of points in the $xy$-plane that satisfy $x^2+y^2-3=0.$
+\vspace{1in}
+\item Prove that $x^2+y^2-3=0$ contains no rational points. (That is, for every $(x,y) \in \Q \times \Q,$  $x^2+y^2-3 \not =0.$ Also, the previous propositions should help and please pause to think at least momentarily about how interesting this result is.)
+
+\vfill
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
