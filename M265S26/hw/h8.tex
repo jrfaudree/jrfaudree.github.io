@@ -1,0 +1,200 @@
+\documentclass[11pt]{report}
+
+%packages
+\usepackage{geometry,
+amsmath,
+amssymb,
+amsthm,
+setspace}
+
+%This is to give color.
+\usepackage{xcolor}
+
+%This is to give space on the sides
+%and between lines for comments
+\geometry{margin=1.in}
+%\doublespacing
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+%%%%
+%% New Commands
+%%%%
+\newcommand{\modn}[3]{#1 \equiv #2 \: (\text{mod } #3)}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bs}{$\backslash$}
+
+%%%%%%%
+% Document Begins
+%%%%%%%%
+\begin{document}
+\hfill Math 265
+
+%%% Your Name goes HERE
+\hfill \textbf{YOUR NAME HERE}
+
+\hfill \today
+
+\begin{center}
+\Large{\textbf{Homework \# 8}} \\
+
+\end{center}
+
+\noindent\fbox{Problem List} \quad Ch 7 \#8, 10, 12, 21, 30, 32, 35; \quad Ch 8 \# 4, 10, 14, 22, 25, 26, 30\\
+
+\noindent\fbox{Problem Directions} 
+\begin{itemize}
+\item Ch 7: Use any technique you like.
+\item Ch 8: Use the methods introduced in this section.
+\end{itemize}
+
+%%%%%% Problems Start
+%%% Ch 7 Other Kinds of Proof
+{\Large{Chapter 7}}
+\begin{enumerate}
+%problem
+\item[\textbf{8.}] Suppose $a, b \in \mathbb{Z}$. Prove that $a \equiv b \pmod{10}$ if and only if $a \equiv b \pmod{2}$ and $a \equiv b \pmod{5}$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+%problem
+\item[\textbf{10.}] If $a \in \mathbb{Z},$ then $a^3 \equiv a \: (\text{mod } 3).$\\
+\\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+%problem
+\item[\textbf{12.}] There exists a positive real number $x$ for which $x^2 < \sqrt{x}.$ \\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+%problem
+\item[\textbf{21.}] Every real solution to $x^3+x+3=0$ is irrational. \\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+%problem
+\item[\textbf{30.}] Suppose $a, b, p \in \mathbb{Z}$ and $p$ is prime. Prove that if $p \mid ab$ then $p \mid a$ or $p \mid b$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+
+%problem
+%problem
+\item[\textbf{32.}] If $n \in \mathbb{Z}$, then $\gcd(n, n+2) \in \{1, 2\}$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+%problem
+\item[\textbf{35.}] Suppose $a, b \in \mathbb{N}$. Then $a = \gcd(a, b)$ if and only if $a \mid b$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+
+%%%%%%%%%%%%%%%%%
+%%% Ch 8 Proofs Involving Sets
+%%%%%%%%%%%%%%%%%
+{\Large{Chapter 8}}
+%problem
+\item[\textbf{4.}]If $m,n \in \Z,$ then $\{x \in \Z \: : \:  mn \mid x\} \subseteq \{x \in \Z \: : \: m \mid x\} \cap \{x \in \Z \: : \: n \mid x \}.$ \\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{10.}] If $A$ and $B$ are sets in a universal set $U,$ then $\overline{A \cap B} = \overline{A} \cup \overline{B}.$ \\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{14.}] If $A,$ $B$ and $C$ are sets, then $(A \cup B)-C = (A -C)\cup (B -C).$\\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{22.}] Let $A$ and $B$ be sets. Prove that $A \subseteq B$ if and only if $A \cap B=A.$\\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{25.}] Suppose $A, B, C,$ and $D$ are sets. Prove that $(A \times B) \cup (C \times D) \subseteq (A \cup C) \times (B \cup D).$\\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{26.}] Prove that $\{4k+5 \: : \: k \in \Z\} = \{4k+1 \: : \: k \in \Z\}.$\\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{30.}] Prove that $(\Z \times \N) \cap (\N \times \Z) = \N \times \N$.\\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+\end{enumerate}
+\end{document}
