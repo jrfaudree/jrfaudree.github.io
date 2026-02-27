@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 13: Ch 7}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+Prove the following statements. Use any method you like, but follow directions.
+\be
+\item Given an integer $a$, then $a^2+4a+7$ is odd if and only if $a$ is even.
+
+\begin{proof}
+$(\Rightarrow:)$ (by contrapositive) Suppose $a$ is odd. Then by the definition of odd, we know there exist an integer $k$ such that $a=2k+1.$ Substituting into $a^2+4a+7$, we obtain
+$$a^2+4a+7=(2k+1)^2+4(2k+1)+7=4k^2+4k+1+8k+4+7=4k^2+12k+12=2(2k^2+6k+6),$$ where $2k^2+6k+6$ is an integer. Thus, $a^2+4a+7$ is even. 
+
+We have shown that if $a$ is odd, then $a^2+4a+7$ is even which this is equivalent to the statement that if $a^2+4a+7$ is odd, then $a$ is even.
+
+$(\Leftarrow:)$ (direct) Suppose $a$ is even. Then $a=2k,$ for some integer $k.$ Substituting into $a^2+4a+7$, we obtain
+$$(2k)^2+4(2k)+7=4k^2+8k+2\cdot 3 +1 =2(2k^2+4k+3)+1,$$
+where $2k^2+4k+3$ is an integer. Thus, $a^2+4a+7$ is odd.
+\end{proof}
+\vfill
+\item There exists a set $X$ such that $\N \in X$ and $N \subseteq X.$
+
+\begin{proof} Let $X = \N \cup \{ \N\} = \big\{ \{\N\},1,2,3,\dots\big\}.$\\
+We can see that $\N \in X$ since in the ``list" form of $X$ on the right, $\N$ is the first element in the list. We can see that $\N \subseteq X$ because we see that for every $n \in \N,$ $n \in X.$
+
+\end{proof}
+\vfill
+\item Suppose $x,y \in \R.$ Then $(x+y)^2=x^2+y^2$ if and only if $x=0$ or $y=0.$\\
+
+\begin{proof} Let $x,y \in \R.$\\
+($\Rightarrow:$) (direct) Suppose $(x+y)^2=x^2+y^2.$ By expanding  and rearranging $(x+y)^2=x^2+y^2$ we obtain $2xy=0.$ Now, we apply a property of real numbers that if a product is zero, at least one of its terms is zero. Thus, $2$, $x$ or $y$ is zero. But $2$ is not zero. So either $x=0$ or $y=0.$\\
+
+($\Leftarrow:$) (direct) Suppose $x=0$ or $y=0.$\\
+If $x=0,$ then by substitution the expression $(x+y)^2=x^2+y^2$ becomes $y^2=y^2,$ which is always true. The argument of $y=0$ is the same. Thus, if $x=0$ or $y=0,$ then $(x+y)^2=x^2+y^2.$
+\end{proof}
+\vfill
+
+
+\item Suppose $a,b,c \in \N.$ Use the proposition we proved in class to show that if $a \big\vert bc$ and $\gcd(a,b)=1,$ then $a \big\vert c.$
+
+\begin{proof} Suppose $a,b,c \in \N,$ $a \big\vert bc$ and $\gcd(a,b)=1.$\\
+Since $a \big\vert bc$, there exists an integer $k$ such that $ak=bc.$ Since $\gcd(a,b)=1,$ by Prop. 7.1, there exist integers $m$ and $n$ such that $an+bm=1.$ \\
+
+Multiply the previous equation by $c$ to obtain $anc+bmc=c.$ Using the fact that $ak=bc$, we can plug in for $bc$ into $amc+bmc=c$ to obtain $c=anc+akm=a(nc+km).$\\
+
+Now, $c=a(nc+km)$ where $nc+km$ is an integer. Thus, $a \big\vert c$ by definition, which is what we wanted to prove. 
+
+\end{proof}
+\vfill
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
