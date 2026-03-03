@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+\doublespacing
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 15: Ch 8}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+Below are four proofs of the assertion: For every pair of sets $A$ and $B$, if $A \subseteq B,$ then $A-B = \emptyset.$\\
+
+\vfill
+
+\textbf{Proof 1:}\\
+Suppose $A$ and $B$ are sets and $A \subseteq B.$ So, every element of $A$ is an element of $B$. So, no element can be in $A-B.$ So, $A-B = \emptyset.$\\
+
+\vfill
+
+\textbf{Proof 2:}\\
+Suppose $A \subseteq B$. Recall that $A - B$ is the set of all elements that are in $A$ but not in $B$. Since every element of $A$ is also in $B$, there are no elements that are in $A$ but not in $B$.
+
+\medskip
+Now suppose for contradiction that $A - B \neq \emptyset$. Then there exists some element $x \in A - B$, which means $x \in A$ and $x \notin B$. But since $A \subseteq B$, we have $x \in B$.
+
+\medskip
+Therefore $A - B = \emptyset$.\\
+
+\vfill
+
+\textbf{Proof 3:}\\
+(by contrapositive) Suppose $A-B \not= \emptyset.$ Thus, there exists some $x \in A-B.$ Since $x \in A-B,$ it follows that $x \in A$ and $x \not \in B.$ Thus, it is not the case that every element of $A$ is automatically an element of $B.$ Thus, $A \not \subseteq B.$\\
+
+\textbf{Proof 4:}\\
+(by contrapositive) Suppose $A-B \not= \emptyset.$ Thus, there exists some $x \in A-B.$ Thus, $x \in A$ and $x \not \in B.$ Thus, $A \not \subseteq B.$\\
+\end{document}
+
+\vfill
+\item For every pair of sets $A$ and $B,$  $A \subseteq B$ if and only if $A-B = \emptyset.$ 
+
+\begin{proof} Let $A$ and $B$ be sets. We will prove the equivalent statement that $A \not \subseteq B$ if and only if $A-B \not = \emptyset.$ (This is effectively a ``double" contrapositive.)
+
+
+$( \Rightarrow :)$ Suppose $A \not \subseteq B.$ Then there exists $a \in A$ such that $a \not \in B.$ Thus, $a \in A-B.$ Thus, $A-B \not \emptyset.$
+
+$( \Leftarrow :)$ Suppose $A-B \not= \emptyset.$ Thus, there exists some $x \in A-B.$ Since $x \in A-B,$ it follows that $x \in A$ and $x \not \in B.$ Thus, it is not the case that every element of $x$ is an element of $B.$ Thus, $A \not \subseteq B.$
+
+\end{proof}
+
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

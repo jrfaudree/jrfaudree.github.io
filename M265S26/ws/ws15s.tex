@@ -1,0 +1,124 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 15: Ch 8}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+Provide a \textbf{formal, complete} proof for each statement below.
+\begin{enumerate}
+\item $\{12a+25b \: : \: a,b \in \Z\} = \Z.$
+
+\begin{proof} We will proceed by mutual containment.\\
+
+$(\se :)$ Let $x \in \{12a+25b \: : \: a,b \in \Z\}.$ Thus, there exist integers $a$ and $b$ such that $x=12a+25b.$ Thus, $x$ is a product and sum of integers, $x$ is an integer. So, $x \in \Z.$ \\
+
+$(\spe :)$ Let $x \in \Z.$\\
+Since $gcd(12,25)=1,$ Proposition 7.1 implies that there exist integers $k$ and $\ell$ such that $$1=12k+25\ell.$$ Now, multiply the previous equality by $x$ to get $$x=12(kx) + 24(\ell x ).$$ Since $k,$ $\ell,$ and $x$ are all integers, $kx$ and $\ell x$ are integers. Thus, we have written an arbitrary integer $x$ in the form $12a + 25b$ where $a=kx$ and $b=\ell x,$ both integers. Thus, we have shown that $x \in   \{12a+25b \: : \: a,b \in \Z\}.$ \end{proof}
+
+\vfill
+
+\item If $A$ and $B$ are sets in a universal set $U$, then $\overline{A \cup B}=\overline{A} \cap \overline{B}.$ 
+
+\begin{proof} Suppose $A$ and $B$ are sets in a universal set $U.$ We will proceed by mutual containment.\\
+
+$(\se :)$ Let $x \in \overline{A \cup B}.$ Then $x$ is not in $A \cup B.$ Thus, $x$ cannot be in $A$ and $x$ also cannot be in $B.$ Since $x$ is not in $A$, $x \in \overline{A}.$ Since $x$ is not in $B$, $x \in \overline{B}.$ Thus, we have shown that $x \not \in A$ and $x \not \in B.$ Thus, $x \in \overline{A} \cap \overline{B}.$  \\
+
+$(\spe :)$ Let $x \in \overline{A} \cap \overline{B}.$ Thus, $x \in \overline{A}$ and $x \in \overline{B}.$ This last statement is equivalent to$x \not \in A$ and $x \not \in B. $ Since $x$ is in neither $A$ not $B$, $x$ cannot be in $A\cup B.$ Thus, $x \in \overline{A \cup B}.$ \\
+\end{proof}
+\vfill
+
+\vfill
+
+\item For every pair of sets $A$ and $B,$  $A \subseteq B$ if and only if $A-B = \emptyset.$ 
+
+\begin{proof} Let $A$ and $B$ be sets. We will prove the equivalent statement that $A \not \subseteq B$ if and only if $A-B \not = \emptyset.$ (This is effectively a ``double" contrapositive.)
+
+
+$( \Rightarrow :)$ Suppose $A \not \subseteq B.$ Then there exists $a \in A$ such that $a \not \in B.$ Thus, $a \in A-B.$ Thus, $A-B \not \emptyset.$
+
+$( \Leftarrow :)$ Suppose $A-B \not= \emptyset.$ Thus, there exists some $x \in A-B.$ Since $x \in A-B,$ it follows that $x \in A$ and $x \not \in B.$ Thus, it is not the case that every element of $x$ is an element of $B.$ Thus, $A \not \subseteq B.$
+
+\end{proof}
+
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
