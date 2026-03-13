@@ -1,0 +1,154 @@
+\documentclass[11pt]{report}
+
+%packages
+\usepackage{geometry,
+amsmath,
+amssymb,
+amsthm,
+setspace,
+mathrsfs}
+
+%This is to give color.
+\usepackage{xcolor}
+
+%This is to give space on the sides
+%and between lines for comments
+\geometry{margin=1.in}
+%\doublespacing
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+%%%%
+%% New Commands
+%%%%
+\newcommand{\modn}[3]{#1 \equiv #2 \: (\text{mod } #3)}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bs}{$\backslash$}
+\newcommand{\ps}{\mathscr{P}}
+
+%%%%%%%
+% Document Begins
+%%%%%%%%
+\begin{document}
+\hfill Math 265
+
+%%% Your Name goes HERE
+\hfill \textbf{YOUR NAME HERE}
+
+\hfill \today
+
+\begin{center}
+\Large{\textbf{Homework \# 9}} \\
+
+\end{center}
+
+\noindent\fbox{Problem List} \quad Ch 9 \# 5,6,8,10,16,21,23,28,29,34\\
+
+\noindent\fbox{Problem Directions: } Prove or disprove. 
+
+\begin{enumerate}
+%problem
+\item[\textbf{5.}] If $A$, $B$, $C$ and $D$ are sets, then $(A \times B) \cup (C \times D) = (A \cup C) \times (B \cup D)$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{6.}] If $A$, $B$, $C$ and $D$ are sets, then $(A \times B) \cap (C \times D) = (A \cap C) \times (B \cap D)$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{8.}] If $A$, $B$ and $C$ are sets, then $A - (B \cup C) = (A - B) \cup (A - C)$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{10.}] If $A$ and $B$ are sets and $A \cap B = \emptyset$, then $\ps(A) - \ps(B) \subseteq \ps(A - B)$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{16.}] If $A$ and $B$ are finite sets, then $|A \cup B| = |A| + |B|$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{21.}] There exist prime numbers $p$ and $q$ for which $p - q = 97$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{23.}] If $x, y \in \mathbb{R}$ and $x^3 < y^3$, then $x < y$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{28.}] Suppose $a, b \in \Z$. If $a \mid b$ and $b \mid a$, then $a = b$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{29.}] If $x, y \in \mathbb{R}$ and $|x + y| = |x - y|$, then $y = 0$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{34.}] If $X \subseteq A \cup B$, then $X \subseteq A$ or $X \subseteq B$.
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+\end{enumerate}
+\newpage
+\begin{center} Selected Hints \end{center}
+Here are the truth values:
+5. F, 6. T, 8. F, 10. T, 16. F, 21. F, 23. T,  28. F, 29. F, 34. F\\
+
+\noindent 21. Use what you know about \emph{parity} of integer sums and of prime numbers.\\
+
+\noindent 23. I found it useful to remember $a^3-b^3=(a-b)(a^2+ab+b^2).$ Also, this can be proved directly OR by contrapositive. But either way, my argument required cases. 
+\end{document}
