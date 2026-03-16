@@ -1,0 +1,122 @@
+\documentclass[11pt]{article}
+\setlength{\topmargin}{-0.8in} % usually -0.25in
+\addtolength{\textheight}{1.4in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in} %\setlength{\parindent}{0pt}
+
+\usepackage[T1]{fontenc} % Recommended for better encoding
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+% macros
+\usepackage{amsmath,
+amssymb,
+mathrsfs,
+amsthm,
+fancyhdr,
+tikz,
+multicol,
+enumitem
+}
+
+\newcommand{\be}{\begin{enumerate}}
+ \newcommand{\ee}{\end{enumerate}}
+
+
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\N}{{\mathbb{N}}}
+
+
+
+\lhead{{Math 265 Proofs}}
+\chead{\large \ Midterm II} 
+\rhead{Spring 2026}
+\cfoot{}
+\pagestyle{fancy}
+\begin{document}
+\thispagestyle{fancy}
+
+
+\medskip
+\large
+\vspace{.1in}
+\begin{tabular}{l@{\hspace{.4in}}l}
+Your Name & \\
+\framebox(200,30){} &  \\
+\end{tabular}
+
+%\bigskip
+
+\vfill
+{
+\renewcommand{\baselinestretch}{1.8}
+\setlength{\tabcolsep}{.2in}
+\normalsize
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Problem&Total Points&\parbox{.8in}{\hfil Score\hfil}\\
+\hline
+1&15&\\
+\hline
+2&15&\\
+\hline
+3&15&\\
+\hline
+4&20&\\
+\hline
+5&15&\\
+\hline
+6&20&\\
+\hline
+%\hline
+Total&100&\\
+\hline
+
+\end{tabular}
+
+\end{center}
+}
+\vfill
+\begin{itemize}
+\item 
+You have 1 hour.
+
+\item If you have a cell phone with you, it should be turned off and put away. (Not in your pocket)
+
+\item You may not use a calculator, book, notes or aids other than a single 3 by 5 notecard.
+
+\item In order to lower the writing load, you may use the symbols $\in$, $\exists$, and $\forall$ \emph{if} they are used precisely and literally. You will not be graded on aesthetics, so repeated use of "Thus, ..." will not be penalized. 
+\item You may \emph{not} use the symbol $\Rightarrow$ except parenthetically to indicate the logical structure of an \emph{if-and-only-if} argument. 
+\item You must write in complete sentences with proper punctuation. Every sentence must begin with a capitalized word in English, not a symbol. 
+\item If you are going to use a method \emph{other than a direct proof}, you must state this at the beginning of your proof unless the directions require you to use particular approach.
+\end{itemize}
+\newpage
+\begin{enumerate}
+%Set builder notation
+\item (15 pts) Give a \textbf{direct} proof of the statement below.
+\begin{quote} For every real number x, if $x \geq -1,$ then there exists some real number $y$ such that $y^2-1=x.$ \end{quote}
+
+\newpage
+
+\item (15 points) Give a proof by \textbf{contrapositive} of the statement below.
+
+\begin{quote} For every pair of integers $a$ and $b$, if $(a+1)(6a+b)$ is odd, then $a$ is even and $b$ is odd. \end{quote}
+\vfill
+\newpage
+\item (15 points) Give a proof by \textbf{contradiction} of the statement below.
+\begin{quote} Let $x$ and $y$ be real numbers. If $5x + 20y=754,$ then either $x$ or $y$ is not an integer. \end{quote}
+\newpage
+\item (20 points) Let $A$ and $B$ be sets. Prove that $A \subseteq B$ if and only if $\mathcal{P}(A) \subseteq \mathcal{P}(B).$
+\newpage
+\item (15 points) Let $A$, $B$, and $C$ be sets. If $A \subseteq B,$ then $C-B \subseteq C-A.$
+\newpage
+\item (20 points) Let $a,b,$ and $c$ be positive integers. Prove that if $c \mid a$ and $c \mid b,$ then $c \mid \gcd(a,b).$
+\newpage
+\end{enumerate}
+\end{document}
