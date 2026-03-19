@@ -1,0 +1,200 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+%\doublespacing
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 18: Ch 10}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{enumerate}
+\item Prove the statement below using induction. 
+\begin{quote} The expression $n^3+5n+6$ is divisible by 3 for every $n \in \N.$\end{quote}
+
+\begin{proof} We proceed by induction on $n$.
+
+\medskip\noindent(1) \textbf{Base case ($n=1$):} In this case, $n^3+5n+6=12$ which is divisible by 3.
+Hence, the statement holds for $n=1$.
+
+\medskip\noindent(2) \textbf{Inductive step:}
+Assume that for some $k\geq 1$, $k^3+5k+6$ is divisible by 3. Thus, $k^3+5k+6=3m,$ for some integer $m.$
+
+We must show that $(k+1)^3+5(k+1)+6$ is divisible by 3. 
+
+Observe\\
+\begin{align*}
+  (k+1)^3+5(k+1)+6
+  &=(k^3+3k^2+3k+1) + (5k+5)+6&\text{ by expansion}\\
+  &= (k^3+5k+6)+(3k^2+3k+6)& \text{ collecting terms}\\
+  &= 3m +3(k^2+k+2)& \text{inductive hypothesis, factoring}\\
+ &= 3(m + k^2+k+2).& 
+\end{align*}
+Since $(k+1)^3+5(k+1)+6=3(m + k^2+k+2)$ where $m + k^2+k+2 \in \Z,$ it follows that $3$ divides $(k+1)^3+5(k+1)+6.$
+\end{proof}
+
+\item Can you think of any \emph{other} ways one might prove the statement above?\\
+Try by cases: $n=3\ell,$ $n=3\ell+1$ and $n=3\ell+2.$
+\vspace{.5in}
+\item Proof by \emph{Strong} Induction
+
+{\textbf{Propostion:} }For every $n \in N,$ $P(n).$ \\
+
+\textbf{proof:} (by induction on $n$)\\
+(1) Base Step: Prove as many instances $P(1), P(2), ...$ in order to make your induction step work.\\
+(2) Inductive Step: Suppose that for some $k \in \N,$ all statements $P(1), P(2), \cdots, P(k)$ are true. Show $P(k+1)$ is true.
+
+\item Proposition: Let $a_n$ be the sequence such that $a_0=1,$ $a_1=4$ and $a_n=3a_{n-1}-2a_{n-2}.$ Then, for every $n \in \N \cup \{0\},$ $a_n=3 \cdot 2^n-2.$
+
+First, make sure you understand the statement and crunch a few numbers.
+
+\begin{proof} We proceed by induction on $n$.
+
+\medskip\noindent(1) \textbf{Base cases ($n=0$ and $n=1$):} We know $a_0=1$ and $a_1=4 $ by definition. We check that the closed formula gives the same values: $$a_0=3 \cdot 2^0-2=1 \text{ and } a_1=3 \cdot 2^1-2=4.$$
+Thus, the proposition holds for $n=0$ and $n=1.$
+
+\medskip\noindent(2) \textbf{Inductive step:}
+Assume that for some $k\geq 1$, the term $a_i$ is equal to $3\cdot 2^i-2$ for all $0\leq i \leq k.$
+We must show that the term $a_{k+1}$ is equal to $3\cdot 2^{k+1}-2.$ 
+
+Observe
+\hspace*{-.3in}\begin{align*}
+  a_{k+1}
+  &= 3a_{k}-2a_{k-1}&\text{ definition of } a_{k+1}\\
+  &= 3(3\cdot 2^k-2) -2(3\cdot 2^{k-1}-2)& \text{ inductive hypothesis for $k$ and $k-1$}\\
+  &= 9\cdot2^k-6-2\cdot 3 \cdot 2^{k-1}+4& \text{ expansion}\\
+  &=9\cdot2^k-3 \cdot 2^{k}-6& \text{ combine terms}\\
+  &=6\cdot2^k-6& \text{ combine terms}\\
+&=3\cdot2^{k+1}k-6&,\\
+which is what we needed to show. 
+\end{align*}
+
+
+\end{proof}
+
+
+\item Proposition: Every integer $n >1$ has a prime factorization.
+
+\begin{proof} We proceed by induction on $n$.
+
+\medskip\noindent(1) \textbf{Base cases ($n=2$):} The integer $2$ is a prime and this is its own prime factorization.
+
+\medskip\noindent(2) \textbf{Inductive step:}
+Assume that for some $k\geq 2$, the integer $i$ has a prime factorization for all $2 \leq i \leq k.$
+We must show that the integer $k+1$ has a prime factorization.  We will proceed by cases.
+
+Case 1: Suppose the integer $k+1$ is prime.\\
+Then $k+1$ is its own prime factorization.
+
+Case 2: Suppose the integer $k+1$ is not prime.\\
+Then $k+1$ is composite and therefore can be written as a product of two integers, say $a$ and $b$ such that $2 \leq a < k+1$ and $2 \leq b < k+1.$ Since $a$ and $b$ are both integers strictly less than $k+1$ and at least 2, the inductive hypothesis applies to each of them. Thus, both $a$ and $b$ have prime factorizations. Since $k+1=ab,$ it follows that the prime factorizations of $a$ and $b$ together form a prime factorization of $k+1.$
+\end{proof}
+\vfill
+(Bonus:) Any postage, $n$, can be made from 3-cent and 7-cent stamps provided $n\in \N$ and $n>12.$
+
+\end{enumerate}
+\end{document}  
+
+We proceed by induction on $n$.
+
+\medskip\noindent(1) \textbf{Base case ($n=1$):}
+The left-hand side equals $1\cdot 2 = 2$.
+The right-hand side equals $\dfrac{1\cdot 2\cdot 3}{3} = 2$.
+Hence the statement holds for $n=1$.
+
+\medskip\noindent(2) \textbf{Inductive step:}
+Assume that for some $k\geq 1$,
+\[
+  1\cdot 2+2\cdot 3+\cdots+k(k+1)=\frac{k(k+1)(k+2)}{3}.
+\]
+We must show the statement holds for $k+1$, i.e.,
+\[
+  1\cdot 2+2\cdot 3+\cdots+k(k+1)+(k+1)(k+2)=\frac{(k+1)(k+2)(k+3)}{3}.
+\]
+Starting from the left-hand side, observe
+\hspace*{-.3in}\begin{align*}
+  \big(1\cdot 2+\cdots+k(k+1)\big)+(k+1)(k+2)
+  &= \frac{k(k+1)(k+2)}{3}+(k+1)(k+2)&\text{ by the inductive hypothesis}\\
+  &= (k+1)(k+2)\!\left(\frac{k}{3}+1\right)& \text{ factoring}\\
+  &= (k+1)(k+2)\cdot\frac{k+3}{3}& \text{ common denominator}\\
+  &= \frac{(k+1)(k+2)(k+3)}{3}.&
+\end{align*}
+This is exactly the right-hand side for $n=k+1$, completing the induction.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
