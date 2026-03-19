@@ -1,0 +1,162 @@
+\documentclass[11pt]{report}
+
+%packages
+\usepackage{geometry,
+amsmath,
+amssymb,
+amsthm,
+setspace,
+mathrsfs}
+
+%This is to give color.
+\usepackage{xcolor}
+
+%This is to give space on the sides
+%and between lines for comments
+\geometry{margin=1.in}
+%\doublespacing
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+%%%%
+%% New Commands
+%%%%
+\newcommand{\modn}[3]{#1 \equiv #2 \: (\text{mod } #3)}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bs}{$\backslash$}
+\newcommand{\ps}{\mathscr{P}}
+
+%%%%%%%
+% Document Begins
+%%%%%%%%
+\begin{document}
+\hfill Math 265
+
+%%% Your Name goes HERE
+\hfill \textbf{YOUR NAME HERE}
+
+\hfill \today
+
+\begin{center}
+\Large{\textbf{Homework \# 10}} \\
+
+\end{center}
+
+\noindent\fbox{Problem List} \quad Ch 10 \# 4, 5, 8, 13, 18, 19, 22, A\\
+
+\noindent\fbox{Problem Directions: } Prove using induction or strong induction.\\
+
+\begin{enumerate}
+%problem
+\item[\textbf{4.}] If $n \in N,$ then $1\cdot 2+2 \cdot 3 + 3 \cdot 4 + 4 \cdot 5 + \cdots + n(n+1)=\frac{n(n+1)(n+2)}{3}$. \\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{5.}] If $n \in N,$ then $2^1+2^2+3^3+\cdots+2^n=2^{n+1}-2$.\\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{8.}] If  $n \in \N,$ then $\frac{1}{2!}+\frac{2}{3!}+\frac{3}{4!}+\cdots+\frac{n}{(n+1)!}=1-\frac{1}{(n+1)!}.$
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{13.}] Prove that $6 \mid (n^3-n)$ for every integer $n \geq 0.$\\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{18.}] Suppose $A_1, A_2, A_3, \cdots, A_n$ are sets in some universal set $U$ and $n \geq 2.$ Prove that $$\overline{A_1 \cup A_2 \cup \cdots \cup A_n}=\overline{A_1}\cap\overline{A_2}\cap \cdots \cap \overline{A_n}.$$\\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{19.}] Prove that $\frac{1}{1}+\frac{1}{4}+\frac{1}{9}+\cdots+\frac{1}{n^2}\leq 2-\frac{1}{n}.$ \\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{22.}] If $n \in \N,$ then $\left(1-\frac{1}{2} \right)\left(1-\frac{1}{4} \right)\left(1-\frac{1}{8} \right)\left(1-\frac{1}{16} \right)\cdots\left(1-\frac{1}{2^n} \right)\geq \frac{1}{4}+\frac{1}{2^{n+1}}.$\\
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+%problem
+\item[\textbf{Problem A:} ] Determine the set of positive integers $n$ that can be written in the form $n = 4a+ 5b$ where $a,b \in \N \cup \{0\}.$ (Hint: Check the first few values of $n$ directly,
+then use strong induction to show that, from a certain point $n_0$ onwards, all numbers $n$ have such a
+representation.)
+%proof
+\begin{proof} YOUR PROOF HERE.
+\end{proof}
+%comments
+\textcolor{red}{Your thoughts/concerns/questions here.}
+%space
+\vspace{1in}
+
+\hrulefill
+%%%%%%%%%%%
+%% Template
+%%%%%%%%%
+\begin{center} Proof by Induction Template \end{center}
+\textbf{Proposition:} For all $n \in \N,$ the sum of the first $n$ odd integers is $n^2.$
+
+The proposition could be written as 
+$$\forall n \in \N, \: 1+3+ 5+\cdots + (2n-1) = n^2.$$
+\begin{proof} (by induction on $n$)\\
+\medskip\noindent(1) \textbf{Base case ($n=1$):}
+The left-hand side equals $1.$ The right-hand side equals $1^2=1$.
+Hence the statement holds for $n=1$.
+
+\medskip\noindent(2) \textbf{Inductive step:}
+Assume that for some $k\geq 1$,
+\[
+  1+ 3+5+\cdots+(2k-1)=k^2.
+\]
+We must show 
+\[
+  1+3+5+\cdots+(2k-1)+(2k+1)=(k+1)^2.
+\]
+Starting from the left-hand side, observe
+\hspace*{-.3in}\begin{align*}
+  \big(1+ 3+5+\cdots+(2k-1)\big)+(2k+1)
+  &= k^2+(2k+1)&\text{ (inductive hypothesis)}\\
+  &= (k+1)^2.& \text{ (factoring)}\\
+\end{align*}
+This completes the induction.
+\end{proof}
+\end{enumerate}
+\end{document}
