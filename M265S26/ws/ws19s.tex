@@ -1,0 +1,129 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+\doublespacing
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 19: Ch 11}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{enumerate}
+\item A \emph{relation} $R$ on $A$ is a subset of $A \times A.$ \\
+Notation: The words `` a relates to  b" or ``the ordered pair $(a,b)$ is in the relation can be written $(a,b) \in R$ or $a \; R \; b$. The same for \emph{not} in $R.$\\
+\vfill
+
+\item Examples\\
+	\begin{enumerate}
+	\item $R$ is a relation on $\Z$ where $R=\{(0,0), (0,5), (-3,7), 4,17)\}.$\\
+	\item $R$ is a relation on $\Z$ where $(a,b) \in R$ if $a \leq b-2$\\
+	\item $R$ is a relation on $\R$ where $(x,y) \in R$ if $x^2=y$\\
+	\item $R$ is a relation on $\N \times \N$ where $(a,b) \; R \; (c,d)$ if $ad=bc.$
+	\end{enumerate}
+	
+\item Suppose $R$ is a relation on the set $A.$
+	\begin{enumerate}
+	\item We say $R$ is \emph{symmetric} if $(a,b) \in R$ implies $(b,a) \in R.$
+	\vfill
+
+	\item We say $R$ is \emph{reflexive} if for every $a \in A,$ $(a,a) \in R.$
+	\vfill
+
+	\item We say $R$ is \emph{transitive} if $(a,b) \in R$ and $(b,c) \in R$ implies $(a,c) \in R.$
+	\vfill
+	\end{enumerate}
+
+\item Let $R$ be the relation on $A=\{0,1,2,3,4\}$ defined as $a\: R \: b$ if $a \mid b.$ List all the elements in $R$. What is the smallest positive number you could add to the set $A$ that would increase the order $R$ as much as possible?\\
+
+$R=\{(0,0), (1,0), (2,0),(3,0),(4,0),(1,1),(1,2),(1,3),(1,4),(2,2),(2,4),(3,3),(4,4)\}$\\
+By inspection, it is reflexive and transitive. It is not symmetric since $(0,1) \in R$ but $(1,0) \not \in R.$ \\ Add 12 since all elements of $A$ will divide it.
+\vfill
+\item Let $R$ be a relation on $A=\Z$ defined by $a \;R\; b$ if $a \equiv b \pmod 3.$ Find three elements of $R$ that contain zero in the first coordinate, find three elements of $R$ that contain 1 in the second coordinate, and find three ordered pairs in $\Z \times \Z$ that are not in $R.$\\
+Some things in $R$: $(0,3), (0,-3), (0,18), (4,1), (19, 1), (-2,1)$\\
+Not in $R$: $(0,1), (4,2), (12,98)$\\
+Reflexive: Since  $3 \mid 0,$ for every $n \in Z,$ $3 \mid (n-n).$ Thus, for every $n \in \Z,$ $n \equiv n \pmod 3.$ Thus, for every $n$, $(n,n) \in R.$\\
+Symmetric: Suppose $(a,b) \in R.$ Then $a \equiv b \pmod 3$. So $3 \mid (a-b)$ or, equivalently there exists some integer $k$ such that $ck=a-b.$ Now, $c(-k)=b-a,$ where $-k$ is an integer. So, $c \mid (b-a).$ So $(b,a) \in R.$\\
+Transitive: Suppose $(a,b) \in R$ and $(b,c) \in R.$ Thus, there are integers $k$ and $\ell$ such that $3k=a-b$ and $3\ell = b-c.$ Adding the previous two equations gives us $3(k+\ell)=a-c.$ Thus, $3 \mid (a-c)$ and $(a,c) \in R.$
+
+
+\item Suppose $R$ is a relation on $\mathcal{P}(A)$ where $A=\{0,1,2,3,4\}$ defined as $X \: R \: Y$ if $X \cap Y \not = \emptyset.$\\
+Some things in $R:$ $(\{0,1\}, \{1,2\}), (A,A),  (\{0,1\}, \{1,2,3\}), (\{2,3,4\}, \{1,2,3\}),(A, \{1,2,3\})$\\
+Not in $R.$: $(\emptyset, A), (\{0\}, \{1\}), (\{1,2,3\},\{0,4\})$\\
+Reflexive: No. $(\emptyset, \emptyset) \not \in R$\\
+Symmetric: Yes. Suppose $(X,Y) \in R.$ Then, $X \cap Y \not = \emptyset.$ Since $X \cap Y=Y \cap X,$ it follows $Y \cap X \not = \emptyset$ and hence $(Y,X) \in R.$\\
+Transitive: No. Consider the elements $X=\{0,1\}, Y=\{1,2\}$ and $Z=\{2,3\}$. We see that $X \cap Y$ and $Y\cap Z$ are both nonempty but $X \cap Z = \emptyset.$ So, $(X,Y),(Y,Z) \in R$ but $(X,Y) \not \in R.$
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
