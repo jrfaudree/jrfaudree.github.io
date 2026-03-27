@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\RR{{\mathbb R}}
+\def\NN{{\mathbb N}}
+\def\ZZ{{\mathbb Z}}
+\def\QQ{{\mathbb Q}}
+\def\CC{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+\newcommand{\sse}{\subseteq}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Exam 3 Review}}
+\rhead{\large\sf\textbf{Spring 2026}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+\begin{document}
+\thispagestyle{fancy}
+
+Exam 3 will be on Friday 3 April during our regular class time. It will include Chapters 9, 10, 11, and Section 12.1.  You will have one hour to complete the exam. You may bring a single 3 in by 5 in notecard with writing on both sides.\\
+
+\begin{center} Definitions \end{center}
+
+For all of the terms below, you must be able to formally state and use the definition from your textbook. 
+\be
+\item odd, even, same parity, opposite parity
+\item divides, multiple, divisor
+\item prime
+\item greatest common divisor, least common multiple
+\item congruent modulo $n$
+\item rational number, irrational number
+\item subsets, set equality
+\item \textbf{relation on $A$, reflexive, symmetric, transitive relations, a relation from $A$ to $B$, an equivalence relation, an equivalence class, a partition of a set}
+\item \textbf{a function from $A$ to $B$, domain, codomain, range of $f$}
+\ee
+
+\begin{center} Proof Techniques \end{center}
+\be
+\item direct proof
+\item using cases
+\item by contrapositive
+\item by contradiction
+\item if-and-only-if proofs
+\item existence statements
+\item \textbf{proofs involving sets (that is, statements including $A \subseteq B$ or $A=B$)}
+\item \textbf{methods of disproving statements}
+\item \textbf{proof by induction (both strong and weak)}
+\ee
+
+\newpage
+\begin{center} Things to Keep in Mind \end{center}
+\be
+\item If a proof technique is not prescribed, you must state the method you are using.
+\item You should put in the ``boiler-plate'' language even if you cannot figure out the whole proof.
+\item You should expect to \emph{use} all of the hypotheses.
+\item I will \emph{not} ask you to prove something that is false.
+\ee
+
+\begin{center} What the Midterm Will Look Like \end{center}
+\be
+\item Problem 1 (a) What is the standard way to show $X \subseteq Y$ for sets $X$ and $Y$? Your answer should be `` Pick an arbitrary element of the set $X$ and prove that it is in the set $Y.$
+\item Problem 1 (b) Prove the proposition below using the standard method described above.  Proposition: If P, then $X \subseteq Y.$ (Clearly, P, X, and Y are specific.)
+\item Problems 2 and Problems 3: Proofs by Induction.
+\item Problem 4 about disproof.
+\item Problem 5 about equivalence relations.
+\ee
+\end{document}
