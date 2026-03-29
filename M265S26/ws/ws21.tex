@@ -1,0 +1,126 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 21: Ch 11/12}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{enumerate}
+\item Quick Review
+\vspace*{-0.5cm}
+	\begin{enumerate}
+	\item $R$ is an equivalence relation on $\R$ defined as $xRy$ if $\sin(x)=\sin(y).$ Describe and/or draw its equivalence classes.
+	\vfill 
+	
+	\item We say $S$ is a partition of the set $A$ if 	
+	\vspace{.75in}
+	\end{enumerate}
+\item Theorem 11.1: Suppose $R$ is an equivalence relation on the set $A.$ For every $a, b \in A,$ $[a]=[b]$ if and only if $aRb.$
+\vfill
+\item Theorem 11.2: Suppose $R$ is an equivalence relation on the set $A$. The set $S=\{[a] : a \in A\}$ is a partition of $A.$
+\vfill
+\newpage
+\item Definition: The \textbf{integers modulo $n$}, denoted $\Z_n$, is the set $\{[0],[1], \cdots, [n-1]\}$ of equivalences classes of $\Z$ modulo $n.$\\
+Try performing arithmetic in $\Z_{10}$. Does it depend on the representative of the equivalence class?
+	\begin{multicols}{3}
+		\begin{enumerate}
+		\item $[0]+[6]=$\\
+		\item $[2]+[3]= $\\
+		\item $[9]+[5]=$\\
+		\item $[3] - [7]=$\\
+		\item $[6] \cdot [1]=$\\
+		\item $[3] \cdot [7]=$	\\
+		\item $[4] \cdot [5]=$	\\
+		\item $[3] \div [7]=$\\	
+		\item $[3] \div [4]=$\\
+		\end{enumerate}
+	\end{multicols}
+	\vfill
+\item What do you \emph{think} should be the definition of a relation $R$ from the set $A$ to the set $B$?
+\vfill	
+\item Think up a relation $R$ from $A=\{a,b\}$ to $B=\{1,2,3\}$. How many distinct relations from $A$ to $B$ are possible?
+\vfill
+\item How many relations $R$ from $A$ to $B$ are functions? (This is require you to decide what you think should be the definition of a \emph{function} from $A$ to $B$...)
+\vfill
+\item Think up a relation $S$ from $C=\{a,b,c\}$ to $D=\{1,2,3,4,5\}$ that is a function. Determine the domain and range of $S$.
+\vfill
+\item In the context of relations that are functions where we already have ideas about the words \emph{domain} and \emph{range}, what might the term \emph{codomain} mean?
+\vfill
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
