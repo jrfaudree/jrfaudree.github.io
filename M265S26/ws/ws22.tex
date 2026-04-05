@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 22: Ch 12}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{enumerate}
+\item State each definition and draw helpful pictures.
+	\begin{enumerate}
+	\item The relation $R$ from $A$ to $B$ is a function if\\
+	\item The function $f$ from $A$ to $B$ injective if \\
+	\item The function $f$ from $A$ to $B$ surjective if \\
+	\end{enumerate}
+\item Let $f: \R-\{0\} \to \R -\{1\}$ be a function defined by $f(x)=\frac{x+1}{x}.$ Prove that $f$ is injective and surjective.
+\vfill
+\item Let $f:\Z \times \Z \to \Z$ be a function defined by $f(m,n)=2m-6n.$ Prove that $f$ is neither injective nor surjective.
+\vfill
+\newpage
+\item For each function below, determine if it is injective or surjective and prove your answer is correct. If the function is not surjective, determine its range.
+	\begin{enumerate}
+	\item  $f:\Z \times \Z \to \Z$ defined as $f(m,n)=2m-3n.$
+	%not 1-1, onto
+	\vfill
+	\item $\theta: \{0,1\} \times \N \to \Z$ defined as $\theta(a,b)=(-1)^ab.$
+	%not onto, is 1-1
+	\vfill
+	\item $g: \N \to \Z$ defined as $g(n)=\begin{cases} \frac{n}{2} & n \text{ even} \\
+	(-1)\frac{n-1}{2} & n \text{ odd} \\
+	\end{cases}$
+	
+	\vfill
+	\end{enumerate} 
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
