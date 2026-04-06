@@ -1,0 +1,129 @@
+\documentclass[11pt]{report}
+
+%packages
+\usepackage{geometry,
+amsmath,
+amssymb,
+amsthm,
+setspace,
+mathrsfs,
+tikz}
+
+%This is to give color.
+\usepackage{xcolor}
+
+%This is to give space on the sides
+%and between lines for comments
+\geometry{margin=1.in}
+%\doublespacing
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+%%%%
+%% New Commands
+%%%%
+\newcommand{\modn}[3]{#1 \equiv #2 \: (\text{mod } #3)}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bs}{$\backslash$}
+\newcommand{\ps}{\mathscr{P}}
+
+%%%%%%%
+% Document Begins
+%%%%%%%%
+\begin{document}
+\hfill Math 265
+
+%%% Your Name goes HERE
+\hfill \textbf{YOUR NAME HERE}
+
+\hfill \today
+
+\begin{center}
+\Large{\textbf{Homework \# 12}} \\
+
+\end{center}
+
+\noindent\fbox{Problem List} \\ \S 12.2 \# 8, 9, 10, 12, 14\\
+\S 12.3 \# 1, 2, 4, 7\\
+\S 12.4 \# 4, 6, 8\\
+
+\begin{enumerate}
+%problem
+\item[\textbf{12.2.8}] A function $f:\Z \times \Z \to \Z \times \Z$ is defined as $f(m,n)=(m+n,2m+n).$ Verify whether this function is injective and whether it is surjective.
+
+\textbf{Answer:} \\
+
+%problem
+\item[\textbf{12.2.9}] Prove that the function $f: \R -\{2\} \to \R-\{5\}$ defined by $f(x) =\frac{5x+1}{x-2}$ is bijective.\\
+
+\textbf{Answer:} \\
+
+%problem
+\item[\textbf{12.2.10}] Prove that the function $f:\R -\{1\} \to \R -\{1\}$ defined by $f(x)=\left( \frac{x+1}{x-1} \right)^3$ is bijective.\\
+
+\textbf{Answer:} \\
+
+%problem
+\item[\textbf{12.2.12}] Consider the function $\theta: \{0,1\} \times \N \to \Z$ defined as $\theta(a,b) = a-2ab+b.$ Is $\theta$ injective?
+Is it surjective? Bijective? Explain\\
+
+\textbf{Answer:} \\
+
+%%%%NEW PROBLEM
+\item[\textbf{12.2.14}] Consider the function $\theta: \mathcal{P}(\Z) \to \mathcal{P}(\Z)$ defined as $\theta(X)=\overline{X}.$ Is $\theta$ injective? Surjective? Bijective? Explain.\\
+
+\textbf{Answer:} \\
+
+%%12.3
+%%%%NEW PROBLEM
+\item[\textbf{12.3.1}] Prove that when at least six integers are chosen at random, then at least two of them will have the same remainder when divided by 5.
+
+\textbf{Answer:} \\
+
+%%%%NEW PROBLEM
+\item[\textbf{12.3.2}] Prove that if $a$ is a natural number, then there exist two unequal natural numbers $k$ and $\ell$ for which $a^k-a^\ell$ is divisible by 10.
+
+\textbf{Answer:} \\
+
+%%%%NEW PROBLEM
+\item[\textbf{12.3.4}] Consider a square whose side length is one unit. Select any five points from inside this square. Prove that at least two of these points are within $\sqrt{2}/2$ units of each other.
+
+\textbf{Answer:} \\
+
+%%%%NEW PROBLEM
+\item[\textbf{12.3.7}] (modified) Let $X \subseteq \{1,2,3,...,2n\}$ with $|X| > n.$
+	\begin{enumerate}
+	\item[\textbf{a.}] Prove that every positive integer $m$ can be write in the form $2^iq$ where $q$ is an odd integer.
+	\item[\textbf{b.}] Partition the elements of the set $\{1,2,3,\cdots, 14\}$  according to the relation $mRn$ if $m$ and $n$ have the same $q$ when written in the form $2^iq,$ where $q$ is odd.
+	\item[\textbf{c.}] Pick two different 8-element subsets of the set $\{1,2,3,\cdots, 14\}.$ Try as much as possible to pick the 8 elements randomly. Show that each of the two subsets contain a pair of of distinct elements, $a$ and $b$, where $a \vert b.$
+	\item[\textbf{d.}] Let $X \subseteq \{1,2,3,...,2n\}$ with $|X| > n.$ Prove $X$	
+ contains two (unequal) elements for which one divides the other.
+ \end{enumerate}
+
+\textbf{Answer:} \\
+
+%%%%NEW PROBLEM
+\item[\textbf{12.4.4}] Suppose $A=\{a,b,c\}.$ Let $f : A \to A$ be the function $f=\{(a,c),(b,c),(c,c)\},$ and let $g : A \to A$ be the function $g=\{(a,a), (b,b),(c,a)\}.$ Find $g \circ f$ and $f \circ g.$\\
+
+\textbf{Answer:} \\
+
+
+
+
+%%%%NEW PROBLEM
+\item[\textbf{2.4.6}] Consider the functions $f,g: \R \to \R$ defined as $f(x)=\frac{1}{x^2+1}$ and $g(x)=3x+2.$ Find the formulas for $g \circ f$ and $f \circ g.$\\
+
+\textbf{Answer:} \\
+
+%%%%NEW PROBLEM
+\item[\textbf{12.4.8}] Consider the functions $f , g : \Z \times \Z \to \Z \times \Z$ defined as $f (m,n) = (3m-4n,2m+n)$ and $g(m,n) = (5m+ n,m).$ Find the formulas for $g \circ f$ and $f \circ g.$
+
+\textbf{Answer:} \\
+\end{enumerate}
+\end{document}
