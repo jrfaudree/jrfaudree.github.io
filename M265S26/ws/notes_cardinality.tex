@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Notes: Ch 14 \S 1-2}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{enumerate}
+\item Two sets $A$ and $B$ have the same \textbf{cardinality} if\\
+\vspace{0.6in}
+
+\item Theorem: $|\N| \neq |\R|.$\\
+\begin{proof} \quad \\
+
+\vfill
+
+\begin{tabular}{r|l}
+$n$ & $f(n)$ \\
+\hline
+1 & 0.4000000000000000\ldots \\
+2 & 8.5006070866690 0\ldots \\
+3 & 7.5050094004410 1\ldots \\
+4 & 5.5070400804805 0\ldots \\
+5 & 6.9002600000050 6\ldots \\
+6 & 6.8280958205002 0\ldots \\
+7 & 6.5050555065580 8\ldots \\
+8 & 8.7208064000044 8\ldots \\
+9 & 0.5500008888007 7\ldots \\
+10 & 0.5002072207805 1\ldots \\
+11 & 2.9000088000090 0\ldots \\
+12 & 6.5028000800967 1\ldots \\
+13 & 8.8900802400805 0\ldots \\
+14 & 8.5000874208022 6\ldots \\
+$\vdots$ & $\vdots$ \\
+\end{tabular}
+
+
+\vfill
+\vfill
+\end{proof}
+\item The set $A$ is called \textbf{countably infinite} if \\
+\vfill
+\item Examples: 
+\newpage
+\item Theorem 14.3: A set $A$ is countably infinite if and only if 
+\vfill
+ \item Theorem 14.4: $|\Q|$ is \\
+ 
+ \begin{proof} \quad \\
+ 
+
+\begin{tabular}{ccccccccccccc}
+$0$ & $1$ & $-1$ & $2$ & $-2$ & $3$ & $-3$ & $4$ & $-4$ & $5$ & $-5$ & $\cdots$ \\
+\hline
+\\
+$\dfrac{0}{1}$ & $\dfrac{1}{1}$ & $\dfrac{-1}{1}$ & $\dfrac{2}{1}$ & $\dfrac{-2}{1}$ & $\dfrac{3}{1}$ & $\dfrac{-3}{1}$ & $\dfrac{4}{1}$ & $\dfrac{-4}{1}$ & $\dfrac{5}{1}$ & $\dfrac{-5}{1}$ & $\cdots$ \\[18pt]
+ & $\dfrac{1}{2}$ & $\dfrac{-1}{2}$ & $\dfrac{2}{3}$ & $\dfrac{-2}{3}$ & $\dfrac{3}{2}$ & $\dfrac{-3}{2}$ & $\dfrac{4}{3}$ & $\dfrac{-4}{3}$ & $\dfrac{5}{2}$ & $\dfrac{-5}{2}$ & $\cdots$ \\[18pt]
+ & $\dfrac{1}{3}$ & $\dfrac{-1}{3}$ & $\dfrac{2}{5}$ & $\dfrac{-2}{5}$ & $\dfrac{3}{4}$ & $\dfrac{-3}{4}$ & $\dfrac{4}{5}$ & $\dfrac{-4}{5}$ & $\dfrac{5}{3}$ & $\dfrac{-5}{3}$ & $\cdots$ \\[18pt]
+ & $\dfrac{1}{4}$ & $\dfrac{-1}{4}$ & $\dfrac{2}{7}$ & $\dfrac{-2}{7}$ & $\dfrac{3}{5}$ & $\dfrac{-3}{5}$ & $\dfrac{4}{7}$ & $\dfrac{-4}{7}$ & $\dfrac{5}{4}$ & $\dfrac{-5}{4}$ & $\cdots$ \\[18pt]
+ & $\dfrac{1}{5}$ & $\dfrac{-1}{5}$ & $\dfrac{2}{9}$ & $\dfrac{-2}{9}$ & $\dfrac{3}{7}$ & $\dfrac{-3}{7}$ & $\dfrac{4}{9}$ & $\dfrac{-4}{9}$ & $\dfrac{5}{6}$ & $\dfrac{-5}{6}$ & $\cdots$ \\[18pt]
+ & $\dfrac{1}{6}$ & $\dfrac{-1}{6}$ & $\dfrac{2}{11}$ & $\dfrac{-2}{11}$ & $\dfrac{3}{8}$ & $\dfrac{-3}{8}$ & $\dfrac{4}{11}$ & $\dfrac{-4}{11}$ & $\dfrac{5}{7}$ & $\dfrac{-5}{7}$ & $\cdots$ \\[18pt]
+ & $\dfrac{1}{7}$ & $\dfrac{-1}{7}$ & $\dfrac{2}{13}$ & $\dfrac{-2}{13}$ & $\dfrac{3}{10}$ & $\dfrac{-3}{10}$ & $\dfrac{4}{13}$ & $\dfrac{-4}{13}$ & $\dfrac{5}{8}$ & $\dfrac{-5}{8}$ & $\cdots$ \\[18pt]
+ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\vdots$ & $\ddots$ \\
+\end{tabular}
+
+ \vfill
+ \end{proof}
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
