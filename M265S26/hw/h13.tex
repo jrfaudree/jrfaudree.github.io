@@ -1,0 +1,238 @@
+\documentclass[11pt]{report}
+
+%packages
+\usepackage{geometry,
+amsmath,
+amssymb,
+amsthm,
+setspace,
+mathrsfs,
+tikz}
+
+%This is to give color.
+\usepackage{xcolor}
+
+%This is to give space on the sides
+%and between lines for comments
+\geometry{margin=1.in}
+%\doublespacing
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+%%%%
+%% New Commands
+%%%%
+\newcommand{\modn}[3]{#1 \equiv #2 \: (\text{mod } #3)}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bs}{$\backslash$}
+\newcommand{\ps}{\mathscr{P}}
+
+%%%%%%%
+% Document Begins
+%%%%%%%%
+\begin{document}
+\hfill Math 265
+
+%%% Your Name goes HERE
+\hfill \textbf{YOUR NAME HERE}
+
+\hfill \today
+
+\begin{center}
+\Large{\textbf{Homework \# 13}} \\
+
+\end{center}
+
+\noindent\fbox{Problem List} \\ \S 12.5 \# 2, 6, 8, 9\\
+\S 12.6 \# 2, 5, 6, 7, 8\\
+\S 14.1 \# 2, 8, 10, 11, 14 \\
+\S 14.2 \# 2, 4, 5, 7, 8, 11, 12\\
+
+\begin{enumerate}
+%problem
+\item[\textbf{12.5.2}] In Exercise 9 of Section 12.2 you proved that $f : \R -\{2\} \to \R - \{5\} $ defined by $f (x) = \frac{5x+1}{x-2}$ is bijective. Now find its inverse.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{12.5.6}] The function $f : \Z \times \Z \to \Z \times \Z$  defined by the formula $f (m,n) = (5m+4n,4m+3n)$ is bijective. Find its inverse.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{12.5.8}] Is the function $\theta : \mathcal{P}(\Z) \to \mathcal{P}(\Z)$ defined as $\theta(X) = X$ bijective? If so, find $\theta^{-1}.$
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{12.5.9}] Consider the function $f : \R \times \N \to \N \times \R$ defined as $f (x, y) = (y,3x y).$ Check that this
+is bijective; find its inverse.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{12.6.2}] Consider the function $f : \{1,2,3,4,5,6,7\} \to \{0,1,2,3,4,5,6,7,8,9\}$ given as $f =\{(1,3), (2,8), (3,3), (4,1), (5,2), (6,4), (7,6)\}.$  Find 
+	\begin{enumerate}
+	\item[a.] $f(\{1,2,3\})$
+	
+	\textbf{Answer:} \\
+	
+	\item[b.] $ f (\{4,5,6,7\}$
+	
+	\textbf{Answer:} \\
+	
+	\item[c.] $f(\emptyset)$
+	
+	\textbf{Answer:} \\
+	
+	\item[d.] $f^{-1}(\{0,5,9\})$
+	
+	\textbf{Answer:} \\
+	
+	\item[e.] $f^{-1}(\{0,3,5,9\})$
+	
+	\textbf{Answer:} \\
+	\end{enumerate}
+	
+\vspace{1in}
+
+%problem
+\item[\textbf{12.6.5}] Consider a function $f : A \to B$ and a subset $X \subseteq A.$ We observed in Example 12.14 that $f^{-1}(f (X)) \not = X$ in general. However $X \subseteq f^{-1}(f (X))$ is always true. Prove this.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{12.6.6}] Given a function $f : A \to B$ and a subset $Y \subseteq B$, is $f (f(Y)) = Y$ always true? Prove or give a counterexample.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{12.6.7}] Given a function $f : A \to B$ and subsets $W, X \subseteq A,$ prove $f (W \cap X) \subseteq f (W)\cap f (X).$
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{12.6.8}] Given a function $f : A \to B$ and subsets $W, X \subseteq A,$ then $f (W \cap  X) = f (W) \cap f (X)$ is false in general. Produce a counterexample.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+\textbf{Directions for \S 14.1 problems:} Show that the two given sets have equal cardinality by describing a bijection
+from one to the other. Describe your bijection with a formula (not as a table).\\
+%problem
+\item[\textbf{14.1.2}] $\R$ and $(\sqrt{2},\infty)$
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{14.1.8}] $\Z$ and $S=\{x \in \R : \sin(x)=1\}$
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{14.1.10}] $\{0,1\} \times \N$ and $\Z$
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{14.1.11}] $[0,1]$ and $(0,1)$\\
+
+\textbf{Comment:} This is very tricky. I gave a hint at the end of the homework. Also, we will learn an easier way to handle this in the future.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{14.1.14}]  $\N \times \N$ and $\{(n,m) \in \N \times \N : n \leq m\}$
+
+Hint: I think it's easier to find a bijection from $\N \times \N$  to $\{(n,m) \in \N \times \N : n \leq m\}$. One way to help ensure the injectivity is to keep one coordinate the same.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+\textbf{Directions:} For the problems in section 14.2, you may use any theorem \emph{from this section.} You must reference it the theorem explicitly as in ``Applying Theorem 14.5 that says....., we can conclude...."\\
+
+%problem
+\item[\textbf{14.2.2}] Prove that the set $A =\{(m,n) \in \N \times \N : m \leq  n\}$ is countably infinite.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{14.2.4}] Prove that the set of all irrational numbers is uncountable. (Suggestion: Consider proof by contradiction using Theorems 14.4 and 14.6.)
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{14.2.5}] Prove or disprove: There exists a countably infinite subset of the set of irrational numbers.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{14.2.7}] Prove or disprove: The set $\Q^{100}$ is countably infinite.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{14.2.8}] Prove or disprove: The set $\Z\times \Q$ is countably infinite.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{14.2.11}] Describe a partition of $\N$ that divides $\N$ into eight countably infinite subsets.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+%problem
+\item[\textbf{14.2.12}] Describe a partition of $\N$ that divides $\N$ into $\aleph_0$ countably infinite subsets.
+
+\textbf{Answer:} \\
+
+\vspace{1in}
+
+
+\textbf{Hint to 14.1.11} One way to think about finding a bijection $f: (0,1) \to [0,1]$ is that we just need to fill two ``holes" at $x=0$ and at $x=1.$ But if I define $f(1/2)=1$, how do we replace it? \\
+
+Consider the infinite sets $S=\{1/2, 1/3, 1/4, 1/5, \cdots \}$ and $T=\{1/3, 1/4, 1/5, \cdots \}.$ How could you show that $|S|=|T|$? How can you use this idea to fill the hole at $x=1/2$?
+\end{enumerate}
+\end{document}
