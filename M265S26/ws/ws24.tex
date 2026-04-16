@@ -1,0 +1,115 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 23: Ch 14 \S 2-3}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{enumerate}
+\item Give a rationale and/or proof for the following statements.
+	\begin{enumerate}
+	\item If $A$ is countably infinite and $B\subseteq A$, then $B$ is countable.
+	\vfill
+	\item If $A$ and $B$ are both countably infinite, then $A \cup B$ is countably infinite.
+	\vfill
+	\item If $A$ and $B$ are both countably infinite, then $A \times B$ is countably infinite.
+	\vfill
+\newpage
+	\item If $A_1, A_2, \ldots A_k$ is a set of $k$ countably infinite sets, then
+		\begin{enumerate}
+		\item $A_1 \cup A_2 \cup \ldots \cup A_k$ is countably infinite.
+		\vfill
+		\item $A_1 \times A_2 \times \ldots \times A_k$ is countably infinite.
+		\vfill
+		\end{enumerate}
+	\end{enumerate}
+
+\item Match the statements on the left with an equivalent statement on the right for sets $A$ and $B$ and function $f:A \to B.$
+
+
+\begin{tabular}{l c r}
+$|A|=|B|$&\quad \quad \quad&$f$ is injective but not surjective\\
+&&$f$ is surjective but not injective\\
+$|A|\leq |B|$&&$f$ is surjective and injective\\
+&&$f$ is neither surjective nor injective\\
+$|A|< |B|$&&$f$ is injective \\
+&&$f$ is surjective \\
+\end{tabular}
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
