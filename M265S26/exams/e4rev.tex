@@ -1,0 +1,116 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=1in, right=1in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul}
+
+\newcommand{\blankbox}[2]{\fbox{\rule{#1}{0in}\rule{0in}{#2}}}
+%special commands for number sets
+\def\R{{\mathbb R}}
+\def\N{{\mathbb N}}
+\def\Z{{\mathbb Z}}
+\def\Q{{\mathbb Q}}
+\def\C{{\mathbb C}}
+%special commands for formatting: center, enumerate, pmatrix, vector span
+\def\bc{\begin{center}}
+\def\ec{\end{center}}
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\bpm}{\begin{pmatrix}}
+\newcommand{\epm}{\end{pmatrix}}
+\newcommand{\bv}[1]{\mathbf{#1}}
+\newcommand{\spn}[1]{\text{Span}\left\{#1\right\}}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\llra}{\longleftrightarrow}
+\newcommand{\sse}{\subseteq}
+
+\setlength{\headheight}{30pt}
+\setlength{\headsep}{20pt}
+\setlength{\fboxsep}{8pt}
+\setlength{\fboxrule}{1pt}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Exam 4 Review}}
+\rhead{\large\sf\textbf{Spring 2026}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+\begin{document}
+\thispagestyle{fancy}
+
+Exam 4 will be on Friday 24 April during our regular class time. It will include Chapter 12 and Chapter 14 Sections 1-2.  You will have one hour to complete the exam. You may bring a single 3 in by 5 in notecard with writing on both sides.\\
+
+This review only discusses new material. However, you are expected to know all of the terms and proof techniques from the whole semester.\\
+
+\begin{center} Definitions \end{center}
+
+For all of the terms below, you must be able to formally state and use the definition from your textbook. 
+
+\be
+\item function, domain, codomain, range
+\item injective (or one-to-one), surjective (or onto), bijective
+\item composition of functions
+\item inverse relations (or functions)
+\item image, preimage, and associated notation
+\item cardinality, countably infinite, countable, uncountable
+\ee
+
+\begin{center} Facts To Know \end{center}
+\be
+\item Pigeonhole principle
+\item $|\N|=|\Z|=|\Q| \neq |\R|$
+\item A set is countably infinite if and only if the elements of A can be written as an infinite sequence.
+\item If $A$ and $B$ are countably infinite, then $A\cup B$ and $A \times B$ are countably infinite.
+\ee
+
+
+\begin{center} Things to Keep in Mind \end{center}
+\be
+\item If a proof technique is not prescribed, you must state the method you are using.
+\item You should put in the ``boiler-plate'' language even if you cannot figure out the whole proof.
+\item You should expect to \emph{use} all of the hypotheses.
+\item I will \emph{not} ask you to prove something that is false.
+\ee
+
+\newpage
+\begin{center} What the Midterm Will Look Like \end{center}
+\be
+\item Problem 1 (two parts): Prove a particular function is injective. Prove a particular function is surjective
+\item Problem 2: Suppose $f:A \to B$ and $g:A \to B$. Prove that if $f$ and $g$ are injective (surjective), then $g \circ f$ is injective (surjective).
+\item Problem 3: A Pigeonhole Principle problem
+\item Problem 4: Prove that two sets have the same cardinality.
+\item Problem 5: Short Answer which will come from questions like:
+	\begin{itemize}
+	\item Show a relation is (is not) a function
+	\item Show a function is \emph{not} injective (surjective)
+	\item Determine image/preimage of a set given a function and/or its inverse
+	\item Demonstrating the mechanics of function composition
+	\item Determine the inverse relation of a function
+	\item Determine if a set is countable or uncountable
+	\end{itemize}
+\ee
+\end{document}
