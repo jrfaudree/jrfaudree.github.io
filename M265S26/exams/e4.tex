@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+\setlength{\topmargin}{-0.8in} % usually -0.25in
+\addtolength{\textheight}{1.4in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in} %\setlength{\parindent}{0pt}
+
+\usepackage[T1]{fontenc} % Recommended for better encoding
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+% macros
+\usepackage{amsmath,
+amssymb,
+mathrsfs,
+amsthm,
+fancyhdr,
+tikz,
+multicol,
+enumitem
+}
+
+\newcommand{\be}{\begin{enumerate}}
+ \newcommand{\ee}{\end{enumerate}}
+
+
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\N}{{\mathbb{N}}}
+
+
+
+\lhead{{Math 265 Proofs}}
+\chead{\large Midterm IV} 
+\rhead{Spring 2026}
+\cfoot{}
+\pagestyle{fancy}
+\begin{document}
+\thispagestyle{fancy}
+
+
+\medskip
+\large
+\vspace{.1in}
+\begin{tabular}{l@{\hspace{.4in}}l}
+Your Name & \\
+\framebox(200,30){} &  \\
+\end{tabular}
+
+%\bigskip
+
+\vfill
+{
+\renewcommand{\baselinestretch}{1.8}
+\setlength{\tabcolsep}{.2in}
+\normalsize
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Problem&Total Points&\parbox{.8in}{\hfil Score\hfil}\\
+\hline
+1&20&\\
+\hline
+2&20&\\
+\hline
+3&12&\\
+\hline
+4&12&\\
+\hline
+5&36&\\
+\hline
+\hline
+%\hline
+Total&100&\\
+\hline
+
+\end{tabular}
+
+\end{center}
+}
+\vfill
+\begin{itemize}
+\item 
+You have 1 hour.
+
+\item If you have a cell phone with you, it should be turned off and put away. (Not in your pocket)
+
+\item You may not use a calculator, book, notes or aids other than a single 3 by 5 notecard.
+
+\item In order to lower the writing load, you may use the symbols $\in$, $\exists$, and $\forall$ \emph{if} they are used precisely and literally. You will not be graded on aesthetics, so repeated use of "Thus, ..." will not be penalized. 
+\item You may \emph{not} use the symbol $\Rightarrow$ except parenthetically to indicate the logical structure of an \emph{if-and-only-if} argument. 
+\item You must write in complete sentences with proper punctuation. Every sentence must begin with a capitalized word in English, not a symbol. 
+\item If you are going to use a method \emph{other than a direct proof}, you must state this at the beginning of your proof unless the directions require you to use particular approach.
+\item When using proof by induction, you \emph{must} indicate when the inductive hypothesis is used.
+\end{itemize}
+\newpage
+\begin{enumerate}
+%injection/bijection for a particular function
+\item (20 pts)
+	\begin{enumerate}
+	\item (8 pts) \textbf{Use the definition} to prove that the function $f: \R -\{1\} \to \R -\{2\}$ defined as $f(x)=\frac{2x}{x-1}$ is injective.
+	\vfill
+	\item (8pts) \textbf{Use the definition} to prove that the function $g: \Z \times \Z \to \Z$ defined as $g(m,n)=5m-2n$ is surjective.
+	\vfill
+	\item (4 pts) Do either $f$ or $g$ have an inverse? Justify your conclusion with a \emph{brief} explanation.
+	\vspace{1in}
+	\end{enumerate}
+\newpage
+%composition of functions is bijective
+\item (20 pts) Suppose $f:A \to B$ and $g: B \to C$ are both bijections. Prove that $g\circ f: A \to C$ is a bijection.
+
+\newpage
+%PHP
+ \item (12 pts) Let $T$ be an arbitrary set of integers. How large must $T$ be in order to guarantee that at least two of them have the same remainder upon division by 7? Prove your answer is correct.
+ \newpage
+ %%
+ \item (6 pts each, 12 pts total) For each pair of sets below, show that they have the same cardinality by \emph{finding a bijection from one set to the other.} You do not need to prove your function is a bijection.
+ 	\begin{enumerate}
+	\item $\R$ and $(-\infty, 100)$
+	\vfill
+	\item $\{0,1,2\} \times \N$ and $\N$
+	\vfill
+	\end{enumerate}
+\item (6 pts each, 36 pts total) Short Answer
+	\begin{enumerate}
+	\item Let $A=\{1,2,3,4\}$. Let $R$ be a relation on $\mathcal{P}(A)$ defined as $X \: R \: Y$ if $X \cup Y = A.$ Show that $R$ is not a function.
+	\vfill
+	\item Show that the function $f: \N \times \N \to \N$ defined by $f(x,y)=2^x+y$ is not injective.
+	\vfill
+	\newpage
+	\item Show that the function $g: \mathcal{P}(\N) \to \mathcal{P}(\N)$ defined by $g(A)=A \cup \{2\}$ is not surjective.
+	\vfill
+	\item Let $S=\{ (q_1,q_2,q_3) : q_1,q_2,q_3 \in \Q\}$. Is $S$ countable? Give a brief justification.
+	\vfill
+	\item Let $f:\R \to \R$ be defined by $f(x)=|x-2|.$ Determine the preimage of the interval $[1,2].$
+	\vfill
+	\item Suppose $f:A \to B$ is a function and $X \subseteq A.$ Show that $(f^{-1}\circ f) (X) = X$ may \textbf{not} be true for all functions $f$. (Hint: The notation $f^{-1}$ does \emph{not} mean $f$ has an inverse. It is the name of the inverse \textbf{relation} of $f$.)
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
