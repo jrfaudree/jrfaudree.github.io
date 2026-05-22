@@ -1,0 +1,131 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+%\doublespacing
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+%\parskip 6pt plus 1pt
+%\def\tableindent{\hskip 0.5 in}
+%\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 17: Ch 9}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+Solutions
+\begin{enumerate}
+\item Disproving the statement $P$ means proving $\; \sim P.$
+
+\item Disprove each false statement below by \textbf{first} stating what you need to show and then providing a complete disproof.
+	\begin{enumerate}
+	\item If $n \in \Z$ and $n^5-3n$ is even, then $n$ is even.\\
+	\textbf{Answer:} This is false. We must find an integer $n$ such that $n^5-3n$ is even, but $n$ is odd.\\
+	
+	Pick $n=1.$ We that $n$ is integer and $n^5-3n=-2$ which is even. But $n$ is odd.
+		\vfill
+	\item There exists a real number such that $x^2 < x < |x|.$\\
+	\textbf{Answer:} This is false. We must show that for every integer $x$ either $x \leq x^2$ or $x \geq |x|.$\\
+	We will proceed by cases.\\
+	\textbf{Case 1:} Suppose $x \geq 0.$ Then $x \geq |x|,$ since $x = |x|$ for positive numbers.\\
+	\textbf{Case 1:} Suppose $x < 0.$ Since $x^2\geq 0$ for all real numbers, it follows that $x <0\leq x^2.$ Thus, $x \leq x^2.$\\
+	\vfill
+	\item For all sets $A$ and $B$, if $A-B=\emptyset$, then $B \not = \emptyset.$\\
+	\textbf{Answer:} This is false. We must find a pair of sets $A$ and $B$ such that $A-B=\emptyset$ and $B = \emptyset.$\\
+	Pick $A=B=\emptyset.$ We see that $A$ and $B$ are sets and $A-B=\emptyset$ and $B=\emptyset.$
+	\vfill
+	\end{enumerate}
+\item Prove or disprove the statements below. Your disproof must be preceded by a description of what you must show in order to disprove the statement.
+	\begin{enumerate}
+	\item Every odd integer is the sum of three odd integers.\\
+	\textbf{Answer:} This is true.\\
+	\begin{proof} Let $n$ be an odd integer. Since $n$ is odd, so is the integer $-n.$ Now, $n=n+n+(-n)$ a sum of three odd integers. \end{proof}
+	
+	\vfill
+	\item If $A$ and $B$ are sets, then $\mathcal{P}(A) - \mathcal{P}(B)  \subseteq \mathcal{P}(A-B).$\\
+	\textbf{Answer:} This is false. We must find two sets $A$ and $B$ such that $\mathcal{P}(A) - \mathcal{P}(B)  \not\subseteq \mathcal{P}(A-B).$ Alternatively, we need to find $A$ and $B$ such that there exists some $X \in \mathcal{P}(A) - \mathcal{P}(B)$ such that $X \not \in \mathcal{P}(A-B).$\\
+	Pick $A=\{1,2\}$ and $B=\{2\}.$ Thus, $A-B=\{1\}.$ Choose, $X=A.$ We know that $A \in \mathcal{P}(A)$ for all sets $A.$ Thus, $\{1,2\} \in \mathcal{P}(A).$ Since $1 \not \in B,$ then $A \not \in \mathcal{P}(B).$ So, $A \in \mathcal{P}(A) - \mathcal{P}(B).$ Since $2 \not \in A-B,$ $A \not \in \mathcal{P}(A-B).$\\
+
+
+	\vfill
+	\item For all $a,b,c \in \N,$ if $a \mid bc,$ then $a \mid b$ or $a \mid c.$\\
+	\textbf{Answer:} This is false. We need to find integers $a,b,$ and $c$ such that $a \mid bc$ and $a \nmid b$ and $a \nmid c.$\\
+	Pick $a=6,$ $b=2$ and $c=3.$ Then $a \mid bc$ since $6 \mid 6.$ But $a \nmid b$ and $a \nmid c$ since $6 \nmid 2$ and $6 \nmid 3.$\\
+
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

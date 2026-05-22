@@ -1,0 +1,138 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+\doublespacing
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 18: Ch 10}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{enumerate}
+\item Prove the statement below using induction. 
+\begin{quote} The expression $n^3+5n+6$ is divisible by 3 for every $n \in \N.$\end{quote}
+
+
+
+\vfill
+\vfill
+\item Can you think of any \emph{other} ways one might prove the statement above?\\
+
+\vspace{.5in}
+\item Proposition: For every $n \in \N,$ every set of $n$ horses has the same color.
+\vfill
+\newpage
+\item Proof by \emph{Strong} Induction
+\vspace{1in}
+\item Proposition: Let $a_n$ be the sequence such that $a_0=1,$ $a_1=4$ and $a_n=3a_{n-1}-2a_{n-2}.$ Then, for every $n \in \N \cup \{0\},$ $a_n=3 \cdot 2^n-2.$
+\vfill
+\vfill
+
+\item Proposition: Every integer $n >1$ has a prime factorization.
+\vfill
+(Bonus:) Any postage, $n$, can be made from 3-cent and 7-cent stamps provided $n\in \N$ and $n>12.$\end{enumerate}
+\end{document}  
+
+We proceed by induction on $n$.
+
+\medskip\noindent(1) \textbf{Base case ($n=1$):}
+The left-hand side equals $1\cdot 2 = 2$.
+The right-hand side equals $\dfrac{1\cdot 2\cdot 3}{3} = 2$.
+Hence the statement holds for $n=1$.
+
+\medskip\noindent(2) \textbf{Inductive step:}
+Assume that for some $k\geq 1$,
+\[
+  1\cdot 2+2\cdot 3+\cdots+k(k+1)=\frac{k(k+1)(k+2)}{3}.
+\]
+We must show the statement holds for $k+1$, i.e.,
+\[
+  1\cdot 2+2\cdot 3+\cdots+k(k+1)+(k+1)(k+2)=\frac{(k+1)(k+2)(k+3)}{3}.
+\]
+Starting from the left-hand side, observe
+\hspace*{-.3in}\begin{align*}
+  \big(1\cdot 2+\cdots+k(k+1)\big)+(k+1)(k+2)
+  &= \frac{k(k+1)(k+2)}{3}+(k+1)(k+2)&\text{ by the inductive hypothesis}\\
+  &= (k+1)(k+2)\!\left(\frac{k}{3}+1\right)& \text{ factoring}\\
+  &= (k+1)(k+2)\cdot\frac{k+3}{3}& \text{ common denominator}\\
+  &= \frac{(k+1)(k+2)(k+3)}{3}.&
+\end{align*}
+This is exactly the right-hand side for $n=k+1$, completing the induction.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,112 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 25: Ch 14 \S 3-4}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{enumerate}
+\item Thm 14.7: Let $A$ be a set. Then \quad \fbox{$|A|$ \quad \quad $|\mathcal{P}(A)|.$}\\
+\vfill
+\item Thm 14.8: Let $A$ be a countably infinite set and $B$ be an infinite set such that $B\subseteq A.$ Then \\
+\vfill
+\item Thm 14.10 (The Cantor-Bernstein-Schröder Theorem)\\
+Let $f:A\to B$ and $g:B \to A$ be injective. Then, 
+\vfill
+\item Thm 14.9: Let $B \subseteq A$ such that $B$ is uncountable. Then, \\
+\vfill
+\item Let $f(x)=\frac{1}{1+e^x}$
+	\begin{enumerate}
+	\item Suppose that the domain of $f$ is $\R.$ Determine the range of $f$ and justify your conclusion.
+	\vfill
+	\item Is $f(x)$ injective? Justify your conclusion.
+	\vfill
+	\item Now use $f(x)$ (and your work above) to prove two sets have the same cardinality.
+	\vfill
+	\end{enumerate}
+\newpage
+\item Show that $|(0,1)|=|[0,1)|$ by finding a bijection between them.\\
+\vfill
+\item Show that $|(0,1)|=|[0,1)|$ using the Cantor-Bernstein-Schröder Theorem.\\
+\vfill
+\item Thm 14.11 $|\R|=|\mathcal{P}(\N)|$\\
+\vspace{5in}
+\newpage
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+

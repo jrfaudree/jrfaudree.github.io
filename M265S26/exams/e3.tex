@@ -1,0 +1,151 @@
+\documentclass[11pt]{article}
+\setlength{\topmargin}{-0.8in} % usually -0.25in
+\addtolength{\textheight}{1.4in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in} %\setlength{\parindent}{0pt}
+
+\usepackage[T1]{fontenc} % Recommended for better encoding
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+% macros
+\usepackage{amsmath,
+amssymb,
+mathrsfs,
+amsthm,
+fancyhdr,
+tikz,
+multicol,
+enumitem
+}
+
+\newcommand{\be}{\begin{enumerate}}
+ \newcommand{\ee}{\end{enumerate}}
+
+
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\N}{{\mathbb{N}}}
+
+
+
+\lhead{{Math 265 Proofs}}
+\chead{\large Midterm III} 
+\rhead{Spring 2026}
+\cfoot{}
+\pagestyle{fancy}
+\begin{document}
+\thispagestyle{fancy}
+
+
+\medskip
+\large
+\vspace{.1in}
+\begin{tabular}{l@{\hspace{.4in}}l}
+Your Name & \\
+\framebox(200,30){} &  \\
+\end{tabular}
+
+%\bigskip
+
+\vfill
+{
+\renewcommand{\baselinestretch}{1.8}
+\setlength{\tabcolsep}{.2in}
+\normalsize
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Problem&Total Points&\parbox{.8in}{\hfil Score\hfil}\\
+\hline
+1&20&\\
+\hline
+2&15&\\
+\hline
+3&15&\\
+\hline
+4&32&\\
+\hline
+5&18&\\
+\hline
+\hline
+%\hline
+Total&100&\\
+\hline
+
+\end{tabular}
+
+\end{center}
+}
+\vfill
+\begin{itemize}
+\item 
+You have 1 hour.
+
+\item If you have a cell phone with you, it should be turned off and put away. (Not in your pocket)
+
+\item You may not use a calculator, book, notes or aids other than a single 3 by 5 notecard.
+
+\item In order to lower the writing load, you may use the symbols $\in$, $\exists$, and $\forall$ \emph{if} they are used precisely and literally. You will not be graded on aesthetics, so repeated use of "Thus, ..." will not be penalized. 
+\item You may \emph{not} use the symbol $\Rightarrow$ except parenthetically to indicate the logical structure of an \emph{if-and-only-if} argument. 
+\item You must write in complete sentences with proper punctuation. Every sentence must begin with a capitalized word in English, not a symbol. 
+\item If you are going to use a method \emph{other than a direct proof}, you must state this at the beginning of your proof unless the directions require you to use particular approach.
+\item When using proof by induction, you \emph{must} indicate when the inductive hypothesis is used.
+\end{itemize}
+\newpage
+\begin{enumerate}
+%Set Problem
+\item (20 pts) 
+	\begin{enumerate}
+	\item (5 pts) Describe the standard method to prove $X \subseteq Y$ for sets $X$ and $Y$.
+	\vspace{1in}
+	\item (15 pts) Use the standard method for showing set containment to prove that for all sets $A,$ $B$, and $C$, if $$A\cap C \subseteq B \cap C \text{   and   } A\cup C \subseteq B \cup C,$$
+	then $A \subseteq B.$
+	\end{enumerate}
+\newpage
+\item (15 pts) \textbf{Use mathematical induction} to prove $$3^1+3^2+3^3 + \cdots + 3^n = \frac{3^{n+1}-3}{2}$$ for all integers $n \in \N.$
+\newpage
+\item (15 pts) \textbf{Use mathematical induction} to prove $2^n < (n+1)!$ for all integers $n \geq 2.$
+\newpage
+\item (8 pts. each for 32 pts. total) Disprove the statements below.
+	\begin{enumerate}
+	\item If $X \subseteq \N$ and $|X|$ is infinite, then $|\N-X|$ is finite.
+	\vfill
+	\item For all sets $A$, $B$, and $C,$ if $A \subseteq B,$ then $A \cap \overline{(B \cap C)}=\emptyset.$
+	\vfill
+	\item For every $n \in \N$, there exists some $m \in \N$ such that $mn \equiv 1 \pmod {10}.$
+	\vfill
+	\item The relation $R$ on $\Z$ defined by $xRy$ if $|x-y| <5$ is transitive.
+	\vfill
+	\end{enumerate}
+	\newpage
+\item (18 pts.) Let $A=\{1,2,3\}.$ Let $R$ be a relation on $\mathcal{P}(A),$ the power set of $A,$ defined as $X\: R\: Y$ if $X \cap \{1,2\} = Y \cap \{1,2\}.$
+	\begin{enumerate}
+	\item (2 pts) Show that for $X=\{1\}$ and $Y=\{1,3\},$ by the definition, $X\: R\: Y.$
+	\vspace{1in}
+	\item (10 pts) Prove that $R$ is an equivalence relation.
+	\vfill
+	\vfill
+	\item (6 pts) Describe the partition of $\mathcal{P}(A)$ resulting from the equivalence classes of $R.$ Use proper notation and clearly indicate the members of each partition.
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
+Let $R$ be a relation on $\N \times \N$ defined as $$(a,b) R (c,d) \text{  if  }a+d=b+c.$$
+	\begin{enumerate}
+	\item Show that $(1,2)R(3,4).$
+	\vfill
+	\item Find three additional ordered pairs $(c,d)$ such that $(1,2)R(c,d).$ (It is sufficient to state them. You don't need to prove your are correct.)
+	\vfill
+	\item Show that $R$ is reflexive.
+	\vfill
+	\item Show that $R$ is symmetric.
+	\vfill
+	\item The relation $R$ is an equivalence relation. Determine $[(1,1)]$,  the equivalence class of $(1,1).$
+	\vfill
+	\end{enumerate}

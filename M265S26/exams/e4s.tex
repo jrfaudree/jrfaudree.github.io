@@ -1,0 +1,238 @@
+\documentclass[11pt]{article}
+\setlength{\topmargin}{-0.8in}
+\addtolength{\textheight}{1.4in}
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in}
+
+\usepackage[T1]{fontenc}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+\usepackage{amsmath,
+amssymb,
+mathrsfs,
+amsthm,
+fancyhdr,
+tikz,
+multicol,
+enumitem
+}
+
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\N}{{\mathbb{N}}}
+
+\lhead{{Math 265 Proofs}}
+\chead{\large Midterm IV --- \textbf{Solutions}}
+\rhead{Spring 2026}
+\cfoot{}
+\pagestyle{fancy}
+
+\begin{document}
+\thispagestyle{fancy}
+
+\begin{enumerate}
+
+%-------------------------------------------------------------
+\item % Problem 1
+%-------------------------------------------------------------
+
+\begin{enumerate}
+
+%--- 1(a): f is injective ---
+\item Prove the function $f: \R\setminus\{1\} \to \R\setminus\{2\}$ defined by
+$f(x)=\dfrac{2x}{x-1}$ is injective using the definition.
+
+\medskip
+\textbf{Proof.}
+Suppose $x_1, x_2 \in \R\setminus\{1\}$ and $f(x_1)=f(x_2)$.
+Then
+\[
+  \frac{2x_1}{x_1-1} = \frac{2x_2}{x_2-1}.
+\]
+Cross-multiplying gives
+\[
+  2x_1(x_2-1) = 2x_2(x_1-1).
+\]
+Expanding both sides yields
+\[
+  2x_1 x_2 - 2x_1 = 2x_1 x_2 - 2x_2.
+\]
+Subtracting $2x_1 x_2$ from both sides gives $-2x_1 = -2x_2$, and therefore $x_1 = x_2$.
+Since $f(x_1)=f(x_2)$ implies $x_1=x_2$, the function $f$ is injective. $\blacksquare$
+
+\medskip
+
+%--- 1(b): g is surjective ---
+\item Prove the function $g: \Z\times\Z \to \Z$ defined by $g(m,n)=5m-2n$ is surjective using the definition.
+
+\medskip
+\textbf{Proof.}
+Let $k \in \Z$ be arbitrary.
+We need to find $(m,n)\in\Z\times\Z$ such that $5m-2n=k$.
+Choose $m=k$ and $n=2k$.
+Since $k\in\Z,$ we know $m,n\in\Z$ and thus $(k,2k)\in\Z\times\Z$.
+Now, 
+\[
+  g(k,2k) = 5k - 2(2k) = 5k - 4k = k.
+\]
+Since $k$ was arbitrary, $g$ is surjective. $\blacksquare$
+
+\medskip
+
+%--- 1(c): inverses ---
+\item The function $f$ has an inverse, but $g$ does not.
+
+\medskip
+\textbf{Justification.}
+One can use algebra to construct the inverse of $f$: $f^{-1}(y)=\dfrac{y}{y-2}$.
+
+The function $g$ is \emph{not} injective. Observe $g(0,0)=0=g(2,5).$ 
+\end{enumerate}
+
+%-------------------------------------------------------------
+\item % Problem 2
+%-------------------------------------------------------------
+
+Prove that if $f:A\to B$ and $g:B\to C$ are bijections, then $g\circ f:A\to C$ is a bijection.
+
+\medskip
+\textbf{Proof.}
+We must show that $g\circ f$ is both injective and surjective.
+
+\medskip
+\textit{Injective.}\\
+Suppose $a_1,a_2\in A$ and $(g\circ f)(a_1)=(g\circ f)(a_2)$ (or equivalently $g(f(a_1))=g(f(a_2))$).\\
+
+Since $g$ is injective, it follows that $f(a_1)=f(a_2)$. Since $f$ is injective, it follows that $a_1=a_2$.\\
+
+Hence $g\circ f$ is injective.
+
+\medskip
+\textit{Surjective.}
+
+Let $c\in C$ be arbitrary.\\
+
+Since $g$ is surjective, there exists $b\in B$ such that $g(b)=c$. Since $f$ is surjective, there exists $a\in A$ such that $f(a)=b$.\\
+
+Now, observe that  $(g\circ f)(a)=g(f(a))=g(b)=c$.\\
+
+Since $c$ was arbitrary, $g\circ f$ is surjective.\\
+
+
+Since $g\circ f$ is both injective and surjective, it is a bijection. $\blacksquare$
+
+
+%-------------------------------------------------------------
+\item Let $T$ be an arbitrary set of integers. How large must $T$ be in order to guarantee that at least two of them have the same remainder upon division by 7? Prove your answer is correct.\\
+%-------------------------------------------------------------
+
+\textbf{Answer.} The set $T$ must have at least $\mathbf{8}$ elements.
+
+\medskip
+\textbf{Proof.}
+When an integer is divided by $7$, the possible remainders are $0,1,2,3,4,5,6$ --- exactly $7$ distinct values. Let $S=\{0,1,2,3,4,5,6\}.$
+
+Let $f: T \to S$ be defined as $f(x)$ is the remainder of $x$ upon division by 7.\\
+
+Since $|T|=8>7=|S|,$ by the Pigeonhole Principle, $f$ is not injection. Thus, there must be two element of $T$, say $x$ and $y$ such that $f(x)=f(y).$ By the definition of $f$, this implies $x$ and $y$ have the same remainder upon division by 7.\\
+
+
+Observe that 8 is best possible since the set $S$ itself demonstrates that there exist sets of cardinality $7$ such that all elements have different remainders.  $\blacksquare$
+
+
+%-------------------------------------------------------------
+\item % Problem 4
+%-------------------------------------------------------------
+
+\begin{enumerate}
+
+%--- 4(a): bijection from R to (-inf, 100) ---
+\item We exhibit a bijection $F: \R \to (-\infty, 100)$.
+
+\medskip
+Define $F(x) = 100 - e^{x}$.
+
+\medskip
+\textit{Why this works.}\\
+We know that as $x \to \infty,$ $F \to -\infty$ and as $x \to -\infty$, $F \to 100.$ Moreover, $F$ is continuous and always decreasing.
+
+\medskip
+
+%--- 4(b): bijection from {0,1,2} x N to N ---
+\item We exhibit a bijection $G: \{0,1,2\}\times\N \to \N.$\\
+
+Define $G(k, n) = 3n + k$
+
+\medskip
+\textit{Why this works.}\\
+It is easy to see that the function is onto since every integer $a \in \N$ can be written in the form $a=3n+k,$ where $k \in \{0,1,2\}.$ That fact that this form ($a=3n+k$) is \emph{unique}, thanks to the division algorithm, ensures the function is injective.
+
+\end{enumerate}
+
+%-------------------------------------------------------------
+\item % Problem 5 --- Short Answer
+%-------------------------------------------------------------
+
+\begin{enumerate}
+
+%--- 5(a): R is not a function ---
+\item Show the relation $R$ on $\mathcal{P}(A)$ defined by $X\,R\,Y$ iff $X\cup Y=A$ is not a function.
+
+\medskip
+Observe that $\{1,2\} R \{3,4\}$ and $\{1,2\} R \{2, 3,4\}$. 
+Therefore $R$ is not a function. $\blacksquare$
+
+\medskip
+
+%--- 5(b): f(x,y)=2^x+y is not injective ---
+\item Show the function $f:\N\times\N\to\N$ defined by $f(x,y)=2^x+y$ is not injective.
+
+\medskip
+Observe $f(1,3)=2+3=5$ {and} $f(2,1)=4+1=5.$
+
+\medskip
+
+%--- 5(c): g(A)=A∪{2} is not surjective ---
+\item Show the function $g:\mathcal{P}(\N)\to\mathcal{P}(\N)$ defined by $g(A)=A\cup\{2\}$ is not surjective.
+
+\medskip
+
+Observe that by the definition of $g$ every set in the image must contain the element $2$. Thus, the set $B=\{1,3\}$ can never be the image of any set.
+\medskip
+
+%--- 5(d): S is countable ---
+\item Let $S=\{(q_1,q_2,q_3): q_1,q_2,q_3\in\Q\}$. Is $S$ contable?
+
+\medskip
+\textbf{Answer.} $S$ is countable. We know this because $S=\Q\times\Q\times\Q.$ Since we know $\Q$ is countably infinite and we know the Cartesian product of any finite collection of countably infinite sets is countably infinite, we can conclude that $S$ is countably infinite and thus countable.
+\medskip
+
+%--- 5(e): preimage of [1,2] under f(x)=|x-2| ---
+\item Let $f:\R\to\R$ be defined by $f(x)=|x-2|$.
+
+\medskip
+\textbf{Answer.} The preimage of $[1,2]$ is $[0,1]\cup[3,4]$.
+
+\medskip
+%--- 5(f): (f^{-1} o f)(X) = X need not hold ---
+\item Show there exists a function $f:A\to B$ and a set $X\subseteq A$ such that $(f^{-1}\circ f)(X)\neq X$.
+
+\medskip
+
+Let $A=\{1,2\}$, $B=\{3\}$, and define $f(1)=f(2)=3$ (the constant function).
+Let $X=\{1\}$.
+Then $f(X)=\{3\}.$ But, $f^{-1}(f(X))=f^{-1}(\{3\})=\{a\in A: f(a)=3\}=\{1,2\} \neq \{1\}=X.$
+
+
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

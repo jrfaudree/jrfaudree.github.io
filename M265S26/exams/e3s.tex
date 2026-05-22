@@ -1,0 +1,182 @@
+\documentclass[11pt]{article}
+\setlength{\topmargin}{-0.8in} % usually -0.25in
+\addtolength{\textheight}{1.4in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in} %\setlength{\parindent}{0pt}
+
+\usepackage[T1]{fontenc} % Recommended for better encoding
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+% macros
+\usepackage{amsmath,
+amssymb,
+mathrsfs,
+amsthm,
+fancyhdr,
+tikz,
+multicol,
+enumitem
+}
+
+\newcommand{\be}{\begin{enumerate}}
+ \newcommand{\ee}{\end{enumerate}}
+
+
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\N}{{\mathbb{N}}}
+
+
+
+\lhead{{Math 265 Proofs}}
+\chead{\large Midterm III} 
+\rhead{Spring 2026}
+\cfoot{}
+\pagestyle{fancy}
+\begin{document}
+\thispagestyle{fancy}
+
+Some Solutions\\
+\begin{enumerate}
+%Set Problem
+\item (20 pts) 
+	\begin{enumerate}
+	\item (5 pts) Describe the standard method to prove $X \subseteq Y$ for sets $X$ and $Y$.
+	
+	Let $x$ be an arbitrary element of $X$. Show $x \in Y.$\\
+	\item (15 pts) Use the standard method for showing set containment to prove that for all sets $A,$ $B$, and $C$, if $$A\cap C \subseteq B \cap C \text{   and   } A\cup C \subseteq B \cup C,$$
+	then $A \subseteq B.$
+	
+	\begin{proof}
+	Assume $A \cap C \subseteq B \cap C$ and $A \cup C \subseteq B \cup C$. Let $x \in A$. We wish to show $x \in B$.
+
+Since $x \in A$, we have $x \in A \cup C.$ By hypothesis,  $A \cup C \subseteq B \cup C$, so $x \in A \cup C$ implies   $x \in B \cup C$.  Thus, $x \in B$ or $x \in C$. 
+
+\textbf{Case 1:} Suppose $x \notin C$. Since $x \in B \cup C$, it follows that $x \in B$, and we are done.
+
+\textbf{Case 2:} Suppose $x \in C$. Since $x \in A$ and $x \in C$, we have $x \in A \cap C$. By hypothesis $A \cap C \subseteq B \cap C$, so $x \in B \cap C$, which gives $x \in B$.
+
+In both cases $x \in B$. Since $x \in A$ was arbitrary, we conclude $A \subseteq B$.
+\end{proof}
+	\end{enumerate}
+\item (15 pts) \textbf{Use mathematical induction} to prove $$3^1+3^2+3^3 + \cdots + 3^n = \frac{3^{n+1}-3}{2}$$ for all integers $n \in \N.$
+
+\begin{proof}
+\textbf{Base case ($n=1$):} The left-hand side is $3^1 = 3$. The right-hand side is $\dfrac{3^{2}-3}{2} = \dfrac{9-3}{2} = \dfrac{6}{2} = 3$. Thus the formula holds for $n=1$.
+
+\textbf{Inductive step:} Assume that for some $k \in \N$, 
+\[
+  3^1 + 3^2 + \cdots + 3^k = \frac{3^{k+1}-3}{2}.
+\]
+We must show that
+\[
+  3^1 + 3^2 + \cdots + 3^k + 3^{k+1} = \frac{3^{k+2}-3}{2}.
+\]
+Starting from the left-hand side and applying the inductive hypothesis, we obtain
+\begin{align*}
+  3^1 + 3^2 + \cdots + 3^k + 3^{k+1}
+  &= \frac{3^{k+1}-3}{2} + 3^{k+1} \\[6pt]
+  &= \frac{3^{k+1}-3 + 2\cdot 3^{k+1}}{2} \\[6pt]
+  &= \frac{3 \cdot 3^{k+1}-3}{2} \\[6pt]
+  &= \frac{3^{k+2}-3}{2}.
+\end{align*}
+This is exactly the formula for $n = k+1$. By the principle of mathematical induction, the formula holds for all $n \in \N$. 
+\end{proof}
+\item (15 pts) \textbf{Use mathematical induction} to prove $2^n < (n+1)!$ for all integers $n \geq 2.$
+
+\begin{proof}
+\textbf{Base case ($n=2$):} We have $2^2 = 4$ and $(2+1)! = 3! = 6$. Since $4 < 6$, the statement holds for $n=2$.
+
+\textbf{Inductive step:} Assume that $2^k < (k+1)!$ for some integer $k \geq 2$. We must show $2^{k+1} < (k+2)!$.
+
+Observe
+\begin{align*}
+  2^{k+1} &= 2 \cdot 2^k \\
+           &< 2 \cdot (k+1)! \quad \text{(by the inductive hypothesis)}\\
+           &\leq (k+2)\cdot(k+1)! \quad \text{(since } k \geq 2 \text{ implies } k+2 \geq 4 > 2\text{)}\\
+           &= (k+2)!.
+\end{align*}
+Thus $2^{k+1} < (k+2)!$, which is the statement for $n = k+1$.
+
+By the principle of mathematical induction, $2^n < (n+1)!$ for all integers $n \geq 2$.
+
+\end{proof}
+
+\item (8 pts. each for 32 pts. total) Disprove the statements below.
+	\begin{enumerate}
+	\item If $X \subseteq \N$ and $|X|$ is infinite, then $|\N-X|$ is finite.
+	
+	\textbf{Disproof  by counterexample:} Let $X$ be the set of all even natural numbers, i.e., $X = \{2, 4, 6, 8, \ldots\}$. Then $X \subseteq \N$ and $|X|$ is infinite. However, $\N - X = \{1, 3, 5, 7, \ldots\}$, the set of odd natural numbers, which is also infinite. Therefore the statement is false.
+	\vfill
+	\item For all sets $A$, $B$, and $C,$ if $A \subseteq B,$ then $A \cap \overline{(B \cap C)}=\emptyset.$
+	
+	\textbf{Disproof by counterexample:} Let $A = \{1\}$, $B = \{1, 2\}$, $C = \{2\}$ (within some universal set, say $U = \{1,2,3\}$). Then $A \subseteq B$. Now $B \cap C = \{2\}$, so $\overline{(B\cap C)} = \{1,3\}$. Thus $A \cap \overline{(B\cap C)} = \{1\} \cap \{1,3\} = \{1\} \neq \emptyset$. Therefore the statement is false.
+	\vfill
+	\item For every $n \in \N$, there exists some $m \in \N$ such that $mn \equiv 1 \pmod {10}.$
+	
+	\textbf{Disproof by counterexample:} Let $n = 2$. Suppose for contradiction there exists $m \in \N$ with $2m \equiv 1 \pmod{10}$. Then $10 \mid (2m - 1)$, so $2m - 1$ is divisible by $10$, hence even. But $2m - 1$ is odd, a contradiction. Thus no such $m$ exists for $n = 2$, and the statement is false.
+	\vfill
+	\item The relation $R$ on $\Z$ defined by $xRy$ if $|x-y| <5$ is transitive.
+	
+	\textbf{Disproof by counterexample:} Let $x = 0$, $y = 4$, and $z = 8$. Then $|x - y| = 4 < 5$, so $x\,R\,y$. Also $|y - z| = 4 < 5$, so $y\,R\,z$. However, $|x - z| = 8 \not< 5$, so $x\,\not R\,z$. Therefore $R$ is not transitive. 
+	\vfill
+	\end{enumerate}
+
+\item (18 pts.) Let $A=\{1,2,3\}.$ Let $R$ be a relation on $\mathcal{P}(A),$ the power set of $A,$ defined as $X\: R\: Y$ if $X \cap \{1,2\} = Y \cap \{1,2\}.$
+	\begin{enumerate}
+	\item (2 pts) Show that for $X=\{1\}$ and $Y=\{1,3\},$ by the definition, $X\: R\: Y.$
+	
+	
+	Observe $\{1\} \cap \{1,2\} = \{1\}$ and $\{1,3\} \cap \{1,2\} = \{1\}$. Since both intersections equal $\{1\}$, we have $\{1\}\,R\,\{1,3\}$ by the definition of $R$.
+	
+	
+	\item (10 pts) Prove that $R$ is an equivalence relation.
+	
+	\begin{proof} We must show $R$ is reflexive, symmetric, and transitive.
+
+\textbf{Reflexive:} Let $X \in \mathcal{P}(A)$. Then $X \cap \{1,2\} = X \cap \{1,2\}$, so $X\,R\,X$. Thus $R$ is reflexive.
+
+\textbf{Symmetric:} Let $X, Y \in \mathcal{P}(A)$ and suppose $X\,R\,Y$. Then $X \cap \{1,2\} = Y \cap \{1,2\}$. By symmetry of equality, $Y \cap \{1,2\} = X \cap \{1,2\}$, so $Y\,R\,X$. Thus $R$ is symmetric.
+
+\textbf{Transitive:} Let $X, Y, Z \in \mathcal{P}(A)$ and suppose $X\,R\,Y$ and $Y\,R\,Z$. Then $X \cap \{1,2\} = Y \cap \{1,2\}$ and $Y \cap \{1,2\} = Z \cap \{1,2\}$. By transitivity of equality, $X \cap \{1,2\} = Z \cap \{1,2\}$, so $X\,R\,Z$. Thus $R$ is transitive.
+
+Since $R$ is reflexive, symmetric, and transitive, $R$ is an equivalence relation. \end{proof}
+
+	\item (6 pts) Describe the partition of $\mathcal{P}(A)$ resulting from the equivalence classes of $R.$ Use proper notation and clearly indicate the members of each partition.
+	
+	Two sets $X, Y \in \mathcal{P}(A)$ are in the same equivalence class if and only if $X \cap \{1,2\} = Y \cap \{1,2\}$. The possible values of $X \cap \{1,2\}$ are the subsets of $\{1,2\}$: namely $\emptyset$, $\{1\}$, $\{2\}$, and $\{1,2\}$. This gives four equivalence classes:
+
+\begin{align*}
+[\emptyset] &= \{\emptyset,\; \{3\}\} \\[4pt]
+[\{1\}]     &= \{\{1\},\; \{1,3\}\} \\[4pt]
+[\{2\}]     &= \{\{2\},\; \{2,3\}\} \\[4pt]
+[\{1,2\}]   &= \{\{1,2\},\; \{1,2,3\}\}
+\end{align*}
+
+These four classes are pairwise disjoint and their union is all of $\mathcal{P}(A)$, confirming they form a partition. 
+	
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
+Let $R$ be a relation on $\N \times \N$ defined as $$(a,b) R (c,d) \text{  if  }a+d=b+c.$$
+	\begin{enumerate}
+	\item Show that $(1,2)R(3,4).$
+	
+	
+	
+	\vfill
+	\item Find three additional ordered pairs $(c,d)$ such that $(1,2)R(c,d).$ (It is sufficient to state them. You don't need to prove your are correct.)
+	\vfill
+	\item Show that $R$ is reflexive.
+	\vfill
+	\item Show that $R$ is symmetric.
+	\vfill
+	\item The relation $R$ is an equivalence relation. Determine $[(1,1)]$,  the equivalence class of $(1,1).$
+	\vfill
+	\end{enumerate}

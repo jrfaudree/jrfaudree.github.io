@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+\doublespacing
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 19: Ch 11}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{enumerate}
+\item A \emph{relation} $R$ on $A$ is 
+\vfill
+
+\item Examples
+\vfill
+
+\vfill
+
+\item Suppose $R$ is a relation on the set $A.$
+	\begin{enumerate}
+	\item We say $R$ is \emph{symmetric} if 
+	\vfill
+
+	\item We say $R$ is \emph{reflexive} if 
+	\vfill
+
+	\item We say $R$ is \emph{transitive} if 
+	\vfill
+	\end{enumerate}
+\newpage
+\item Let $R$ be the relation on $A=\{0,1,2,3,4\}$ defined as $a\: R \: b$ if $a \mid b.$ List all the elements in $R$. What is the smallest positive number you could add to the set $A$ that would increase the order $R$ as much as possible?
+\vfill
+\item Let $R$ be a relation on $A=\Z$ defined by $a \;R\; b$ if $a \equiv b \pmod 3.$ Find three elements of $R$ that contain zero in the first coordinate, find three elements of $R$ that contain 1 in the second coordinate, and find three ordered pairs in $\Z \times \Z$ that are not in $R.$
+\vfill
+\item Suppose $R$ is a relation on $\mathcal{P}(A)$ where $A=\{0,1,2,3,4\}$ defined as $X \: R \: Y$ if $X \cap Y \not = \emptyset.$ List 5 elements in $R$ and 3 elements of $ \mathcal{P}(A)\times \mathcal{P}(A)$ that are not in $R.$
+\vfill
+\item For each relation above determine if it is symmetric, reflexive or transitive. Make a formal argument/proof of your conclusion.
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+

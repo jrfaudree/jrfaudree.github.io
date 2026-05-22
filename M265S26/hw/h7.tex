@@ -1,0 +1,287 @@
+\documentclass[11pt]{report}
+
+%packages
+\usepackage{geometry,
+amsmath,
+amssymb,
+amsthm,
+setspace}
+
+%This is to give color.
+\usepackage{xcolor}
+
+%This is to give space on the sides
+%and between lines for comments
+\geometry{margin=1.in}
+\doublespacing
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{cor}[thm]{Corollary}
+
+%%%%
+%% New Commands
+%%%%
+\newcommand{\modn}[3]{#1 \equiv #2 \: (\text{mod } #3)}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\bs}{$\backslash$}
+
+%%%%%%%
+% Document Begins
+%%%%%%%%
+\begin{document}
+\hfill Math 265
+
+%%% Your Name goes HERE
+\hfill \textbf{YOUR NAME}
+
+\hfill \today
+
+\begin{center}
+\Large{\textbf{Homework \# 7}} \\
+Due: Wednesday 02/25/2026\\
+\end{center}
+\fbox{\LaTeX\: Comments:} In the preamble of the latex file you will see $\backslash$newcommand. This is a way to make your own special short-cuts. For example, I got tired of typing: \fbox{\bs textbf\{Z\}}. Thanks to a \bs newcommand, we can now type \fbox{\bs Z}.\\
+Even better, instead of typing \fbox{a \bs equiv b \bs :(\bs text\{mod \} n) } to get \fbox{$a \equiv b \:(\text{mod } n)$}, we can now type \fbox{\bs modn\{a\}\{b\}\{n\}}\\
+\textbf{But you must have these ``newcommands" in your preamble or your file will not compile.}
+
+\vspace{.2in}
+
+\noindent\fbox{Problem List} \quad Ch 5 \#4,6,7,10,11,18,19,24,25,27,28,30; \quad Ch 6 \# 4,8,9,10,12,14,15,16,18,22,23\\
+
+\noindent\fbox{Problem Directions} 
+\begin{itemize}
+\item Ch 5 \#4-11: Use proof by contrapositive.
+\item Ch 5 \#18-30: Use a direct proof or proof by contrapositive; it's your choice.
+\item Ch 6 \# 4-18: Use proof by contradiction. 
+\item Ch 6 \# 22-23: Use any method. Note that we worked \#20 in class.
+\end{itemize}
+%%%%%% Problems Start
+%%% Ch 5 Contrapositive
+{\Large{Chapter 5}}
+\begin{enumerate}
+%problem
+\item[\textbf{4.}] Suppose $a,b,c \in \mathbb{Z}.$ If  $a$ does not divide $bc$, then $a$ does not divide $b$.\\
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{6.}] Suppose $x \in \mathbb{R}.$ If $x^3-x >0,$ then $x > -1.$\\
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+
+%problem
+\item[\textbf{7.}] Suppose $a,b \in \mathbb{Z}.$ If $ab$ and $a+b$ are even, then both $a$ and $b$ are even. \\
+
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{10.}] Suppose $x,y,z \in \mathbb{Z}$ and $x \not =0.$ If $x \nmid yz,$ then $x \nmid y$ and $x \nmid z.$\\
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{11.}]  Suppose $x,y \in \Z.$ If $x^2(y+3)$ is even, then $x$ is even or $y$ is odd.\\
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+
+%problem
+\item[\textbf{18.}]If $a,b \in \mathbb{Z},$ then $(a+b)^3 \equiv a^3+b^3 \:(\text{mod } 3).$\\
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{19.}] If $a,b,c \in \mathbb{Z}$ and $n \in \mathbb{N}.$ If $a \equiv b \:(\text{mod } n)$ and $a \equiv c \: (\text{mod } n),$ then $c \equiv b  \:(\text{mod } n).$\\
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{24.}]  If $\modn{a}{b}{n}$ and $\modn c d n,$ then $\modn{ac}{bd}{n}.$
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+
+
+\item[\textbf{25.}] If $n \in \mathbb{N}$ and $2^n-1$ is prime, then $n$ is prime.\\
+
+\textbf{Recall the Calc 2 Review from Class:} $r^n-1=(r-1)(r^{n-1}+r^{n-2}+ \cdots +r+1).$\\
+
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+\item[\textbf{27.}] If $\modn{a}{0}{4}$ or $\modn{a}{1}{4},$ then ${a \choose 2}$ is even.
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{28.}] If $n \in \Z,$ then $4 \nmid(n^2-3).$
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{30.}] If $\modn{a}{b}{n},$ then $\gcd(a,n) = \gcd(b,n).$
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%%%%%% 
+%%% Ch 6 Contradiction
+{\Large{Chapter 6}}
+
+%problem
+\item[\textbf{4.}] Prove $\sqrt{6}$ is irrational.
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{8.}] Suppose $a,b,c \in \mathbb{Z}.$ If $a^2+b^2=c^2$, then $a$ or $b$ is even.\\
+
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{9.}] Suppose $a,b \in \mathbb{R}.$ If $a$ is rational and $ab$ is irrational, then $b$ is irrational.\
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{10.}] There exist no integers $a$ and $b$ for which $21a+30b=1.$
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{12.}] For every positive $x \in \mathbb{Q},$ there is a positive $y \in \mathbb{Q}$ for which $y < x.$ \\
+
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{14.}] If $A$ and $B$ are sets, then $A \cap (B-A) = \emptyset.$
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{15.}] If $b \in \Z$ and $b \nmid k$ for every $k \in \N,$ then $b = 0.$
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{16.}] If $a$ and $b$ are positive real numbers, then $a+b \geq 2\sqrt{ab}.$
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{18.}] Suppose $a,b \in \Z.$ If $4 \big\vert (a^2+b^2),$ then $a$ and $b$ are not both odd.
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{22.}] We showed in class that $x^2+y^2-3=0$ can have no rational solutions. Use this fact to show that $x^2+y^2-3^k=0$ can have no rational solutions if $k$ is an odd positive integer.
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+%problem
+\item[\textbf{23.}] Use problem 22 (above) to prove that $\sqrt{3^k}$ is irrational for all odd, positive $k.$
+%your proof
+\begin{proof} YOUR PROOF GOES HERE
+\end{proof}
+\textcolor{red}{Your comments on your own proof here.}
+%space between problems
+\vspace{1.5in}
+
+
+\end{enumerate}
+\end{document}

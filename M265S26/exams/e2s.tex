@@ -1,0 +1,124 @@
+\documentclass[11pt]{article}
+\setlength{\topmargin}{-0.8in} % usually -0.25in
+\addtolength{\textheight}{1.4in} % usually 1.25in
+\addtolength{\oddsidemargin}{-0.8in}
+\addtolength{\evensidemargin}{-0.8in}
+\addtolength{\textwidth}{1.6in} %\setlength{\parindent}{0pt}
+
+\usepackage[T1]{fontenc} % Recommended for better encoding
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{helvet}
+
+% macros
+\usepackage{amsmath,
+amssymb,
+mathrsfs,
+amsthm,
+fancyhdr,
+tikz,
+multicol,
+enumitem
+}
+
+\newcommand{\be}{\begin{enumerate}}
+ \newcommand{\ee}{\end{enumerate}}
+
+
+\newcommand{\C}{{\mathbb{C}}}
+\newcommand{\R}{{\mathbb{R}}}
+\newcommand{\eps}{\epsilon}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\N}{{\mathbb{N}}}
+
+
+
+\lhead{{Math 265 Proofs}}
+\chead{\large Midterm II - Solutions} 
+\rhead{Spring 2026}
+\cfoot{}
+\pagestyle{fancy}
+\begin{document}
+\thispagestyle{fancy}
+
+
+\begin{enumerate}
+
+\item (15 pts) Give a \textbf{direct} proof of the statement below.
+\begin{quote} For every real number x, if $x \geq -1,$ then there exists some real number $y$ such that $y^2-1=x.$ \end{quote}
+
+\begin{proof} Suppose $x \in \R$ such that $x \geq -1.$ Choose $y=\sqrt{x+1}.$ Observe that since $x \geq -1,$ we know $x+1 \geq 0$ which guarantees that $y=\sqrt{x+1}$ is a real number. Now, we see
+\begin{align*}
+y^2-1& = (  \sqrt{x+1} )^2 -1& \text{ by substituting } y=\sqrt{x+1}\\
+&=x& \text{ by algebra,}
+\end{align*}
+which is what we needed to show.
+\end{proof}
+
+\item (15 points) Give a proof by \textbf{contrapositive} of the statement below.
+
+\begin{quote} For every pair of integers $a$ and $b$, if $(a+1)(6a+b)$ is odd, then $a$ is even and $b$ is odd. \end{quote}
+
+\begin{proof} (contrapositive) Let $a$ and $b$ be integers. We will show that if $a$ is odd or $b$ is even, then $(a+1)(6a+b)$ is even. \\
+
+Suppose that $a$ is odd or $b$ is even. We will proceed by cases.\\
+
+\textbf{Case 1:} $a$ is odd\\
+Since $a$ is odd, there exists an integer $k$ such that $a=2k+1.$ Thus, 
+\begin{align*}
+(a+1)(6a+b)& = (2k+2)(12k+6+b)& \text{ by substituting } a=2k+1\\
+&=2(k+1)(12k+6+b)& \text{ by factoring}\\
+&=2\ell,&\\
+\end{align*}
+where $\ell=(k+1)(12k+6+b) \in \Z.$ Thus, by the definition of even, $(a+1)(6a+b)$ is even.\\
+
+\textbf{Case 2:} $b$ is even\\
+Since $b$ is even, there exists an integer $k$ such that $b=2k.$ Thus, 
+\begin{align*}
+(a+1)(6a+b)& = (a+1)(6a+2k)& \text{ by substituting } b=2k\\
+&=2(a+1)(6a+k)& \text{ by factoring}\\
+&=2\ell,&\\
+\end{align*}
+where $\ell=(a+1)(6a+k) \in \Z.$ Thus, by the definition of even, $(a+1)(6a+b)$ is even.\\
+
+Thus, in all cases, $(a+1)(6a+b)$ is even.\\
+\end{proof}
+\vfill
+\newpage
+\item (15 points) Give a proof by \textbf{contradiction} of the statement below.
+\begin{quote} Let $x$ and $y$ be real numbers. If $5x + 20y=754,$ then either $x$ or $y$ is not an integer. \end{quote}
+
+\begin{proof} (by contradiction) Suppose $x$ and $y$ are real numbers satisfying $5x + 20y=754.$ For the sake of contradiction we further suppose that both $x$ and $y$ are integers. Upon factoring, we obtain 
+$$5(x+4y)=754.$$
+Since $x$ and $y$ are integers, it follows that $x+4y$ is an integer. Thus, $5 \mid 5(x+4y)$ and, since $5(x+4y)=754,$ it means $5 \mid 754.$ But this contradicts the fact that $5 \nmid 754.$
+\end{proof} 
+\vfill
+\item (20 points) Let $A$ and $B$ be sets. Prove that $A \subseteq B$ if and only if $\mathcal{P}(A) \subseteq \mathcal{P}(B).$
+
+\begin{proof} Let $A$ and $B$ be sets. \\
+
+$(\Rightarrow:)$ Suppose  $A \subseteq B.$ Let $X$ be an arbitrary element of  $\mathcal{P}(A).$ Since $X \in \mathcal{P}(A),$ $X \subseteq A.$ Since $X \subseteq A$ and $A \subseteq B,$ we know $X \subseteq B.$ Since $X \subseteq B,$ it follows that $X \in \mathcal{P}(B).$ Thus, every element of $\mathcal{P}(A)$ is en element of $\mathcal{P}(B),$ which implies $\mathcal{P}(A) \subseteq \mathcal{P}(B).$\\
+
+$(\Leftarrow:)$ Suppose $\mathcal{P}(A) \subseteq \mathcal{P}(B).$ Let $a$ be an arbitrary element of $A.$ Thus, $\{ a \} \subseteq A$ and consquently $\{a \} \in \mathcal{P}(A).$ Since $\{a \} \in \mathcal{P}(A)$ and $\mathcal{P}(A) \subseteq \mathcal{P}(B),$ it follows that $\{a \} \in \mathcal{P}(B)$. Since $\{a \} \in \mathcal{P}(B),$ we know $\{a \} \subseteq B.$ Since $\{a \} \subseteq B,$ it follows that $a \in B.$ Since every element of $A$ is an element of $B,$ we have shown that $A \subseteq B.$\\
+
+\end{proof}
+
+\item (15 points) Let $A$, $B$, and $C$ be sets. If $A \subseteq B,$ then $C-B \subseteq C-A.$
+
+\begin{proof} Let $A$, $B$, and $C$ be sets such that $A \subseteq B.$ Let $x $ be an arbitrary element of $C-B.$ Thus, $x \in C$ and $x \not \in{B}.$ Since $A \subseteq B$, and $x \not \in B, $ it follows that $x \not \in A.$ Thus, we know $x \not in A$ and $x \in C.$ Thus, $x \in C-A.$ Since every element of $C-B$ is an element of $C-A,$ we can conclude that $C-B \subseteq C-A.$
+
+\end{proof}
+
+\item (20 points) Let $a,b,$ and $c$ be positive integers. Prove that if $c \mid a$ and $c \mid b,$ then $c \mid \gcd(a,b).$
+
+\begin{proof} Suppose $a,b,c \in \Z$ such that $c \mid a$ and $c \mid b$ and let $d = \gcd(a,b).$ We need to show that $c \mid d.$\\ 
+From Proposition 7.1, we know there exist integers $k$ and $\ell$ such that $d=ka+b\ell.$ Since $c \mid a$ and $c \mid b,$ we know there are integers $m$ and $n$ such that $cm=a$ and $cn=b.$ Now, 
+\begin{align*}
+d &= ka+b\ell \\ 
+&= kcm+bcn\\
+&=c(km+bn), \\
+\end{align*}
+where $km+bn\in \Z.$ Since $c(km+bn)=d,$ we know $c \mid d.$\end{proof}
+\newpage
+\end{enumerate}
+\end{document} 

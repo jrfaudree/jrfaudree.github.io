@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 12: Ch 6}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\be
+\item Prove there are an infinite number of primes.\\
+\begin{proof} (by contradiction) Suppose there are a finite number of primes, say $p_1, p_2, \dots, p_k.$ Let $N=p_1p_2\cdots p_k + 1.$ The number $N$ is either prime or composite. 
+
+If $N$ is prime, then we have the contradiction that there are only $k$ primes and there are $k+1$ primes.
+
+Now suppose that $N$ is composite. Thus, $N$ is divisible by at least one of the $k$ primes,  $p_1, p_2, \dots, p_k,$ say $p_i.$ So there exists some integer $\ell$ such that $N=p_i \ell.$ 
+
+But now the expression $N=p_1p_2\cdots p_k + 1$ can be rewritten as 
+$$1=N- p_1p_2\cdots p_k=p_i(\ell - p_1p_2 \cdots p_{i-1}p_{i+1}\cdots p_k),$$ which implies that the prime $p_i$ divides 1, a contradiction. \end{proof}
+\vfill
+\item Prove that any two rational numbers $x$ and $y$ can be written in the form $x=\frac{a}{n}$ and $y=\frac{b}{n}$ such that $\gcd(a,b,n)=1$ but that it is not possible to conclude that $\gcd(a,n)=1$ or $\gcd(b,n)=1.$
+
+\textit{Informal proof:} We know any two rational number can be written as ratios of integers so $x=a/c$ and $y=b/d$ for $a,b,c,d \in \Z$ is possible. Given these ratios, we can find a common denominator, say $cd$ to obtain $x=ad/cd$ and $y=bc/cd.$ Let's now simply this to $x=a/n$ and $y=b/n$ (and yes I am overusing the variables $a$ and $b$.)
+
+Given the integers $a,b,n$, if they have a common divisor then we can cancel it from all three and still have ratios equal to $x$ and $y$. So it is possible to suppose that $\gcd(a,b,n)=1.$ 
+
+On the other hand, if $x=9/2$ and $y=4/3,$ then the least common denominator is $6$ which would give use $x=27/6$ and $y=8/6$ neither or which is in lowest terms. So this is not guaranteed.
+\vfill
+\item Statements about even and odd numbers could be rewritten in the language of integers modulo 2. For example, the statement:\\
+\fbox{If $n$ is odd, then $n^2$ is odd} could be rewritten as
+\fbox{If $n \equiv 1 \: (\text{mod } 2)$, then $n^2 \equiv 1 \: (\text{mod } 2).$} 
+
+Make \textbf{conjectures} about what happens when you consider the squares of integers modulo 3 and then prove that you are correct.
+
+\textbf{Proposition} If $n\equiv_3 0,$ then $n^2 \equiv_30.$ If $n \equiv_3 1$ or $n \equiv_3 2$, then $n^2 \equiv_3 1.$ (By implication, it is not possible for the square of any integer to be congruent to 2 mod 2.\\
+
+\textit{Informal sketch of proof:} For $n=3k,$ $n^2=9k^2=3(3k^2).$ \\
+For $n=3k+1,$ $n^2=9k^2+6k+1=3(3k^2+2k)+1.$\\
+For $n=3k+2,$ $n^2=9k^2+12k+4=3(3k^2+4k+1)+1.$\\
+\vfill
+\newpage
+\item Make a conjecture about when the sum of two integers can be congruent to $0$ modulo 3 and prove that you are correct. Your proposition will look something like the one below:\\
+
+\textbf{Proposition:} Let $a,b \in \Z$ such that $a+b \equiv 0 \: (\text{mod } 3),$ then either both are congruent to zero modulo 3 or one is congruent to 1 and the other is congruent to 2.\\
+
+\textit{Informal sketch of proof:} While it's clear that $3k+3\ell \equiv_3 0$ and that $(3k+1) + 3\ell+2 \equiv_3 0,$ this is not sufficient. We would need to show that no other combinations can be congruent to zero. There are four more. This argument is basically proof by 6 cases.
+\vfill
+\item Describe the set of points in the $xy$-plane that satisfy $x^2+y^2-3=0.$\\
+
+It's a circle in the plane with center at the origin and a radius of $\sqrt{3}$.\\
+\vfill
+\item Prove that $x^2+y^2-3=0$ contains no rational points. 
+
+\begin{proof} (by contradiction) Suppose that there exist $(x,y) \in \Q \times \Q$ such that $x^2+y^2-3 \not =0.$ By \#2, we can write $x=a/n$ and $y=b/n$ where $\gcd(a,b,n)=1.$ Plugging into the equation we obtain
+$$\frac{a^2}{n^2} + \frac{b^2}{n^2} -3=0.$$
+This is equivalent to ${a^2} + {b^2} =3n^2.$
+
+Now, we can conclude that $a^2 + b^2 \equiv_3 0.$ Using our result in \#4, either both $a^2$ and $b^2$ are congruent to 0 modulo 3 or one is congruent to 1 and the other to 2. But our result in \#3 implies that neither $a^2$ nor $b^2$ can be congruent to 2. So we are left with only one possibility -- that both $a^2$ and $b^2$ are congruent to zero. Using \#3 again, we conclude that $a=3k$ and $b=3\ell.$
+
+Now, $3n^2 = 9k^2+9\ell^2=3(3k^2+3 \ell^2)$ which upon division by $3$ gives $n^2 = 3k^2+3 \ell^2=3(k^2+\ell^2.)$ Thus, we conclude that $n$ is also a multiple of 3. 
+
+Finally we have a contradiction that $\gcd(a,b,n)=1$ and $\gcd(a,b,n) \geq 3.$ \end{proof}
+
+\vfill
+\end{enumerate}
+\end{document}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

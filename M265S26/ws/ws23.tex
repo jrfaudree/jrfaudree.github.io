@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+
+% Layout.
+\usepackage[top=1in, bottom=0.75in, left=0.75in, right=0.75in, headheight=1in, headsep=6pt]{geometry}
+
+% Fonts.
+\usepackage{mathptmx}
+
+\usepackage[scaled=0.86]{helvet}
+\renewcommand{\emph}[1]{\textsf{\textbf{#1}}}
+
+% Misc packages.
+\usepackage{amsmath,amssymb,latexsym,amsthm}
+\usepackage{graphicx,hyperref}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{multicol}
+\usepackage{tabularx,colortbl}
+\usepackage{enumitem}
+\usepackage{soul,multicol}
+\usepackage{setspace}
+
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    pdftitle={Proofs Worksheet},
+    pdfpagemode=FullScreen,
+    }
+
+\def\mailto#1{\href{mailto:#1}{#1}}
+
+%% special math symbols
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\sse}{\subseteq}
+\newcommand{\mcp}{\mathcal{P}}
+\newcommand{\ol}[1]{\overline{#1}}
+
+%other specials
+\newcommand{\be}{\begin{enumerate}}
+\newcommand{\ee}{\end{enumerate}}
+\newcommand{\se}{\subseteq}
+\newcommand{\spe}{\supseteq}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\lcm}{\text{lcm}}
+%\newcommand{\gcd}{\text{gcd}}
+
+% Paragraph spacing
+\parindent 0pt
+\parskip 6pt plus 1pt
+\def\tableindent{\hskip 0.5 in}
+\def\ts{\hskip 1.5 em}
+
+%header
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{\large\sf\textbf{MATH 265: Introduction to Mathematical Proofs}}
+\rhead{\large\sf\textbf{Worksheet 23: Ch 12 \S 3-4}}
+
+\newcommand{\localhead}[1]{\par\smallskip\textbf{#1}\nobreak\\}%
+\def\heading#1{\localhead{\large\emph{#1}}}
+\def\subheading#1{\localhead{\emph{#1}}}
+
+\newenvironment{clist}%
+{\bgroup\parskip 0pt\begin{list}{$\bullet$}{\partopsep 4pt\topsep 0pt\itemsep -2pt}}%
+{\end{list}\egroup}%
+
+\begin{document}
+\begin{enumerate}
+\item The Pigeonhole Principle
+	\begin{enumerate}
+	\item (version 1)
+	\vspace{0.5in}
+	\item (version 2)
+	\vspace{0.5in}
+	\end{enumerate}
+\item  Given any 10-element subset of $\{1,2,3, \cdots, 100\}$ there exist at least two distinct subsets with the same sum.
+\vfill
+\item Let $B=\large\{ \{0\}, \{1,8\},\{2,7\}, \{3,6\},\{4,5\}\large\}$ be a partition  of $\{0,1,2,3,\cdots,9\}.$ \\ Suppose that $f(n): \N \to B$ maps a natural number to the subset of $B$ that contains its remainder upon division by $9.$
+	\begin{enumerate}
+	\item  Determine $f(13)$ and $f(28).$
+	\vspace{1in}
+	\item Prove that if $f(n)=f(m)$, then either $9 \mid (n+m)$ or $9 \mid (n-m)_.$
+	\vfill
+	\newpage
+	\item Fill in the blank below with the \emph{smallest} possible value for which it is true and then prove the statement using PHP v2. \\
+	
+	{Every} subset of $\N$ with at least \underline{\hspace{.5in}} elements will contain a pair of numbers whose sum or difference is divisible by 9. 
+	
+	\vfill
+	\end{enumerate}
+\item Let $A=\{a,b,c\}, B=\{1,2,3\},$ and $C=\{4,5,6,7\}.$ \\
+Suppose $f:A \to B,$ $g:B \to C$ and $h: C \to B$ are functions defined below.	\\
+$$f=\{(a,1),(b,2),(c,2)\}, \quad g=\{(1,4),(2,5),(3,6)\}, \quad  h=\{(4,1),(5,2),(6,2),(7,3)\}.$$
+Describe each expression below by using "potato" pictures, stating explicitly the associated ordered pairs, and establishing the domain, codomain and range.  Note ``$\circ$" represents composition of functions just like in precalculus:
+$$g\circ f = g(f(x))$$
+	\begin{enumerate}
+	\item $g \circ f$
+	\vfill
+	\item $(h \circ g) \circ f$
+	\vfill
+	\end{enumerate}
+\end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
